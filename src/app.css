@@ -477,3 +477,41 @@ button.wide {
 .home .search {
 	margin: 0 0 10px;
 }
+
+/* Install help */
+.install {
+	margin-top: 28px;
+	padding: 16px;
+	background: var(--card);
+	border: 1px solid var(--line);
+	border-radius: 16px;
+}
+.install h2 {
+	margin: 0 0 4px;
+	font-size: 1.05rem;
+}
+.install p {
+	margin: 0 0 10px;
+	color: var(--muted);
+	font-size: 0.92rem;
+}
+.install button {
+	width: 100%;
+	margin-bottom: 10px;
+}
+.install details {
+	border-top: 1px solid var(--line);
+	padding: 8px 0;
+}
+.install summary {
+	cursor: pointer;
+	font-weight: 600;
+	padding: 6px 0;
+}
+.install ol {
+	margin: 6px 0 4px;
+	padding-left: 20px;
+}
+.install li {
+	margin: 4px 0;
+}

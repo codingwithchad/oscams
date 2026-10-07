@@ -1,0 +1,18 @@
+{
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "created_at": "2026-10-07T00:00:00Z",
+  "tags": [
+    "westport"
+  ],
+  "id": "nws-forecast-westport",
+  "name": "Westport forecast",
+  "lat": 46.8904,
+  "lon": -124.1052,
+  "kind": "forecast",
+  "provider": "nws",
+  "provider_ref": "46.8904,-124.1052",
+  "source": "National Weather Service",
+  "page_url": "https://forecast.weather.gov/MapClick.php?lat=46.8904&lon=-124.1052",
+  "attribution_text": "National Weather Service"
+}

@@ -1,5 +1,6 @@
 import { isDormant } from '../geo';
 import type { Conditions, Nearby, WeatherSource } from '../types';
+import { localStamp, parseBuoy, upcomingTides, type TidePrediction } from '../marine';
 import { cached } from './cache';
 
 const USER_AGENT = 'oscams (https://github.com/codingwithchad/oscams)';
@@ -102,13 +103,50 @@ async function fetchWsdotStation(src: WeatherSource): Promise<Row[]> {
 	]);
 }
 
+async function fetchBuoy(src: WeatherSource): Promise<Row[]> {
+	const res = await fetch(
+		`https://www.ndbc.noaa.gov/data/realtime2/${encodeURIComponent(src.provider_ref ?? '')}.txt`,
+		{
+			headers: { 'User-Agent': USER_AGENT },
+			signal: AbortSignal.timeout(8000)
+		}
+	);
+	if (!res.ok) throw new Error(`upstream ${res.status}`);
+	return parseBuoy(await res.text());
+}
+
+async function fetchTides(src: WeatherSource): Promise<Row[]> {
+	const now = new Date();
+	const tz = 'America/Los_Angeles';
+	const stamp = localStamp(now, tz);
+	const url = new URL('https://api.tidesandcurrents.noaa.gov/api/prod/datagetter');
+	url.search = new URLSearchParams({
+		product: 'predictions',
+		application: 'oscams',
+		begin_date: stamp.slice(0, 10).replaceAll('-', ''),
+		range: '48',
+		datum: 'MLLW',
+		station: src.provider_ref ?? '',
+		time_zone: 'lst_ldt',
+		units: 'english',
+		interval: 'hilo',
+		format: 'json'
+	}).toString();
+	const data = await getJson<{ predictions?: TidePrediction[] }>(url.toString(), {
+		'User-Agent': USER_AGENT
+	});
+	return upcomingTides(data.predictions ?? [], stamp);
+}
+
 const adapters: Record<
 	NonNullable<WeatherSource['provider']>,
 	(s: WeatherSource) => Promise<Row[]>
 > = {
 	nws: fetchNws,
 	'wsdot-pass': fetchWsdotPass,
-	'wsdot-weather': fetchWsdotStation
+	'wsdot-weather': fetchWsdotStation,
+	ndbc: fetchBuoy,
+	'noaa-tides': fetchTides
 };
 
 /** Fetch live values for one source. Never throws: problems come back as state "error". */

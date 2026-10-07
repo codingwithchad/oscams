@@ -7,7 +7,9 @@
 	const label: Record<Conditions['kind'], string> = {
 		forecast: 'Forecast',
 		station: 'Station',
-		'pass-conditions': 'Roads'
+		'pass-conditions': 'Roads',
+		waves: 'Surf',
+		tides: 'Tides'
 	};
 	const live = $derived(conditions.filter((c) => c.state === 'ok'));
 	const quiet = $derived(conditions.filter((c) => c.state !== 'ok'));

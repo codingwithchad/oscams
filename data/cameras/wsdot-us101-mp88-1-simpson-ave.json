@@ -1,0 +1,22 @@
+{
+  "id": "wsdot-us101-mp88-1-simpson-ave",
+  "name": "US 101 at MP 88.1: Simpson Ave",
+  "lat": 46.975406,
+  "lon": -123.879001,
+  "feed_url": "https://images.wsdot.wa.gov/orflow/101vc08818.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "route": "US 101",
+  "milepost": 88.1,
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road",
+    "westport"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z"
+}

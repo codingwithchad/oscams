@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
 	import type { PageProps } from './$types';
+	import InstallHelp from '../lib/InstallHelp.svelte';
 	import SearchBox from '../lib/SearchBox.svelte';
 
 	let { data }: PageProps = $props();
@@ -69,5 +70,6 @@
 		{locating ? 'Finding you…' : 'Use my location'}
 	</button>
 	{#if error}<p class="error">{error}</p>{/if}
+	<InstallHelp />
 	<p class="hint">We're adding places. Search any town or zip to see what's nearby.</p>
 </main>
