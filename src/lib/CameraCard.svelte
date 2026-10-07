@@ -2,7 +2,7 @@
 	import { ago } from './format';
 	import type { Camera, Nearby } from './types';
 
-	let { camera }: { camera: Nearby<Camera> } = $props();
+	let { camera, note }: { camera: Nearby<Camera>; note?: string } = $props();
 
 	const refreshMs = $derived((camera.refresh_seconds ?? 120) * 1000);
 	const isImage = $derived(camera.feed_type === 'image');
@@ -76,7 +76,7 @@
 	<div class="meta">
 		<h3>{camera.name}</h3>
 		<p class="sub">
-			{camera.distance.toFixed(1)} mi{camera.location_precision === 'approximate'
+			{note ?? `${camera.distance.toFixed(1)} mi`}{camera.location_precision === 'approximate'
 				? ' (approx.)'
 				: ''}
 			· {camera.attribution_text ?? camera.source}
@@ -94,7 +94,7 @@
 			<div>
 				<strong>{camera.name}</strong>
 				<span class="sub">
-					{camera.distance.toFixed(1)} mi · {camera.attribution_text ?? camera.source}
+					{note ?? `${camera.distance.toFixed(1)} mi`} · {camera.attribution_text ?? camera.source}
 					{#if age}· updated {age}{/if}
 					· refreshes about every {Math.round(refreshMs / 60000) || 1} min
 				</span>

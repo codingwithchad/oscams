@@ -15,3 +15,9 @@ export function ago(iso: string, now: number = Date.now()): string {
 	const hours = Math.round(mins / 60);
 	return hours < 48 ? `${hours} h ago` : `${Math.round(hours / 24)} days ago`;
 }
+
+/** 83 -> "1 h 23 min". */
+export function duration(minutes: number): string {
+	const m = Math.round(minutes);
+	return m < 60 ? `${m} min` : `${Math.floor(m / 60)} h ${m % 60} min`;
+}

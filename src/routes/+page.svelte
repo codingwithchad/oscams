@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
 	import type { PageProps } from './$types';
+	import TripForm from '../lib/TripForm.svelte';
 	import InstallHelp from '../lib/InstallHelp.svelte';
 	import SearchBox from '../lib/SearchBox.svelte';
 
@@ -63,6 +64,12 @@
 			{/each}
 		</nav>
 	{/if}
+
+	<h2 class="section-title">Plan a drive</h2>
+	<section class="trip-card">
+		<p>Pick your start and where you're headed. Cameras show in the order you'll pass them.</p>
+		<TripForm places={data.places.map((p) => ({ id: p.id, name: p.name }))} />
+	</section>
 
 	<h2 class="section-title">Somewhere else?</h2>
 	<SearchBox />

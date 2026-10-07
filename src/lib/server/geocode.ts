@@ -3,6 +3,7 @@ import type { Place } from '../types';
 import { cached } from './cache';
 
 const USER_AGENT = 'oscams (https://github.com/codingwithchad/oscams)';
+const BIG_AREAS = new Set(['county', 'state', 'region', 'country', 'state_district', 'province']);
 const DAY = 24 * 60 * 60 * 1000;
 
 // Nominatim allows at most one request per second, so uncached lookups wait in line.
@@ -26,16 +27,28 @@ export async function geocode(query: string): Promise<Place | null> {
 	return cached(`geo:${q.toLowerCase()}`, DAY, () =>
 		inLine(async () => {
 			const url = new URL('https://nominatim.openstreetmap.org/search');
-			url.search = new URLSearchParams({ q, format: 'jsonv2', limit: '1' }).toString();
+			url.search = new URLSearchParams({
+				q,
+				format: 'jsonv2',
+				limit: '5',
+				addressdetails: '0'
+			}).toString();
 			const res = await fetch(url, {
 				headers: { 'User-Agent': USER_AGENT },
 				signal: AbortSignal.timeout(8000)
 			});
 			if (!res.ok) throw new Error(`geocoder ${res.status}`);
-			const hits = (await res.json()) as { lat: string; lon: string; display_name: string }[];
+			const hits = (await res.json()) as {
+				lat: string;
+				lon: string;
+				display_name: string;
+				addresstype?: string;
+			}[];
 			if (!hits.length) return null;
-			const label = hits[0].display_name.split(',').slice(0, 2).join(',').trim();
-			return { lat: Number(hits[0].lat), lon: Number(hits[0].lon), label };
+			// Prefer an actual town or street over a county or other big area that merely shares the name.
+			const best = hits.find((h) => !BIG_AREAS.has(h.addresstype ?? '')) ?? hits[0];
+			const label = best.display_name.split(',').slice(0, 2).join(',').trim();
+			return { lat: Number(best.lat), lon: Number(best.lon), label };
 		})
 	);
 }
