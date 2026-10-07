@@ -5,22 +5,138 @@
   "description": "One public camera. One file per camera in data/cameras/.",
   "type": "object",
   "additionalProperties": false,
-  "required": ["id", "name", "lat", "lon", "feed_url", "feed_type", "source", "status", "created_at"],
+  "required": [
+    "id",
+    "name",
+    "lat",
+    "lon",
+    "feed_url",
+    "feed_type",
+    "source",
+    "status",
+    "created_at"
+  ],
   "properties": {
-    "id": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$", "description": "Stable slug. Must match the filename without extension." },
-    "name": { "type": "string", "minLength": 1 },
-    "lat": { "type": "number", "minimum": -90, "maximum": 90 },
-    "lon": { "type": "number", "minimum": -180, "maximum": 180 },
-    "feed_url": { "type": "string", "format": "uri" },
-    "feed_type": { "enum": ["image", "video", "stream"] },
-    "source": { "type": "string", "minLength": 1, "description": "Who operates the camera, e.g. WSDOT." },
-    "status": { "enum": ["pending", "approved"] },
-    "page_url": { "type": "string", "format": "uri", "description": "Human-facing page, for attribution." },
-    "refresh_seconds": { "type": "integer", "minimum": 1, "description": "How often an image feed updates." },
-    "submitted_by": { "type": "string", "description": "Who submitted it (GitHub handle or form contact)." },
-    "approved_by": { "type": "string" },
-    "created_at": { "type": "string", "format": "date-time" }
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "description": "Stable slug. Must match the filename without extension."
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "lat": {
+      "type": "number",
+      "minimum": -90,
+      "maximum": 90
+    },
+    "lon": {
+      "type": "number",
+      "minimum": -180,
+      "maximum": 180
+    },
+    "feed_url": {
+      "type": "string",
+      "format": "uri"
+    },
+    "feed_type": {
+      "enum": [
+        "image",
+        "video",
+        "stream"
+      ]
+    },
+    "source": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Who operates the camera, e.g. WSDOT."
+    },
+    "status": {
+      "enum": [
+        "pending",
+        "approved"
+      ]
+    },
+    "page_url": {
+      "type": "string",
+      "format": "uri",
+      "description": "Human-facing page, for attribution."
+    },
+    "refresh_seconds": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "How often an image feed updates."
+    },
+    "submitted_by": {
+      "type": "string",
+      "description": "Who submitted it (GitHub handle or form contact)."
+    },
+    "approved_by": {
+      "type": "string"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "description": {
+      "type": "string"
+    },
+    "elevation_m": {
+      "type": "number",
+      "description": "Elevation in meters."
+    },
+    "heading": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 360,
+      "description": "Compass direction the camera points, in degrees."
+    },
+    "route": {
+      "type": "string",
+      "description": "Road, e.g. US 2."
+    },
+    "milepost": {
+      "type": "number"
+    },
+    "embed_mode": {
+      "enum": [
+        "direct",
+        "iframe",
+        "proxy",
+        "link"
+      ],
+      "description": "How the app can show the feed: hotlink it, iframe it, proxy it, or only link out."
+    },
+    "license_or_terms": {
+      "type": "string"
+    },
+    "attribution_text": {
+      "type": "string"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+      },
+      "uniqueItems": true,
+      "description": "Optional free-form labels, e.g. road, mountain, summit, surf, weather."
+    }
   },
-  "if": { "properties": { "status": { "const": "approved" } }, "required": ["status"] },
-  "then": { "required": ["approved_by"] }
+  "if": {
+    "properties": {
+      "status": {
+        "const": "approved"
+      }
+    },
+    "required": [
+      "status"
+    ]
+  },
+  "then": {
+    "required": [
+      "approved_by"
+    ]
+  }
 }
