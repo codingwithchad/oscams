@@ -1,0 +1,18 @@
+{
+  "id": "nws-forecast-mount-rainier-sunrise",
+  "name": "Sunrise forecast",
+  "lat": 46.9139,
+  "lon": -121.6431,
+  "kind": "forecast",
+  "provider": "nws",
+  "provider_ref": "46.9139,-121.6431",
+  "source": "National Weather Service",
+  "page_url": "https://forecast.weather.gov/MapClick.php?lat=46.9139&lon=-121.6431",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "attribution_text": "National Weather Service",
+  "tags": [
+    "national-park"
+  ],
+  "created_at": "2026-10-07T00:00:00Z"
+}

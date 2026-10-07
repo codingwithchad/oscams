@@ -1,0 +1,18 @@
+{
+  "id": "nws-forecast-olympic-lake-crescent",
+  "name": "Lake Crescent forecast",
+  "lat": 48.06,
+  "lon": -123.8,
+  "kind": "forecast",
+  "provider": "nws",
+  "provider_ref": "48.06,-123.8",
+  "source": "National Weather Service",
+  "page_url": "https://forecast.weather.gov/MapClick.php?lat=48.06&lon=-123.8",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "attribution_text": "National Weather Service",
+  "tags": [
+    "national-park"
+  ],
+  "created_at": "2026-10-07T00:00:00Z"
+}

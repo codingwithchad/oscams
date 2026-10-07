@@ -1,0 +1,24 @@
+{
+  "id": "nps-mora-longmire",
+  "name": "Longmire",
+  "description": "Looking southwest from the Administration Building toward the road entering Longmire.",
+  "lat": 46.749,
+  "lon": -121.8109,
+  "feed_url": "https://www.nps.gov/webcams-mora/longmire.jpg",
+  "feed_type": "image",
+  "source": "National Park Service",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://www.nps.gov/mora/learn/photosmultimedia/webcams.htm",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "national-park",
+    "mount-rainier"
+  ],
+  "attribution_text": "National Park Service",
+  "license_or_terms": "NPS content is generally public domain unless otherwise noted; credit appreciated (nps.gov/aboutus/disclaimer.htm).",
+  "created_at": "2026-10-07T00:00:00Z",
+  "location_precision": "approximate",
+  "max_width": 900
+}

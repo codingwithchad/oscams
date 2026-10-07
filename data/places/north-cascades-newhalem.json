@@ -1,0 +1,10 @@
+{
+  "id": "north-cascades-newhalem",
+  "name": "North Cascades: Newhalem",
+  "region": "Washington",
+  "blurb": "The Picket Range from the Skagit valley",
+  "lat": 48.6716,
+  "lon": -121.2467,
+  "radius_miles": 3,
+  "collection": "national-parks"
+}

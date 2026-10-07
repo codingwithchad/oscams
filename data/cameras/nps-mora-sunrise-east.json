@@ -1,0 +1,23 @@
+{
+  "id": "nps-mora-sunrise-east",
+  "name": "Sunrise: looking east",
+  "description": "East from Sunrise.",
+  "lat": 46.9139,
+  "lon": -121.6431,
+  "location_precision": "approximate",
+  "feed_type": "image",
+  "source": "National Park Service",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "availability": "seasonal",
+  "expected_return": "2027-07",
+  "seasonal_note": "Not broken. NPS says this camera is down for the winter; it usually returns when the Sunrise road opens in summer.",
+  "page_url": "https://www.nps.gov/mora/learn/photosmultimedia/webcams.htm",
+  "tags": [
+    "national-park",
+    "mount-rainier"
+  ],
+  "attribution_text": "National Park Service",
+  "license_or_terms": "NPS content is generally public domain unless otherwise noted; credit appreciated (nps.gov/aboutus/disclaimer.htm).",
+  "created_at": "2026-10-07T00:00:00Z"
+}

@@ -1,0 +1,10 @@
+{
+  "id": "mount-rainier-sunrise",
+  "name": "Mount Rainier (Sunrise)",
+  "region": "Washington",
+  "blurb": "Cameras down for the winter",
+  "lat": 46.9139,
+  "lon": -121.6431,
+  "radius_miles": 3,
+  "collection": "national-parks"
+}

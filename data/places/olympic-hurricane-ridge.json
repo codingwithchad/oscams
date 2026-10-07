@@ -1,0 +1,10 @@
+{
+  "id": "olympic-hurricane-ridge",
+  "name": "Olympic: Hurricane Ridge",
+  "region": "Washington",
+  "blurb": "Mountain views above Port Angeles",
+  "lat": 47.9697,
+  "lon": -123.4981,
+  "radius_miles": 3,
+  "collection": "national-parks"
+}

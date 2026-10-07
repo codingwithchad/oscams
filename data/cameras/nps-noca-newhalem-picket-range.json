@@ -1,0 +1,25 @@
+{
+  "id": "nps-noca-newhalem-picket-range",
+  "name": "Newhalem: Picket Range",
+  "description": "NPS air quality camera near the Newhalem visitor center, looking toward the mountains.",
+  "lat": 48.6716,
+  "lon": -121.2467,
+  "feed_url": "https://www.nps.gov/featurecontent/ard/webcams/images/nocalarge.jpg",
+  "feed_type": "image",
+  "source": "National Park Service",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://www.nps.gov/subjects/air/webcams.htm?site=noca",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "national-park",
+    "north-cascades",
+    "air-quality"
+  ],
+  "attribution_text": "National Park Service",
+  "license_or_terms": "NPS content is generally public domain unless otherwise noted; credit appreciated (nps.gov/aboutus/disclaimer.htm).",
+  "created_at": "2026-10-07T00:00:00Z",
+  "location_precision": "approximate",
+  "max_width": 900
+}

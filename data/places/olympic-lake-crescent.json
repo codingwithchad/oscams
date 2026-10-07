@@ -1,0 +1,10 @@
+{
+  "id": "olympic-lake-crescent",
+  "name": "Olympic: Lake Crescent",
+  "region": "Washington",
+  "blurb": "Glacier-carved lake in the park",
+  "lat": 48.06,
+  "lon": -123.8,
+  "radius_miles": 3,
+  "collection": "national-parks"
+}

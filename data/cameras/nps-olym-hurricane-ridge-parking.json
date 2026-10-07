@@ -1,0 +1,25 @@
+{
+  "id": "nps-olym-hurricane-ridge-parking",
+  "name": "Hurricane Ridge: parking lot",
+  "description": "The Hurricane Ridge parking lot and visitor center area.",
+  "lat": 47.9697,
+  "lon": -123.4981,
+  "feed_url": "https://www.nps.gov/webcams-olym/hrparkinglot.jpg",
+  "feed_type": "image",
+  "source": "National Park Service",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://www.nps.gov/olym/learn/photosmultimedia/webcams.htm",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "national-park",
+    "olympic",
+    "hurricane-ridge"
+  ],
+  "attribution_text": "National Park Service",
+  "license_or_terms": "NPS content is generally public domain unless otherwise noted; credit appreciated (nps.gov/aboutus/disclaimer.htm).",
+  "created_at": "2026-10-07T00:00:00Z",
+  "location_precision": "approximate",
+  "max_width": 900
+}
