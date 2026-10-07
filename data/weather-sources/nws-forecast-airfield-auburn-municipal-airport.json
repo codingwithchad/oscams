@@ -1,0 +1,18 @@
+{
+  "id": "nws-forecast-airfield-auburn-municipal-airport",
+  "name": "Auburn Municipal Airport forecast",
+  "lat": 47.3275,
+  "lon": -122.2264,
+  "kind": "forecast",
+  "provider": "nws",
+  "provider_ref": "47.3275,-122.2264",
+  "source": "National Weather Service",
+  "page_url": "https://forecast.weather.gov/MapClick.php?lat=47.3275&lon=-122.2264",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "attribution_text": "National Weather Service",
+  "tags": [
+    "airfield"
+  ],
+  "created_at": "2026-10-07T00:00:00Z"
+}

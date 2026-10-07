@@ -1,0 +1,21 @@
+{
+  "id": "wsdot-aviation-auburn-municipal-airport-north",
+  "name": "Auburn Municipal Airport North",
+  "lat": 47.3275,
+  "lon": -122.226389,
+  "feed_url": "https://images.wsdot.wa.gov/airports/auburn2.jpg",
+  "feed_type": "image",
+  "source": "WSDOT Aviation",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.wa.gov/travel/aviation/airports-list",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "airfield",
+    "airport",
+    "airfield-auburn-municipal-airport"
+  ],
+  "attribution_text": "WSDOT Aviation (pictures are for pilots, not an official weather briefing)",
+  "created_at": "2026-10-07T00:00:00Z"
+}

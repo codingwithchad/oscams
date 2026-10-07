@@ -1,0 +1,18 @@
+{
+  "id": "nws-forecast-airfield-easton-airport",
+  "name": "Easton Airport forecast",
+  "lat": 47.2542,
+  "lon": -121.1853,
+  "kind": "forecast",
+  "provider": "nws",
+  "provider_ref": "47.2542,-121.1853",
+  "source": "National Weather Service",
+  "page_url": "https://forecast.weather.gov/MapClick.php?lat=47.2542&lon=-121.1853",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "attribution_text": "National Weather Service",
+  "tags": [
+    "airfield"
+  ],
+  "created_at": "2026-10-07T00:00:00Z"
+}

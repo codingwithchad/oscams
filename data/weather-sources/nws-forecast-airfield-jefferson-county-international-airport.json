@@ -1,0 +1,18 @@
+{
+  "id": "nws-forecast-airfield-jefferson-county-international-airport",
+  "name": "Jefferson County International Airport forecast",
+  "lat": 48.0552,
+  "lon": -122.81,
+  "kind": "forecast",
+  "provider": "nws",
+  "provider_ref": "48.0552,-122.8100",
+  "source": "National Weather Service",
+  "page_url": "https://forecast.weather.gov/MapClick.php?lat=48.0552&lon=-122.8100",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "attribution_text": "National Weather Service",
+  "tags": [
+    "airfield"
+  ],
+  "created_at": "2026-10-07T00:00:00Z"
+}

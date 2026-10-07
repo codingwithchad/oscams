@@ -1,0 +1,10 @@
+{
+  "id": "airfield-olympia-regional-airport",
+  "name": "Olympia Regional Airport",
+  "region": "Washington",
+  "blurb": "WSDOT Aviation airfield cameras",
+  "lat": 46.9704,
+  "lon": -122.9022,
+  "radius_miles": 1.5,
+  "collection": "airfields"
+}

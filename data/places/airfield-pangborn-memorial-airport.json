@@ -1,0 +1,10 @@
+{
+  "id": "airfield-pangborn-memorial-airport",
+  "name": "Pangborn Memorial Airport",
+  "region": "Washington",
+  "blurb": "WSDOT Aviation airfield cameras",
+  "lat": 47.399,
+  "lon": -120.2065,
+  "radius_miles": 1.5,
+  "collection": "airfields"
+}

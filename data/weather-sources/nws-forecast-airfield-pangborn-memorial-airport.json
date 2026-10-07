@@ -1,0 +1,18 @@
+{
+  "id": "nws-forecast-airfield-pangborn-memorial-airport",
+  "name": "Pangborn Memorial Airport forecast",
+  "lat": 47.399,
+  "lon": -120.2065,
+  "kind": "forecast",
+  "provider": "nws",
+  "provider_ref": "47.3990,-120.2065",
+  "source": "National Weather Service",
+  "page_url": "https://forecast.weather.gov/MapClick.php?lat=47.3990&lon=-120.2065",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "attribution_text": "National Weather Service",
+  "tags": [
+    "airfield"
+  ],
+  "created_at": "2026-10-07T00:00:00Z"
+}

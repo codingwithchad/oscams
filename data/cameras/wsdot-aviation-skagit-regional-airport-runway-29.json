@@ -1,0 +1,21 @@
+{
+  "id": "wsdot-aviation-skagit-regional-airport-runway-29",
+  "name": "Skagit Regional Airport Runway 29",
+  "lat": 48.470277,
+  "lon": -122.421667,
+  "feed_url": "https://images.wsdot.wa.gov/airports/skagitRW29.jpg",
+  "feed_type": "image",
+  "source": "WSDOT Aviation",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.wa.gov/travel/aviation/airports-list",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "airfield",
+    "airport",
+    "airfield-skagit-regional-airport"
+  ],
+  "attribution_text": "WSDOT Aviation (pictures are for pilots, not an official weather briefing)",
+  "created_at": "2026-10-07T00:00:00Z"
+}

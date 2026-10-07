@@ -1,0 +1,21 @@
+{
+  "id": "wsdot-aviation-walla-walla-regional-airport-west",
+  "name": "Walla Walla Regional Airport West",
+  "lat": 46.094562,
+  "lon": -118.288037,
+  "feed_url": "https://images.wsdot.wa.gov/airports/walla3.jpg",
+  "feed_type": "image",
+  "source": "WSDOT Aviation",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.wa.gov/travel/aviation/airports-list",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "airfield",
+    "airport",
+    "airfield-walla-walla-regional-airport"
+  ],
+  "attribution_text": "WSDOT Aviation (pictures are for pilots, not an official weather briefing)",
+  "created_at": "2026-10-07T00:00:00Z"
+}

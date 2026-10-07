@@ -155,6 +155,12 @@
     "provider_ref": {
       "type": "string",
       "description": "The camera's id at the provider, e.g. a Windy webcam id."
+    },
+    "max_width": {
+      "type": "integer",
+      "minimum": 200,
+      "maximum": 2000,
+      "description": "Serve a smaller copy of the picture (pixels wide) through our server. For sources that publish very large images."
     }
   },
   "if": {

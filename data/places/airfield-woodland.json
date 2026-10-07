@@ -1,0 +1,10 @@
+{
+  "id": "airfield-woodland",
+  "name": "Woodland airfield",
+  "region": "Washington",
+  "blurb": "WSDOT Aviation airfield cameras",
+  "lat": 45.9037,
+  "lon": -122.7407,
+  "radius_miles": 1.5,
+  "collection": "airfields"
+}

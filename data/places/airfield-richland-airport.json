@@ -1,0 +1,10 @@
+{
+  "id": "airfield-richland-airport",
+  "name": "Richland Airport",
+  "region": "Washington",
+  "blurb": "WSDOT Aviation airfield cameras",
+  "lat": 46.3056,
+  "lon": -119.3042,
+  "radius_miles": 1.5,
+  "collection": "airfields"
+}

@@ -1,0 +1,10 @@
+{
+  "id": "airfield-southwest-washington-regional-airport",
+  "name": "Southwest Washington Regional Airport",
+  "region": "Washington",
+  "blurb": "WSDOT Aviation airfield cameras",
+  "lat": 46.1178,
+  "lon": -122.8983,
+  "radius_miles": 1.5,
+  "collection": "airfields"
+}

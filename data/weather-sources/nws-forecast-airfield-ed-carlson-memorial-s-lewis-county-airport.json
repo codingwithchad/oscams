@@ -1,0 +1,18 @@
+{
+  "id": "nws-forecast-airfield-ed-carlson-memorial-s-lewis-county-airport",
+  "name": "Ed Carlson Memorial \u2013 S Lewis County Airport forecast",
+  "lat": 46.4769,
+  "lon": -122.8064,
+  "kind": "forecast",
+  "provider": "nws",
+  "provider_ref": "46.4769,-122.8064",
+  "source": "National Weather Service",
+  "page_url": "https://forecast.weather.gov/MapClick.php?lat=46.4769&lon=-122.8064",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "attribution_text": "National Weather Service",
+  "tags": [
+    "airfield"
+  ],
+  "created_at": "2026-10-07T00:00:00Z"
+}

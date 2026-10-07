@@ -1,0 +1,21 @@
+{
+  "id": "wsdot-aviation-prosser-airport-northwest",
+  "name": "Prosser Airport Northwest",
+  "lat": 46.213333,
+  "lon": -119.795556,
+  "feed_url": "https://images.wsdot.wa.gov/airports/prossernw.jpg",
+  "feed_type": "image",
+  "source": "WSDOT Aviation",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.wa.gov/travel/aviation/airports-list",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "airfield",
+    "airport",
+    "airfield-prosser-airport"
+  ],
+  "attribution_text": "WSDOT Aviation (pictures are for pilots, not an official weather briefing)",
+  "created_at": "2026-10-07T00:00:00Z"
+}

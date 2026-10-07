@@ -1,0 +1,10 @@
+{
+  "id": "airfield-jefferson-county-international-airport",
+  "name": "Jefferson County International Airport",
+  "region": "Washington",
+  "blurb": "WSDOT Aviation airfield cameras",
+  "lat": 48.0552,
+  "lon": -122.81,
+  "radius_miles": 1.5,
+  "collection": "airfields"
+}

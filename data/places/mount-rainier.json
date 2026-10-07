@@ -1,0 +1,10 @@
+{
+  "id": "mount-rainier",
+  "name": "Mount Rainier (Paradise)",
+  "region": "Washington",
+  "blurb": "National Park Service cameras on the mountain",
+  "lat": 46.786,
+  "lon": -121.7352,
+  "radius_miles": 4,
+  "order": 5
+}

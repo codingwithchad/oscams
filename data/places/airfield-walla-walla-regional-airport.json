@@ -1,0 +1,10 @@
+{
+  "id": "airfield-walla-walla-regional-airport",
+  "name": "Walla Walla Regional Airport",
+  "region": "Washington",
+  "blurb": "WSDOT Aviation airfield cameras",
+  "lat": 46.0946,
+  "lon": -118.288,
+  "radius_miles": 1.5,
+  "collection": "airfields"
+}

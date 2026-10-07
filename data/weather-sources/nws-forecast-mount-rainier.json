@@ -1,0 +1,18 @@
+{
+  "id": "nws-forecast-mount-rainier",
+  "name": "Paradise forecast",
+  "lat": 46.786,
+  "lon": -121.7352,
+  "kind": "forecast",
+  "provider": "nws",
+  "provider_ref": "46.786,-121.7352",
+  "source": "National Weather Service",
+  "page_url": "https://forecast.weather.gov/MapClick.php?lat=46.786&lon=-121.7352",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "attribution_text": "National Weather Service",
+  "tags": [
+    "mount-rainier"
+  ],
+  "created_at": "2026-10-07T00:00:00Z"
+}

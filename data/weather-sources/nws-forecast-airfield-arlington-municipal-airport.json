@@ -1,0 +1,18 @@
+{
+  "id": "nws-forecast-airfield-arlington-municipal-airport",
+  "name": "Arlington Municipal Airport forecast",
+  "lat": 48.1675,
+  "lon": -122.1583,
+  "kind": "forecast",
+  "provider": "nws",
+  "provider_ref": "48.1675,-122.1583",
+  "source": "National Weather Service",
+  "page_url": "https://forecast.weather.gov/MapClick.php?lat=48.1675&lon=-122.1583",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "attribution_text": "National Weather Service",
+  "tags": [
+    "airfield"
+  ],
+  "created_at": "2026-10-07T00:00:00Z"
+}

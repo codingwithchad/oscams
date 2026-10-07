@@ -1,0 +1,18 @@
+{
+  "id": "nws-forecast-airfield-bellingham-international-airport",
+  "name": "Bellingham International Airport forecast",
+  "lat": 48.7925,
+  "lon": -122.5375,
+  "kind": "forecast",
+  "provider": "nws",
+  "provider_ref": "48.7925,-122.5375",
+  "source": "National Weather Service",
+  "page_url": "https://forecast.weather.gov/MapClick.php?lat=48.7925&lon=-122.5375",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "attribution_text": "National Weather Service",
+  "tags": [
+    "airfield"
+  ],
+  "created_at": "2026-10-07T00:00:00Z"
+}

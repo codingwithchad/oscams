@@ -1,0 +1,10 @@
+{
+  "id": "airfield-mears-field",
+  "name": "Mears Field",
+  "region": "Washington",
+  "blurb": "WSDOT Aviation airfield cameras",
+  "lat": 48.5297,
+  "lon": -121.7581,
+  "radius_miles": 1.5,
+  "collection": "airfields"
+}

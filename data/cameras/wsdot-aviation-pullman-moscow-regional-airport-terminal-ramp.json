@@ -1,0 +1,21 @@
+{
+  "id": "wsdot-aviation-pullman-moscow-regional-airport-terminal-ramp",
+  "name": "Pullman-Moscow Regional Airport Terminal Ramp",
+  "lat": 46.743611,
+  "lon": -117.109445,
+  "feed_url": "https://images.wsdot.wa.gov/airports/pullmanRamp.jpg",
+  "feed_type": "image",
+  "source": "WSDOT Aviation",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.wa.gov/travel/aviation/airports-list",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "airfield",
+    "airport",
+    "airfield-pullman-moscow-regional-airport"
+  ],
+  "attribution_text": "WSDOT Aviation (pictures are for pilots, not an official weather briefing)",
+  "created_at": "2026-10-07T00:00:00Z"
+}

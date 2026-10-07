@@ -40,7 +40,9 @@
 	const imageSrc = $derived(
 		view
 			? (providerUrl ?? camera.feed_url)
-			: `${camera.feed_url}${camera.feed_url?.includes('?') ? '&' : '?'}t=${Math.floor(tick / refreshMs)}`
+			: camera.max_width
+				? `/img/${encodeURIComponent(camera.id)}?t=${Math.floor(tick / refreshMs)}`
+				: `${camera.feed_url}${camera.feed_url?.includes('?') ? '&' : '?'}t=${Math.floor(tick / refreshMs)}`
 	);
 	const shownModified = $derived(modified ?? view?.modified ?? null);
 	const age = $derived(shownModified ? ago(shownModified, tick) : null);

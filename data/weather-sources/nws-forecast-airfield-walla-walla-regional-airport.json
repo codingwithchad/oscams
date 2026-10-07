@@ -1,0 +1,18 @@
+{
+  "id": "nws-forecast-airfield-walla-walla-regional-airport",
+  "name": "Walla Walla Regional Airport forecast",
+  "lat": 46.0946,
+  "lon": -118.288,
+  "kind": "forecast",
+  "provider": "nws",
+  "provider_ref": "46.0946,-118.2880",
+  "source": "National Weather Service",
+  "page_url": "https://forecast.weather.gov/MapClick.php?lat=46.0946&lon=-118.2880",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "attribution_text": "National Weather Service",
+  "tags": [
+    "airfield"
+  ],
+  "created_at": "2026-10-07T00:00:00Z"
+}

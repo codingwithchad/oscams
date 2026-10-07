@@ -1,0 +1,10 @@
+{
+  "id": "airfield-lopez-island-airport",
+  "name": "Lopez Island Airport",
+  "region": "Washington",
+  "blurb": "WSDOT Aviation airfield cameras",
+  "lat": 48.4839,
+  "lon": -122.9375,
+  "radius_miles": 1.5,
+  "collection": "airfields"
+}

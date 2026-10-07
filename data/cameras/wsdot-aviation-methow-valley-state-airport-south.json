@@ -1,0 +1,22 @@
+{
+  "id": "wsdot-aviation-methow-valley-state-airport-south",
+  "name": "Methow Valley State Airport South",
+  "lat": 48.424722,
+  "lon": -120.145834,
+  "feed_url": "https://images.wsdot.wa.gov/airports/methows.jpg",
+  "feed_type": "image",
+  "source": "WSDOT Aviation",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.wa.gov/travel/aviation/airports-list",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "airfield",
+    "airport",
+    "airfield-methow-valley-state-airport"
+  ],
+  "attribution_text": "WSDOT Aviation (pictures are for pilots, not an official weather briefing)",
+  "created_at": "2026-10-07T00:00:00Z",
+  "max_width": 900
+}

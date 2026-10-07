@@ -1,0 +1,10 @@
+{
+  "id": "airfield-ed-carlson-memorial-s-lewis-county-airport",
+  "name": "Ed Carlson Memorial \u2013 S Lewis County Airport",
+  "region": "Washington",
+  "blurb": "WSDOT Aviation airfield cameras",
+  "lat": 46.4769,
+  "lon": -122.8064,
+  "radius_miles": 1.5,
+  "collection": "airfields"
+}

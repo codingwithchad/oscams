@@ -1,0 +1,10 @@
+{
+  "id": "airfield-renton-municipal-airport",
+  "name": "Renton Municipal Airport",
+  "region": "Washington",
+  "blurb": "WSDOT Aviation airfield cameras",
+  "lat": 47.4931,
+  "lon": -122.2156,
+  "radius_miles": 1.5,
+  "collection": "airfields"
+}

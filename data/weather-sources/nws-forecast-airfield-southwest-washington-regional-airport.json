@@ -1,0 +1,18 @@
+{
+  "id": "nws-forecast-airfield-southwest-washington-regional-airport",
+  "name": "Southwest Washington Regional Airport forecast",
+  "lat": 46.1178,
+  "lon": -122.8983,
+  "kind": "forecast",
+  "provider": "nws",
+  "provider_ref": "46.1178,-122.8983",
+  "source": "National Weather Service",
+  "page_url": "https://forecast.weather.gov/MapClick.php?lat=46.1178&lon=-122.8983",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "attribution_text": "National Weather Service",
+  "tags": [
+    "airfield"
+  ],
+  "created_at": "2026-10-07T00:00:00Z"
+}

@@ -20,7 +20,12 @@ export const load: PageServerLoad = ({ params }) => {
 					name: p.name,
 					blurb: p.blurb,
 					liveCameras: live.length,
-					cover: live[0] ? { url: live[0].feed_url as string, name: live[0].name } : null
+					cover: live[0]
+						? {
+								url: live[0].max_width ? `/img/${live[0].id}` : (live[0].feed_url as string),
+								name: live[0].name
+							}
+						: null
 				};
 			})
 	};

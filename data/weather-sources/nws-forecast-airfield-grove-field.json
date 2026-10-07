@@ -1,0 +1,18 @@
+{
+  "id": "nws-forecast-airfield-grove-field",
+  "name": "Grove Field forecast",
+  "lat": 45.6278,
+  "lon": -122.4042,
+  "kind": "forecast",
+  "provider": "nws",
+  "provider_ref": "45.6278,-122.4042",
+  "source": "National Weather Service",
+  "page_url": "https://forecast.weather.gov/MapClick.php?lat=45.6278&lon=-122.4042",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "attribution_text": "National Weather Service",
+  "tags": [
+    "airfield"
+  ],
+  "created_at": "2026-10-07T00:00:00Z"
+}

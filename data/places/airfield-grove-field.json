@@ -1,0 +1,10 @@
+{
+  "id": "airfield-grove-field",
+  "name": "Grove Field",
+  "region": "Washington",
+  "blurb": "WSDOT Aviation airfield cameras",
+  "lat": 45.6278,
+  "lon": -122.4042,
+  "radius_miles": 1.5,
+  "collection": "airfields"
+}

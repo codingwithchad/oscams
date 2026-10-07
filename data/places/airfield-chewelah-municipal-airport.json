@@ -1,0 +1,10 @@
+{
+  "id": "airfield-chewelah-municipal-airport",
+  "name": "Chewelah Municipal Airport",
+  "region": "Washington",
+  "blurb": "WSDOT Aviation airfield cameras",
+  "lat": 48.314,
+  "lon": -117.7433,
+  "radius_miles": 1.5,
+  "collection": "airfields"
+}

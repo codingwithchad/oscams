@@ -1,0 +1,10 @@
+{
+  "id": "airfield-methow-valley-state-airport",
+  "name": "Methow Valley State Airport",
+  "region": "Washington",
+  "blurb": "WSDOT Aviation airfield cameras",
+  "lat": 48.4247,
+  "lon": -120.1458,
+  "radius_miles": 1.5,
+  "collection": "airfields"
+}

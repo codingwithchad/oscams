@@ -1,0 +1,10 @@
+{
+  "id": "airfield-anacortes-airport",
+  "name": "Anacortes Airport",
+  "region": "Washington",
+  "blurb": "WSDOT Aviation airfield cameras",
+  "lat": 48.4983,
+  "lon": -122.6625,
+  "radius_miles": 1.5,
+  "collection": "airfields"
+}

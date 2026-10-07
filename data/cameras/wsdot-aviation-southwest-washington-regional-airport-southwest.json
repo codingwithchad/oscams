@@ -1,0 +1,21 @@
+{
+  "id": "wsdot-aviation-southwest-washington-regional-airport-southwest",
+  "name": "Southwest Washington Regional Airport Southwest",
+  "lat": 46.117777,
+  "lon": -122.898334,
+  "feed_url": "https://images.wsdot.wa.gov/airports/kelsosw.jpg",
+  "feed_type": "image",
+  "source": "WSDOT Aviation",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.wa.gov/travel/aviation/airports-list",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "airfield",
+    "airport",
+    "airfield-southwest-washington-regional-airport"
+  ],
+  "attribution_text": "WSDOT Aviation (pictures are for pilots, not an official weather briefing)",
+  "created_at": "2026-10-07T00:00:00Z"
+}

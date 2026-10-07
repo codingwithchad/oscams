@@ -1,0 +1,10 @@
+{
+  "id": "airfield-felts-field",
+  "name": "Felts Field",
+  "region": "Washington",
+  "blurb": "WSDOT Aviation airfield cameras",
+  "lat": 47.6805,
+  "lon": -117.32,
+  "radius_miles": 1.5,
+  "collection": "airfields"
+}

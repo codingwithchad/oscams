@@ -1,0 +1,10 @@
+{
+  "id": "airfield-bellingham-international-airport",
+  "name": "Bellingham International Airport",
+  "region": "Washington",
+  "blurb": "WSDOT Aviation airfield cameras",
+  "lat": 48.7925,
+  "lon": -122.5375,
+  "radius_miles": 1.5,
+  "collection": "airfields"
+}

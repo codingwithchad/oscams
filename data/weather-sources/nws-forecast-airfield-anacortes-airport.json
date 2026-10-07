@@ -1,0 +1,18 @@
+{
+  "id": "nws-forecast-airfield-anacortes-airport",
+  "name": "Anacortes Airport forecast",
+  "lat": 48.4983,
+  "lon": -122.6625,
+  "kind": "forecast",
+  "provider": "nws",
+  "provider_ref": "48.4983,-122.6625",
+  "source": "National Weather Service",
+  "page_url": "https://forecast.weather.gov/MapClick.php?lat=48.4983&lon=-122.6625",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "attribution_text": "National Weather Service",
+  "tags": [
+    "airfield"
+  ],
+  "created_at": "2026-10-07T00:00:00Z"
+}

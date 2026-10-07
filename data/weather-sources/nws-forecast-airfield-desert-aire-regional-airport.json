@@ -1,0 +1,18 @@
+{
+  "id": "nws-forecast-airfield-desert-aire-regional-airport",
+  "name": "Desert Aire Regional Airport forecast",
+  "lat": 46.686,
+  "lon": -119.9183,
+  "kind": "forecast",
+  "provider": "nws",
+  "provider_ref": "46.6860,-119.9183",
+  "source": "National Weather Service",
+  "page_url": "https://forecast.weather.gov/MapClick.php?lat=46.6860&lon=-119.9183",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "attribution_text": "National Weather Service",
+  "tags": [
+    "airfield"
+  ],
+  "created_at": "2026-10-07T00:00:00Z"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "nws-forecast-airfield-packwood-airport",
+  "name": "Packwood Airport forecast",
+  "lat": 46.6039,
+  "lon": -121.6778,
+  "kind": "forecast",
+  "provider": "nws",
+  "provider_ref": "46.6039,-121.6778",
+  "source": "National Weather Service",
+  "page_url": "https://forecast.weather.gov/MapClick.php?lat=46.6039&lon=-121.6778",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "attribution_text": "National Weather Service",
+  "tags": [
+    "airfield"
+  ],
+  "created_at": "2026-10-07T00:00:00Z"
+}

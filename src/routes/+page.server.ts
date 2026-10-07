@@ -20,7 +20,12 @@ export const load: PageServerLoad = () => {
 			collection: p.collection ?? null,
 			liveCameras: live.length,
 			// The nearest live picture becomes the place's cover photo.
-			cover: direct ? { url: direct.feed_url as string, name: direct.name } : null
+			cover: direct
+				? {
+						url: direct.max_width ? `/img/${direct.id}` : (direct.feed_url as string),
+						name: direct.name
+					}
+				: null
 		};
 	});
 	// Most viewed across everyone first; ties keep the order set in the data files.

@@ -18,6 +18,8 @@ interface Located {
 
 export interface Camera extends Located {
 	feed_url?: string;
+	/** Serve a smaller copy of the picture (pixels wide) for very large sources. */
+	max_width?: number;
 	provider?: 'windy';
 	provider_ref?: string;
 	view?: ProviderView;

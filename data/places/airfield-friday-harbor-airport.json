@@ -1,0 +1,10 @@
+{
+  "id": "airfield-friday-harbor-airport",
+  "name": "Friday Harbor Airport",
+  "region": "Washington",
+  "blurb": "WSDOT Aviation airfield cameras",
+  "lat": 48.5219,
+  "lon": -123.0242,
+  "radius_miles": 1.5,
+  "collection": "airfields"
+}

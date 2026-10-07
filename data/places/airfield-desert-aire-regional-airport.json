@@ -1,0 +1,10 @@
+{
+  "id": "airfield-desert-aire-regional-airport",
+  "name": "Desert Aire Regional Airport",
+  "region": "Washington",
+  "blurb": "WSDOT Aviation airfield cameras",
+  "lat": 46.686,
+  "lon": -119.9183,
+  "radius_miles": 1.5,
+  "collection": "airfields"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "nws-forecast-airfield-lopez-island-airport",
+  "name": "Lopez Island Airport forecast",
+  "lat": 48.4839,
+  "lon": -122.9375,
+  "kind": "forecast",
+  "provider": "nws",
+  "provider_ref": "48.4839,-122.9375",
+  "source": "National Weather Service",
+  "page_url": "https://forecast.weather.gov/MapClick.php?lat=48.4839&lon=-122.9375",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "attribution_text": "National Weather Service",
+  "tags": [
+    "airfield"
+  ],
+  "created_at": "2026-10-07T00:00:00Z"
+}

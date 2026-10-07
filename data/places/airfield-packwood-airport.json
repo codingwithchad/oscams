@@ -1,0 +1,10 @@
+{
+  "id": "airfield-packwood-airport",
+  "name": "Packwood Airport",
+  "region": "Washington",
+  "blurb": "WSDOT Aviation airfield cameras",
+  "lat": 46.6039,
+  "lon": -121.6778,
+  "radius_miles": 1.5,
+  "collection": "airfields"
+}

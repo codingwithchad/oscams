@@ -1,0 +1,18 @@
+{
+  "id": "nws-forecast-airfield-richland-airport",
+  "name": "Richland Airport forecast",
+  "lat": 46.3056,
+  "lon": -119.3042,
+  "kind": "forecast",
+  "provider": "nws",
+  "provider_ref": "46.3056,-119.3042",
+  "source": "National Weather Service",
+  "page_url": "https://forecast.weather.gov/MapClick.php?lat=46.3056&lon=-119.3042",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "attribution_text": "National Weather Service",
+  "tags": [
+    "airfield"
+  ],
+  "created_at": "2026-10-07T00:00:00Z"
+}

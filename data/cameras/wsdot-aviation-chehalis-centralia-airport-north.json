@@ -1,0 +1,21 @@
+{
+  "id": "wsdot-aviation-chehalis-centralia-airport-north",
+  "name": "Chehalis-Centralia Airport North",
+  "lat": 46.676944,
+  "lon": -122.9825,
+  "feed_url": "https://images.wsdot.wa.gov/airports/chehalis9.jpg",
+  "feed_type": "image",
+  "source": "WSDOT Aviation",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.wa.gov/travel/aviation/airports-list",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "airfield",
+    "airport",
+    "airfield-chehalis-centralia-airport"
+  ],
+  "attribution_text": "WSDOT Aviation (pictures are for pilots, not an official weather briefing)",
+  "created_at": "2026-10-07T00:00:00Z"
+}

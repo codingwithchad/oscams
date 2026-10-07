@@ -1,0 +1,10 @@
+{
+  "id": "airfield-moses-lake-municipal-airport",
+  "name": "Moses Lake Municipal Airport",
+  "region": "Washington",
+  "blurb": "WSDOT Aviation airfield cameras",
+  "lat": 47.1419,
+  "lon": -119.2378,
+  "radius_miles": 1.5,
+  "collection": "airfields"
+}

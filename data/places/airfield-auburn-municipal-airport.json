@@ -1,0 +1,10 @@
+{
+  "id": "airfield-auburn-municipal-airport",
+  "name": "Auburn Municipal Airport",
+  "region": "Washington",
+  "blurb": "WSDOT Aviation airfield cameras",
+  "lat": 47.3275,
+  "lon": -122.2264,
+  "radius_miles": 1.5,
+  "collection": "airfields"
+}

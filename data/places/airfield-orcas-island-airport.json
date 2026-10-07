@@ -1,0 +1,10 @@
+{
+  "id": "airfield-orcas-island-airport",
+  "name": "Orcas Island Airport",
+  "region": "Washington",
+  "blurb": "WSDOT Aviation airfield cameras",
+  "lat": 48.7083,
+  "lon": -122.9106,
+  "radius_miles": 1.5,
+  "collection": "airfields"
+}

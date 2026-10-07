@@ -56,7 +56,7 @@
 	/>
 
 	{#if data.collections.length}
-		<h2 class="section-title">Ferries, border &amp; airports</h2>
+		<h2 class="section-title">Browse</h2>
 		<nav class="collections" aria-label="Browse by type">
 			{#each data.collections as c (c.id)}
 				<a class="collection" href="/collections/{encodeURIComponent(c.id)}">

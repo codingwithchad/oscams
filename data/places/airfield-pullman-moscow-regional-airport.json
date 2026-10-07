@@ -1,0 +1,10 @@
+{
+  "id": "airfield-pullman-moscow-regional-airport",
+  "name": "Pullman-Moscow Regional Airport",
+  "region": "Washington",
+  "blurb": "WSDOT Aviation airfield cameras",
+  "lat": 46.7436,
+  "lon": -117.1094,
+  "radius_miles": 1.5,
+  "collection": "airfields"
+}

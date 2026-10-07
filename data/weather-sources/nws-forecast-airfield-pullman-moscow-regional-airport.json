@@ -1,0 +1,18 @@
+{
+  "id": "nws-forecast-airfield-pullman-moscow-regional-airport",
+  "name": "Pullman-Moscow Regional Airport forecast",
+  "lat": 46.7436,
+  "lon": -117.1094,
+  "kind": "forecast",
+  "provider": "nws",
+  "provider_ref": "46.7436,-117.1094",
+  "source": "National Weather Service",
+  "page_url": "https://forecast.weather.gov/MapClick.php?lat=46.7436&lon=-117.1094",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "attribution_text": "National Weather Service",
+  "tags": [
+    "airfield"
+  ],
+  "created_at": "2026-10-07T00:00:00Z"
+}

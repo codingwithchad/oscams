@@ -1,0 +1,10 @@
+{
+  "id": "airfield-colville-municipal-airport",
+  "name": "Colville Municipal Airport",
+  "region": "Washington",
+  "blurb": "WSDOT Aviation airfield cameras",
+  "lat": 48.5439,
+  "lon": -117.8839,
+  "radius_miles": 1.5,
+  "collection": "airfields"
+}

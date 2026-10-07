@@ -1,0 +1,10 @@
+{
+  "id": "airfield-arlington-municipal-airport",
+  "name": "Arlington Municipal Airport",
+  "region": "Washington",
+  "blurb": "WSDOT Aviation airfield cameras",
+  "lat": 48.1675,
+  "lon": -122.1583,
+  "radius_miles": 1.5,
+  "collection": "airfields"
+}

@@ -1,0 +1,22 @@
+{
+  "id": "wsdot-aviation-pangborn-memorial-airport",
+  "name": "Pangborn Memorial Airport",
+  "lat": 47.399,
+  "lon": -120.2065,
+  "feed_url": "https://cam.pangbornairport.com/webcam/pawebcam.jpg",
+  "feed_type": "image",
+  "source": "WSDOT Aviation",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.wa.gov/travel/aviation/airports-list",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "airfield",
+    "airport",
+    "airfield-pangborn-memorial-airport"
+  ],
+  "attribution_text": "WSDOT Aviation (pictures are for pilots, not an official weather briefing)",
+  "created_at": "2026-10-07T00:00:00Z",
+  "max_width": 900
+}

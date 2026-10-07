@@ -1,0 +1,10 @@
+{
+  "id": "airfield-prosser-airport",
+  "name": "Prosser Airport",
+  "region": "Washington",
+  "blurb": "WSDOT Aviation airfield cameras",
+  "lat": 46.2133,
+  "lon": -119.7956,
+  "radius_miles": 1.5,
+  "collection": "airfields"
+}

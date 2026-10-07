@@ -1,0 +1,10 @@
+{
+  "id": "airfield-easton-airport",
+  "name": "Easton Airport",
+  "region": "Washington",
+  "blurb": "WSDOT Aviation airfield cameras",
+  "lat": 47.2542,
+  "lon": -121.1853,
+  "radius_miles": 1.5,
+  "collection": "airfields"
+}

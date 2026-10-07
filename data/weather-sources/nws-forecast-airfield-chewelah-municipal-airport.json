@@ -1,0 +1,18 @@
+{
+  "id": "nws-forecast-airfield-chewelah-municipal-airport",
+  "name": "Chewelah Municipal Airport forecast",
+  "lat": 48.314,
+  "lon": -117.7433,
+  "kind": "forecast",
+  "provider": "nws",
+  "provider_ref": "48.3140,-117.7433",
+  "source": "National Weather Service",
+  "page_url": "https://forecast.weather.gov/MapClick.php?lat=48.3140&lon=-117.7433",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "attribution_text": "National Weather Service",
+  "tags": [
+    "airfield"
+  ],
+  "created_at": "2026-10-07T00:00:00Z"
+}
