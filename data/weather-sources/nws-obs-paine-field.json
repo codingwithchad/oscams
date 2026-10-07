@@ -1,0 +1,19 @@
+{
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "tags": [
+    "airport",
+    "paine-field"
+  ],
+  "created_at": "2026-10-07T00:00:00Z",
+  "id": "nws-obs-paine-field",
+  "name": "Paine Field airport weather now",
+  "lat": 47.9063,
+  "lon": -122.2816,
+  "kind": "station",
+  "provider": "nws-obs",
+  "provider_ref": "KPAE",
+  "source": "National Weather Service",
+  "page_url": "https://www.weather.gov/wrh/timeseries?site=KPAE",
+  "attribution_text": "National Weather Service"
+}

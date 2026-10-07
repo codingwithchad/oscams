@@ -1,0 +1,19 @@
+{
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "tags": [
+    "airport",
+    "paine-field"
+  ],
+  "created_at": "2026-10-07T00:00:00Z",
+  "id": "nws-forecast-paine-field",
+  "name": "Paine Field forecast",
+  "lat": 47.9063,
+  "lon": -122.2816,
+  "kind": "forecast",
+  "provider": "nws",
+  "provider_ref": "47.9063,-122.2816",
+  "source": "National Weather Service",
+  "page_url": "https://forecast.weather.gov/MapClick.php?lat=47.9063&lon=-122.2816",
+  "attribution_text": "National Weather Service"
+}

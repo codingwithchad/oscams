@@ -77,3 +77,12 @@ Both use the WSDOT access code (`WSDOT_CODE`). Places overlap by distance, so a 
 ## Featured drives
 
 Files in `data/drives/` (schema `drive.schema.json`) are ready-made trips shown on the home page under Plan a drive. `from` and `to` can be a town, zip, address, a place id, or `lat,lon` (coordinates skip the place search; set `from_label` to name them). Example: `us2-everett-stevens-pass`.
+
+## Airports
+
+The `airports` collection has one place per airport (`airport-<name>`), each with the WSDOT cameras on the roads in, any airport cameras (via Windy), and three weather sources:
+- `faa-status` (kind `airport`): current FAA ground stops, ground delays, arrival and departure delays and closures. The FAA feed lists only airports with a problem, so no entry means "none reported". Notices that only restrict general aviation are ignored.
+- `nws-obs` (kind `station`): the airport's own weather station (sky, temperature, visibility, wind). Visibility matters for flights.
+- A normal NWS forecast.
+
+Security checkpoint wait times are not included: there is no official open feed, and the third-party estimates found were not reliable.

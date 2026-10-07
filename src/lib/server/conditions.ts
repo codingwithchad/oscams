@@ -1,5 +1,6 @@
 import { isDormant } from '../geo';
 import type { Conditions, Nearby, WeatherSource } from '../types';
+import { faaRows, observationRows } from '../airport';
 import { hourlyRows, type HourlyPeriod } from '../forecast';
 import { borderRows, ferryRows, type BorderReading, type TerminalSpace } from '../transit';
 import { localStamp, parseBuoy, upcomingTides, type TidePrediction } from '../marine';
@@ -177,6 +178,26 @@ async function fetchBorder(src: WeatherSource): Promise<Row[]> {
 	);
 }
 
+async function fetchFaa(src: WeatherSource): Promise<Row[]> {
+	const xml = await cached('faa:status', 2 * 60 * 1000, async () => {
+		const res = await fetch('https://nasstatus.faa.gov/api/airport-status-information', {
+			headers: { 'User-Agent': USER_AGENT },
+			signal: AbortSignal.timeout(8000)
+		});
+		if (!res.ok) throw new Error(`upstream ${res.status}`);
+		return res.text();
+	});
+	return faaRows(xml, src.provider_ref ?? '');
+}
+
+async function fetchObservation(src: WeatherSource): Promise<Row[]> {
+	const obs = await getJson<Parameters<typeof observationRows>[0]>(
+		`https://api.weather.gov/stations/${encodeURIComponent(src.provider_ref ?? '')}/observations/latest`,
+		{ 'User-Agent': USER_AGENT, Accept: 'application/geo+json' }
+	);
+	return observationRows(obs);
+}
+
 const adapters: Record<
 	NonNullable<WeatherSource['provider']>,
 	(s: WeatherSource, at?: number) => Promise<Row[]>
@@ -187,7 +208,9 @@ const adapters: Record<
 	ndbc: fetchBuoy,
 	'noaa-tides': fetchTides,
 	'wsdot-ferry': fetchFerry,
-	'wsdot-border': fetchBorder
+	'wsdot-border': fetchBorder,
+	'faa-status': fetchFaa,
+	'nws-obs': fetchObservation
 };
 
 /** Fetch live values for one source. Never throws: problems come back as state "error". */
@@ -211,7 +234,10 @@ export async function getConditions(
 		return { ...base, state: 'error', note: 'No way to fetch this source yet.', rows: [] };
 	try {
 		// Sailing space and border waits change quickly; forecasts and readings do not.
-		const fast = src.provider === 'wsdot-ferry' || src.provider === 'wsdot-border';
+		const fast =
+			src.provider === 'wsdot-ferry' ||
+			src.provider === 'wsdot-border' ||
+			src.provider === 'faa-status';
 		// Forecasts for a future arrival time are asked for by the 10 minute slot so they can be cached.
 		const at = src.kind === 'forecast' ? opts.at : undefined;
 		const slot = at === undefined ? 'now' : Math.floor(at / 600_000);

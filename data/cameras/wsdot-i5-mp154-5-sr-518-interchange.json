@@ -1,0 +1,23 @@
+{
+  "id": "wsdot-i5-mp154-5-sr-518-interchange",
+  "name": "I-5 at MP 154.5: SR 518 Interchange",
+  "lat": 47.462726,
+  "lon": -122.265738,
+  "feed_url": "https://images.wsdot.wa.gov/nw/005vc15452.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "airport",
+    "sea-tac",
+    "road"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "I 5",
+  "milepost": 154.5
+}

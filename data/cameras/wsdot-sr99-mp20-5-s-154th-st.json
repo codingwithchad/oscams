@@ -1,0 +1,23 @@
+{
+  "id": "wsdot-sr99-mp20-5-s-154th-st",
+  "name": "SR 99 at MP 20.5: S 154th St",
+  "lat": 47.465259,
+  "lon": -122.288931,
+  "feed_url": "https://images.wsdot.wa.gov/nw/099vc02054.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "airport",
+    "sea-tac",
+    "road"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "SR 99",
+  "milepost": 20.5
+}

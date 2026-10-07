@@ -1,0 +1,19 @@
+{
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "tags": [
+    "airport",
+    "paine-field"
+  ],
+  "created_at": "2026-10-07T00:00:00Z",
+  "id": "faa-delays-paine-field",
+  "name": "Paine Field flight delays",
+  "lat": 47.9063,
+  "lon": -122.2816,
+  "kind": "airport",
+  "provider": "faa-status",
+  "provider_ref": "PAE",
+  "source": "FAA",
+  "page_url": "https://nasstatus.faa.gov/",
+  "attribution_text": "Federal Aviation Administration"
+}

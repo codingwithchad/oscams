@@ -1,0 +1,22 @@
+{
+  "id": "sea-tac-main-terminal-garage",
+  "name": "Sea-Tac main terminal parking garage",
+  "description": "View from the main terminal garage.",
+  "lat": 47.44817,
+  "lon": -122.29581,
+  "feed_type": "image",
+  "source": "KING 5 via Windy.com",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "provider": "windy",
+  "provider_ref": "1343923806",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "page_url": "https://windy.com/webcams/1343923806",
+  "tags": [
+    "airport",
+    "sea-tac"
+  ],
+  "attribution_text": "KING 5 via Windy.com",
+  "created_at": "2026-10-07T00:00:00Z"
+}

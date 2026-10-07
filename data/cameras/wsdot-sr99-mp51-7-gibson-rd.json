@@ -1,0 +1,23 @@
+{
+  "id": "wsdot-sr99-mp51-7-gibson-rd",
+  "name": "SR 99 at MP 51.7: Gibson Rd",
+  "lat": 47.883089,
+  "lon": -122.264301,
+  "feed_url": "https://images.wsdot.wa.gov/nw/099vc05177.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "airport",
+    "paine-field",
+    "road"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "SR 99",
+  "milepost": 51.7
+}

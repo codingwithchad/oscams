@@ -1,0 +1,10 @@
+{
+  "id": "airport-paine-field",
+  "name": "Paine Field (PAE)",
+  "region": "Washington",
+  "blurb": "Everett: approach roads and delays",
+  "lat": 47.9063,
+  "lon": -122.2816,
+  "radius_miles": 2.0,
+  "collection": "airports"
+}

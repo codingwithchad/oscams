@@ -1,0 +1,19 @@
+{
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "tags": [
+    "airport",
+    "sea-tac"
+  ],
+  "created_at": "2026-10-07T00:00:00Z",
+  "id": "nws-forecast-sea-tac",
+  "name": "Sea-Tac forecast",
+  "lat": 47.4502,
+  "lon": -122.3088,
+  "kind": "forecast",
+  "provider": "nws",
+  "provider_ref": "47.4502,-122.3088",
+  "source": "National Weather Service",
+  "page_url": "https://forecast.weather.gov/MapClick.php?lat=47.4502&lon=-122.3088",
+  "attribution_text": "National Weather Service"
+}

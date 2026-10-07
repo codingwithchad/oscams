@@ -1,0 +1,19 @@
+{
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "tags": [
+    "airport",
+    "sea-tac"
+  ],
+  "created_at": "2026-10-07T00:00:00Z",
+  "id": "faa-delays-sea-tac",
+  "name": "Sea-Tac flight delays",
+  "lat": 47.4502,
+  "lon": -122.3088,
+  "kind": "airport",
+  "provider": "faa-status",
+  "provider_ref": "SEA",
+  "source": "FAA",
+  "page_url": "https://nasstatus.faa.gov/",
+  "attribution_text": "Federal Aviation Administration"
+}

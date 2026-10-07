@@ -1,0 +1,10 @@
+{
+  "id": "airport-sea-tac",
+  "name": "Sea-Tac Airport (SEA)",
+  "region": "Washington",
+  "blurb": "Seattle-Tacoma International: approach roads, terminal garage, delays",
+  "lat": 47.4502,
+  "lon": -122.3088,
+  "radius_miles": 2.5,
+  "collection": "airports"
+}
