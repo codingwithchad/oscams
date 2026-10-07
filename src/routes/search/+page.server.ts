@@ -2,6 +2,7 @@ import { isDormant, nearby } from '../../lib/geo';
 import { getCatalog } from '../../lib/server/catalog';
 import { getConditions } from '../../lib/server/conditions';
 import { geocode } from '../../lib/server/geocode';
+import { recordView } from '../../lib/server/popularity';
 import { withLiveLinks } from '../../lib/server/live';
 import type { Camera, Nearby, Place } from '../../lib/types';
 import type { PageServerLoad } from './$types';
@@ -42,6 +43,7 @@ export const load: PageServerLoad = async ({ url, setHeaders }) => {
 	}
 	if (!place) return { ...empty, place: null, failed };
 
+	if (featured) recordView(featured.id);
 	setHeaders({ 'cache-control': 'private, max-age=60' });
 	const found = await withLiveLinks(nearby(cameras, place, radius));
 	const offline = (c: Nearby<Camera>) => isDormant(c) || !c.feed_url;

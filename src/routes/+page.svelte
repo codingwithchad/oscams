@@ -1,13 +1,40 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
-	import type { PageProps } from './$types';
-	import TripForm from '../lib/TripForm.svelte';
 	import InstallHelp from '../lib/InstallHelp.svelte';
 	import SearchBox from '../lib/SearchBox.svelte';
+	import TripForm from '../lib/TripForm.svelte';
+	import { loadRecents, type Recent } from '../lib/recents';
+	import type { PageProps } from './$types';
 
 	let { data }: PageProps = $props();
 	let locating = $state(false);
 	let error = $state('');
+	let recents = $state<Recent[]>([]);
+
+	$effect(() => {
+		recents = loadRecents();
+	});
+
+	const SHOWN = 3;
+	const byId = $derived(new Map(data.places.map((p) => [p.id, p])));
+
+	// Places this person looked at recently come first, then whatever is most viewed by everyone.
+	const shown = $derived.by(() => {
+		const ids: string[] = [];
+		for (const r of recents)
+			if (r.kind === 'place' && byId.has(r.id) && !ids.includes(r.id)) ids.push(r.id);
+		for (const id of data.popular) if (!ids.includes(id)) ids.push(id);
+		return ids.slice(0, SHOWN).map((id) => byId.get(id)!);
+	});
+	const more = $derived(
+		data.popular.filter((id) => !shown.some((s) => s.id === id)).map((id) => byId.get(id)!)
+	);
+	const searches = $derived(
+		recents.filter((r): r is Extract<Recent, { kind: 'search' }> => r.kind === 'search').slice(0, 4)
+	);
+	const chips = $derived(
+		data.places.filter((p) => !p.collection).map((p) => ({ id: p.id, name: p.name }))
+	);
 
 	function useMyLocation() {
 		error = '';
@@ -44,10 +71,29 @@
 </header>
 
 <main class="home">
-	{#if data.places.length}
-		<h2 class="section-title">Pick a place</h2>
-		<nav class="places" aria-label="Available places">
-			{#each data.places as place (place.id)}
+	<h2 class="section-title first">Plan a drive</h2>
+	<section class="trip-card">
+		<p>Pick your start and where you're headed. Cameras show in the order you'll pass them.</p>
+		<TripForm places={chips} />
+	</section>
+
+	{#if data.collections.length}
+		<h2 class="section-title">Ferries &amp; border</h2>
+		<nav class="collections" aria-label="Browse by type">
+			{#each data.collections as c (c.id)}
+				<a class="collection" href="/collections/{encodeURIComponent(c.id)}">
+					<span class="place-name">{c.name}</span>
+					<span class="place-sub">{c.blurb}</span>
+					<span class="place-count">{c.places} places</span>
+				</a>
+			{/each}
+		</nav>
+	{/if}
+
+	{#if shown.length}
+		<h2 class="section-title">Places</h2>
+		<nav class="places" aria-label="Places">
+			{#each shown as place (place.id)}
 				<a class="place" href="/search?place={encodeURIComponent(place.id)}">
 					<span class="cover">
 						{#if place.cover}
@@ -63,33 +109,32 @@
 				</a>
 			{/each}
 		</nav>
+		{#if more.length}
+			<details class="more-places">
+				<summary>All places ({more.length} more)</summary>
+				<ul>
+					{#each more as place (place.id)}
+						<li><a href="/search?place={encodeURIComponent(place.id)}">{place.name}</a></li>
+					{/each}
+				</ul>
+			</details>
+		{/if}
 	{/if}
-
-	{#if data.collections.length}
-		<h2 class="section-title">Browse</h2>
-		<nav class="collections" aria-label="Browse by type">
-			{#each data.collections as c (c.id)}
-				<a class="collection" href="/collections/{encodeURIComponent(c.id)}">
-					<span class="place-name">{c.name}</span>
-					<span class="place-sub">{c.blurb}</span>
-					<span class="place-count">{c.places} places</span>
-				</a>
-			{/each}
-		</nav>
-	{/if}
-
-	<h2 class="section-title">Plan a drive</h2>
-	<section class="trip-card">
-		<p>Pick your start and where you're headed. Cameras show in the order you'll pass them.</p>
-		<TripForm places={data.places.map((p) => ({ id: p.id, name: p.name }))} />
-	</section>
 
 	<h2 class="section-title">Somewhere else?</h2>
 	<SearchBox />
+	{#if searches.length}
+		<div class="chips recent-searches" aria-label="Recent searches">
+			{#each searches as s (s.q)}
+				<a class="chip" href="/search?q={encodeURIComponent(s.q)}">{s.label}</a>
+			{/each}
+		</div>
+	{/if}
 	<button class="secondary wide" onclick={useMyLocation} disabled={locating}>
 		{locating ? 'Finding you…' : 'Use my location'}
 	</button>
 	{#if error}<p class="error">{error}</p>{/if}
+
 	<InstallHelp />
 	<p class="hint">We're adding places. Search any town or zip to see what's nearby.</p>
 </main>

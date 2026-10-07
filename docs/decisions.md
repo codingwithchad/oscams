@@ -15,3 +15,7 @@ Windy.com already offers a map of cameras, so OS Cams focuses on the drive: ente
 - Route comes from the free OSRM demo server (cached). Replace with a paid or self-hosted router before heavy use.
 - Corridor 1.5 mi either side of the road, 2 mi buffer past the destination, 2.5 mi radius around the destination for places like resorts that sit off the road.
 - Follow mode needs the page open and the screen on (it asks for a screen wake lock). It is meant for passengers and pre-trip checks, not for a driver to study.
+
+## 2026-10-07: Home page order and "Places"
+
+Home order: Plan a drive, Ferries & border, Places, search, install help. The three Places shown are: places this device viewed recently first (kept in the phone's localStorage, no accounts), then the places most viewed by everyone (anonymous in-memory counters that reset when the server restarts). Remaining places are under "All places". Recent free-text searches show as small chips under the search box.

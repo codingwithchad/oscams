@@ -4,11 +4,18 @@
 	import OfflineCameras from '../../lib/OfflineCameras.svelte';
 	import SearchBox from '../../lib/SearchBox.svelte';
 	import { rememberPlace } from '../../lib/lastPlace';
+	import { rememberRecent } from '../../lib/recents';
 	import type { PageProps } from './$types';
 
 	let { data }: PageProps = $props();
 	$effect(() => {
-		if (data.place) rememberPlace(location.pathname + location.search);
+		if (!data.place) return;
+		rememberPlace(location.pathname + location.search);
+		rememberRecent(
+			data.placeId
+				? { kind: 'place', id: data.placeId }
+				: { kind: 'search', q: data.q, label: data.place.label }
+		);
 	});
 	const radii = [10, 25, 50, 75];
 	const base = $derived(

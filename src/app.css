@@ -681,3 +681,26 @@ button.wide {
 .wx-list li {
 	padding: 1px 0;
 }
+
+/* Home ordering */
+.section-title.first {
+	margin-top: 22px;
+}
+.recent-searches {
+	margin: 0 0 10px;
+}
+.recent-searches .chip {
+	text-decoration: none;
+}
+.more-places {
+	margin-top: 12px;
+	color: var(--muted);
+	font-size: 0.9rem;
+}
+.more-places summary {
+	cursor: pointer;
+}
+.more-places ul {
+	margin: 6px 0 0;
+	padding-left: 18px;
+}
