@@ -1,0 +1,10 @@
+{
+  "id": "mukilteo",
+  "name": "Mukilteo",
+  "region": "Washington",
+  "blurb": "Ferry terminal, Lighthouse Park and SR 525",
+  "lat": 47.9496,
+  "lon": -122.305,
+  "radius_miles": 2,
+  "order": 1
+}

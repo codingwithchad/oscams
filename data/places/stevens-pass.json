@@ -4,5 +4,6 @@
   "region": "Washington",
   "blurb": "US 2 mountain pass and ski resort",
   "lat": 47.7448,
-  "lon": -121.089
+  "lon": -121.089,
+  "order": 2
 }
