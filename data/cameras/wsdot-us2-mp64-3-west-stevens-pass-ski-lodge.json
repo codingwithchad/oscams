@@ -11,7 +11,7 @@
   "route": "US 2",
   "milepost": 64.3,
   "embed_mode": "direct",
-  "refresh_seconds": 300,
+  "refresh_seconds": 120,
   "tags": [
     "road",
     "mountain-pass",

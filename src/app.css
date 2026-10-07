@@ -301,3 +301,57 @@ dd {
 .offline li {
 	padding: 2px 0;
 }
+
+/* Tap to enlarge */
+.image-button {
+	display: block;
+	position: relative;
+	width: 100%;
+	padding: 0;
+	border-radius: 0;
+	background: #000;
+	min-height: 0;
+}
+.image-button .age {
+	position: absolute;
+	left: 8px;
+	bottom: 8px;
+	padding: 2px 8px;
+	border-radius: 999px;
+	font-size: 0.75rem;
+	background: rgb(0 0 0 / 0.65);
+	color: #fff;
+}
+.image-button .age.stale {
+	background: #8a5a00;
+}
+.lightbox {
+	width: min(96vw, 1100px);
+	max-height: 96vh;
+	padding: 12px;
+	border: 0;
+	border-radius: 14px;
+	background: var(--card);
+	color: var(--text);
+}
+.lightbox::backdrop {
+	background: rgb(0 0 0 / 0.8);
+}
+.lightbox img {
+	display: block;
+	width: 100%;
+	max-height: 72vh;
+	object-fit: contain;
+	background: #000;
+	border-radius: 8px;
+}
+.lightbox-bar {
+	display: flex;
+	justify-content: space-between;
+	gap: 12px;
+	align-items: start;
+	margin-bottom: 10px;
+}
+.lightbox-bar .sub {
+	display: block;
+}

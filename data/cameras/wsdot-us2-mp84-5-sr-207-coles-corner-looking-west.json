@@ -11,7 +11,7 @@
   "page_url": "https://wsdot.com/travel/real-time/mountainpasses/stevens",
   "route": "US 2",
   "embed_mode": "direct",
-  "refresh_seconds": 300,
+  "refresh_seconds": 120,
   "tags": [
     "road",
     "stevens-pass"
