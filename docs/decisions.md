@@ -41,3 +41,7 @@ A zip search used to show 22 weather blocks (about 2,400 px) and 308 cameras. No
 ## 2026-10-07: Ferry, airport and border reports only when you're going there
 
 Sailings, flight delays and border waits are shown only when the place (or the drive's destination) is a ferry terminal, airport or crossing (its collection), or the place's data opts in with `include_kinds` (Mukilteo shows sailings). Ordinary places and zip searches never show them, and drives only show them at the destination, where they are listed first.
+
+## 2026-10-07: Home page polish pass 1
+
+Slim header (about a quarter of its old height): camera mark, "OS Cams" and the slogan "Live views along your way." ("Know before you go" is what DOT sites say.) Browse became two-across tiles with an icon, name and place count; each collection sets its `icon` in its data file. The start card now sits right under the header so search and the tiles are visible without scrolling.

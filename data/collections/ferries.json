@@ -2,5 +2,6 @@
   "id": "ferries",
   "name": "Ferries",
   "blurb": "Washington State Ferries terminals, cameras and sailing space",
-  "order": 1
+  "order": 1,
+  "icon": "ferry"
 }

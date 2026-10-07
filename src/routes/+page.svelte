@@ -1,4 +1,5 @@
 <script lang="ts">
+	import CollectionIcon from '../lib/CollectionIcon.svelte';
 	import InstallHelp from '../lib/InstallHelp.svelte';
 	import StartCard from '../lib/StartCard.svelte';
 	import { loadRecents, type Recent } from '../lib/recents';
@@ -33,7 +34,7 @@
 	);
 </script>
 
-<svelte:head><title>OS Cams · Know before you go</title></svelte:head>
+<svelte:head><title>OS Cams · Live views along your way</title></svelte:head>
 
 <header class="hero">
 	<svg class="hero-mark" viewBox="0 0 64 64" aria-hidden="true">
@@ -43,9 +44,10 @@
 		<circle cx="32" cy="35" r="7" fill="#5bb6e6" />
 		<circle cx="32" cy="35" r="2.5" fill="#fff" />
 	</svg>
-	<h1>OS Cams</h1>
-	<p class="tagline">Know before you go.</p>
-	<p class="lede">Live public cameras and weather, gathered around the place you're headed.</p>
+	<div class="hero-text">
+		<h1>OS Cams</h1>
+		<p class="tagline">Live views along your way.</p>
+	</div>
 </header>
 
 <main class="home">
@@ -59,10 +61,10 @@
 		<h2 class="section-title">Browse</h2>
 		<nav class="collections" aria-label="Browse by type">
 			{#each data.collections as c (c.id)}
-				<a class="collection" href="/collections/{encodeURIComponent(c.id)}">
-					<span class="place-name">{c.name}</span>
-					<span class="place-sub">{c.blurb}</span>
-					<span class="place-count">{c.places} places</span>
+				<a class="collection" href="/collections/{encodeURIComponent(c.id)}" title={c.blurb}>
+					<CollectionIcon name={c.icon} />
+					<span class="collection-name">{c.name}</span>
+					<span class="collection-count">{c.places} places</span>
 				</a>
 			{/each}
 		</nav>

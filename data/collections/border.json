@@ -1,6 +1,7 @@
 {
   "id": "border",
   "name": "Border crossings",
-  "blurb": "US–Canada crossings in Washington: cameras and wait times",
-  "order": 2
+  "blurb": "US\u2013Canada crossings in Washington: cameras and wait times",
+  "order": 2,
+  "icon": "border"
 }

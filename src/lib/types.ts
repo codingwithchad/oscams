@@ -76,6 +76,7 @@ export interface Collection {
 	id: string;
 	name: string;
 	blurb?: string;
+	icon?: string;
 	order?: number;
 }
 
