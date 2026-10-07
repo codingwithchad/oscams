@@ -59,5 +59,15 @@
 		{/if}
 
 		<OfflineCameras cameras={data.offline} />
+
+		{#if data.cameras.some((c) => c.view)}
+			<p class="courtesy">
+				Webcams provided by <a href="https://www.windy.com/" target="_blank" rel="noopener"
+					>windy.com</a
+				>
+				&mdash;
+				<a href="https://www.windy.com/webcams/add" target="_blank" rel="noopener">add a webcam</a>
+			</p>
+		{/if}
 	{/if}
 </main>

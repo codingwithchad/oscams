@@ -20,7 +20,9 @@ describe('data files', () => {
 
 	it('live cameras have a feed url', () => {
 		for (const cam of readFolder<Camera>('cameras')) {
-			if (cam.availability !== 'seasonal') expect(cam.feed_url, cam.id).toBeTruthy();
+			if (cam.availability !== 'seasonal' && !cam.provider)
+				expect(cam.feed_url, cam.id).toBeTruthy();
+			if (cam.provider) expect(cam.provider_ref, cam.id).toBeTruthy();
 		}
 	});
 });

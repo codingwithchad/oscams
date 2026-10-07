@@ -6,15 +6,21 @@
 
 	const refreshMs = $derived((camera.refresh_seconds ?? 120) * 1000);
 	const isImage = $derived(camera.feed_type === 'image');
+	const view = $derived(camera.view);
 	let tick = $state(Date.now());
 	let modified = $state<string | null>(null);
+	let providerUrl = $state<string | null>(null);
 	let dialog: HTMLDialogElement | undefined = $state();
 
 	async function loadAge() {
 		if (!isImage) return;
 		try {
 			const res = await fetch(`/api/cameras/${encodeURIComponent(camera.id)}/age`);
-			if (res.ok) modified = (await res.json()).modified;
+			if (res.ok) {
+				const body = await res.json();
+				modified = body.modified;
+				providerUrl = body.url;
+			}
 		} catch {
 			// age is a nice-to-have; ignore failures
 		}
@@ -30,15 +36,32 @@
 		return () => clearInterval(timer);
 	});
 
+	// Provider pictures must be used exactly as the provider gave them, so no cache-busting parameter.
 	const imageSrc = $derived(
-		`${camera.feed_url}${camera.feed_url?.includes('?') ? '&' : '?'}t=${Math.floor(tick / refreshMs)}`
+		view
+			? (providerUrl ?? camera.feed_url)
+			: `${camera.feed_url}${camera.feed_url?.includes('?') ? '&' : '?'}t=${Math.floor(tick / refreshMs)}`
 	);
-	const age = $derived(modified ? ago(modified, tick) : null);
-	const stale = $derived(modified ? tick - new Date(modified).getTime() > refreshMs * 5 : false);
+	const shownModified = $derived(modified ?? view?.modified ?? null);
+	const age = $derived(shownModified ? ago(shownModified, tick) : null);
+	const stale = $derived(
+		shownModified ? tick - new Date(shownModified).getTime() > refreshMs * 5 : false
+	);
 </script>
 
 <article class="card camera">
-	{#if isImage}
+	{#if view}
+		<a
+			class="image-link"
+			href={view.link}
+			target="_blank"
+			rel="noopener"
+			aria-label="Open {camera.name} on Windy.com"
+		>
+			<img src={imageSrc} alt={camera.name} loading="lazy" width={view.width} />
+			{#if age}<span class="age" class:stale>{stale ? 'Stale · ' : ''}{age}</span>{/if}
+		</a>
+	{:else if isImage}
 		<button
 			class="image-button"
 			onclick={() => dialog?.showModal()}
@@ -61,7 +84,7 @@
 	</div>
 </article>
 
-{#if isImage}
+{#if isImage && !view}
 	<dialog
 		bind:this={dialog}
 		class="lightbox"

@@ -1,0 +1,23 @@
+{
+  "feed_type": "image",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "provider": "windy",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "created_at": "2026-10-07T00:00:00Z",
+  "id": "paine-field-airport",
+  "name": "Paine Field airport",
+  "description": "Airfield weather view in Everett.",
+  "lat": 47.89729,
+  "lon": -122.28342,
+  "provider_ref": "1348580382",
+  "source": "Paine Field via Windy.com",
+  "page_url": "https://windy.com/webcams/1348580382",
+  "tags": [
+    "airport",
+    "weather",
+    "mukilteo"
+  ],
+  "attribution_text": "Paine Field via Windy.com"
+}

@@ -2,11 +2,28 @@ import { isDormant, nearby } from '../../lib/geo';
 import { getCatalog } from '../../lib/server/catalog';
 import { getConditions } from '../../lib/server/conditions';
 import { geocode } from '../../lib/server/geocode';
-import type { Place } from '../../lib/types';
+import { resolveWindy } from '../../lib/server/windy';
+import type { Camera, Nearby, Place } from '../../lib/types';
 import type { PageServerLoad } from './$types';
 
 const DEFAULT_RADIUS = 25;
 const MAX_RADIUS = 75;
+
+/** Cameras whose picture link comes from a provider get it filled in now. */
+async function withLiveLinks(cameras: Nearby<Camera>[]): Promise<Nearby<Camera>[]> {
+	return Promise.all(
+		cameras.map(async (c) => {
+			if (c.provider !== 'windy') return c;
+			const v = await resolveWindy(c);
+			if (!v) return { ...c, feed_url: undefined };
+			return {
+				...c,
+				feed_url: v.url,
+				view: { link: v.link, owner: v.owner, modified: v.modified, width: v.width }
+			};
+		})
+	);
+}
 
 export const load: PageServerLoad = async ({ url, setHeaders }) => {
 	const { cameras, weather, places } = getCatalog();
@@ -42,8 +59,8 @@ export const load: PageServerLoad = async ({ url, setHeaders }) => {
 	if (!place) return { ...empty, place: null, failed };
 
 	setHeaders({ 'cache-control': 'private, max-age=60' });
-	const found = nearby(cameras, place, radius);
-	const offline = (c: (typeof found)[number]) => isDormant(c) || !c.feed_url;
+	const found = await withLiveLinks(nearby(cameras, place, radius));
+	const offline = (c: Nearby<Camera>) => isDormant(c) || !c.feed_url;
 	return {
 		...empty,
 		place,

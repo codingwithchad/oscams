@@ -1,12 +1,23 @@
 import { error, json } from '@sveltejs/kit';
 import { getCatalog } from '../../../../../lib/server/catalog';
 import { cached } from '../../../../../lib/server/cache';
+import { resolveWindy } from '../../../../../lib/server/windy';
 import type { RequestHandler } from './$types';
 
-/** When did this camera's image last change? Read from the feed's Last-Modified header. */
+/** When did this camera's image last change? (and, for provider cameras, its current picture link) */
 export const GET: RequestHandler = async ({ params }) => {
 	const camera = getCatalog().cameras.find((c) => c.id === params.id);
-	if (!camera?.feed_url || camera.feed_type !== 'image') error(404, 'Unknown camera');
+	if (!camera || camera.feed_type !== 'image') error(404, 'Unknown camera');
+
+	if (camera.provider === 'windy') {
+		const view = await resolveWindy(camera);
+		return json(
+			{ modified: view?.modified ?? null, url: view?.url ?? null },
+			{ headers: { 'cache-control': 'public, max-age=30' } }
+		);
+	}
+
+	if (!camera.feed_url) error(404, 'Unknown camera');
 	const url = camera.feed_url;
 	const modified = await cached(`age:${camera.id}`, 30_000, async () => {
 		try {
@@ -18,5 +29,5 @@ export const GET: RequestHandler = async ({ params }) => {
 			return null;
 		}
 	});
-	return json({ modified }, { headers: { 'cache-control': 'public, max-age=30' } });
+	return json({ modified, url: null }, { headers: { 'cache-control': 'public, max-age=30' } });
 };

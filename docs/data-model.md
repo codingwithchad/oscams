@@ -56,3 +56,11 @@ The files only say where to look. The app fetches live values at view time. API 
 Same seasonal rule as cameras: if a source is quiet in the off-season, mark it `seasonal` and show a clear "not broken" placeholder.
 
 NWAC avalanche-center stations (Brooks Chair, Tye Mill/Skyline, Grace Lakes, Berne) are a possible later addition. They publish readings only, no cameras, and we have not confirmed a usable API.
+
+## Provider cameras (Windy.com)
+
+A camera can set `provider: "windy"` and `provider_ref` (the Windy webcam id) instead of `feed_url`. Windy picture links expire, so they are never stored: the server asks Windy for the current link at view time (cached about 5 minutes) and needs `WINDY_API_KEY`.
+
+Windy's terms, which the app follows: show images no larger than the API size, use the API's links unchanged, link every image to its Windy page, and show "Webcams provided by Windy.com" on pages that use them.
+
+To find candidates near a place: `node --env-file=.env scripts/windy-nearby.mjs <lat> <lon> [radius_km]`. Many Windy cameras duplicate WSDOT ones; the script flags those.

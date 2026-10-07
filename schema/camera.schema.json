@@ -145,6 +145,16 @@
         "approximate"
       ],
       "default": "exact"
+    },
+    "provider": {
+      "enum": [
+        "windy"
+      ],
+      "description": "Where the live picture link comes from at view time. The link is not stored because it expires."
+    },
+    "provider_ref": {
+      "type": "string",
+      "description": "The camera's id at the provider, e.g. a Windy webcam id."
     }
   },
   "if": {
@@ -183,20 +193,39 @@
     },
     {
       "if": {
-        "not": {
-          "properties": {
-            "availability": {
-              "const": "seasonal"
-            }
+        "anyOf": [
+          {
+            "properties": {
+              "availability": {
+                "const": "seasonal"
+              }
+            },
+            "required": [
+              "availability"
+            ]
           },
-          "required": [
-            "availability"
-          ]
-        }
+          {
+            "required": [
+              "provider"
+            ]
+          }
+        ]
+      },
+      "else": {
+        "required": [
+          "feed_url"
+        ]
+      }
+    },
+    {
+      "if": {
+        "required": [
+          "provider"
+        ]
       },
       "then": {
         "required": [
-          "feed_url"
+          "provider_ref"
         ]
       }
     }

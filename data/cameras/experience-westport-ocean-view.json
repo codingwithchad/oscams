@@ -1,0 +1,23 @@
+{
+  "feed_type": "image",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "provider": "windy",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "created_at": "2026-10-07T00:00:00Z",
+  "id": "experience-westport-ocean-view",
+  "name": "Westport ocean view",
+  "description": "Rocks and surf on the Westport shoreline.",
+  "lat": 46.91133,
+  "lon": -124.11759,
+  "provider_ref": "1598799836",
+  "source": "Experience Westport via Windy.com",
+  "page_url": "https://windy.com/webcams/1598799836",
+  "tags": [
+    "surf",
+    "beach",
+    "westport"
+  ],
+  "attribution_text": "Experience Westport via Windy.com"
+}

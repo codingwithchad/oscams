@@ -1,23 +1,23 @@
 {
-  "id": "stevens-pass-resort-snow-stake",
-  "name": "Stevens Pass Resort: Snow Stake",
-  "description": "Measures snow depth at the base area.",
-  "lat": 47.7448,
-  "lon": -121.089,
-  "location_precision": "approximate",
   "feed_type": "image",
-  "source": "Stevens Pass Resort",
   "status": "approved",
   "approved_by": "codingwithchad",
-  "availability": "seasonal",
-  "expected_return": "2026-11",
-  "seasonal_note": "Not broken. This camera comes back when the ski season opens, around November.",
-  "page_url": "https://www.stevenspass.com/the-mountain/mountain-conditions/mountain-cams.aspx",
+  "provider": "windy",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "created_at": "2026-10-07T00:00:00Z",
+  "id": "stevens-pass-resort-snow-stake",
+  "name": "Stevens Pass Resort: Snow Stake",
+  "description": "Snow depth stake on Cowboy Mountain.",
+  "lat": 47.73364,
+  "lon": -121.10387,
+  "provider_ref": "1793895621",
+  "source": "Stevens Pass Resort via Windy.com",
+  "page_url": "https://windy.com/webcams/1793895621",
   "tags": [
     "ski-resort",
     "mountain",
     "stevens-pass"
   ],
-  "attribution_text": "Stevens Pass Resort",
-  "created_at": "2026-10-07T00:00:00Z"
+  "attribution_text": "Stevens Pass Resort via Windy.com"
 }

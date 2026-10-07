@@ -9,8 +9,9 @@ export const load: PageServerLoad = () => {
 	return {
 		places: places.map((p) => {
 			const live = nearby(cameras, p, p.radius_miles ?? DEFAULT_RADIUS).filter(
-				(c) => !isDormant(c) && c.feed_url && c.feed_type === 'image'
+				(c) => !isDormant(c) && (c.feed_url || c.provider) && c.feed_type === 'image'
 			);
+			const direct = live.find((c) => c.feed_url);
 			return {
 				id: p.id,
 				name: p.name,
@@ -18,7 +19,7 @@ export const load: PageServerLoad = () => {
 				blurb: p.blurb,
 				liveCameras: live.length,
 				// The nearest live picture becomes the place's cover photo.
-				cover: live[0] ? { url: live[0].feed_url as string, name: live[0].name } : null
+				cover: direct ? { url: direct.feed_url as string, name: direct.name } : null
 			};
 		})
 	};

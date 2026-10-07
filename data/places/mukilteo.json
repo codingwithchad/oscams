@@ -2,9 +2,9 @@
   "id": "mukilteo",
   "name": "Mukilteo",
   "region": "Washington",
-  "blurb": "Ferry terminal, Lighthouse Park and SR 525",
+  "blurb": "Ferry terminal, Lighthouse Park and Paine Field",
   "lat": 47.9496,
   "lon": -122.305,
-  "radius_miles": 2,
+  "radius_miles": 4,
   "order": 1
 }

@@ -515,3 +515,38 @@ button.wide {
 .install li {
 	margin: 4px 0;
 }
+
+/* Windy cameras: shown no larger than the size the API provides, and linked back to Windy */
+.image-link {
+	display: block;
+	position: relative;
+	background: #000;
+	text-align: center;
+}
+.image-link img {
+	display: block;
+	width: 100%;
+	max-width: 400px;
+	height: auto;
+	aspect-ratio: 400 / 224;
+	margin: 0 auto;
+}
+.image-link .age {
+	position: absolute;
+	left: 8px;
+	bottom: 8px;
+	padding: 2px 8px;
+	border-radius: 999px;
+	font-size: 0.75rem;
+	background: rgb(0 0 0 / 0.65);
+	color: #fff;
+}
+.image-link .age.stale {
+	background: #8a5a00;
+}
+.courtesy {
+	margin: 22px 0 0;
+	text-align: center;
+	color: var(--muted);
+	font-size: 0.85rem;
+}

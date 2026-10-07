@@ -18,6 +18,9 @@ interface Located {
 
 export interface Camera extends Located {
 	feed_url?: string;
+	provider?: 'windy';
+	provider_ref?: string;
+	view?: ProviderView;
 	feed_type: 'image' | 'video' | 'stream';
 	embed_mode?: 'direct' | 'iframe' | 'proxy' | 'link';
 	refresh_seconds?: number;
@@ -52,6 +55,14 @@ export interface Place {
 }
 
 export type Nearby<T> = T & { distance: number };
+
+/** Extra details for cameras whose picture link comes from a provider API at view time. */
+export interface ProviderView {
+	link: string;
+	owner: string | null;
+	modified: string | null;
+	width: number;
+}
 
 export interface Conditions {
 	id: string;
