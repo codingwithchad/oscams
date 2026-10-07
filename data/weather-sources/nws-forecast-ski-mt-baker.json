@@ -1,0 +1,18 @@
+{
+  "id": "nws-forecast-ski-mt-baker",
+  "name": "Mt. Baker forecast",
+  "lat": 48.857,
+  "lon": -121.667,
+  "kind": "forecast",
+  "provider": "nws",
+  "provider_ref": "48.857,-121.667",
+  "source": "National Weather Service",
+  "page_url": "https://forecast.weather.gov/MapClick.php?lat=48.857&lon=-121.667",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "attribution_text": "National Weather Service",
+  "tags": [
+    "ski"
+  ],
+  "created_at": "2026-10-07T00:00:00Z"
+}

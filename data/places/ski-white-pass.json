@@ -1,0 +1,15 @@
+{
+  "id": "ski-white-pass",
+  "name": "White Pass",
+  "region": "Washington",
+  "blurb": "US 12 between Packwood and Naches",
+  "lat": 46.637,
+  "lon": -121.391,
+  "radius_miles": 8,
+  "collection": "ski-areas",
+  "note": "The resort's own cameras are on its website but are not published for reuse, so we cannot show them yet.",
+  "link": {
+    "label": "White Pass's cameras",
+    "url": "https://skiwhitepass.com/mountain-cams/"
+  }
+}

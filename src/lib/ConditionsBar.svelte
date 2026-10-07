@@ -21,13 +21,15 @@
 	const quiet = $derived(conditions.filter((c) => c.state !== 'ok'));
 	// A few reports up front; the rest wait behind "more reports" so cameras are never far down the page.
 	const picked = $derived(pickHeadlines(live, mode));
+	// Road reports say which road; everything else just says what kind of report it is.
+	const quietName = (c: Conditions) => (c.kind === 'pass-conditions' ? c.name : label[c.kind]);
 	const quietText = $derived(
 		quiet
 			.map((c) => {
 				const back = returnLabel(c.returns);
 				return c.state === 'dormant'
-					? `${label[c.kind]}: seasonal${back ? `, back ${back}` : ''}`
-					: `${label[c.kind]}: unavailable`;
+					? `${quietName(c)}: seasonal${back ? `, back ${back}` : ''}`
+					: `${quietName(c)}: unavailable`;
 			})
 			.join(' · ')
 	);

@@ -1,0 +1,18 @@
+{
+  "id": "nws-forecast-ski-white-pass",
+  "name": "White Pass forecast",
+  "lat": 46.637,
+  "lon": -121.391,
+  "kind": "forecast",
+  "provider": "nws",
+  "provider_ref": "46.637,-121.391",
+  "source": "National Weather Service",
+  "page_url": "https://forecast.weather.gov/MapClick.php?lat=46.637&lon=-121.391",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "attribution_text": "National Weather Service",
+  "tags": [
+    "ski"
+  ],
+  "created_at": "2026-10-07T00:00:00Z"
+}

@@ -1,0 +1,24 @@
+{
+  "id": "wsdot-pass-white-pass-us12",
+  "name": "White Pass road conditions",
+  "lat": 46.638333,
+  "lon": -121.39,
+  "kind": "pass-conditions",
+  "provider": "wsdot-pass",
+  "provider_ref": "12",
+  "source": "WSDOT",
+  "page_url": "https://wsdot.com/travel/real-time/mountainpasses/white",
+  "requires_key": "WSDOT_CODE",
+  "elevation_ft": 4500,
+  "availability": "seasonal",
+  "expected_return": "2026-11",
+  "seasonal_note": "Not broken. WSDOT reports road conditions here from about November 1 to April 1.",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "tags": [
+    "white-pass",
+    "ski"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z"
+}

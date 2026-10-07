@@ -1,0 +1,15 @@
+{
+  "id": "ski-mt-baker",
+  "name": "Mt. Baker",
+  "region": "Washington",
+  "blurb": "The Cascades' snowiest ski area, up the Mt. Baker Highway",
+  "lat": 48.857,
+  "lon": -121.667,
+  "radius_miles": 8,
+  "collection": "ski-areas",
+  "note": "The resort's own cameras are on its website but are not published for reuse, so we cannot show them yet.",
+  "link": {
+    "label": "Mt. Baker's website",
+    "url": "https://www.mtbaker.us/"
+  }
+}
