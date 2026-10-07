@@ -1,0 +1,18 @@
+{
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "created_at": "2026-10-07T00:00:00Z",
+  "tags": [
+    "stevens-pass"
+  ],
+  "id": "nws-forecast-stevens-pass",
+  "name": "Stevens Pass forecast",
+  "lat": 47.7448,
+  "lon": -121.089,
+  "kind": "forecast",
+  "provider": "nws",
+  "provider_ref": "47.7448,-121.089",
+  "source": "National Weather Service",
+  "page_url": "https://forecast.weather.gov/MapClick.php?lat=47.7448&lon=-121.089",
+  "attribution_text": "National Weather Service"
+}

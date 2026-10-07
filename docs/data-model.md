@@ -46,3 +46,13 @@ Some cameras are off for part of the year (ski resort cams in the off-season). S
 The app should show these as a clearly labeled placeholder ("not broken, back in November"), not as an error and not as a bare link. When the feed is live, set `availability: live` and add `feed_url`.
 
 `location_precision: approximate` marks coordinates that are a best guess (e.g. the base area) until exact positions are known.
+
+## Weather sources
+
+Conditions are data too. Each file in `data/weather-sources/` (schema: `schema/weather-source.schema.json`) points at one place to get conditions for a location: an NWS forecast, a WSDOT weather station, or WSDOT pass conditions. Search returns nearby weather sources the same way it returns nearby cameras.
+
+The files only say where to look. The app fetches live values at view time. API keys are never stored: `requires_key` names an environment variable (e.g. `WSDOT_CODE`).
+
+Same seasonal rule as cameras: if a source is quiet in the off-season, mark it `seasonal` and show a clear "not broken" placeholder.
+
+NWAC avalanche-center stations (Brooks Chair, Tye Mill/Skyline, Grace Lakes, Berne) are a possible later addition. They publish readings only, no cameras, and we have not confirmed a usable API.

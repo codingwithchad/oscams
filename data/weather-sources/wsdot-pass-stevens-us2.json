@@ -1,0 +1,23 @@
+{
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "created_at": "2026-10-07T00:00:00Z",
+  "tags": [
+    "stevens-pass"
+  ],
+  "id": "wsdot-pass-stevens-us2",
+  "name": "Stevens Pass road conditions",
+  "lat": 47.745,
+  "lon": -121.093333,
+  "kind": "pass-conditions",
+  "provider": "wsdot-pass",
+  "provider_ref": "10",
+  "source": "WSDOT",
+  "page_url": "https://wsdot.com/travel/real-time/mountainpasses/stevens",
+  "requires_key": "WSDOT_CODE",
+  "elevation_ft": 4061,
+  "availability": "seasonal",
+  "expected_return": "2026-11",
+  "seasonal_note": "Not broken. WSDOT reports pass conditions from about November 1 to April 1.",
+  "attribution_text": "Washington State Department of Transportation"
+}

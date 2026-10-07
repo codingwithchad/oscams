@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/codingwithchad/oscams/schema/weather-source.schema.json",
+  "title": "Weather source",
+  "description": "One place to get conditions for a point. Data only: the app reads these and fetches live values. API keys are never stored here.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "name", "lat", "lon", "kind", "source", "status", "created_at"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" },
+    "name": { "type": "string", "minLength": 1 },
+    "lat": { "type": "number", "minimum": -90, "maximum": 90 },
+    "lon": { "type": "number", "minimum": -180, "maximum": 180 },
+    "kind": { "enum": ["forecast", "station", "pass-conditions"], "description": "forecast = predicted weather for a point; station = measured readings; pass-conditions = road status and restrictions." },
+    "provider": { "enum": ["nws", "wsdot-weather", "wsdot-pass"], "description": "Which adapter the app uses to fetch it." },
+    "provider_ref": { "type": "string", "description": "Provider-specific id: a WSDOT station or pass id, or a lat,lon for NWS." },
+    "source": { "type": "string", "minLength": 1 },
+    "page_url": { "type": "string", "format": "uri" },
+    "requires_key": { "type": "string", "description": "Name of the environment variable holding the key, never the key itself." },
+    "availability": { "enum": ["live", "seasonal"], "default": "live" },
+    "expected_return": { "type": "string", "pattern": "^\\d{4}-\\d{2}(-\\d{2})?$" },
+    "seasonal_note": { "type": "string" },
+    "elevation_ft": { "type": "number" },
+    "status": { "enum": ["pending", "approved"] },
+    "approved_by": { "type": "string" },
+    "submitted_by": { "type": "string" },
+    "tags": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+    "attribution_text": { "type": "string" },
+    "created_at": { "type": "string", "format": "date-time" }
+  },
+  "if": { "properties": { "status": { "const": "approved" } }, "required": ["status"] },
+  "then": { "required": ["approved_by"] }
+}
