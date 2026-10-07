@@ -1,0 +1,29 @@
+name: Dead, wrong or mislabeled camera
+description: A camera shows nothing, shows the wrong place, or has the wrong name or position.
+labels: [data, good first issue]
+body:
+  - type: input
+    id: camera
+    attributes:
+      label: Which camera?
+      description: Its name, or the address of its page on oscams.onrender.com.
+    validations: { required: true }
+  - type: dropdown
+    id: problem
+    attributes:
+      label: What is wrong?
+      options:
+        [
+          Shows nothing / error,
+          Picture is frozen or very old,
+          Shows a different place than its name,
+          Wrong position on the map,
+          Wrong name or label,
+          Other
+        ]
+    validations: { required: true }
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      description: What you see, and how long it has been like this if you know.

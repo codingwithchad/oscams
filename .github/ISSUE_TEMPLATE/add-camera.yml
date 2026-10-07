@@ -1,0 +1,26 @@
+name: Suggest a camera or place
+description: A public camera we should show, or a place we should cover.
+labels: [data, help wanted]
+body:
+  - type: input
+    id: where
+    attributes:
+      label: Where is it?
+      description: A place name, road and milepost, or coordinates.
+    validations: { required: true }
+  - type: input
+    id: owner
+    attributes:
+      label: Who runs the camera?
+      description: A state or city agency, a park, a port, a resort, a business, a person.
+    validations: { required: true }
+  - type: input
+    id: link
+    attributes:
+      label: Link to the official page or feed
+    validations: { required: true }
+  - type: textarea
+    id: terms
+    attributes:
+      label: Does the owner allow public reuse?
+      description: Quote or link the terms if you can. We can only add feeds that are published for public use. If you're not sure, say so and we'll look.

@@ -1,19 +1,45 @@
-# OS Cams
+# OS Cams (Open Source Cameras)
 
-Open Source Cameras. Search any location and see the public cameras and weather around it in one place. Works on a phone, no install needed.
+**Live views along your way.** Public cameras and weather for the place you're headed, or for the whole drive. Works on iPhone and Android in the browser, nothing to install, free, no accounts, no ads.
 
-## Run it
+**Try it: https://oscams.onrender.com**
+
+## What it does
+
+- **Trip mode:** enter a start and a finish and see the cameras along the road in the order you'll pass them, with the forecast for when you'll arrive. "Follow my trip" hides cameras you've already passed.
+- **Mountain passes:** open, chains or closed for every Washington pass, plus a replay of the last two hours of each pass camera so you can see snow building up.
+- **Places:** ferries (with sailing space), border crossings (with wait times), airports (with FAA delays), airfields, national parks, ski areas, and any town or zip code.
+- **Cameras are data, not code.** Adding one is a small JSON file, so you don't need to write any code to help.
+
+Right now it covers Washington State. The design (data files plus small adapters) is meant to grow to other states.
+
+## Help wanted
+
+You don't need to be a programmer. See [CONTRIBUTING.md](CONTRIBUTING.md). Easy ways in:
+
+- Report a camera that's dead, mislabeled or in the wrong place.
+- Add a camera, place or drive as a data file (no code, checked automatically).
+- Pick up a [good first issue](../../labels/good%20first%20issue).
+
+## Run it yourself
 
 ```
 npm install
-cp .env.example .env   # add your WSDOT_CODE (optional, enables WSDOT weather and road conditions)
-npm run dev
+npm run dev        # http://localhost:5173, no keys needed
+npm test           # unit tests and the data checks
+npm run check      # type check
 ```
 
-Other commands: `npm test`, `npm run check`, `npm run build`.
+Some live data (WSDOT road reports, ferry sailing space, border waits, weather stations) needs a free WSDOT access code. To use it, copy `.env.example` to `.env` and fill it in. Everything else works without it.
 
-## How it works
+## How it's built
 
-Cameras and weather sources are data files, never code. To add one, add a JSON file to `data/cameras/` or `data/weather-sources/`. See [docs/data-model.md](docs/data-model.md). Stack decisions are in [docs/decisions.md](docs/decisions.md).
+SvelteKit and TypeScript on one small Node server, deployed on Render. Cameras, places, drives, passes and weather sources live in `data/`, each file checked against a schema in `schema/`. See [docs/data-model.md](docs/data-model.md), [docs/decisions.md](docs/decisions.md) and [docs/sources.md](docs/sources.md) (where each camera feed comes from and why we're allowed to use it).
 
-Search turns a place into coordinates, then shows every approved camera and weather source within a radius (10 to 75 miles). Trip mode (`/trip`) plans a drive and lists cameras along the road in driving order.
+## About this project
+
+Built in October 2026 by one person with voice dictation and [Claude Code](https://claude.com/claude-code), while recovering from surgery. It's a prototype and it's open source, and it would be better with other people in it.
+
+## License
+
+MIT. See [LICENSE](LICENSE). Camera pictures belong to their owners; this project only links to feeds their owners publish for public use.
