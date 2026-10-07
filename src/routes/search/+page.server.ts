@@ -53,6 +53,6 @@ export const load: PageServerLoad = async ({ url, setHeaders }) => {
 		cameras: found.filter((c) => !offline(c)),
 		offline: found.filter(offline),
 		// Streamed: the page shows cameras right away while live weather loads.
-		conditions: Promise.all(nearby(weather, place, radius).map(getConditions))
+		conditions: Promise.all(nearby(weather, place, radius).map((w) => getConditions(w)))
 	};
 };

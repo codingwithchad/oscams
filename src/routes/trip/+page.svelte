@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { page } from '$app/state';
 	import CameraCard from '../../lib/CameraCard.svelte';
 	import ConditionsBar from '../../lib/ConditionsBar.svelte';
 	import OfflineCameras from '../../lib/OfflineCameras.svelte';
@@ -108,6 +109,18 @@
 				{trip.miles.toFixed(0)} mi · about {duration(trip.minutes)} · {trip.stops.length} cameras on the
 				way
 			</p>
+			<nav class="leave" aria-label="When are you leaving?">
+				<span class="leave-label">Leave</span>
+				{#each [[0, 'Now'], [60, 'In 1 h'], [120, 'In 2 h'], [180, 'In 3 h']] as [mins, text] (mins)}
+					<a
+						class="chip"
+						aria-current={trip.leaveIn === mins ? 'true' : undefined}
+						href={`/trip?from=${encodeURIComponent(page.url.searchParams.get('from') ?? '')}&to=${encodeURIComponent(page.url.searchParams.get('to') ?? '')}${page.url.searchParams.get('fl') ? `&fl=${encodeURIComponent(page.url.searchParams.get('fl') ?? '')}` : ''}${mins ? `&in=${mins}` : ''}`}
+					>
+						{text}
+					</a>
+				{/each}
+			</nav>
 			<div class="follow">
 				{#if !following}
 					<button onclick={startFollowing}>Follow my trip</button>

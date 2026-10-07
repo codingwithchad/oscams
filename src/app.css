@@ -726,3 +726,25 @@ button.wide {
 .drive:active {
 	border-color: var(--accent);
 }
+
+/* Leave-time picker on trips */
+.leave {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 8px;
+	margin: 10px 0 4px;
+}
+.leave-label {
+	font-size: 0.85rem;
+	font-weight: 600;
+	color: var(--muted);
+}
+.leave .chip {
+	text-decoration: none;
+}
+.leave .chip[aria-current='true'] {
+	background: var(--accent);
+	color: #fff;
+	border-color: var(--accent);
+}

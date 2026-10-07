@@ -28,18 +28,19 @@ async function resolve(
 function inDrivingOrder<T extends { lat: number; lon: number }>(
 	items: T[],
 	coords: [number, number][]
-): T[] {
+): { item: T; along: number }[] {
 	const cum = cumulativeMiles(coords);
 	return items
 		.map((item) => ({ item, along: projectOnRoute(item, coords, cum).along }))
-		.sort((a, b) => a.along - b.along)
-		.map((x) => x.item);
+		.sort((a, b) => a.along - b.along);
 }
 
 export const load: PageServerLoad = async ({ url, setHeaders }) => {
 	const fromQ = url.searchParams.get('from')?.trim() ?? '';
 	const toQ = url.searchParams.get('to')?.trim() ?? '';
 	const fromLabel = url.searchParams.get('fl')?.trim().slice(0, 80) ?? '';
+	// Minutes until you leave (0 = now), so forecasts can be for the time you will actually be there.
+	const leaveIn = Math.min(Math.max(Number(url.searchParams.get('in')) || 0, 0), 12 * 60);
 	const base = { fromQ: fromLabel || fromQ, toQ, error: null as string | null };
 	if (!fromQ || !toQ) return { ...base, trip: null };
 
@@ -95,13 +96,21 @@ export const load: PageServerLoad = async ({ url, setHeaders }) => {
 			to: to.label,
 			miles: total,
 			minutes: route.minutes,
+			leaveIn,
 			route: route.coords,
 			stops: stops.filter((s) => !isOffline(s.camera)),
 			offline: stops
 				.filter((s) => isOffline(s.camera))
 				.map((s) => ({ ...s.camera, distance: s.along }) as Nearby<Camera>),
 			// Streamed: the page shows cameras right away while live weather loads.
-			conditions: Promise.all(inDrivingOrder(wx, route.coords).map(getConditions))
+			conditions: Promise.all(
+				inDrivingOrder(wx, route.coords).map(({ item, along }) => {
+					// When you will be there: now (or when you leave) plus the driving time to that point.
+					const minutesIn =
+						leaveIn + (route.minutes * Math.min(along, total)) / Math.max(total, 0.1);
+					return getConditions(item, { at: Date.now() + minutesIn * 60_000 });
+				})
+			)
 		}
 	};
 };

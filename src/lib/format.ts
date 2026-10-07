@@ -21,3 +21,12 @@ export function duration(minutes: number): string {
 	const m = Math.round(minutes);
 	return m < 60 ? `${m} min` : `${Math.floor(m / 60)} h ${m % 60} min`;
 }
+
+/** "2:55 PM" in Washington time. */
+export function pacificClock(ms: number): string {
+	return new Intl.DateTimeFormat('en-US', {
+		hour: 'numeric',
+		minute: '2-digit',
+		timeZone: 'America/Los_Angeles'
+	}).format(new Date(ms));
+}

@@ -36,7 +36,7 @@
 						? c.name.replace(/ wait times$/, '')
 						: c.kind === 'forecast' || c.kind === 'station'
 							? c.name
-							: label[c.kind]}</span
+							: label[c.kind]}{c.kind === 'forecast' && c.at ? ' · when you get there' : ''}</span
 				>
 				{#if c.kind === 'ferry'}
 					<ul class="wx-list">

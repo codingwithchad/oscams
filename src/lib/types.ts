@@ -92,6 +92,8 @@ export interface Conditions {
 	page_url?: string;
 	distance: number;
 	returns?: string;
+	/** For forecasts: the time (ms) this forecast is for, when it is not "now". */
+	at?: number;
 	state: 'ok' | 'dormant' | 'error';
 	note?: string;
 	rows: { label: string; value: string }[];

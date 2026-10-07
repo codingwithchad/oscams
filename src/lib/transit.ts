@@ -1,3 +1,5 @@
+import { pacificClock } from './format';
+
 export interface Row {
 	label: string;
 	value: string;

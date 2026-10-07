@@ -1,5 +1,6 @@
 import { isDormant } from '../geo';
 import type { Conditions, Nearby, WeatherSource } from '../types';
+import { hourlyRows, type HourlyPeriod } from '../forecast';
 import { borderRows, ferryRows, type BorderReading, type TerminalSpace } from '../transit';
 import { localStamp, parseBuoy, upcomingTides, type TidePrediction } from '../marine';
 import { cached } from './cache';
@@ -25,13 +26,29 @@ function compact(rows: [string, string | null][]): Row[] {
 		.map(([label, value]) => ({ label, value }));
 }
 
-async function fetchNws(src: WeatherSource): Promise<Row[]> {
+async function fetchNws(src: WeatherSource, at?: number): Promise<Row[]> {
 	const ref = (src.provider_ref ?? `${src.lat},${src.lon}`).replace(/\s/g, '');
 	const headers = { 'User-Agent': USER_AGENT, Accept: 'application/geo+json' };
-	const point = await getJson<{ properties: { forecast: string } }>(
-		`https://api.weather.gov/points/${ref}`,
-		headers
+	const point = await cached(`nws:points:${ref}`, 24 * 60 * 60 * 1000, () =>
+		getJson<{ properties: { forecast: string; forecastHourly: string } }>(
+			`https://api.weather.gov/points/${ref}`,
+			headers
+		)
 	);
+	if (at !== undefined) {
+		try {
+			const hourly = await getJson<{ properties: { periods: HourlyPeriod[] } }>(
+				point.properties.forecastHourly,
+				headers
+			);
+			const rows = hourlyRows(hourly.properties.periods, at);
+			if (rows.length) return rows;
+		} catch (err) {
+			console.warn(
+				`[conditions] ${src.id}: hourly forecast unavailable (${(err as Error).message})`
+			);
+		}
+	}
 	const forecast = await getJson<{
 		properties: {
 			periods: {
@@ -162,7 +179,7 @@ async function fetchBorder(src: WeatherSource): Promise<Row[]> {
 
 const adapters: Record<
 	NonNullable<WeatherSource['provider']>,
-	(s: WeatherSource) => Promise<Row[]>
+	(s: WeatherSource, at?: number) => Promise<Row[]>
 > = {
 	nws: fetchNws,
 	'wsdot-pass': fetchWsdotPass,
@@ -174,7 +191,10 @@ const adapters: Record<
 };
 
 /** Fetch live values for one source. Never throws: problems come back as state "error". */
-export async function getConditions(src: Nearby<WeatherSource>): Promise<Conditions> {
+export async function getConditions(
+	src: Nearby<WeatherSource>,
+	opts: { at?: number } = {}
+): Promise<Conditions> {
 	const base = {
 		id: src.id,
 		name: src.name,
@@ -192,8 +212,11 @@ export async function getConditions(src: Nearby<WeatherSource>): Promise<Conditi
 	try {
 		// Sailing space and border waits change quickly; forecasts and readings do not.
 		const fast = src.provider === 'wsdot-ferry' || src.provider === 'wsdot-border';
-		const rows = await cached(`wx:${src.id}`, fast ? 2 * 60 * 1000 : TEN_MINUTES, () =>
-			adapter(src)
+		// Forecasts for a future arrival time are asked for by the 10 minute slot so they can be cached.
+		const at = src.kind === 'forecast' ? opts.at : undefined;
+		const slot = at === undefined ? 'now' : Math.floor(at / 600_000);
+		const rows = await cached(`wx:${src.id}:${slot}`, fast ? 2 * 60 * 1000 : TEN_MINUTES, () =>
+			adapter(src, at)
 		);
 		if (!rows.length)
 			return {
@@ -202,7 +225,12 @@ export async function getConditions(src: Nearby<WeatherSource>): Promise<Conditi
 				note: src.seasonal_note ?? 'No current readings.',
 				rows: []
 			};
-		return { ...base, state: 'ok', rows };
+		return {
+			...base,
+			state: 'ok',
+			rows,
+			at: at !== undefined && rows[0]?.label.startsWith('About') ? at : undefined
+		};
 	} catch (err) {
 		console.warn(`[conditions] ${src.id}: ${(err as Error).message}`);
 		return { ...base, state: 'error', note: 'Could not load right now. Try again soon.', rows: [] };
