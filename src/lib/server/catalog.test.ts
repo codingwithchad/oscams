@@ -1,0 +1,26 @@
+import { describe, expect, it } from 'vitest';
+import { readFolder } from './catalog';
+import type { Camera, WeatherSource } from '../types';
+
+describe('data files', () => {
+	const all = [
+		...readFolder<Camera & { approved_by?: string }>('cameras'),
+		...readFolder<WeatherSource & { approved_by?: string }>('weather-sources')
+	];
+
+	it('has data', () => {
+		expect(all.length).toBeGreaterThan(0);
+	});
+
+	it('approved items name an approver', () => {
+		for (const item of all.filter((i) => i.status === 'approved')) {
+			expect(item.approved_by, item.id).toBeTruthy();
+		}
+	});
+
+	it('live cameras have a feed url', () => {
+		for (const cam of readFolder<Camera>('cameras')) {
+			if (cam.availability !== 'seasonal') expect(cam.feed_url, cam.id).toBeTruthy();
+		}
+	});
+});
