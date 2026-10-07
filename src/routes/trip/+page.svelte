@@ -24,6 +24,15 @@
 	let watchId: number | null = null;
 	let wakeLock: { release: () => Promise<void> } | null = null;
 
+	function tripLink(changes: Record<string, string | null>): string {
+		const u = new URL(page.url.href);
+		for (const [k, v] of Object.entries(changes)) {
+			if (v === null) u.searchParams.delete(k);
+			else u.searchParams.set(k, v);
+		}
+		return `${u.pathname}${u.search}`;
+	}
+
 	const cum = $derived(trip ? cumulativeMiles(trip.route) : []);
 
 	function stopFollowing() {
@@ -150,6 +159,17 @@
 		{:then conditions}
 			<ConditionsBar {conditions} />
 		{/await}
+
+		{#if !trip.showingAll}
+			<p class="thinned">
+				Showing {trip.stops.length} key cameras of {trip.totalCameras}.
+				<a href={tripLink({ all: '1' })}>Show all {trip.totalCameras}</a>
+			</p>
+		{:else if trip.totalCameras > 40}
+			<p class="thinned">
+				Showing all {trip.totalCameras} cameras. <a href={tripLink({ all: null })}>Show fewer</a>
+			</p>
+		{/if}
 
 		{#if ahead.length}
 			<div class="grid">

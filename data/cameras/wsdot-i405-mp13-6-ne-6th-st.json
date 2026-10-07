@@ -1,0 +1,22 @@
+{
+  "id": "wsdot-i405-mp13-6-ne-6th-st",
+  "name": "I-405 at MP 13.6: NE 6th St",
+  "lat": 47.615308,
+  "lon": -122.188479,
+  "feed_url": "https://images.wsdot.wa.gov/nw/405vc01368.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road",
+    "i-405"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "I 405",
+  "milepost": 13.6
+}

@@ -1,0 +1,19 @@
+{
+  "id": "wsdot-station-i-5-sr526-interchange-at-mp-189-19-3268",
+  "name": "I-5 / SR526 Interchange at mp 189.19",
+  "lat": 47.9163,
+  "lon": -122.2072,
+  "kind": "station",
+  "provider": "wsdot-weather",
+  "provider_ref": "3268",
+  "source": "WSDOT",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "requires_key": "WSDOT_CODE",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "tags": [
+    "i-5"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z"
+}

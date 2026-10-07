@@ -1,0 +1,22 @@
+{
+  "id": "wsdot-i405-mp21-8-ne-144th-st",
+  "name": "I-405 at MP 21.8: NE 144th St",
+  "lat": 47.731342,
+  "lon": -122.188321,
+  "feed_url": "https://images.wsdot.wa.gov/nw/405vc02182.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road",
+    "i-405"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "I 405",
+  "milepost": 21.8
+}

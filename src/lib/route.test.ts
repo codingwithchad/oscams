@@ -1,5 +1,12 @@
 import { describe, expect, it } from 'vitest';
-import { alongRoute, cumulativeMiles, projectOnRoute, type LatLon } from './route';
+import {
+	alongRoute,
+	cumulativeMiles,
+	projectOnRoute,
+	thinStops,
+	thinToTarget,
+	type LatLon
+} from './route';
 
 // A straight road running due north for about 10 miles.
 const road: LatLon[] = [
@@ -55,5 +62,19 @@ describe('route', () => {
 		const out = alongRoute(items, road);
 		expect(out.map((r) => r.item.id)).toEqual(['roadside', 'resort']);
 		expect(out[0].along).toBeLessThan(out[1].along);
+	});
+});
+
+describe('thinning', () => {
+	const stops = Array.from({ length: 20 }, (_, i) => ({ id: i, along: i * 0.5, keep: i === 3 }));
+
+	it('spaces cameras out but always keeps marked ones', () => {
+		const out = thinStops(stops, 2);
+		expect(out.map((s) => s.id)).toEqual([0, 3, 7, 11, 15, 19]);
+	});
+
+	it('leaves short lists alone and thins long ones to the target', () => {
+		expect(thinToTarget(stops, 30)).toBe(stops);
+		expect(thinToTarget(stops, 8).length).toBeLessThanOrEqual(8);
 	});
 });

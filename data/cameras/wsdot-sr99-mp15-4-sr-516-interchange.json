@@ -1,0 +1,22 @@
+{
+  "id": "wsdot-sr99-mp15-4-sr-516-interchange",
+  "name": "SR 99 at MP 15.4: SR 516 Interchange",
+  "lat": 47.393597,
+  "lon": -122.294724,
+  "feed_url": "https://images.wsdot.wa.gov/nw/099vc01549.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road",
+    "i-5"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "SR 99",
+  "milepost": 15.4
+}

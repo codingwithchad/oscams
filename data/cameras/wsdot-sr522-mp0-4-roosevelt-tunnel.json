@@ -1,0 +1,22 @@
+{
+  "id": "wsdot-sr522-mp0-4-roosevelt-tunnel",
+  "name": "SR 522 at MP 0.4: Roosevelt Tunnel",
+  "lat": 47.684152,
+  "lon": -122.31565,
+  "feed_url": "https://images.wsdot.wa.gov/nw/522vc00048.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road",
+    "i-5"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "SR 522",
+  "milepost": 0.4
+}

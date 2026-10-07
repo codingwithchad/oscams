@@ -86,3 +86,5 @@ The `airports` collection has one place per airport (`airport-<name>`), each wit
 - A normal NWS forecast.
 
 Security checkpoint wait times are not included: there is no official open feed, and the third-party estimates found were not reliable.
+
+To add a drive's cameras in one step: `node --env-file=.env scripts/import-wsdot-route.mjs "<from lat,lon>" "<to lat,lon>" [corridor_miles] [tag]`, then add a file in `data/drives/` and a forecast source (`nws-forecast-<place>`) at each end.

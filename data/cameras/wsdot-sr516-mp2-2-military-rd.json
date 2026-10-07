@@ -1,0 +1,22 @@
+{
+  "id": "wsdot-sr516-mp2-2-military-rd",
+  "name": "SR 516 at MP 2.2: Military Rd",
+  "lat": 47.390667,
+  "lon": -122.286511,
+  "feed_url": "https://images.wsdot.wa.gov/nw/516vc00225.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road",
+    "i-5"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "SR 516",
+  "milepost": 2.2
+}

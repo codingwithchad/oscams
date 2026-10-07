@@ -1,0 +1,22 @@
+{
+  "id": "wsdot-sr161-mp33-7-19th-way-s",
+  "name": "SR 161 at MP 33.7: 19th Way S",
+  "lat": 47.272738,
+  "lon": -122.305966,
+  "feed_url": "https://images.wsdot.wa.gov/nw/161vc03500.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road",
+    "i-5"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "SR 161",
+  "milepost": 33.7
+}

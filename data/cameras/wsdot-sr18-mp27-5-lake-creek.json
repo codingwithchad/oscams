@@ -1,0 +1,22 @@
+{
+  "id": "wsdot-sr18-mp27-5-lake-creek",
+  "name": "SR 18 @ MP 27.5: Lake Creek",
+  "lat": 47.503743,
+  "lon": -121.88517,
+  "feed_url": "https://images.wsdot.wa.gov/nw/018vc02748.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road",
+    "i-90"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "SR 18",
+  "milepost": 27.5
+}

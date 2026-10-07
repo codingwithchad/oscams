@@ -1,0 +1,19 @@
+{
+  "id": "wsdot-station-asahel-curtis-on-i-90-at-mp-47-55-2955",
+  "name": "Asahel Curtis on I-90 at mp 47.55",
+  "lat": 47.3933,
+  "lon": -121.4734,
+  "kind": "station",
+  "provider": "wsdot-weather",
+  "provider_ref": "2955",
+  "source": "WSDOT",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "requires_key": "WSDOT_CODE",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "tags": [
+    "i-90"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z"
+}

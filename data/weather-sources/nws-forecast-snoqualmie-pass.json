@@ -1,0 +1,18 @@
+{
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "created_at": "2026-10-07T00:00:00Z",
+  "source": "National Weather Service",
+  "attribution_text": "National Weather Service",
+  "kind": "forecast",
+  "provider": "nws",
+  "id": "nws-forecast-snoqualmie-pass",
+  "name": "Snoqualmie Pass forecast",
+  "lat": 47.4254,
+  "lon": -121.4137,
+  "provider_ref": "47.4254,-121.4137",
+  "page_url": "https://forecast.weather.gov/MapClick.php?lat=47.4254&lon=-121.4137",
+  "tags": [
+    "snoqualmie-pass"
+  ]
+}

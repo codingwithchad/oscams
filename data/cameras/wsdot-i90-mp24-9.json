@@ -1,0 +1,22 @@
+{
+  "id": "wsdot-i90-mp24-9",
+  "name": "I-90 at MP 24.9",
+  "lat": 47.505926,
+  "lon": -121.898696,
+  "feed_url": "https://images.wsdot.wa.gov/nw/090vc02495.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road",
+    "i-90"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "I 90",
+  "milepost": 24.9
+}

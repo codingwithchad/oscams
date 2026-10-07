@@ -73,6 +73,7 @@ export interface Drive {
 	from: string;
 	from_label?: string;
 	to: string;
+	to_label?: string;
 	order?: number;
 }
 

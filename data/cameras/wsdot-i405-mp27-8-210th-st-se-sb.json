@@ -1,0 +1,22 @@
+{
+  "id": "wsdot-i405-mp27-8-210th-st-se-sb",
+  "name": "I-405 at MP 27.8: 210th St SE, SB",
+  "lat": 47.807405,
+  "lon": -122.227628,
+  "feed_url": "https://images.wsdot.wa.gov/nw/405vc02786.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road",
+    "i-405"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "I 405",
+  "milepost": 27.8
+}

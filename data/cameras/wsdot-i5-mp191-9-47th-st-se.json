@@ -1,0 +1,22 @@
+{
+  "id": "wsdot-i5-mp191-9-47th-st-se",
+  "name": "I-5 at MP 191.9: 47th St SE",
+  "lat": 47.954868,
+  "lon": -122.199333,
+  "feed_url": "https://images.wsdot.wa.gov/nw/005vc19195.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road",
+    "i-5"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "I 5",
+  "milepost": 191.9
+}

@@ -76,3 +76,35 @@ export function alongRoute<T extends Point>(
 	}
 	return out.sort((a, b) => a.along - b.along || a.off - b.off);
 }
+
+/**
+ * Thin a long list of stops so the drive shows spaced-out key cameras instead of every one.
+ * Stops marked `keep` (other sources, the destination area) are always included.
+ */
+export function thinStops<T extends { along: number; keep?: boolean }>(
+	stops: T[],
+	minGap: number
+): T[] {
+	const out: T[] = [];
+	let last = -Infinity;
+	for (const s of stops) {
+		if (s.keep || s.along - last >= minGap) {
+			out.push(s);
+			last = s.along;
+		}
+	}
+	return out;
+}
+
+/** The smallest spacing (in 0.5 mile steps) that brings the list down to `target` stops or fewer. */
+export function thinToTarget<T extends { along: number; keep?: boolean }>(
+	stops: T[],
+	target: number
+): T[] {
+	if (stops.length <= target) return stops;
+	for (let gap = 0.5; gap <= 20; gap += 0.5) {
+		const thinned = thinStops(stops, gap);
+		if (thinned.length <= target) return thinned;
+	}
+	return thinStops(stops, 20);
+}

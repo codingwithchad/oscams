@@ -39,6 +39,10 @@
     "from_label": {
       "type": "string",
       "description": "Name to show when `from` is coordinates."
+    },
+    "to_label": {
+      "type": "string",
+      "description": "Name to show when `to` is coordinates."
     }
   }
 }

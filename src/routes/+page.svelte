@@ -1,14 +1,10 @@
 <script lang="ts">
-	import { goto } from '$app/navigation';
 	import InstallHelp from '../lib/InstallHelp.svelte';
-	import SearchBox from '../lib/SearchBox.svelte';
-	import TripForm from '../lib/TripForm.svelte';
+	import StartCard from '../lib/StartCard.svelte';
 	import { loadRecents, type Recent } from '../lib/recents';
 	import type { PageProps } from './$types';
 
 	let { data }: PageProps = $props();
-	let locating = $state(false);
-	let error = $state('');
 	let recents = $state<Recent[]>([]);
 
 	$effect(() => {
@@ -35,24 +31,6 @@
 	const chips = $derived(
 		data.places.filter((p) => !p.collection).map((p) => ({ id: p.id, name: p.name }))
 	);
-
-	function useMyLocation() {
-		error = '';
-		if (!navigator.geolocation) {
-			error = 'Location is not available on this device.';
-			return;
-		}
-		locating = true;
-		navigator.geolocation.getCurrentPosition(
-			(pos) =>
-				goto(`/search?q=${pos.coords.latitude.toFixed(4)},${pos.coords.longitude.toFixed(4)}`),
-			() => {
-				locating = false;
-				error = 'Could not get your location.';
-			},
-			{ timeout: 10000 }
-		);
-	}
 </script>
 
 <svelte:head><title>OS Cams · Know before you go</title></svelte:head>
@@ -71,26 +49,11 @@
 </header>
 
 <main class="home">
-	<h2 class="section-title first">Plan a drive</h2>
-	<section class="trip-card">
-		<p>Pick your start and where you're headed. Cameras show in the order you'll pass them.</p>
-		<TripForm places={chips} />
-	</section>
-	{#if data.drives.length}
-		<nav class="drives" aria-label="Popular drives">
-			{#each data.drives as d (d.id)}
-				<a
-					class="drive"
-					href="/trip?from={encodeURIComponent(d.from)}&to={encodeURIComponent(d.to)}{d.from_label
-						? `&fl=${encodeURIComponent(d.from_label)}`
-						: ''}"
-				>
-					<span class="place-name">{d.name}</span>
-					{#if d.blurb}<span class="place-sub">{d.blurb}</span>{/if}
-				</a>
-			{/each}
-		</nav>
-	{/if}
+	<StartCard
+		{chips}
+		drives={data.drives}
+		searches={searches.map((x) => ({ q: x.q, label: x.label }))}
+	/>
 
 	{#if data.collections.length}
 		<h2 class="section-title">Ferries, border &amp; airports</h2>
@@ -135,20 +98,6 @@
 			</details>
 		{/if}
 	{/if}
-
-	<h2 class="section-title">Somewhere else?</h2>
-	<SearchBox />
-	{#if searches.length}
-		<div class="chips recent-searches" aria-label="Recent searches">
-			{#each searches as s (s.q)}
-				<a class="chip" href="/search?q={encodeURIComponent(s.q)}">{s.label}</a>
-			{/each}
-		</div>
-	{/if}
-	<button class="secondary wide" onclick={useMyLocation} disabled={locating}>
-		{locating ? 'Finding you…' : 'Use my location'}
-	</button>
-	{#if error}<p class="error">{error}</p>{/if}
 
 	<InstallHelp />
 	<p class="hint">We're adding places. Search any town or zip to see what's nearby.</p>

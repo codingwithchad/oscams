@@ -1,0 +1,22 @@
+{
+  "id": "wsdot-i405-mp0-3-southcenter",
+  "name": "I-405 at MP 0.3: Southcenter",
+  "lat": 47.462588,
+  "lon": -122.258334,
+  "feed_url": "https://images.wsdot.wa.gov/nw/405vc00034.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road",
+    "i-5"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "I 405",
+  "milepost": 0.3
+}

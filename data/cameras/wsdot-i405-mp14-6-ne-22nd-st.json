@@ -1,0 +1,22 @@
+{
+  "id": "wsdot-i405-mp14-6-ne-22nd-st",
+  "name": "I-405 at MP 14.6: NE 22nd St",
+  "lat": 47.629968,
+  "lon": -122.188235,
+  "feed_url": "https://images.wsdot.wa.gov/nw/405vc01469.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road",
+    "i-405"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "I 405",
+  "milepost": 14.6
+}

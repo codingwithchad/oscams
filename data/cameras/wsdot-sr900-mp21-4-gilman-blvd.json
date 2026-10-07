@@ -1,0 +1,22 @@
+{
+  "id": "wsdot-sr900-mp21-4-gilman-blvd",
+  "name": "SR 900 at MP 21.4: Gilman Blvd",
+  "lat": 47.5457,
+  "lon": -122.062733,
+  "feed_url": "https://images.wsdot.wa.gov/nw/900vc02142.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road",
+    "i-90"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "SR 900",
+  "milepost": 21.4
+}

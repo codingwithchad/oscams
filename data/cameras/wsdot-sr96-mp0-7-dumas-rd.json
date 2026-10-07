@@ -1,0 +1,22 @@
+{
+  "id": "wsdot-sr96-mp0-7-dumas-rd",
+  "name": "SR 96 at MP 0.7: Dumas Rd",
+  "lat": 47.880186,
+  "lon": -122.219505,
+  "feed_url": "https://images.wsdot.wa.gov/nw/096vc00073.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road",
+    "i-5"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "SR 96",
+  "milepost": 0.7
+}

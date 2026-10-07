@@ -1,0 +1,22 @@
+{
+  "id": "wsdot-i5-mp157-1-mlk-jr-way-s",
+  "name": "I-5 at MP 157.1: MLK Jr Way S",
+  "lat": 47.4972,
+  "lon": -122.27,
+  "feed_url": "https://images.wsdot.wa.gov/nw/005vc15718.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road",
+    "i-5"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "I 5",
+  "milepost": 157.1
+}

@@ -1,0 +1,20 @@
+{
+  "id": "wsdot-i-5-at-133-7-sb-i-705-to-nb-i-5-sb-sr-7-ground",
+  "name": "I-5 at 133.7: SB I-705 to NB I-5/SB SR 7, Ground",
+  "lat": 47.233256,
+  "lon": -122.432671,
+  "feed_url": "https://images.wsdot.wa.gov/orflow/005vc13376.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road",
+    "i-5"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z"
+}

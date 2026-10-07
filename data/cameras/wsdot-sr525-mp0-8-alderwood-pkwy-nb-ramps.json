@@ -1,0 +1,22 @@
+{
+  "id": "wsdot-sr525-mp0-8-alderwood-pkwy-nb-ramps",
+  "name": "SR 525 at MP 0.8: Alderwood Pkwy, NB Ramps",
+  "lat": 47.841632,
+  "lon": -122.270946,
+  "feed_url": "https://images.wsdot.wa.gov/nw/525vc00087.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road",
+    "i-5"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "SR 525",
+  "milepost": 0.8
+}

@@ -1,0 +1,22 @@
+{
+  "id": "wsdot-i5-mp162-8-s-court-st",
+  "name": "I-5 at MP 162.8: S. Court St",
+  "lat": 47.570799,
+  "lon": -122.31995,
+  "feed_url": "https://images.wsdot.wa.gov/nw/005vc16287.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road",
+    "i-5"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "I 5",
+  "milepost": 162.8
+}

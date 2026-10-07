@@ -1,0 +1,18 @@
+{
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "created_at": "2026-10-07T00:00:00Z",
+  "source": "National Weather Service",
+  "attribution_text": "National Weather Service",
+  "kind": "forecast",
+  "provider": "nws",
+  "id": "nws-forecast-seattle",
+  "name": "Seattle forecast",
+  "lat": 47.6062,
+  "lon": -122.3321,
+  "provider_ref": "47.6062,-122.3321",
+  "page_url": "https://forecast.weather.gov/MapClick.php?lat=47.6062&lon=-122.3321",
+  "tags": [
+    "seattle"
+  ]
+}

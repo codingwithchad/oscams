@@ -1,0 +1,22 @@
+{
+  "id": "wsdot-sr599-mp1-4-e-marginal-way",
+  "name": "SR 599 at MP 1.4: E Marginal Way",
+  "lat": 47.497582,
+  "lon": -122.287691,
+  "feed_url": "https://images.wsdot.wa.gov/nw/599vc00141.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road",
+    "i-5"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "SR 599",
+  "milepost": 1.4
+}

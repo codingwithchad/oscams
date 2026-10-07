@@ -4,11 +4,11 @@ import { getConditions } from '../../lib/server/conditions';
 import { geocode } from '../../lib/server/geocode';
 import { withLiveLinks } from '../../lib/server/live';
 import { drivingRoute } from '../../lib/server/routing';
-import { alongRoute, cumulativeMiles, projectOnRoute } from '../../lib/route';
+import { alongRoute, cumulativeMiles, projectOnRoute, thinToTarget } from '../../lib/route';
 import type { Camera, FeaturedPlace, Nearby, Place, WeatherSource } from '../../lib/types';
 import type { PageServerLoad } from './$types';
 
-const DEFAULT_DESTINATION_RADIUS = 10;
+const DEFAULT_DESTINATION_RADIUS = 3;
 
 async function resolve(
 	q: string,
@@ -39,9 +39,11 @@ export const load: PageServerLoad = async ({ url, setHeaders }) => {
 	const fromQ = url.searchParams.get('from')?.trim() ?? '';
 	const toQ = url.searchParams.get('to')?.trim() ?? '';
 	const fromLabel = url.searchParams.get('fl')?.trim().slice(0, 80) ?? '';
+	const toLabel = url.searchParams.get('tl')?.trim().slice(0, 80) ?? '';
+	const showAll = url.searchParams.get('all') === '1';
 	// Minutes until you leave (0 = now), so forecasts can be for the time you will actually be there.
 	const leaveIn = Math.min(Math.max(Number(url.searchParams.get('in')) || 0, 0), 12 * 60);
-	const base = { fromQ: fromLabel || fromQ, toQ, error: null as string | null };
+	const base = { fromQ: fromLabel || fromQ, toQ: toLabel || toQ, error: null as string | null };
 	if (!fromQ || !toQ) return { ...base, trip: null };
 
 	const { cameras, weather, places } = getCatalog();
@@ -58,7 +60,8 @@ export const load: PageServerLoad = async ({ url, setHeaders }) => {
 	if (!from) return { ...base, error: `Couldn't find “${fromQ}”.`, trip: null };
 	if (!to) return { ...base, error: `Couldn't find “${toQ}”.`, trip: null };
 	if (fromLabel) from.label = fromLabel;
-	base.toQ = to.featured?.name ?? toQ;
+	if (toLabel) to.label = toLabel;
+	base.toQ = toLabel || (to.featured?.name ?? toQ);
 
 	let route;
 	try {
@@ -77,11 +80,27 @@ export const load: PageServerLoad = async ({ url, setHeaders }) => {
 	const withLinks = await withLiveLinks(found.map((f) => f.item));
 	const stops = found.map((f, i) => ({ camera: withLinks[i], along: f.along, off: f.off }));
 	const isOffline = (c: Camera) => isDormant(c) || !c.feed_url;
+	const live = stops.filter((s) => !isOffline(s.camera));
+	// Long drives (like I-5) have a camera every half mile. Show spaced-out key cameras by default;
+	// other sources and the destination area are always kept. "Show all" lists every one.
+	const MAX_SHOWN = 40;
+	const candidates = live.map((s) => ({
+		...s,
+		keep: s.camera.source !== 'WSDOT' || Boolean(s.camera.provider)
+	}));
+	const shown = showAll ? live : thinToTarget(candidates, MAX_SHOWN);
 
 	// Weather: anything along the road, plus anything that serves the destination.
 	const radius = to.featured?.radius_miles ?? DEFAULT_DESTINATION_RADIUS;
 	const sources = new Map<string, WeatherSource>();
-	for (const w of alongRoute(weather, route.coords, { corridor: 3 }))
+	// Along the road only forecasts, roadside stations and pass conditions matter; ferries, border and
+	// airport reports show up when the drive ends at one of them.
+	const ROADSIDE = new Set(['forecast', 'station', 'pass-conditions']);
+	for (const w of alongRoute(
+		weather.filter((x) => ROADSIDE.has(x.kind)),
+		route.coords,
+		{ corridor: 3 }
+	))
 		sources.set(w.item.id, w.item);
 	for (const w of nearby(weather, to, radius)) sources.set(w.id, w);
 	const wx: Nearby<WeatherSource>[] = [...sources.values()].map((w) => ({
@@ -98,13 +117,18 @@ export const load: PageServerLoad = async ({ url, setHeaders }) => {
 			minutes: route.minutes,
 			leaveIn,
 			route: route.coords,
-			stops: stops.filter((s) => !isOffline(s.camera)),
+			stops: shown,
+			totalCameras: live.length,
+			showingAll: showAll || shown.length === live.length,
 			offline: stops
 				.filter((s) => isOffline(s.camera))
 				.map((s) => ({ ...s.camera, distance: s.along }) as Nearby<Camera>),
 			// Streamed: the page shows cameras right away while live weather loads.
 			conditions: Promise.all(
-				inDrivingOrder(wx, route.coords).map(({ item, along }) => {
+				thinToTarget(
+					inDrivingOrder(wx, route.coords).map((x) => ({ ...x, keep: x.item.kind === 'forecast' })),
+					7
+				).map(({ item, along }) => {
 					// When you will be there: now (or when you leave) plus the driving time to that point.
 					const minutesIn =
 						leaveIn + (route.minutes * Math.min(along, total)) / Math.max(total, 0.1);

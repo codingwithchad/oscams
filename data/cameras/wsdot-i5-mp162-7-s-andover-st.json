@@ -1,0 +1,22 @@
+{
+  "id": "wsdot-i5-mp162-7-s-andover-st",
+  "name": "I-5 at MP 162.7: S Andover St",
+  "lat": 47.568341,
+  "lon": -122.320601,
+  "feed_url": "https://images.wsdot.wa.gov/nw/005vc16272.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road",
+    "i-5"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "I 5",
+  "milepost": 162.7
+}

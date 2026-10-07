@@ -1,0 +1,22 @@
+{
+  "id": "wsdot-sr522-mp10-5-s-campus-way",
+  "name": "SR 522 at MP 10.5: S Campus Way",
+  "lat": 47.755382,
+  "lon": -122.194456,
+  "feed_url": "https://images.wsdot.wa.gov/nw/522vc01056.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road",
+    "i-405"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "SR 522",
+  "milepost": 10.5
+}

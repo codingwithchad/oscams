@@ -1,0 +1,22 @@
+{
+  "id": "wsdot-i405-mp13-2-se-1st-st",
+  "name": "I-405 @ MP 13.2: SE 1st St",
+  "lat": 47.608672,
+  "lon": -122.187935,
+  "feed_url": "https://images.wsdot.wa.gov/nw/405vc01321.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road",
+    "i-405"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "I 405",
+  "milepost": 13.2
+}

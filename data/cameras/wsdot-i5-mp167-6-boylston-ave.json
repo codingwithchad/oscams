@@ -1,0 +1,22 @@
+{
+  "id": "wsdot-i5-mp167-6-boylston-ave",
+  "name": "I-5 at MP 167.6: Boylston Ave",
+  "lat": 47.636303,
+  "lon": -122.322707,
+  "feed_url": "https://images.wsdot.wa.gov/nw/005vc16763.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road",
+    "i-5"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "I 5",
+  "milepost": 167.6
+}

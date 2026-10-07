@@ -1,0 +1,22 @@
+{
+  "id": "wsdot-i405-mp11-1-i-90-interchange-nw-quadrant",
+  "name": "I-405 at MP 11.1: I-90 Interchange, NW Quadrant",
+  "lat": 47.58111,
+  "lon": -122.175711,
+  "feed_url": "https://images.wsdot.wa.gov/nw/405vc01118.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road",
+    "i-90"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "I 405",
+  "milepost": 11.1
+}

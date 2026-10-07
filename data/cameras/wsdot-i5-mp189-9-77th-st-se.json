@@ -1,0 +1,22 @@
+{
+  "id": "wsdot-i5-mp189-9-77th-st-se",
+  "name": "I-5 at MP 189.9: 77th St SE",
+  "lat": 47.927355,
+  "lon": -122.201673,
+  "feed_url": "https://images.wsdot.wa.gov/nw/005vc18997.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road",
+    "i-5"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "I 5",
+  "milepost": 189.9
+}

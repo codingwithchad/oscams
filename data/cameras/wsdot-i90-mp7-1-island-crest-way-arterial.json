@@ -1,0 +1,22 @@
+{
+  "id": "wsdot-i90-mp7-1-island-crest-way-arterial",
+  "name": "I-90 at MP 7.1: Island Crest Way Arterial",
+  "lat": 47.586443,
+  "lon": -122.229521,
+  "feed_url": "https://images.wsdot.wa.gov/nw/090vc00713.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road",
+    "i-90"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "I 90",
+  "milepost": 7.1
+}

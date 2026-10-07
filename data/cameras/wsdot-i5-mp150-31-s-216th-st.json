@@ -1,0 +1,22 @@
+{
+  "id": "wsdot-i5-mp150-31-s-216th-st",
+  "name": "I-5 @ MP 150.31: S 216th St",
+  "lat": 47.407902,
+  "lon": -122.291823,
+  "feed_url": "https://images.wsdot.wa.gov/nw/005vc15031.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road",
+    "i-5"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "I 5",
+  "milepost": 150.31
+}
