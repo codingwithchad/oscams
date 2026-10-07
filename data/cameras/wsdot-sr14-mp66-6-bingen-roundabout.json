@@ -1,0 +1,21 @@
+{
+  "id": "wsdot-sr14-mp66-6-bingen-roundabout",
+  "name": "SR 14 at MP 66.6: Bingen Roundabout",
+  "lat": 45.71328,
+  "lon": -121.462178,
+  "feed_url": "https://images.wsdot.wa.gov/sw/014vc06663.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "SR 14",
+  "milepost": 66.6
+}

@@ -1,0 +1,19 @@
+{
+  "id": "wsdot-us-395-nsc-at-mp-162-1-nsc-395-freya",
+  "name": "US 395 NSC at MP 162.1: NSC 395 & Freya",
+  "lat": 47.722373,
+  "lon": -117.356723,
+  "feed_url": "https://images.wsdot.wa.gov/spokane/wsdot_395nsc_16216_freya.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z"
+}

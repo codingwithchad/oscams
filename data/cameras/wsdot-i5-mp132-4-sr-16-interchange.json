@@ -1,0 +1,21 @@
+{
+  "id": "wsdot-i5-mp132-4-sr-16-interchange",
+  "name": "I-5 SB at MP 132.4: SR 16 Interchange",
+  "lat": 47.230476,
+  "lon": -122.460417,
+  "feed_url": "https://images.wsdot.wa.gov/orflow/005vc13240.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "I 5",
+  "milepost": 132.4
+}

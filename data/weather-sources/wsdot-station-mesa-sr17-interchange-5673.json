@@ -1,0 +1,17 @@
+{
+  "id": "wsdot-station-mesa-sr17-interchange-5673",
+  "name": "Mesa/SR17 Interchange",
+  "lat": 46.57141,
+  "lon": -118.98851,
+  "kind": "station",
+  "provider": "wsdot-weather",
+  "provider_ref": "5673",
+  "source": "WSDOT",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "requires_key": "WSDOT_CODE",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "tags": [],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z"
+}

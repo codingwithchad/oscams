@@ -1,0 +1,21 @@
+{
+  "id": "wsdot-sr96-mp1-7-25th-ave-se",
+  "name": "SR 96 at MP 1.7: 25th Ave SE",
+  "lat": 47.878068,
+  "lon": -122.198466,
+  "feed_url": "https://images.wsdot.wa.gov/nw/096vc00177.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "SR 96",
+  "milepost": 1.7
+}

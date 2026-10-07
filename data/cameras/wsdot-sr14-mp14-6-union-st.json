@@ -1,0 +1,21 @@
+{
+  "id": "wsdot-sr14-mp14-6-union-st",
+  "name": "SR 14 at MP 14.6: Union St",
+  "lat": 45.580397,
+  "lon": -122.385384,
+  "feed_url": "https://images.wsdot.wa.gov/sw/014vc01465.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "SR 14",
+  "milepost": 14.6
+}

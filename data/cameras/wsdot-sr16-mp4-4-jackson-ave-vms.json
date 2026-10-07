@@ -1,0 +1,21 @@
+{
+  "id": "wsdot-sr16-mp4-4-jackson-ave-vms",
+  "name": "SR 16 at MP 4.4: Jackson Ave VMS",
+  "lat": 47.258843,
+  "lon": -122.531169,
+  "feed_url": "https://images.wsdot.wa.gov/orflow/016vc00440.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "SR 16",
+  "milepost": 4.4
+}

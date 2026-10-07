@@ -1,0 +1,21 @@
+{
+  "id": "wsdot-sr512-mp8-7-sr-161-south-hill",
+  "name": "SR 512 at MP 8.7: SR 161 (South Hill)",
+  "lat": 47.161427,
+  "lon": -122.297004,
+  "feed_url": "https://images.wsdot.wa.gov/orflow/512vc00875.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "SR 512",
+  "milepost": 8.7
+}

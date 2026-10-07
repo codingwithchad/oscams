@@ -1,0 +1,21 @@
+{
+  "id": "wsdot-sr291-mp9-2-charles-road-7",
+  "name": "SR 291 at MP 9.2: Charles Road (7)",
+  "lat": 47.776998,
+  "lon": -117.543943,
+  "feed_url": "https://images.wsdot.wa.gov/rweather/NineMile-7.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "SR 291",
+  "milepost": 9.2
+}

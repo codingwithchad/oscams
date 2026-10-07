@@ -1,0 +1,21 @@
+{
+  "id": "wsdot-sr167-mp25-7-s-22nd-st",
+  "name": "SR 167 at MP 25.7: S 22nd St",
+  "lat": 47.459807,
+  "lon": -122.217038,
+  "feed_url": "https://images.wsdot.wa.gov/nw/167vc02574.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "SR 167",
+  "milepost": 25.7
+}

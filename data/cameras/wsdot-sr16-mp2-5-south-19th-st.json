@@ -1,0 +1,21 @@
+{
+  "id": "wsdot-sr16-mp2-5-south-19th-st",
+  "name": "SR 16 at MP 2.5: South 19th St",
+  "lat": 47.24276,
+  "lon": -122.5044,
+  "feed_url": "https://images.wsdot.wa.gov/orflow/016vc00250.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "SR 16",
+  "milepost": 2.5
+}

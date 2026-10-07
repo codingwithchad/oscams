@@ -1,0 +1,21 @@
+{
+  "id": "wsdot-sr221-mp13-4-sellards-road",
+  "name": "SR 221 at MP 13.4: Sellards Road",
+  "lat": 46.13108,
+  "lon": -119.60158,
+  "feed_url": "https://images.wsdot.wa.gov/rweather/medium_SellardsRoad.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "SR 221",
+  "milepost": 13.4
+}

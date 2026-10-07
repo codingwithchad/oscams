@@ -1,6 +1,7 @@
 import { parseLatLon } from '../geo';
 import type { Place } from '../types';
 import { cached } from './cache';
+import { lookupWashington } from './gazetteer';
 
 const USER_AGENT = 'oscams (https://github.com/codingwithchad/oscams)';
 const BIG_AREAS = new Set(['county', 'state', 'region', 'country', 'state_district', 'province']);
@@ -23,6 +24,10 @@ export async function geocode(query: string): Promise<Place | null> {
 	if (!q) return null;
 	const direct = parseLatLon(q);
 	if (direct) return { ...direct, label: `${direct.lat.toFixed(3)}, ${direct.lon.toFixed(3)}` };
+
+	// Washington towns and ZIP codes come from the offline list: instant, and no outside service needed.
+	const local = lookupWashington(q);
+	if (local) return local;
 
 	return cached(`geo:${q.toLowerCase()}`, DAY, async () => {
 		try {

@@ -1,0 +1,21 @@
+{
+  "id": "wsdot-i405-mp11-9-se-20th-st-sb",
+  "name": "I-405 at MP 11.9: SE 20th St, SB",
+  "lat": 47.590911,
+  "lon": -122.181121,
+  "feed_url": "https://images.wsdot.wa.gov/nw/405vc01194.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "I 405",
+  "milepost": 11.9
+}

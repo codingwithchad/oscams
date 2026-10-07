@@ -1,0 +1,21 @@
+{
+  "id": "wsdot-sr18-mp15-7-se-231st-st",
+  "name": "SR 18 at MP 15.7: SE 231st St",
+  "lat": 47.394593,
+  "lon": -122.047133,
+  "feed_url": "https://images.wsdot.wa.gov/nw/018vc01572.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "SR 18",
+  "milepost": 15.7
+}

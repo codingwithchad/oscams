@@ -1,0 +1,21 @@
+{
+  "id": "wsdot-us2-mp127-8-us-97-i-c-e-end-odabashian-br",
+  "name": "US 2 at MP 127.8: US 97 I/C E. End Odabashian Br.",
+  "lat": 47.467786,
+  "lon": -120.299551,
+  "feed_url": "https://images.wsdot.wa.gov/nc/028vc00001.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "US 2",
+  "milepost": 127.8
+}

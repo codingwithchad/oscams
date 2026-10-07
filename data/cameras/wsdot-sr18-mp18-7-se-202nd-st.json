@@ -1,0 +1,21 @@
+{
+  "id": "wsdot-sr18-mp18-7-se-202nd-st",
+  "name": "SR 18 at MP 18.7: SE 202nd St",
+  "lat": 47.420609,
+  "lon": -122.001967,
+  "feed_url": "https://images.wsdot.wa.gov/nw/018vc01873.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "SR 18",
+  "milepost": 18.7
+}

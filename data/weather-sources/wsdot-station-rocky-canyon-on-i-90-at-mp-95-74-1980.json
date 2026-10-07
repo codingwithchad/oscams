@@ -1,0 +1,17 @@
+{
+  "id": "wsdot-station-rocky-canyon-on-i-90-at-mp-95-74-1980",
+  "name": "Rocky Canyon on I-90 at mp 95.74",
+  "lat": 47.078,
+  "lon": -120.724,
+  "kind": "station",
+  "provider": "wsdot-weather",
+  "provider_ref": "1980",
+  "source": "WSDOT",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "requires_key": "WSDOT_CODE",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "tags": [],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z"
+}

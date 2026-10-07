@@ -1,0 +1,21 @@
+{
+  "id": "wsdot-i5-mp85-5-lewis-county-line",
+  "name": "I-5 at MP 85.5: Lewis County Line",
+  "lat": 46.765422,
+  "lon": -122.993245,
+  "feed_url": "https://images.wsdot.wa.gov/sw/005vc08551.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "I 5",
+  "milepost": 85.5
+}

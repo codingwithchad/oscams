@@ -1,0 +1,19 @@
+{
+  "id": "wsdot-us-395-nsc-at-mp-162-5-nsc-395-lincoln",
+  "name": "US 395 NSC at MP 162.5: NSC 395 & Lincoln",
+  "lat": 47.72865,
+  "lon": -117.354851,
+  "feed_url": "https://images.wsdot.wa.gov/spokane/wsdot_395nsc_16256_lincoln.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z"
+}

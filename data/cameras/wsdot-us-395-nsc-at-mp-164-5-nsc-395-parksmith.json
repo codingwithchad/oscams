@@ -1,0 +1,19 @@
+{
+  "id": "wsdot-us-395-nsc-at-mp-164-5-nsc-395-parksmith",
+  "name": "US 395 NSC at MP 164.5: NSC 395  & Parksmith",
+  "lat": 47.758238,
+  "lon": -117.36399,
+  "feed_url": "https://images.wsdot.wa.gov/spokane/wsdot_395nsc_16453_parksmith.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z"
+}

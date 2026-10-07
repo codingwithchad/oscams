@@ -1,0 +1,21 @@
+{
+  "id": "wsdot-us97-mp185-don-senn-memorial-interchange",
+  "name": "US 97 at MP 185: Don Senn Memorial Interchange",
+  "lat": 47.558857,
+  "lon": -120.592839,
+  "feed_url": "https://images.wsdot.wa.gov/nc/097vc18494.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "US 97",
+  "milepost": 185
+}

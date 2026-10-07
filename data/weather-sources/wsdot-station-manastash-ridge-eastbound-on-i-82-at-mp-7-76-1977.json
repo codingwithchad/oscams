@@ -1,0 +1,17 @@
+{
+  "id": "wsdot-station-manastash-ridge-eastbound-on-i-82-at-mp-7-76-1977",
+  "name": "Manastash Ridge Eastbound on I-82 at mp 7.76",
+  "lat": 46.887,
+  "lon": -120.427,
+  "kind": "station",
+  "provider": "wsdot-weather",
+  "provider_ref": "1977",
+  "source": "WSDOT",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "requires_key": "WSDOT_CODE",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "tags": [],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "wsdot-sr203-mp5-2-ne-tolt-hill-rd-10127",
+  "name": "SR 203 at MP 5.2: NE Tolt Hill Rd",
+  "lat": 47.637041,
+  "lon": -121.916248,
+  "feed_url": "https://images.wsdot.wa.gov/nw/203vc00521.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "SR 203",
+  "milepost": 5.2
+}

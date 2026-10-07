@@ -1,0 +1,17 @@
+{
+  "id": "wsdot-station-clayton-rd-on-us-395-at-mp-188-10-2686",
+  "name": "Clayton Rd on US 395 at mp 188.10",
+  "lat": 48.0284,
+  "lon": -117.5981,
+  "kind": "station",
+  "provider": "wsdot-weather",
+  "provider_ref": "2686",
+  "source": "WSDOT",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "requires_key": "WSDOT_CODE",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "tags": [],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z"
+}

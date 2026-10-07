@@ -1,0 +1,21 @@
+{
+  "id": "wsdot-sr527-mp9-5-121st-st-se",
+  "name": "SR 527 at MP 9.5: 121st St SE",
+  "lat": 47.887573,
+  "lon": -122.206675,
+  "feed_url": "https://images.wsdot.wa.gov/nw/527vc00950.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "SR 527",
+  "milepost": 9.5
+}

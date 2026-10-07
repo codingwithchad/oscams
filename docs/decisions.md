@@ -53,3 +53,11 @@ Browse now ends with two utility tiles: "All places" (a filterable directory gro
 "Ski areas" lists the biggest Washington ski areas by skiable acres (Crystal Mountain about 2,600, 49 Degrees North about 2,300, Mission Ridge about 2,000, The Summit at Snoqualmie about 2,000, and Stevens Pass tied with Mt. Baker at about 1,125; sources disagree, so check before quoting). Only Stevens Pass (Windy cameras plus WSDOT) and Snoqualmie (WSDOT) have cameras we can reuse. Crystal, 49 Degrees North and Mission Ridge show a forecast plus a note and a link to the resort's own cameras. Places can carry a `note` and `link`, and a collection can list places from other lists with `also`. A place page shows only its nearest forecast.
 
 Windy was searched widely around all seven ski areas (2026-10-07). Nothing usable was added: Windy's three "Mt. Baker" entries are a small airstrip, a distant hazy peak and a duplicate of the North Cascades park camera, so they are not shown. White Pass has WSDOT's summit camera. Each resort road has a seasonal WSDOT road-conditions report (Crystal also has Chinook Pass).
+
+## 2026-10-07: Reliability pass and statewide cameras
+
+- The cache now merges identical in-flight lookups, so many visitors asking for the same thing cause one outside request.
+- Washington town and ZIP searches use an offline list built from the US Census Bureau Gazetteer (public domain; `node scripts/build-gazetteer.mjs`, data in `data/gazetteer/wa.json`). Other states and street addresses still go to the online search, with Open-Meteo as a backup.
+- Home page counts are computed once every 10 minutes, and all data is read when the server starts.
+- A camera picture that fails to load is retried once, then shows "Camera unavailable right now" until its next refresh.
+- All working WSDOT cameras and reporting weather stations in the state were imported (`node --env-file=.env scripts/import-wsdot-route.mjs all`), so a trip between any two Washington places finds cameras along the way. Re-run it to pick up new WSDOT cameras; it skips ones we already have and ones that do not serve a real picture.

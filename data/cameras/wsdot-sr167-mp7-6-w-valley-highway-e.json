@@ -1,0 +1,21 @@
+{
+  "id": "wsdot-sr167-mp7-6-w-valley-highway-e",
+  "name": "SR 167 at MP 7.6: W Valley Highway E",
+  "lat": 47.206459,
+  "lon": -122.247773,
+  "feed_url": "https://images.wsdot.wa.gov/orflow/167vc00759.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "SR 167",
+  "milepost": 7.6
+}

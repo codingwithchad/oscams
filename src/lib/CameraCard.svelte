@@ -11,6 +11,17 @@
 	let modified = $state<string | null>(null);
 	let providerUrl = $state<string | null>(null);
 	let dialog: HTMLDialogElement | undefined = $state();
+	// A picture that fails to load gets one retry, then a clear "unavailable" tile until the next refresh.
+	let retry = $state(0);
+	let failed = $state(false);
+
+	function onFail() {
+		if (retry < 1 && !view) setTimeout(() => retry++, 1500);
+		else failed = true;
+	}
+	function onOk() {
+		failed = false;
+	}
 
 	async function loadAge() {
 		if (!isImage) return;
@@ -31,6 +42,8 @@
 		loadAge();
 		const timer = setInterval(() => {
 			tick = Date.now();
+			retry = 0;
+			failed = false;
 			loadAge();
 		}, refreshMs);
 		return () => clearInterval(timer);
@@ -41,8 +54,8 @@
 		view
 			? (providerUrl ?? camera.feed_url)
 			: camera.max_width
-				? `/img/${encodeURIComponent(camera.id)}?t=${Math.floor(tick / refreshMs)}`
-				: `${camera.feed_url}${camera.feed_url?.includes('?') ? '&' : '?'}t=${Math.floor(tick / refreshMs)}`
+				? `/img/${encodeURIComponent(camera.id)}?t=${Math.floor(tick / refreshMs)}&r=${retry}`
+				: `${camera.feed_url}${camera.feed_url?.includes('?') ? '&' : '?'}t=${Math.floor(tick / refreshMs)}&r=${retry}`
 	);
 	const shownModified = $derived(modified ?? view?.modified ?? null);
 	const age = $derived(shownModified ? ago(shownModified, tick) : null);
@@ -60,7 +73,18 @@
 			rel="noopener"
 			aria-label="Open {camera.name} on Windy.com"
 		>
-			<img src={imageSrc} alt={camera.name} loading="lazy" width={view.width} />
+			{#if failed}
+				<span class="cam-down">Camera unavailable right now</span>
+			{:else}
+				<img
+					src={imageSrc}
+					alt={camera.name}
+					loading="lazy"
+					width={view.width}
+					onerror={onFail}
+					onload={onOk}
+				/>
+			{/if}
 			{#if age}<span class="age" class:stale>{stale ? 'Stale · ' : ''}{age}</span>{/if}
 		</a>
 	{:else if isImage}
@@ -69,7 +93,11 @@
 			onclick={() => dialog?.showModal()}
 			aria-label="Enlarge {camera.name}"
 		>
-			<img src={imageSrc} alt={camera.name} loading="lazy" />
+			{#if failed}
+				<span class="cam-down">Camera unavailable right now</span>
+			{:else}
+				<img src={imageSrc} alt={camera.name} loading="lazy" onerror={onFail} onload={onOk} />
+			{/if}
 			{#if age}<span class="age" class:stale>{stale ? 'Stale · ' : ''}{age}</span>{/if}
 		</button>
 	{:else}

@@ -1,0 +1,21 @@
+{
+  "id": "wsdot-us395-mp167-9-wandermere-rd",
+  "name": "US 395 at MP 167.9: Wandermere Rd",
+  "lat": 47.774967,
+  "lon": -117.402576,
+  "feed_url": "https://images.wsdot.wa.gov/spokane/wsdot_division_wandermere.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "US 395",
+  "milepost": 167.9
+}

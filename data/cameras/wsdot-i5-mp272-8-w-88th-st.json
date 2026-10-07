@@ -1,0 +1,21 @@
+{
+  "id": "wsdot-i5-mp272-8-w-88th-st",
+  "name": "I-5 at MP 272.8: W 88th St",
+  "lat": 48.961768,
+  "lon": -122.702452,
+  "feed_url": "https://images.wsdot.wa.gov/nw/005vc27281.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "I 5",
+  "milepost": 272.8
+}

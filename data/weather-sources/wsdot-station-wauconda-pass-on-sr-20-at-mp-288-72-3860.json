@@ -1,0 +1,17 @@
+{
+  "id": "wsdot-station-wauconda-pass-on-sr-20-at-mp-288-72-3860",
+  "name": "Wauconda Pass on SR 20 at mp 288.72",
+  "lat": 48.727548442,
+  "lon": -118.962583142,
+  "kind": "station",
+  "provider": "wsdot-weather",
+  "provider_ref": "3860",
+  "source": "WSDOT",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "requires_key": "WSDOT_CODE",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "tags": [],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z"
+}

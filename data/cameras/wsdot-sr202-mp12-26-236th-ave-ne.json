@@ -1,0 +1,21 @@
+{
+  "id": "wsdot-sr202-mp12-26-236th-ave-ne",
+  "name": "SR 202 at MP 12.26: 236th Ave NE",
+  "lat": 47.64397,
+  "lon": -122.023212,
+  "feed_url": "https://images.wsdot.wa.gov/nw/202vc01226.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "SR 202",
+  "milepost": 12.26
+}

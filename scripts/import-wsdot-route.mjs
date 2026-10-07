@@ -1,11 +1,13 @@
 // Add the WSDOT cameras and weather stations along a drive as data files.
 // Usage: node --env-file=.env scripts/import-wsdot-route.mjs "<from lat,lon>" "<to lat,lon>" [corridor_miles=0.6] [tag]
+//        node --env-file=.env scripts/import-wsdot-route.mjs all     (every working camera and reporting station in the state)
 // Only working cameras are added (each picture is downloaded and checked), and ones we already have are skipped.
 import { readdirSync, readFileSync, writeFileSync } from 'node:fs';
 
 const [fromArg, toArg, corridorArg = '0.6', tagArg = ''] = process.argv.slice(2);
 const key = process.env.WSDOT_CODE;
-if (!fromArg || !toArg || !key) {
+const ALL = fromArg === 'all';
+if (!fromArg || (!ALL && !toArg) || !key) {
 	console.error(
 		'Usage: node --env-file=.env scripts/import-wsdot-route.mjs "lat,lon" "lat,lon" [corridor_miles] [tag]  (needs WSDOT_CODE)'
 	);
@@ -13,8 +15,8 @@ if (!fromArg || !toArg || !key) {
 }
 const corridor = Number(corridorArg);
 const parse = (s) => s.split(',').map(Number);
-const [fLat, fLon] = parse(fromArg);
-const [tLat, tLon] = parse(toArg);
+const [fLat, fLon] = ALL ? [0, 0] : parse(fromArg);
+const [tLat, tLon] = ALL ? [0, 0] : parse(toArg);
 
 const rad = Math.PI / 180;
 const miles = (a, b, c, d) => {
@@ -24,14 +26,17 @@ const miles = (a, b, c, d) => {
 	return 3958.8 * 2 * Math.asin(Math.sqrt(x));
 };
 
-const osrm = await (
-	await fetch(
-		`https://router.project-osrm.org/route/v1/driving/${fLon},${fLat};${tLon},${tLat}?overview=full&geometries=geojson`
-	)
-).json();
-const route = osrm.routes?.[0]?.geometry.coordinates.map(([lon, lat]) => [lat, lon]);
-if (!route) throw new Error('no route');
+const osrm = ALL
+	? null
+	: await (
+			await fetch(
+				`https://router.project-osrm.org/route/v1/driving/${fLon},${fLat};${tLon},${tLat}?overview=full&geometries=geojson`
+			)
+		).json();
+const route = ALL ? [] : osrm.routes?.[0]?.geometry.coordinates.map(([lon, lat]) => [lat, lon]);
+if (!ALL && !route) throw new Error('no route');
 const offRoute = (lat, lon) => {
+	if (ALL) return 0;
 	let best = Infinity;
 	const cos = Math.cos(lat * rad);
 	for (let i = 0; i < route.length - 1; i++) {

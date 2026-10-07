@@ -1,0 +1,17 @@
+{
+  "id": "wsdot-station-km-mountain-on-sr-4-at-mp-22-20-2789",
+  "name": "KM Mountain on SR 4 at mp 22.20",
+  "lat": 46.346048,
+  "lon": -123.510366,
+  "kind": "station",
+  "provider": "wsdot-weather",
+  "provider_ref": "2789",
+  "source": "WSDOT",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "requires_key": "WSDOT_CODE",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "tags": [],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z"
+}

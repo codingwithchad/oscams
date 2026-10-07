@@ -1,0 +1,21 @@
+{
+  "id": "wsdot-sr20-mp289-wauconda-view-east",
+  "name": "SR 20 at MP 289: Wauconda (View East)",
+  "lat": 48.727768,
+  "lon": -118.962871,
+  "feed_url": "https://images.wsdot.wa.gov/nc/020vc28872.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "SR 20",
+  "milepost": 289
+}

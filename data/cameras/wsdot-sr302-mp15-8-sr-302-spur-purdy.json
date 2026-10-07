@@ -1,0 +1,21 @@
+{
+  "id": "wsdot-sr302-mp15-8-sr-302-spur-purdy",
+  "name": "SR 302 at MP 15.8: SR 302 Spur - Purdy",
+  "lat": 47.38437,
+  "lon": -122.627265,
+  "feed_url": "https://images.wsdot.wa.gov/orflow/302vc01580.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "SR 302",
+  "milepost": 15.8
+}

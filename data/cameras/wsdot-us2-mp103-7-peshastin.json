@@ -1,0 +1,21 @@
+{
+  "id": "wsdot-us2-mp103-7-peshastin",
+  "name": "US 2 at MP 103.7: Peshastin",
+  "lat": 47.567065,
+  "lon": -120.60563,
+  "feed_url": "https://images.wsdot.wa.gov/nc/002vc10367.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "US 2",
+  "milepost": 103.7
+}

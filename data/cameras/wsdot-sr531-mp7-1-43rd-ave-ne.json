@@ -1,0 +1,21 @@
+{
+  "id": "wsdot-sr531-mp7-1-43rd-ave-ne",
+  "name": "SR 531 at MP 7.1: 43rd Ave NE",
+  "lat": 48.152284,
+  "lon": -122.172281,
+  "feed_url": "https://images.wsdot.wa.gov/nw/531vc00721.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "SR 531",
+  "milepost": 7.1
+}

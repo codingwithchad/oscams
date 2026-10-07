@@ -5,7 +5,11 @@ import type { PageServerLoad } from './$types';
 
 const DEFAULT_RADIUS = 25;
 
-export const load: PageServerLoad = () => {
+const TEN_MINUTES = 10 * 60 * 1000;
+let memo: { at: number; value: ReturnType<typeof compute> } | null = null;
+
+/** The per-place camera counts and cover photos only change when the data files do (or a seasonal camera wakes up), so work them out once in a while, not on every visit. */
+function compute() {
 	const { places, cameras, collections, drives } = getCatalog();
 	const cards = places.map((p) => {
 		const live = nearby(cameras, p, p.radius_miles ?? DEFAULT_RADIUS).filter(
@@ -28,19 +32,24 @@ export const load: PageServerLoad = () => {
 				: null
 		};
 	});
-	// Most viewed across everyone first; ties keep the order set in the data files.
-	const popular = cards
-		.filter((c) => !c.collection)
-		.map((c, i) => ({ c, i }))
-		.sort((a, b) => viewCount(b.c.id) - viewCount(a.c.id) || a.i - b.i)
-		.map((x) => x.c.id);
 	return {
 		collections: collections.map((c) => ({
 			...c,
 			places: places.filter((p) => p.collection === c.id || c.also?.includes(p.id)).length
 		})),
 		drives,
-		places: cards,
-		popular
+		places: cards
 	};
+}
+
+export const load: PageServerLoad = () => {
+	if (!memo || Date.now() - memo.at > TEN_MINUTES) memo = { at: Date.now(), value: compute() };
+	const { collections, drives, places: cards } = memo.value;
+	// Most viewed across everyone first; ties keep the order set in the data files.
+	const popular = cards
+		.filter((c) => !c.collection)
+		.map((c, i) => ({ c, i }))
+		.sort((a, b) => viewCount(b.c.id) - viewCount(a.c.id) || a.i - b.i)
+		.map((x) => x.c.id);
+	return { collections, drives, places: cards, popular };
 };

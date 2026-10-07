@@ -1,0 +1,21 @@
+{
+  "id": "wsdot-sr240-mp40-4-edison-st",
+  "name": "SR 240 at MP 40.4: Edison St",
+  "lat": 46.228555,
+  "lon": -119.190894,
+  "feed_url": "https://images.wsdot.wa.gov/sc/240VC04049.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "SR 240",
+  "milepost": 40.4
+}

@@ -1,0 +1,21 @@
+{
+  "id": "wsdot-us97-mp2-2-sr14-maryhill",
+  "name": "US 97 at MP 2.2: SR14 Maryhill",
+  "lat": 45.696579,
+  "lon": -120.821534,
+  "feed_url": "https://images.wsdot.wa.gov/sw/097vc00228.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "US 97",
+  "milepost": 2.2
+}

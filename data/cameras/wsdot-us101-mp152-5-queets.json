@@ -1,0 +1,21 @@
+{
+  "id": "wsdot-us101-mp152-5-queets",
+  "name": "US 101 at MP 152.5: Queets",
+  "lat": 47.535669,
+  "lon": -124.333121,
+  "feed_url": "https://images.wsdot.wa.gov/rweather/Medium_Queets.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "US 101",
+  "milepost": 152.5
+}

@@ -1,0 +1,21 @@
+{
+  "id": "wsdot-sr432-mp4-4-washington-way-10293",
+  "name": "SR 432 at MP 4.4: Washington Way",
+  "lat": 46.131702,
+  "lon": -122.977993,
+  "feed_url": "https://images.wsdot.wa.gov/sw/432vc00445.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "SR 432",
+  "milepost": 4.4
+}

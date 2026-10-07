@@ -1,0 +1,21 @@
+{
+  "id": "wsdot-i82-mp22-4-selah-creek-rest-area",
+  "name": "I-82 at MP 22.4: Selah Creek Rest Area",
+  "lat": 46.712147,
+  "lon": -120.415388,
+  "feed_url": "https://images.wsdot.wa.gov/sc/082VC02240.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "I 82",
+  "milepost": 22.4
+}

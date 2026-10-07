@@ -1,0 +1,21 @@
+{
+  "id": "wsdot-i5-mp204-2-144th-st-ne",
+  "name": "I-5 at MP 204.2: 144th St NE",
+  "lat": 48.126333,
+  "lon": -122.185363,
+  "feed_url": "https://images.wsdot.wa.gov/nw/005vc20424.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "I 5",
+  "milepost": 204.2
+}

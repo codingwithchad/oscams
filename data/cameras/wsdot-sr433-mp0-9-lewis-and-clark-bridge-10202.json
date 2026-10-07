@@ -1,0 +1,21 @@
+{
+  "id": "wsdot-sr433-mp0-9-lewis-and-clark-bridge-10202",
+  "name": "SR 433 at MP 0.9: Lewis and Clark Bridge",
+  "lat": 46.116235,
+  "lon": -122.950513,
+  "feed_url": "https://images.wsdot.wa.gov/sw/433vc00097.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "SR 433",
+  "milepost": 0.9
+}

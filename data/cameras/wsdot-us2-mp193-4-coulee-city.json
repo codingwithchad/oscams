@@ -1,0 +1,21 @@
+{
+  "id": "wsdot-us2-mp193-4-coulee-city",
+  "name": "US 2 at MP 193.4: Coulee City",
+  "lat": 47.638304,
+  "lon": -119.26254,
+  "feed_url": "https://images.wsdot.wa.gov/nc/002vc19335.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "US 2",
+  "milepost": 193.4
+}

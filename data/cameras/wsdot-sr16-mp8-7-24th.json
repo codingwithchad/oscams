@@ -1,0 +1,21 @@
+{
+  "id": "wsdot-sr16-mp8-7-24th",
+  "name": "SR 16 at MP 8.7: 24th",
+  "lat": 47.280111,
+  "lon": -122.560514,
+  "feed_url": "https://images.wsdot.wa.gov/orflow/016vc00879.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "SR 16",
+  "milepost": 8.7
+}

@@ -1,0 +1,21 @@
+{
+  "id": "wsdot-sr205-mp34-3-st-johns-rd",
+  "name": "SR 205 at MP 34.3: St Johns Rd",
+  "lat": 45.695796,
+  "lon": -122.611031,
+  "feed_url": "https://images.wsdot.wa.gov/sw/205vc03434.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "SR 205",
+  "milepost": 34.3
+}

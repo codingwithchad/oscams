@@ -1,0 +1,21 @@
+{
+  "id": "wsdot-sr532-mp5-8-72nd-ave-nw",
+  "name": "SR 532 at MP 5.8: 72nd Ave NW",
+  "lat": 48.239724,
+  "lon": -122.330722,
+  "feed_url": "https://images.wsdot.wa.gov/nw/532vc00588.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "SR 532",
+  "milepost": 5.8
+}

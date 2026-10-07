@@ -1,0 +1,19 @@
+{
+  "id": "wsdot-sr-28-spur-at-mp-4-5th-st-ne",
+  "name": "SR 28 Spur at MP 4: 5th St NE",
+  "lat": 47.410137,
+  "lon": -120.29172,
+  "feed_url": "https://images.wsdot.wa.gov/nc/028vc00431.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z"
+}

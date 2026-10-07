@@ -1,0 +1,17 @@
+{
+  "id": "wsdot-station-cape-horn-on-sr-14-at-mp-23-95-2061",
+  "name": "Cape Horn on SR 14 at mp 23.95",
+  "lat": 45.569,
+  "lon": -122.203,
+  "kind": "station",
+  "provider": "wsdot-weather",
+  "provider_ref": "2061",
+  "source": "WSDOT",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "requires_key": "WSDOT_CODE",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "tags": [],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z"
+}

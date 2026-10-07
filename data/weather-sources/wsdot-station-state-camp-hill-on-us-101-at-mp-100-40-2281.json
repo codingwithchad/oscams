@@ -1,0 +1,17 @@
+{
+  "id": "wsdot-station-state-camp-hill-on-us-101-at-mp-100-40-2281",
+  "name": "State Camp Hill on US 101 at mp 100.40",
+  "lat": 47.1402,
+  "lon": -123.8922,
+  "kind": "station",
+  "provider": "wsdot-weather",
+  "provider_ref": "2281",
+  "source": "WSDOT",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "requires_key": "WSDOT_CODE",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "tags": [],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z"
+}

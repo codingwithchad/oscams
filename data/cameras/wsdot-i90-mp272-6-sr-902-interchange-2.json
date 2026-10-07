@@ -1,0 +1,21 @@
+{
+  "id": "wsdot-i90-mp272-6-sr-902-interchange-2",
+  "name": "I-90 at MP 272.6: SR 902 Interchange #2",
+  "lat": 47.589434,
+  "lon": -117.567718,
+  "feed_url": "https://images.wsdot.wa.gov/spokane/wsdot_090_27260_medical_lake_2.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "I 90",
+  "milepost": 272.6
+}

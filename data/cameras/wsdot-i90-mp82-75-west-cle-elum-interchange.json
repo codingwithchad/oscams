@@ -1,0 +1,21 @@
+{
+  "id": "wsdot-i90-mp82-75-west-cle-elum-interchange",
+  "name": "I-90 at MP 82.75: West Cle Elum Interchange",
+  "lat": 47.193308,
+  "lon": -120.966495,
+  "feed_url": "https://images.wsdot.wa.gov/sc/090vc08275.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "I 90",
+  "milepost": 82.75
+}

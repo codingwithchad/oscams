@@ -1,0 +1,21 @@
+{
+  "id": "wsdot-sr31-mp16-6-metaline-falls",
+  "name": "SR 31 at MP 16.6: Metaline Falls",
+  "lat": 48.86921,
+  "lon": -117.35473,
+  "feed_url": "https://images.wsdot.wa.gov/rweather/medium_metalinefalls.JPG",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "SR 31",
+  "milepost": 16.6
+}

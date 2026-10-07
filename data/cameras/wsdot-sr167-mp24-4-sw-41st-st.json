@@ -1,0 +1,21 @@
+{
+  "id": "wsdot-sr167-mp24-4-sw-41st-st",
+  "name": "SR 167 at MP 24.4: SW 41st St",
+  "lat": 47.441307,
+  "lon": -122.217384,
+  "feed_url": "https://images.wsdot.wa.gov/nw/167vc02459.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "SR 167",
+  "milepost": 24.4
+}

@@ -879,3 +879,21 @@ button.wide {
 .collection.utility .ci {
 	color: var(--muted);
 }
+
+/* A camera whose picture will not load */
+.cam-down {
+	display: grid;
+	place-items: center;
+	width: 100%;
+	aspect-ratio: 4 / 3;
+	background: var(--bg);
+	color: var(--muted);
+	font-size: 0.9rem;
+	text-align: center;
+	padding: 12px;
+}
+.image-link .cam-down {
+	aspect-ratio: 400 / 224;
+	max-width: 400px;
+	margin: 0 auto;
+}

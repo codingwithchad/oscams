@@ -1,0 +1,17 @@
+{
+  "id": "wsdot-station-i5-sb-at-sr-16-i-c-flyover-5678",
+  "name": "I5 SB at SR 16 I/C Flyover",
+  "lat": 47.231000804,
+  "lon": -122.457406871,
+  "kind": "station",
+  "provider": "wsdot-weather",
+  "provider_ref": "5678",
+  "source": "WSDOT",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "requires_key": "WSDOT_CODE",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "tags": [],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z"
+}

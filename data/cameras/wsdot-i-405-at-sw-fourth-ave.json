@@ -1,0 +1,19 @@
+{
+  "id": "wsdot-i-405-at-sw-fourth-ave",
+  "name": "I-405 at SW Fourth Ave",
+  "lat": 45.50618,
+  "lon": -122.68275,
+  "feed_url": "https://www.tripcheck.com/RoadCams/cams/i405fourth_pid546.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z"
+}

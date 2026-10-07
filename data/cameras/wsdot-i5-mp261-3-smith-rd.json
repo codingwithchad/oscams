@@ -1,0 +1,21 @@
+{
+  "id": "wsdot-i5-mp261-3-smith-rd",
+  "name": "I-5 at MP 261.3: Smith Rd",
+  "lat": 48.831762,
+  "lon": -122.562062,
+  "feed_url": "https://images.wsdot.wa.gov/nw/005vc26132.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "I 5",
+  "milepost": 261.3
+}

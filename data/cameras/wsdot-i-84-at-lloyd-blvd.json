@@ -1,0 +1,19 @@
+{
+  "id": "wsdot-i-84-at-lloyd-blvd",
+  "name": "I-84 at Lloyd Blvd.",
+  "lat": 45.52976,
+  "lon": -122.64923,
+  "feed_url": "https://www.tripcheck.com/RoadCams/cams/i84lloyd_pid587.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z"
+}

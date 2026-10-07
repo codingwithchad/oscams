@@ -1,0 +1,21 @@
+{
+  "id": "wsdot-sr9-mp15-4-market-pl",
+  "name": "SR 9 at MP 15.4: Market Pl",
+  "lat": 47.998175,
+  "lon": -122.105569,
+  "feed_url": "https://images.wsdot.wa.gov/nw/009vc01544.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "SR 9",
+  "milepost": 15.4
+}

@@ -1,0 +1,21 @@
+{
+  "id": "wsdot-i405-mp1-4-longacres-dr",
+  "name": "I-405 at MP 1.4: Longacres Dr",
+  "lat": 47.466314,
+  "lon": -122.237351,
+  "feed_url": "https://images.wsdot.wa.gov/nw/405vc00140.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "I 405",
+  "milepost": 1.4
+}

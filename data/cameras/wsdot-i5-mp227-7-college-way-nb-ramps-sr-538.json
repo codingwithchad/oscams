@@ -1,0 +1,21 @@
+{
+  "id": "wsdot-i5-mp227-7-college-way-nb-ramps-sr-538",
+  "name": "I-5 at MP 227.7: College Way NB Ramps (SR 538)",
+  "lat": 48.429437,
+  "lon": -122.340749,
+  "feed_url": "https://images.wsdot.wa.gov/nw/538vc00004.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "I 5",
+  "milepost": 227.7
+}

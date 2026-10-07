@@ -1,0 +1,21 @@
+{
+  "id": "wsdot-sr240-mp43-1-blue-bridge-roundabout",
+  "name": "SR 240 at MP 43.1: Blue Bridge Roundabout",
+  "lat": 46.216718,
+  "lon": -119.139536,
+  "feed_url": "https://images.wsdot.wa.gov/sc/240vc04310.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "SR 240",
+  "milepost": 43.1
+}

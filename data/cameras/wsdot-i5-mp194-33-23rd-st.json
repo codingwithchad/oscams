@@ -1,0 +1,21 @@
+{
+  "id": "wsdot-i5-mp194-33-23rd-st",
+  "name": "I-5 @ MP 194.33: 23rd St",
+  "lat": 47.985339,
+  "lon": -122.183184,
+  "feed_url": "https://images.wsdot.wa.gov/nw/005vc19433.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "I 5",
+  "milepost": 194.33
+}

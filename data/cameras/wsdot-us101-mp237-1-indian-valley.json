@@ -1,0 +1,21 @@
+{
+  "id": "wsdot-us101-mp237-1-indian-valley",
+  "name": "US 101 at MP 237.1: Indian Valley",
+  "lat": 48.06748,
+  "lon": -123.61789,
+  "feed_url": "https://images.wsdot.wa.gov/rweather/Medium_IndianValleyUS101.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "US 101",
+  "milepost": 237.1
+}

@@ -1,0 +1,17 @@
+{
+  "id": "wsdot-station-s-277th-st-on-sr-167-at-mp-18-03-3852",
+  "name": "S 277th St on SR 167 at mp 18.03",
+  "lat": 47.353395,
+  "lon": -122.244567187,
+  "kind": "station",
+  "provider": "wsdot-weather",
+  "provider_ref": "3852",
+  "source": "WSDOT",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "requires_key": "WSDOT_CODE",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "tags": [],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z"
+}

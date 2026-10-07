@@ -1,0 +1,19 @@
+{
+  "id": "wsdot-ore-217-at-denney",
+  "name": "ORE 217 at Denney",
+  "lat": 45.47169,
+  "lon": -122.78583,
+  "feed_url": "https://www.tripcheck.com/RoadCams/cams/217denney_pid516.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z"
+}

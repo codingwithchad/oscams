@@ -1,0 +1,21 @@
+{
+  "id": "wsdot-sr16-mp4-7-tacoma-narrows-bridge-eastside",
+  "name": "SR 16 at MP 4.7: Tacoma Narrows Bridge, Eastside",
+  "lat": 47.259673,
+  "lon": -122.539291,
+  "feed_url": "https://images.wsdot.wa.gov/ORFlow/016vc00479.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "SR 16",
+  "milepost": 4.7
+}

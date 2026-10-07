@@ -1,0 +1,21 @@
+{
+  "id": "wsdot-i5-mp123-6-thorne-lane-nb",
+  "name": "I-5 at MP 123.6: Thorne Lane NB",
+  "lat": 47.12714,
+  "lon": -122.542093,
+  "feed_url": "https://images.wsdot.wa.gov/orflow/005vc12360.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "I 5",
+  "milepost": 123.6
+}

@@ -1,0 +1,21 @@
+{
+  "id": "wsdot-sr516-mp11-5-sr-18-interchange-eb-ramps",
+  "name": "SR 516 at MP 11.5: SR 18 Interchange, EB Ramps",
+  "lat": 47.358062,
+  "lon": -122.11973,
+  "feed_url": "https://images.wsdot.wa.gov/nw/516vc01152.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "SR 516",
+  "milepost": 11.5
+}

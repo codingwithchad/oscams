@@ -1,0 +1,19 @@
+{
+  "id": "wsdot-i-205-at-92nd",
+  "name": "I-205 at 92nd",
+  "lat": 45.464315,
+  "lon": -122.568321,
+  "feed_url": "https://www.tripcheck.com/RoadCams/cams/i20592nd_pid532.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z"
+}

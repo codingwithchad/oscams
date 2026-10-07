@@ -1,0 +1,21 @@
+{
+  "id": "wsdot-i90-mp164-5-looking-east",
+  "name": "I-90 at MP 164.5 (Looking East)",
+  "lat": 47.103875,
+  "lon": -119.523754,
+  "feed_url": "https://images.wsdot.wa.gov/nc/090vc16456.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "I 90",
+  "milepost": 164.5
+}

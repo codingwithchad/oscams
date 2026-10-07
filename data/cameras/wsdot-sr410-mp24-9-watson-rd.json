@@ -1,0 +1,21 @@
+{
+  "id": "wsdot-sr410-mp24-9-watson-rd",
+  "name": "SR 410 at MP 24.9: Watson Rd",
+  "lat": 47.199387,
+  "lon": -121.978888,
+  "feed_url": "https://images.wsdot.wa.gov/nw/410vc02493.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "SR 410",
+  "milepost": 24.9
+}

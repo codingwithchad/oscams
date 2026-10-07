@@ -1,0 +1,21 @@
+{
+  "id": "wsdot-sr104-mp13-1-climbing-hill-looking-east",
+  "name": "SR 104 at MP 13.1: Climbing Hill Looking East",
+  "lat": 47.868908,
+  "lon": -122.652935,
+  "feed_url": "https://images.wsdot.wa.gov/orflow/104vc01312.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "SR 104",
+  "milepost": 13.1
+}

@@ -1,0 +1,21 @@
+{
+  "id": "wsdot-i405-mp2-8-talbot-rd-nb-ramp",
+  "name": "I-405 at MP 2.8: Talbot Rd, NB Ramp",
+  "lat": 47.468396,
+  "lon": -122.207721,
+  "feed_url": "https://images.wsdot.wa.gov/nw/405vc00279.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "I 405",
+  "milepost": 2.8
+}

@@ -1,0 +1,21 @@
+{
+  "id": "wsdot-i5-mp117-9-center-dr",
+  "name": "I-5 at MP 117.9: Center Dr",
+  "lat": 47.088033,
+  "lon": -122.644168,
+  "feed_url": "https://images.wsdot.wa.gov/orflow/005vc11799.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "I 5",
+  "milepost": 117.9
+}

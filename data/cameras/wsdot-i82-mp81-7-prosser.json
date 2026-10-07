@@ -1,0 +1,21 @@
+{
+  "id": "wsdot-i82-mp81-7-prosser",
+  "name": "I-82 at MP 81.7: Prosser",
+  "lat": 46.21766,
+  "lon": -119.7482,
+  "feed_url": "https://images.wsdot.wa.gov/rweather/Medium_Prosser.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "I 82",
+  "milepost": 81.7
+}

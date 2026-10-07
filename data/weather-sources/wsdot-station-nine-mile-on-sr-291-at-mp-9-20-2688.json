@@ -1,0 +1,17 @@
+{
+  "id": "wsdot-station-nine-mile-on-sr-291-at-mp-9-20-2688",
+  "name": "Nine Mile on SR 291 at mp 9.20",
+  "lat": 47.7773,
+  "lon": -117.544,
+  "kind": "station",
+  "provider": "wsdot-weather",
+  "provider_ref": "2688",
+  "source": "WSDOT",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "requires_key": "WSDOT_CODE",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "tags": [],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z"
+}

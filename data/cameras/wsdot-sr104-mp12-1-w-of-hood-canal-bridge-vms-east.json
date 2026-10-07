@@ -1,0 +1,21 @@
+{
+  "id": "wsdot-sr104-mp12-1-w-of-hood-canal-bridge-vms-east",
+  "name": "SR 104 at MP 12.1: W of Hood Canal Bridge VMS East",
+  "lat": 47.870496,
+  "lon": -122.672197,
+  "feed_url": "https://images.wsdot.wa.gov/orflow/104vc01218.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "SR 104",
+  "milepost": 12.1
+}

@@ -1,0 +1,21 @@
+{
+  "id": "wsdot-sr410-mp15-6-214th-ave-e",
+  "name": "SR 410 at MP 15.6: 214th Ave E",
+  "lat": 47.167464,
+  "lon": -122.144379,
+  "feed_url": "https://images.wsdot.wa.gov/orflow/410vc01559.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "SR 410",
+  "milepost": 15.6
+}

@@ -1,0 +1,21 @@
+{
+  "id": "wsdot-us2-mp279-2-hayford-rd",
+  "name": "US 2 at MP 279.2: Hayford Rd",
+  "lat": 47.642877,
+  "lon": -117.561478,
+  "feed_url": "https://images.wsdot.wa.gov/spokane/wsdot_002_27923_hayford.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "US 2",
+  "milepost": 279.2
+}

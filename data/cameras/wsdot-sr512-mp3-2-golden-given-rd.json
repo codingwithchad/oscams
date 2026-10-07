@@ -1,0 +1,21 @@
+{
+  "id": "wsdot-sr512-mp3-2-golden-given-rd",
+  "name": "SR 512 at MP 3.2: Golden Given Rd",
+  "lat": 47.159021,
+  "lon": -122.412805,
+  "feed_url": "https://images.wsdot.wa.gov/orflow/512vc00323.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "SR 512",
+  "milepost": 3.2
+}

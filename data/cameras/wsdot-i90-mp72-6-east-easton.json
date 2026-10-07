@@ -1,0 +1,21 @@
+{
+  "id": "wsdot-i90-mp72-6-east-easton",
+  "name": "I-90 at MP 72.6: East Easton",
+  "lat": 47.225278,
+  "lon": -121.156944,
+  "feed_url": "https://images.wsdot.wa.gov/sc/090VC07266.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "I 90",
+  "milepost": 72.6
+}

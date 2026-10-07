@@ -1,0 +1,21 @@
+{
+  "id": "wsdot-us101-mp78-3-cosmopolis-hill",
+  "name": "US 101 at MP 78.3: Cosmopolis Hill",
+  "lat": 46.933937,
+  "lon": -123.72985,
+  "feed_url": "https://images.wsdot.wa.gov/rweather/Cosmopolis.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "US 101",
+  "milepost": 78.3
+}

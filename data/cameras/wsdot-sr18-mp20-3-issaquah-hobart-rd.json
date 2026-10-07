@@ -1,0 +1,21 @@
+{
+  "id": "wsdot-sr18-mp20-3-issaquah-hobart-rd",
+  "name": "SR 18 at Mp 20.3: Issaquah-Hobart Rd",
+  "lat": 47.434504,
+  "lon": -121.978772,
+  "feed_url": "https://images.wsdot.wa.gov/nw/018vc02031.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "SR 18",
+  "milepost": 20.3
+}

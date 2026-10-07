@@ -1,0 +1,21 @@
+{
+  "id": "wsdot-sr18-mp1-4-42nd-ave-s",
+  "name": "SR 18 at MP 1.4: 42nd Ave S",
+  "lat": 47.300248,
+  "lon": -122.280627,
+  "feed_url": "https://images.wsdot.wa.gov/nw/018vc00146.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "SR 18",
+  "milepost": 1.4
+}

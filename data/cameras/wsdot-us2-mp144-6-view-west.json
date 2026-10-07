@@ -1,0 +1,21 @@
+{
+  "id": "wsdot-us2-mp144-6-view-west",
+  "name": "US 2 at MP 144.6: (View West)",
+  "lat": 47.650852,
+  "lon": -120.147112,
+  "feed_url": "https://images.wsdot.wa.gov/nc/002vc14457.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "US 2",
+  "milepost": 144.6
+}

@@ -1,0 +1,21 @@
+{
+  "id": "wsdot-us195-mp93-qualchin-rd",
+  "name": "US 195 at MP 93: Qualchin Rd",
+  "lat": 47.610405,
+  "lon": -117.418278,
+  "feed_url": "https://images.wsdot.wa.gov/spokane/wsdot_195_09300_qualchan.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "US 195",
+  "milepost": 93
+}

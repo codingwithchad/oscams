@@ -1,0 +1,17 @@
+{
+  "id": "wsdot-station-lake-samish-park-and-ride-on-i-5-at-mp-246-25-1982",
+  "name": "Lake Samish Park and Ride on I-5 at mp 246.25",
+  "lat": 48.688,
+  "lon": -122.4,
+  "kind": "station",
+  "provider": "wsdot-weather",
+  "provider_ref": "1982",
+  "source": "WSDOT",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "requires_key": "WSDOT_CODE",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "tags": [],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z"
+}

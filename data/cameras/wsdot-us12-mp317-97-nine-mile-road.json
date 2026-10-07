@@ -1,0 +1,21 @@
+{
+  "id": "wsdot-us12-mp317-97-nine-mile-road",
+  "name": "US 12 at MP 317.97: Nine Mile Road",
+  "lat": 46.05099,
+  "lon": -118.693061,
+  "feed_url": "https://images.wsdot.wa.gov/SC/012vc31797.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "US 12",
+  "milepost": 317.97
+}

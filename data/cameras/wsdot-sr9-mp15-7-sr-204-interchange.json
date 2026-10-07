@@ -1,0 +1,21 @@
+{
+  "id": "wsdot-sr9-mp15-7-sr-204-interchange",
+  "name": "SR 9 at MP 15.7: SR 204 Interchange",
+  "lat": 48.002872,
+  "lon": -122.106302,
+  "feed_url": "https://images.wsdot.wa.gov/nw/009vc01577.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "SR 9",
+  "milepost": 15.7
+}

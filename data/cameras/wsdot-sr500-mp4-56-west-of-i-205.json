@@ -1,0 +1,21 @@
+{
+  "id": "wsdot-sr500-mp4-56-west-of-i-205",
+  "name": "SR 500 at MP 4.56: West of I-205",
+  "lat": 45.655623,
+  "lon": -122.574899,
+  "feed_url": "https://images.wsdot.wa.gov/sw/500vc00456.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "SR 500",
+  "milepost": 4.56
+}

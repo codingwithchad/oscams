@@ -1,0 +1,21 @@
+{
+  "id": "wsdot-i5-mp9-1-s-of-179th-st",
+  "name": "I-5 at MP 9.1: S of 179th St",
+  "lat": 45.744836,
+  "lon": -122.661346,
+  "feed_url": "https://images.wsdot.wa.gov/sw/005vc00912.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "I 5",
+  "milepost": 9.1
+}

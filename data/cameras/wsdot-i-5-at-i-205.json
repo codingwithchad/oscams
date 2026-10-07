@@ -1,0 +1,19 @@
+{
+  "id": "wsdot-i-5-at-i-205",
+  "name": "I-5 at I-205",
+  "lat": 45.36803,
+  "lon": -122.75883,
+  "feed_url": "https://www.tripcheck.com/RoadCams/cams/i5i205_pid563.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z"
+}

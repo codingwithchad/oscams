@@ -1,0 +1,17 @@
+{
+  "id": "wsdot-station-sr-20-sr-536-at-mount-vernon-at-mp-55-09-3267",
+  "name": "SR 20 / SR 536 at Mount Vernon at mp 55.09",
+  "lat": 48.446,
+  "lon": -122.432,
+  "kind": "station",
+  "provider": "wsdot-weather",
+  "provider_ref": "3267",
+  "source": "WSDOT",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "requires_key": "WSDOT_CODE",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "tags": [],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z"
+}

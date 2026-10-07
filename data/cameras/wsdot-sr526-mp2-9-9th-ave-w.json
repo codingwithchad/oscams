@@ -1,0 +1,21 @@
+{
+  "id": "wsdot-sr526-mp2-9-9th-ave-w",
+  "name": "SR 526 at MP 2.9: 9th Ave W",
+  "lat": 47.923342,
+  "lon": -122.240603,
+  "feed_url": "https://images.wsdot.wa.gov/nw/526vc00264.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "SR 526",
+  "milepost": 2.9
+}

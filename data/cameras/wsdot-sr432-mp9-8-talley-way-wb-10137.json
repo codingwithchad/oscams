@@ -1,0 +1,21 @@
+{
+  "id": "wsdot-sr432-mp9-8-talley-way-wb-10137",
+  "name": "SR 432 at MP 9.8: Talley Way WB",
+  "lat": 46.106985,
+  "lon": -122.888417,
+  "feed_url": "https://images.wsdot.wa.gov/sw/432vc00983.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "SR 432",
+  "milepost": 9.8
+}

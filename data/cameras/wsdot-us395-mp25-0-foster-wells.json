@@ -1,0 +1,21 @@
+{
+  "id": "wsdot-us395-mp25-0-foster-wells",
+  "name": "US 395 at MP 25.0 Foster Wells",
+  "lat": 46.283581,
+  "lon": -119.093342,
+  "feed_url": "https://images.wsdot.wa.gov/sc/395vc02500.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "US 395",
+  "milepost": 25
+}

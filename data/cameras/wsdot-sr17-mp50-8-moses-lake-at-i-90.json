@@ -1,0 +1,21 @@
+{
+  "id": "wsdot-sr17-mp50-8-moses-lake-at-i-90",
+  "name": "SR 17 at MP 50.8: Moses Lake at I-90",
+  "lat": 47.09943,
+  "lon": -119.244193,
+  "feed_url": "https://images.wsdot.wa.gov/nc/017vc05067.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "SR 17",
+  "milepost": 50.8
+}

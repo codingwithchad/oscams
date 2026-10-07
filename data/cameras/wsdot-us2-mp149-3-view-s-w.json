@@ -1,0 +1,21 @@
+{
+  "id": "wsdot-us2-mp149-3-view-s-w",
+  "name": "US 2 at MP 149.3: (View S.W.)",
+  "lat": 47.642231,
+  "lon": -120.074287,
+  "feed_url": "https://images.wsdot.wa.gov/nc/002vc14930.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "US 2",
+  "milepost": 149.3
+}
