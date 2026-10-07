@@ -1,0 +1,22 @@
+{
+  "id": "wsdot-sr9-mp6-9-lowell-larimer-rd",
+  "name": "SR 9 at MP 6.9: Lowell-Larimer Rd",
+  "lat": 47.878113,
+  "lon": -122.109757,
+  "feed_url": "https://images.wsdot.wa.gov/nw/009vc00697.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road",
+    "snohomish"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "SR 9",
+  "milepost": 6.9
+}

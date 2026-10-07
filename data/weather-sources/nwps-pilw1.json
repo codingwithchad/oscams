@@ -1,0 +1,19 @@
+{
+  "kind": "river",
+  "provider": "nwps",
+  "source": "NOAA National Water Prediction Service",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "attribution_text": "NOAA National Water Prediction Service",
+  "created_at": "2026-10-07T00:00:00Z",
+  "id": "nwps-pilw1",
+  "name": "Pilchuck River near Snohomish",
+  "lat": 47.935,
+  "lon": -122.0719,
+  "provider_ref": "PILW1",
+  "page_url": "https://water.noaa.gov/gauges/pilw1",
+  "tags": [
+    "snohomish",
+    "river"
+  ]
+}

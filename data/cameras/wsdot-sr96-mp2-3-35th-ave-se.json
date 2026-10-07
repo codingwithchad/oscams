@@ -1,0 +1,22 @@
+{
+  "id": "wsdot-sr96-mp2-3-35th-ave-se",
+  "name": "SR 96 at MP 2.3: 35th Ave SE",
+  "lat": 47.877954,
+  "lon": -122.185114,
+  "feed_url": "https://images.wsdot.wa.gov/nw/096vc00239.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road",
+    "snohomish"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "SR 96",
+  "milepost": 2.3
+}

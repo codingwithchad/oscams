@@ -1,0 +1,19 @@
+{
+  "kind": "river",
+  "provider": "nwps",
+  "source": "NOAA National Water Prediction Service",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "attribution_text": "NOAA National Water Prediction Service",
+  "created_at": "2026-10-07T00:00:00Z",
+  "id": "nwps-glbw1",
+  "name": "Skykomish River near Gold Bar",
+  "lat": 47.8374,
+  "lon": -121.6668,
+  "provider_ref": "GLBW1",
+  "page_url": "https://water.noaa.gov/gauges/glbw1",
+  "tags": [
+    "us-2",
+    "river"
+  ]
+}

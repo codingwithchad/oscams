@@ -1,0 +1,22 @@
+{
+  "id": "wsdot-sr9-mp13-8-s-lake-stevens-rd",
+  "name": "SR 9 at MP 13.8: S Lake Stevens Rd",
+  "lat": 47.975188,
+  "lon": -122.102579,
+  "feed_url": "https://images.wsdot.wa.gov/nw/009vc01383.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road",
+    "snohomish"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "SR 9",
+  "milepost": 13.8
+}

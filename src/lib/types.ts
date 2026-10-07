@@ -31,7 +31,15 @@ export interface Camera extends Located {
 
 export interface WeatherSource extends Located {
 	kind:
-		'forecast' | 'station' | 'pass-conditions' | 'waves' | 'tides' | 'ferry' | 'border' | 'airport';
+		| 'forecast'
+		| 'station'
+		| 'pass-conditions'
+		| 'waves'
+		| 'tides'
+		| 'ferry'
+		| 'border'
+		| 'airport'
+		| 'river';
 	provider?:
 		| 'nws'
 		| 'wsdot-weather'
@@ -41,7 +49,8 @@ export interface WeatherSource extends Located {
 		| 'wsdot-ferry'
 		| 'wsdot-border'
 		| 'faa-status'
-		| 'nws-obs';
+		| 'nws-obs'
+		| 'nwps';
 	provider_ref?: string;
 	requires_key?: string;
 	elevation_ft?: number;

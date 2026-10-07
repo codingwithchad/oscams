@@ -12,7 +12,8 @@
 		tides: 'Tides',
 		ferry: 'Sailings',
 		border: 'Border wait',
-		airport: 'Flight delays'
+		airport: 'Flight delays',
+		river: 'River'
 	};
 	const live = $derived(conditions.filter((c) => c.state === 'ok'));
 	const quiet = $derived(conditions.filter((c) => c.state !== 'ok'));
@@ -35,11 +36,11 @@
 				<span class="wx-kind"
 					>{c.kind === 'border'
 						? c.name.replace(/ wait times$/, '')
-						: c.kind === 'forecast' || c.kind === 'station'
+						: c.kind === 'forecast' || c.kind === 'station' || c.kind === 'river'
 							? c.name
 							: label[c.kind]}{c.kind === 'forecast' && c.at ? ' · when you get there' : ''}</span
 				>
-				{#if c.kind === 'ferry' || c.kind === 'airport'}
+				{#if c.kind === 'ferry' || c.kind === 'airport' || c.kind === 'river'}
 					<ul class="wx-list">
 						{#each c.rows as row (row.label)}<li>
 								<strong>{row.label}</strong>

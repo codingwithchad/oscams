@@ -1,0 +1,22 @@
+{
+  "id": "wsdot-sr9-mp8-4-marsh-rd",
+  "name": "SR 9 at MP 8.4: Marsh Rd",
+  "lat": 47.898752,
+  "lon": -122.109313,
+  "feed_url": "https://images.wsdot.wa.gov/nw/009vc00841.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road",
+    "snohomish"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "SR 9",
+  "milepost": 8.4
+}

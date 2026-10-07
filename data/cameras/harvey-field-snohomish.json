@@ -1,0 +1,22 @@
+{
+  "id": "harvey-field-snohomish",
+  "name": "Harvey Field airport",
+  "description": "Small airport on the edge of Snohomish.",
+  "lat": 47.90725,
+  "lon": -122.10003,
+  "feed_type": "image",
+  "source": "Harvey Field via Windy.com",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "provider": "windy",
+  "provider_ref": "1483305285",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "page_url": "https://windy.com/webcams/1483305285",
+  "tags": [
+    "airport",
+    "snohomish"
+  ],
+  "attribution_text": "Harvey Field via Windy.com",
+  "created_at": "2026-10-07T00:00:00Z"
+}

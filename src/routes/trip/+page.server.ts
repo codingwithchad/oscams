@@ -95,7 +95,7 @@ export const load: PageServerLoad = async ({ url, setHeaders }) => {
 	const sources = new Map<string, WeatherSource>();
 	// Along the road only forecasts, roadside stations and pass conditions matter; ferries, border and
 	// airport reports show up when the drive ends at one of them.
-	const ROADSIDE = new Set(['forecast', 'station', 'pass-conditions']);
+	const ROADSIDE = new Set(['forecast', 'station', 'pass-conditions', 'river']);
 	for (const w of alongRoute(
 		weather.filter((x) => ROADSIDE.has(x.kind)),
 		route.coords,

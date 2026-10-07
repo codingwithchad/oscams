@@ -43,9 +43,10 @@
         "tides",
         "ferry",
         "border",
-        "airport"
+        "airport",
+        "river"
       ],
-      "description": "forecast = predicted weather for a point; station = measured readings; pass-conditions = road status and restrictions; waves = ocean buoy readings; tides = predicted high and low tides. ferry = sailing space at a ferry terminal; border = wait times at a border crossing. airport = FAA delay status for an airport."
+      "description": "forecast = predicted weather for a point; station = measured readings; pass-conditions = road status and restrictions; waves = ocean buoy readings; tides = predicted high and low tides. ferry = sailing space at a ferry terminal; border = wait times at a border crossing. airport = FAA delay status for an airport. river = river level and flood forecast from a NOAA gauge."
     },
     "provider": {
       "enum": [
@@ -57,7 +58,8 @@
         "wsdot-ferry",
         "wsdot-border",
         "faa-status",
-        "nws-obs"
+        "nws-obs",
+        "nwps"
       ],
       "description": "Which adapter the app uses to fetch it."
     },

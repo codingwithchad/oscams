@@ -1,0 +1,18 @@
+{
+  "id": "nws-forecast-snohomish",
+  "name": "Snohomish forecast",
+  "lat": 47.9129,
+  "lon": -122.098,
+  "kind": "forecast",
+  "provider": "nws",
+  "provider_ref": "47.9129,-122.098",
+  "source": "National Weather Service",
+  "page_url": "https://forecast.weather.gov/MapClick.php?lat=47.9129&lon=-122.098",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "attribution_text": "National Weather Service",
+  "tags": [
+    "snohomish"
+  ],
+  "created_at": "2026-10-07T00:00:00Z"
+}

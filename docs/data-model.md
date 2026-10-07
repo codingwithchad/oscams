@@ -88,3 +88,7 @@ The `airports` collection has one place per airport (`airport-<name>`), each wit
 Security checkpoint wait times are not included: there is no official open feed, and the third-party estimates found were not reliable.
 
 To add a drive's cameras in one step: `node --env-file=.env scripts/import-wsdot-route.mjs "<from lat,lon>" "<to lat,lon>" [corridor_miles] [tag]`, then add a file in `data/drives/` and a forecast source (`nws-forecast-<place>`) at each end.
+
+## Rivers
+
+A `river` weather source (`provider: nwps`, `provider_ref` = NOAA gauge id such as `SNAW1`) shows the river level now, whether it is rising or falling, the forecast high and where flood stage starts, from NOAA's National Water Prediction Service. Gauges along a drive appear in its weather strip. Find a gauge id with `https://api.water.noaa.gov/nwps/v1/gauges?bbox.xmin=...` (a bounding box around the place).

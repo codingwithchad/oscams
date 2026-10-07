@@ -68,8 +68,11 @@ async function networkFirst(
 	max: number
 ) {
 	const cache = await caches.open(cacheName);
+	// Only give up on a slow network when there is a saved copy of this exact page or picture to
+	// show instead. Otherwise keep waiting (a sleeping server can take a minute to wake up).
+	const saved = await cache.match(key);
 	try {
-		const response = await withTimeout(request);
+		const response = await (saved ? withTimeout(request) : fetch(request));
 		// opaque (cross-origin image) responses have status 0 and are still fine to keep
 		if (response.ok || response.type === 'opaque') {
 			await cache.put(key, response.clone());
@@ -77,7 +80,6 @@ async function networkFirst(
 		}
 		return response;
 	} catch (err) {
-		const saved = await cache.match(key);
 		if (saved) return saved;
 		throw err;
 	}
@@ -106,7 +108,9 @@ sw.addEventListener('fetch', (event) => {
 		if (request.mode === 'navigate') {
 			event.respondWith(
 				networkFirst(request, PAGES, request, MAX_PAGES).catch(async () => {
-					const home = await caches.match('/');
+					// Offline with no saved copy of this page. The home page can stand in for the home page
+					// only; anything else gets a clear message instead of a surprise page.
+					const home = url.pathname === '/' ? await caches.match('/') : undefined;
 					return (
 						home ??
 						new Response(OFFLINE_PAGE, { headers: { 'content-type': 'text/html; charset=utf-8' } })

@@ -1,5 +1,6 @@
 import { isDormant } from '../geo';
 import type { Conditions, Nearby, WeatherSource } from '../types';
+import { riverRows, type GaugeInfo, type StageFlow } from '../river';
 import { faaRows, observationRows } from '../airport';
 import { hourlyRows, type HourlyPeriod } from '../forecast';
 import { borderRows, ferryRows, type BorderReading, type TerminalSpace } from '../transit';
@@ -198,6 +199,18 @@ async function fetchObservation(src: WeatherSource): Promise<Row[]> {
 	return observationRows(obs);
 }
 
+async function fetchRiver(src: WeatherSource): Promise<Row[]> {
+	const id = encodeURIComponent(src.provider_ref ?? '');
+	const headers = { 'User-Agent': USER_AGENT };
+	const base = 'https://api.water.noaa.gov/nwps/v1/gauges';
+	// Flood stages rarely change; the readings and forecast do.
+	const gauge = await cached(`nwps:gauge:${id}`, 24 * 60 * 60 * 1000, () =>
+		getJson<GaugeInfo>(`${base}/${id}`, headers)
+	);
+	const flow = await getJson<StageFlow>(`${base}/${id}/stageflow`, headers);
+	return riverRows(gauge, flow, Date.now());
+}
+
 const adapters: Record<
 	NonNullable<WeatherSource['provider']>,
 	(s: WeatherSource, at?: number) => Promise<Row[]>
@@ -210,7 +223,8 @@ const adapters: Record<
 	'wsdot-ferry': fetchFerry,
 	'wsdot-border': fetchBorder,
 	'faa-status': fetchFaa,
-	'nws-obs': fetchObservation
+	'nws-obs': fetchObservation,
+	nwps: fetchRiver
 };
 
 /** Fetch live values for one source. Never throws: problems come back as state "error". */

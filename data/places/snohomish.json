@@ -1,0 +1,10 @@
+{
+  "id": "snohomish",
+  "name": "Snohomish",
+  "region": "Washington",
+  "blurb": "Historic downtown, the river valley and farm country",
+  "lat": 47.9129,
+  "lon": -122.098,
+  "radius_miles": 5,
+  "order": 2
+}
