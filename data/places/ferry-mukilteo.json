@@ -1,0 +1,10 @@
+{
+  "id": "ferry-mukilteo",
+  "name": "Mukilteo ferry",
+  "region": "Washington State Ferries",
+  "blurb": "Terminal cameras and sailing space",
+  "lat": 47.9506,
+  "lon": -122.297,
+  "radius_miles": 2,
+  "collection": "ferries"
+}

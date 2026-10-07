@@ -65,6 +65,19 @@
 		</nav>
 	{/if}
 
+	{#if data.collections.length}
+		<h2 class="section-title">Browse</h2>
+		<nav class="collections" aria-label="Browse by type">
+			{#each data.collections as c (c.id)}
+				<a class="collection" href="/collections/{encodeURIComponent(c.id)}">
+					<span class="place-name">{c.name}</span>
+					<span class="place-sub">{c.blurb}</span>
+					<span class="place-count">{c.places} places</span>
+				</a>
+			{/each}
+		</nav>
+	{/if}
+
 	<h2 class="section-title">Plan a drive</h2>
 	<section class="trip-card">
 		<p>Pick your start and where you're headed. Cameras show in the order you'll pass them.</p>

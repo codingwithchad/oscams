@@ -1,0 +1,19 @@
+{
+  "id": "wsdot-ferry-space-point-defiance",
+  "name": "Point Defiance sailing space",
+  "lat": 47.306519,
+  "lon": -122.514053,
+  "kind": "ferry",
+  "provider": "wsdot-ferry",
+  "provider_ref": "16",
+  "source": "WSDOT Ferries",
+  "page_url": "https://wsdot.com/ferries/",
+  "requires_key": "WSDOT_CODE",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "tags": [
+    "ferry"
+  ],
+  "attribution_text": "Washington State Ferries",
+  "created_at": "2026-10-07T00:00:00Z"
+}

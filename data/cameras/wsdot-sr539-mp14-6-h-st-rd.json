@@ -1,0 +1,22 @@
+{
+  "id": "wsdot-sr539-mp14-6-h-st-rd",
+  "name": "SR 539 at MP 14.6: H St Rd",
+  "lat": 48.995074,
+  "lon": -122.485132,
+  "feed_url": "https://images.wsdot.wa.gov/nw/539vc01467.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/roads-bridges/border-crossings",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "border",
+    "road"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "SR 539",
+  "milepost": 14.6
+}

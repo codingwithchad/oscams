@@ -1,0 +1,19 @@
+{
+  "id": "wsdot-wsf-fauntleroy-trenton-st-looking-north",
+  "name": "WSF Fauntleroy Trenton St looking North",
+  "lat": 47.524794,
+  "lon": -122.392652,
+  "feed_url": "https://images.wsdot.wa.gov/wsf/fauntleroy/terminal/faunttrenton.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "ferry"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z"
+}

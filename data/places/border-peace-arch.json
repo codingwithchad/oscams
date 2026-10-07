@@ -1,0 +1,10 @@
+{
+  "id": "border-peace-arch",
+  "name": "Peace Arch (I-5)",
+  "region": "US\u2013Canada border",
+  "blurb": "I-5 into Canada, Blaine",
+  "lat": 49.0048,
+  "lon": -122.757,
+  "radius_miles": 3,
+  "collection": "border"
+}

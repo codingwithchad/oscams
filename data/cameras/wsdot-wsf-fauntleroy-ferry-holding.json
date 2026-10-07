@@ -1,0 +1,20 @@
+{
+  "id": "wsdot-wsf-fauntleroy-ferry-holding",
+  "name": "WSF Fauntleroy Ferry Holding",
+  "lat": 47.5232,
+  "lon": -122.39359,
+  "feed_url": "https://images.wsdot.wa.gov/wsf/fauntleroy/terminal/fauntleroy.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "ferry"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "description": "For traffic to Vashon & Southworth."
+}

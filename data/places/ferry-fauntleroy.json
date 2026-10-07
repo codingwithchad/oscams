@@ -1,0 +1,10 @@
+{
+  "id": "ferry-fauntleroy",
+  "name": "Fauntleroy ferry",
+  "region": "Washington State Ferries",
+  "blurb": "Terminal cameras and sailing space",
+  "lat": 47.5232,
+  "lon": -122.3967,
+  "radius_miles": 2,
+  "collection": "ferries"
+}

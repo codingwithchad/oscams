@@ -1,0 +1,10 @@
+{
+  "id": "ferry-edmonds",
+  "name": "Edmonds ferry",
+  "region": "Washington State Ferries",
+  "blurb": "Terminal cameras and sailing space",
+  "lat": 47.813378,
+  "lon": -122.385378,
+  "radius_miles": 2,
+  "collection": "ferries"
+}

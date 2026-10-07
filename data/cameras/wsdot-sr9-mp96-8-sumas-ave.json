@@ -1,0 +1,22 @@
+{
+  "id": "wsdot-sr9-mp96-8-sumas-ave",
+  "name": "SR 9 at MP 96.8: Sumas Ave",
+  "lat": 48.995268,
+  "lon": -122.264983,
+  "feed_url": "https://images.wsdot.wa.gov/nw/009vc09686.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/roads-bridges/border-crossings",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "border",
+    "road"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "SR 9",
+  "milepost": 96.8
+}

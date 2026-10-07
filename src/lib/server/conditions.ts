@@ -1,5 +1,6 @@
 import { isDormant } from '../geo';
 import type { Conditions, Nearby, WeatherSource } from '../types';
+import { borderRows, ferryRows, type BorderReading, type TerminalSpace } from '../transit';
 import { localStamp, parseBuoy, upcomingTides, type TidePrediction } from '../marine';
 import { cached } from './cache';
 
@@ -138,6 +139,27 @@ async function fetchTides(src: WeatherSource): Promise<Row[]> {
 	return upcomingTides(data.predictions ?? [], stamp);
 }
 
+async function fetchFerry(src: WeatherSource): Promise<Row[]> {
+	const key = encodeURIComponent(wsdotKey(src));
+	const space = await getJson<TerminalSpace>(
+		`https://www.wsdot.wa.gov/ferries/api/terminals/rest/terminalsailingspace/${encodeURIComponent(src.provider_ref ?? '')}?apiaccesscode=${key}`
+	);
+	return ferryRows(space, Date.now());
+}
+
+async function fetchBorder(src: WeatherSource): Promise<Row[]> {
+	const key = encodeURIComponent(wsdotKey(src));
+	const readings = await cached('wsdot:border', 2 * 60 * 1000, () =>
+		getJson<BorderReading[]>(
+			`${WSDOT}/BorderCrossings/BorderCrossingsREST.svc/GetBorderCrossingsAsJson?AccessCode=${key}`
+		)
+	);
+	return borderRows(
+		readings,
+		(src.provider_ref ?? '').split(',').map((n) => n.trim())
+	);
+}
+
 const adapters: Record<
 	NonNullable<WeatherSource['provider']>,
 	(s: WeatherSource) => Promise<Row[]>
@@ -146,7 +168,9 @@ const adapters: Record<
 	'wsdot-pass': fetchWsdotPass,
 	'wsdot-weather': fetchWsdotStation,
 	ndbc: fetchBuoy,
-	'noaa-tides': fetchTides
+	'noaa-tides': fetchTides,
+	'wsdot-ferry': fetchFerry,
+	'wsdot-border': fetchBorder
 };
 
 /** Fetch live values for one source. Never throws: problems come back as state "error". */
@@ -166,7 +190,11 @@ export async function getConditions(src: Nearby<WeatherSource>): Promise<Conditi
 	if (!adapter)
 		return { ...base, state: 'error', note: 'No way to fetch this source yet.', rows: [] };
 	try {
-		const rows = await cached(`wx:${src.id}`, TEN_MINUTES, () => adapter(src));
+		// Sailing space and border waits change quickly; forecasts and readings do not.
+		const fast = src.provider === 'wsdot-ferry' || src.provider === 'wsdot-border';
+		const rows = await cached(`wx:${src.id}`, fast ? 2 * 60 * 1000 : TEN_MINUTES, () =>
+			adapter(src)
+		);
 		if (!rows.length)
 			return {
 				...base,

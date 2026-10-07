@@ -1,0 +1,19 @@
+{
+  "id": "wsdot-border-lynden-wait",
+  "name": "Lynden (SR 539) wait times",
+  "lat": 49.0023,
+  "lon": -122.4849,
+  "kind": "border",
+  "provider": "wsdot-border",
+  "provider_ref": "SR539,SR539Nexus,SR539Trucks",
+  "source": "WSDOT",
+  "page_url": "https://wsdot.com/travel/roads-bridges/border-crossings",
+  "requires_key": "WSDOT_CODE",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "tags": [
+    "border"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z"
+}

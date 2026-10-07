@@ -9,7 +9,9 @@
 		station: 'Station',
 		'pass-conditions': 'Roads',
 		waves: 'Surf',
-		tides: 'Tides'
+		tides: 'Tides',
+		ferry: 'Sailings',
+		border: 'Border wait'
 	};
 	const live = $derived(conditions.filter((c) => c.state === 'ok'));
 	const quiet = $derived(conditions.filter((c) => c.state !== 'ok'));
@@ -29,8 +31,17 @@
 	<section class="wx-bar" aria-label="Current conditions">
 		{#each live as c (c.id)}
 			<div class="wx">
-				<span class="wx-kind">{label[c.kind]}</span>
-				{#if c.kind === 'forecast'}
+				<span class="wx-kind"
+					>{c.kind === 'border' ? c.name.replace(/ wait times$/, '') : label[c.kind]}</span
+				>
+				{#if c.kind === 'ferry'}
+					<ul class="wx-list">
+						{#each c.rows as row (row.label)}<li>
+								<strong>{row.label}</strong>
+								{row.value}
+							</li>{/each}
+					</ul>
+				{:else if c.kind === 'forecast'}
 					<span>{c.rows[0].label}: {c.rows[0].value}</span>
 					{#if c.rows.length > 1}
 						<details>

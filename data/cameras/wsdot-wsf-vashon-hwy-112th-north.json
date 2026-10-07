@@ -1,0 +1,20 @@
+{
+  "id": "wsdot-wsf-vashon-hwy-112th-north",
+  "name": "WSF Vashon Hwy & 112th (North)",
+  "lat": 47.505682,
+  "lon": -122.46173,
+  "feed_url": "https://images.wsdot.wa.gov/wsf/vashon/VSHvc00004.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "ferry"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "description": "Vashon Hwy & SW 112th St (Camera Facing North)"
+}

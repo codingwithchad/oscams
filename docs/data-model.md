@@ -64,3 +64,12 @@ A camera can set `provider: "windy"` and `provider_ref` (the Windy webcam id) in
 Windy's terms, which the app follows: show images no larger than the API size, use the API's links unchanged, link every image to its Windy page, and show "Webcams provided by Windy.com" on pages that use them.
 
 To find candidates near a place: `node --env-file=.env scripts/windy-nearby.mjs <lat> <lon> [radius_km]`. Many Windy cameras duplicate WSDOT ones; the script flags those.
+
+## Collections, ferries and border crossings
+
+A collection (`data/collections/`, schema `collection.schema.json`) is a section on the home page that groups related places, such as every ferry terminal. A place joins by setting `collection` to the collection's id; places in a collection are listed on that collection's page (`/collections/<id>`) instead of the main home list.
+
+- **Ferries:** one place per WSF terminal (`ferry-<name>`), each with its WSDOT cameras and a `ferry` weather source (`provider: wsdot-ferry`, `provider_ref` = WSF terminal id) that shows the next sailings and drive-up space.
+- **Border crossings:** one place per crossing (`border-<name>`), each with nearby WSDOT cameras and a `border` source (`provider: wsdot-border`, `provider_ref` = comma-separated WSDOT crossing names) that shows wait times by lane. WSDOT reports -1 when a lane has no data.
+
+Both use the WSDOT access code (`WSDOT_CODE`). Places overlap by distance, so a camera near two crossings appears in both.

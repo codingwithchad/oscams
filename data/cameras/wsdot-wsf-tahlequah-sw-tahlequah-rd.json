@@ -1,0 +1,20 @@
+{
+  "id": "wsdot-wsf-tahlequah-sw-tahlequah-rd",
+  "name": "WSF Tahlequah @ SW Tahlequah Rd",
+  "lat": 47.333079,
+  "lon": -122.506957,
+  "feed_url": "https://images.wsdot.wa.gov/wsf/Tahlequah/VMSSign/VMSSign.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "ferry"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "description": "From Tahlequah ferry terminal looking toward Vashon Hwy SW & SW Pohl Rd"
+}

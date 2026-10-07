@@ -1,0 +1,22 @@
+{
+  "id": "wsdot-sr543-mp0-8-d-st",
+  "name": "SR 543 at MP 0.8: D St",
+  "lat": 48.997992,
+  "lon": -122.734746,
+  "feed_url": "https://images.wsdot.wa.gov/nw/543vc00081.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/roads-bridges/border-crossings",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "border",
+    "road"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "SR 543",
+  "milepost": 0.8
+}

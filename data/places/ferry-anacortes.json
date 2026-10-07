@@ -1,0 +1,10 @@
+{
+  "id": "ferry-anacortes",
+  "name": "Anacortes ferry",
+  "region": "Washington State Ferries",
+  "blurb": "Terminal cameras and sailing space",
+  "lat": 48.507351,
+  "lon": -122.677,
+  "radius_miles": 2,
+  "collection": "ferries"
+}

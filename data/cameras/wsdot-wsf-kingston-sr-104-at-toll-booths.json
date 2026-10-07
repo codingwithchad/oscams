@@ -1,0 +1,20 @@
+{
+  "id": "wsdot-wsf-kingston-sr-104-at-toll-booths",
+  "name": "WSF Kingston SR 104 at Toll Booths",
+  "lat": 47.797035,
+  "lon": -122.496861,
+  "feed_url": "https://images.wsdot.wa.gov/orflow/104vc02466.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "ferry"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "description": "SR 104 MP 24.30"
+}

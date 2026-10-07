@@ -1,0 +1,10 @@
+{
+  "id": "ferry-bremerton",
+  "name": "Bremerton ferry",
+  "region": "Washington State Ferries",
+  "blurb": "Terminal cameras and sailing space",
+  "lat": 47.561847,
+  "lon": -122.624089,
+  "radius_miles": 2,
+  "collection": "ferries"
+}

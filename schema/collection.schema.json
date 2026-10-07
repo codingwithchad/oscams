@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/codingwithchad/oscams/schema/collection.schema.json",
+  "title": "Collection",
+  "description": "A group of related places shown as one section on the home page, e.g. every ferry terminal. Places join by setting `collection` to this id.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "name"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" },
+    "name": { "type": "string", "minLength": 1 },
+    "blurb": { "type": "string" },
+    "order": { "type": "number" }
+  }
+}

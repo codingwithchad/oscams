@@ -1,0 +1,10 @@
+{
+  "id": "ferry-lopez-island",
+  "name": "Lopez Island ferry",
+  "region": "Washington State Ferries",
+  "blurb": "Terminal cameras and sailing space",
+  "lat": 48.570928,
+  "lon": -122.882764,
+  "radius_miles": 2,
+  "collection": "ferries"
+}

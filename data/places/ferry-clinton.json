@@ -1,0 +1,10 @@
+{
+  "id": "ferry-clinton",
+  "name": "Clinton ferry",
+  "region": "Washington State Ferries",
+  "blurb": "Terminal cameras and sailing space",
+  "lat": 47.9754,
+  "lon": -122.349581,
+  "radius_miles": 2,
+  "collection": "ferries"
+}

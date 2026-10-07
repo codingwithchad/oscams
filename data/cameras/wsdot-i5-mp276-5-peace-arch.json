@@ -1,0 +1,22 @@
+{
+  "id": "wsdot-i5-mp276-5-peace-arch",
+  "name": "I-5 at MP 276.5: Peace Arch",
+  "lat": 49.001589,
+  "lon": -122.755633,
+  "feed_url": "https://images.wsdot.wa.gov/nw/005vc27650.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/roads-bridges/border-crossings",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "border",
+    "road"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "I 5",
+  "milepost": 276.5
+}

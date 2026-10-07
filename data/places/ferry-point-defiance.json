@@ -1,0 +1,10 @@
+{
+  "id": "ferry-point-defiance",
+  "name": "Point Defiance ferry",
+  "region": "Washington State Ferries",
+  "blurb": "Terminal cameras and sailing space",
+  "lat": 47.306519,
+  "lon": -122.514053,
+  "radius_miles": 2,
+  "collection": "ferries"
+}

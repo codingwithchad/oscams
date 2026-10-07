@@ -1,0 +1,10 @@
+{
+  "id": "ferry-orcas-island",
+  "name": "Orcas Island ferry",
+  "region": "Washington State Ferries",
+  "blurb": "Terminal cameras and sailing space",
+  "lat": 48.597333,
+  "lon": -122.943494,
+  "radius_miles": 2,
+  "collection": "ferries"
+}

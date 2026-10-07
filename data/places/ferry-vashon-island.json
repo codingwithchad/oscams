@@ -1,0 +1,10 @@
+{
+  "id": "ferry-vashon-island",
+  "name": "Vashon Island ferry",
+  "region": "Washington State Ferries",
+  "blurb": "Terminal cameras and sailing space",
+  "lat": 47.51095,
+  "lon": -122.463639,
+  "radius_miles": 2,
+  "collection": "ferries"
+}

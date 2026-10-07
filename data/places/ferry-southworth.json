@@ -1,0 +1,10 @@
+{
+  "id": "ferry-southworth",
+  "name": "Southworth ferry",
+  "region": "Washington State Ferries",
+  "blurb": "Terminal cameras and sailing space",
+  "lat": 47.513064,
+  "lon": -122.495742,
+  "radius_miles": 2,
+  "collection": "ferries"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "wsdot-sr305-mp0-2-high-school-rd-north",
+  "name": "SR 305 at MP 0.2: High School Rd North",
+  "lat": 47.635773,
+  "lon": -122.515529,
+  "feed_url": "https://images.wsdot.wa.gov/orflow/305vc00028.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "ferry"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "SR 305",
+  "milepost": 0.2
+}

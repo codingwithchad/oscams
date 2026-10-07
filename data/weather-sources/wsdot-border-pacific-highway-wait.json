@@ -1,0 +1,19 @@
+{
+  "id": "wsdot-border-pacific-highway-wait",
+  "name": "Pacific Highway (SR 543) wait times",
+  "lat": 49.0029,
+  "lon": -122.7347,
+  "kind": "border",
+  "provider": "wsdot-border",
+  "provider_ref": "SR543,SR543Nexus,SR543Trucks,SR543TrucksFast",
+  "source": "WSDOT",
+  "page_url": "https://wsdot.com/travel/roads-bridges/border-crossings",
+  "requires_key": "WSDOT_CODE",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "tags": [
+    "border"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z"
+}

@@ -1,0 +1,32 @@
+<script lang="ts">
+	import type { PageProps } from './$types';
+
+	let { data }: PageProps = $props();
+</script>
+
+<svelte:head><title>{data.collection.name} · OS Cams</title></svelte:head>
+
+<header class="top">
+	<a class="brand" href="/">OS Cams</a>
+	<span class="top-title">{data.collection.name}</span>
+</header>
+
+<main>
+	<h1>{data.collection.name}</h1>
+	{#if data.collection.blurb}<p class="lede-dark">{data.collection.blurb}</p>{/if}
+	<nav class="places grid-places" aria-label={data.collection.name}>
+		{#each data.places as place (place.id)}
+			<a class="place" href="/search?place={encodeURIComponent(place.id)}">
+				<span class="cover">
+					{#if place.cover}<img src={place.cover.url} alt="" loading="lazy" />{/if}
+					<span class="live"><i></i> Live</span>
+				</span>
+				<span class="place-body">
+					<span class="place-name">{place.name}</span>
+					{#if place.blurb}<span class="place-sub">{place.blurb}</span>{/if}
+					<span class="place-count">{place.liveCameras} live cameras</span>
+				</span>
+			</a>
+		{/each}
+	</nav>
+</main>

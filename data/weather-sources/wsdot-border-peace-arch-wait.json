@@ -1,0 +1,19 @@
+{
+  "id": "wsdot-border-peace-arch-wait",
+  "name": "Peace Arch (I-5) wait times",
+  "lat": 49.0048,
+  "lon": -122.757,
+  "kind": "border",
+  "provider": "wsdot-border",
+  "provider_ref": "I5,I5Nexus",
+  "source": "WSDOT",
+  "page_url": "https://wsdot.com/travel/roads-bridges/border-crossings",
+  "requires_key": "WSDOT_CODE",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "tags": [
+    "border"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z"
+}

@@ -1,0 +1,19 @@
+{
+  "id": "wsdot-ferry-space-lopez-island",
+  "name": "Lopez Island sailing space",
+  "lat": 48.570928,
+  "lon": -122.882764,
+  "kind": "ferry",
+  "provider": "wsdot-ferry",
+  "provider_ref": "13",
+  "source": "WSDOT Ferries",
+  "page_url": "https://wsdot.com/ferries/",
+  "requires_key": "WSDOT_CODE",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "tags": [
+    "ferry"
+  ],
+  "attribution_text": "Washington State Ferries",
+  "created_at": "2026-10-07T00:00:00Z"
+}

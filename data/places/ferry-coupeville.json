@@ -1,0 +1,10 @@
+{
+  "id": "ferry-coupeville",
+  "name": "Coupeville ferry",
+  "region": "Washington State Ferries",
+  "blurb": "Terminal cameras and sailing space",
+  "lat": 48.159008,
+  "lon": -122.672603,
+  "radius_miles": 2,
+  "collection": "ferries"
+}

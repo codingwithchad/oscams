@@ -1,0 +1,10 @@
+{
+  "id": "ferry-friday-harbor",
+  "name": "Friday Harbor ferry",
+  "region": "Washington State Ferries",
+  "blurb": "Terminal cameras and sailing space",
+  "lat": 48.535783,
+  "lon": -123.013844,
+  "radius_miles": 2,
+  "collection": "ferries"
+}

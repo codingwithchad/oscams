@@ -1,0 +1,10 @@
+{
+  "id": "ferry-seattle",
+  "name": "Seattle ferry",
+  "region": "Washington State Ferries",
+  "blurb": "Terminal cameras and sailing space",
+  "lat": 47.602501,
+  "lon": -122.340472,
+  "radius_miles": 2,
+  "collection": "ferries"
+}

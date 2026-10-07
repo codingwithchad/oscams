@@ -1,0 +1,10 @@
+{
+  "id": "border-sumas",
+  "name": "Sumas (SR 9)",
+  "region": "US\u2013Canada border",
+  "blurb": "Sumas to Abbotsford",
+  "lat": 49.0025,
+  "lon": -122.2651,
+  "radius_miles": 3,
+  "collection": "border"
+}

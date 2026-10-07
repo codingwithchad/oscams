@@ -1,0 +1,10 @@
+{
+  "id": "ferry-port-townsend",
+  "name": "Port Townsend ferry",
+  "region": "Washington State Ferries",
+  "blurb": "Terminal cameras and sailing space",
+  "lat": 48.110847,
+  "lon": -122.759039,
+  "radius_miles": 2,
+  "collection": "ferries"
+}

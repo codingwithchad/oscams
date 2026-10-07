@@ -1,6 +1,6 @@
 import { readdirSync, readFileSync } from 'node:fs';
 import path from 'node:path';
-import type { Camera, FeaturedPlace, WeatherSource } from '../types';
+import type { Camera, Collection, FeaturedPlace, WeatherSource } from '../types';
 
 function dataDir(): string {
 	return process.env.DATA_DIR ?? path.resolve(process.cwd(), 'data');
@@ -31,12 +31,20 @@ export function readFolder<T extends { id: string }>(folder: string): T[] {
 	return items;
 }
 
-let cache: { cameras: Camera[]; weather: WeatherSource[]; places: FeaturedPlace[] } | null = null;
+let cache: {
+	cameras: Camera[];
+	weather: WeatherSource[];
+	places: FeaturedPlace[];
+	collections: Collection[];
+} | null = null;
 
 /** Approved items only. Loaded once per server start. */
 export function getCatalog() {
 	if (!cache) {
 		cache = {
+			collections: readFolder<Collection>('collections').sort(
+				(a, b) => (a.order ?? 100) - (b.order ?? 100) || a.name.localeCompare(b.name)
+			),
 			places: readFolder<FeaturedPlace>('places').sort(
 				(a, b) => (a.order ?? 100) - (b.order ?? 100) || a.name.localeCompare(b.name)
 			),

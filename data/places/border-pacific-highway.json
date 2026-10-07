@@ -1,0 +1,10 @@
+{
+  "id": "border-pacific-highway",
+  "name": "Pacific Highway (SR 543)",
+  "region": "US\u2013Canada border",
+  "blurb": "Trucks and cars, Blaine",
+  "lat": 49.0029,
+  "lon": -122.7347,
+  "radius_miles": 3,
+  "collection": "border"
+}

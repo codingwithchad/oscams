@@ -1,0 +1,10 @@
+{
+  "id": "border-lynden",
+  "name": "Lynden (SR 539)",
+  "region": "US\u2013Canada border",
+  "blurb": "Guide Meridian into Aldergrove",
+  "lat": 49.0023,
+  "lon": -122.4849,
+  "radius_miles": 3,
+  "collection": "border"
+}

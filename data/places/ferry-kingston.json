@@ -1,0 +1,10 @@
+{
+  "id": "ferry-kingston",
+  "name": "Kingston ferry",
+  "region": "Washington State Ferries",
+  "blurb": "Terminal cameras and sailing space",
+  "lat": 47.794606,
+  "lon": -122.494328,
+  "radius_miles": 2,
+  "collection": "ferries"
+}

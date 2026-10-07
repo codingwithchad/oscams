@@ -1,0 +1,10 @@
+{
+  "id": "ferry-bainbridge-island",
+  "name": "Bainbridge Island ferry",
+  "region": "Washington State Ferries",
+  "blurb": "Terminal cameras and sailing space",
+  "lat": 47.622339,
+  "lon": -122.509617,
+  "radius_miles": 2,
+  "collection": "ferries"
+}
