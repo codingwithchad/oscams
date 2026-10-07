@@ -1,0 +1,20 @@
+{
+  "id": "wsdot-i-90-at-mp-62-97-stampede-pass-exit-62",
+  "name": "I-90 At MP 62.97 Stampede Pass Exit 62",
+  "lat": 47.305868,
+  "lon": -121.30588,
+  "feed_url": "https://images.wsdot.wa.gov/SC/090vc06297.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/mountainpasses/snoqualmie",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road",
+    "snoqualmie-pass"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z"
+}

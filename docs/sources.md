@@ -24,3 +24,7 @@ The list is old: of 164 unique links, 66 respond and only 14 are direct image fe
 ## National parks in Washington
 
 Checked every NPS unit page for webcams. Only three parks have them: Mount Rainier (Paradise, Longmire, an air-quality view, and two Sunrise cameras that NPS lists as down for the winter), Olympic (Hurricane Ridge parking lot and south view, and the Lake Crescent air-quality camera) and North Cascades (Newhalem air-quality camera). San Juan Island, Ebey's Landing, Lake Roosevelt, Fort Vancouver and the other units have none. The Kalaloch beach camera on Olympic's page is run by a concessionaire (pixelcaster.com), not NPS, so it is not used.
+
+## Snoqualmie Pass
+
+WSDOT cameras on I-90 from Seattle to the pass and east past Hyak to Stampede Pass, the WSDOT Aviation cameras at Hyak, three WSDOT roadside weather stations, the pass road-conditions report (seasonal, about Nov 1 to Apr 1) and an NWS forecast. The Summit at Snoqualmie publishes its mountain cameras only as video embeds on its own site (camstreamer.com), with no reuse terms, and Windy.com does not list them, so they are not used.

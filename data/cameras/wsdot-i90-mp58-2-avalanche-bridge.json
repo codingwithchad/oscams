@@ -1,0 +1,22 @@
+{
+  "id": "wsdot-i90-mp58-2-avalanche-bridge",
+  "name": "I-90 at MP 58.2: Avalanche Bridge",
+  "lat": 47.356995,
+  "lon": -121.367297,
+  "feed_url": "https://images.wsdot.wa.gov/sc/090vc05820.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/mountainpasses/snoqualmie",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road",
+    "snoqualmie-pass"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "I 90",
+  "milepost": 58.2
+}
