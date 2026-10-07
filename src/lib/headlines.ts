@@ -1,3 +1,6 @@
+/** Reports that only appear because you are going to that ferry, airport or crossing; they come first. */
+const DESTINATION_KINDS = new Set(['ferry', 'airport', 'border']);
+
 export interface HasKind {
 	kind: string;
 }
@@ -18,6 +21,10 @@ export function pickHeadlines<T extends HasKind>(
 	const forecasts = items.filter((i) => i.kind === 'forecast');
 	if (forecasts[0]) chosen.add(forecasts[0]);
 	if (mode === 'trip' && forecasts.length > 1) chosen.add(forecasts[forecasts.length - 1]);
+	for (const item of items) {
+		if (chosen.size >= count) break;
+		if (DESTINATION_KINDS.has(item.kind)) chosen.add(item);
+	}
 	for (const item of items) {
 		if (chosen.size >= count) break;
 		if (item.kind !== 'forecast') chosen.add(item);

@@ -66,6 +66,8 @@ export interface FeaturedPlace {
 	radius_miles?: number;
 	order?: number;
 	collection?: string;
+	/** Report kinds to show for this place beyond the usual ones, e.g. ["ferry"]. */
+	include_kinds?: string[];
 }
 
 export interface Collection {

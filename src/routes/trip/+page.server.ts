@@ -1,3 +1,4 @@
+import { allowedKinds } from '../../lib/kinds';
 import { distanceMiles, isDormant, nearby, parseLatLon } from '../../lib/geo';
 import { getCatalog } from '../../lib/server/catalog';
 import { getConditions } from '../../lib/server/conditions';
@@ -102,7 +103,14 @@ export const load: PageServerLoad = async ({ url, setHeaders }) => {
 		{ corridor: 3 }
 	))
 		sources.set(w.item.id, w.item);
-	for (const w of nearby(weather, to, radius)) sources.set(w.id, w);
+	// Near the destination, ferry/airport/border reports only count if you are going to one.
+	const destinationKinds = allowedKinds(to.featured);
+	for (const w of nearby(
+		weather.filter((x) => destinationKinds.has(x.kind)),
+		to,
+		radius
+	))
+		sources.set(w.id, w);
 	const wx: Nearby<WeatherSource>[] = [...sources.values()].map((w) => ({
 		...w,
 		distance: distanceMiles(w, to)
@@ -126,7 +134,10 @@ export const load: PageServerLoad = async ({ url, setHeaders }) => {
 			// Streamed: the page shows cameras right away while live weather loads.
 			conditions: Promise.all(
 				thinToTarget(
-					inDrivingOrder(wx, route.coords).map((x) => ({ ...x, keep: x.item.kind === 'forecast' })),
+					inDrivingOrder(wx, route.coords).map((x) => ({
+						...x,
+						keep: x.item.kind === 'forecast' || !ROADSIDE.has(x.item.kind)
+					})),
 					7
 				).map(({ item, along }) => {
 					// When you will be there: now (or when you leave) plus the driving time to that point.

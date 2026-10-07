@@ -1,6 +1,7 @@
 import { isDormant, nearby } from '../../lib/geo';
 import { getCatalog } from '../../lib/server/catalog';
 import { getConditions } from '../../lib/server/conditions';
+import { allowedKinds } from '../../lib/kinds';
 import { geocode } from '../../lib/server/geocode';
 import { recordView } from '../../lib/server/popularity';
 import { withLiveLinks } from '../../lib/server/live';
@@ -46,6 +47,8 @@ export const load: PageServerLoad = async ({ url, setHeaders }) => {
 	if (!place) return { ...empty, place: null, failed };
 
 	if (featured) recordView(featured.id);
+	// Ferry, airport and border reports only appear when the place itself is one of those.
+	const kinds = allowedKinds(featured);
 	setHeaders({ 'cache-control': 'private, max-age=60' });
 	const found = await withLiveLinks(nearby(cameras, place, radius));
 	const offline = (c: Nearby<Camera>) => isDormant(c) || !c.feed_url;
@@ -58,6 +61,12 @@ export const load: PageServerLoad = async ({ url, setHeaders }) => {
 		showingAll: showAll || live.length <= CAMERA_LIMIT,
 		offline: found.filter(offline),
 		// Streamed: the page shows cameras right away while live weather loads.
-		conditions: Promise.all(nearby(weather, place, radius).map((w) => getConditions(w)))
+		conditions: Promise.all(
+			nearby(
+				weather.filter((w) => kinds.has(w.kind)),
+				place,
+				radius
+			).map((w) => getConditions(w))
+		)
 	};
 };

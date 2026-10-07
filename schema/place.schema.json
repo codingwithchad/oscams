@@ -49,6 +49,18 @@
     "collection": {
       "type": "string",
       "description": "Id of a collection (data/collections) this place belongs to. Places in a collection are listed there instead of on the main home list."
+    },
+    "include_kinds": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "ferry",
+          "airport",
+          "border"
+        ]
+      },
+      "uniqueItems": true,
+      "description": "Ferry, airport or border reports to show for this place even though it is not in that collection (for example the Mukilteo ferry town)."
     }
   }
 }

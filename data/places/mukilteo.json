@@ -6,5 +6,8 @@
   "lat": 47.9496,
   "lon": -122.305,
   "radius_miles": 4,
-  "order": 1
+  "order": 1,
+  "include_kinds": [
+    "ferry"
+  ]
 }
