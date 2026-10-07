@@ -704,3 +704,25 @@ button.wide {
 	margin: 6px 0 0;
 	padding-left: 18px;
 }
+
+/* Featured drives */
+.drives {
+	display: grid;
+	gap: 8px;
+	margin-top: 10px;
+}
+.drive {
+	display: grid;
+	gap: 1px;
+	padding: 12px 16px;
+	border-radius: 14px;
+	text-decoration: none;
+	color: var(--text);
+	background: var(--card);
+	border: 1px solid var(--line);
+	border-left: 4px solid var(--accent);
+}
+.drive:hover,
+.drive:active {
+	border-color: var(--accent);
+}

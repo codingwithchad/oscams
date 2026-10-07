@@ -6,7 +6,7 @@ import type { PageServerLoad } from './$types';
 const DEFAULT_RADIUS = 25;
 
 export const load: PageServerLoad = () => {
-	const { places, cameras, collections } = getCatalog();
+	const { places, cameras, collections, drives } = getCatalog();
 	const cards = places.map((p) => {
 		const live = nearby(cameras, p, p.radius_miles ?? DEFAULT_RADIUS).filter(
 			(c) => !isDormant(c) && (c.feed_url || c.provider) && c.feed_type === 'image'
@@ -34,6 +34,7 @@ export const load: PageServerLoad = () => {
 			...c,
 			places: places.filter((p) => p.collection === c.id).length
 		})),
+		drives,
 		places: cards,
 		popular
 	};

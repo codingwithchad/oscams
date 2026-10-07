@@ -1,0 +1,22 @@
+{
+  "id": "wsdot-i5-mp193-9-us-2-interchange",
+  "name": "I-5 at MP 193.9: US 2 Interchange",
+  "lat": 47.980354,
+  "lon": -122.188347,
+  "feed_url": "https://images.wsdot.wa.gov/nw/005vc19389.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road",
+    "us-2"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "I 5",
+  "milepost": 193.9
+}

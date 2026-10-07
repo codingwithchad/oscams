@@ -1,0 +1,22 @@
+{
+  "id": "wsdot-us2-mp14-9-lewis-st-sr-203",
+  "name": "US 2 at MP 14.9: Lewis St (SR 203)",
+  "lat": 47.85955,
+  "lon": -121.971514,
+  "feed_url": "https://images.wsdot.wa.gov/nw/002vc01494.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road",
+    "us-2"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "US 2",
+  "milepost": 14.9
+}

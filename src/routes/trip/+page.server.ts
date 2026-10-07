@@ -4,7 +4,7 @@ import { getConditions } from '../../lib/server/conditions';
 import { geocode } from '../../lib/server/geocode';
 import { withLiveLinks } from '../../lib/server/live';
 import { drivingRoute } from '../../lib/server/routing';
-import { alongRoute } from '../../lib/route';
+import { alongRoute, cumulativeMiles, projectOnRoute } from '../../lib/route';
 import type { Camera, FeaturedPlace, Nearby, Place, WeatherSource } from '../../lib/types';
 import type { PageServerLoad } from './$types';
 
@@ -24,10 +24,23 @@ async function resolve(
 	return geocode(text);
 }
 
+/** Weather sources from the start of the drive to the end, so the strip reads like the road. */
+function inDrivingOrder<T extends { lat: number; lon: number }>(
+	items: T[],
+	coords: [number, number][]
+): T[] {
+	const cum = cumulativeMiles(coords);
+	return items
+		.map((item) => ({ item, along: projectOnRoute(item, coords, cum).along }))
+		.sort((a, b) => a.along - b.along)
+		.map((x) => x.item);
+}
+
 export const load: PageServerLoad = async ({ url, setHeaders }) => {
 	const fromQ = url.searchParams.get('from')?.trim() ?? '';
 	const toQ = url.searchParams.get('to')?.trim() ?? '';
-	const base = { fromQ, toQ, error: null as string | null };
+	const fromLabel = url.searchParams.get('fl')?.trim().slice(0, 80) ?? '';
+	const base = { fromQ: fromLabel || fromQ, toQ, error: null as string | null };
 	if (!fromQ || !toQ) return { ...base, trip: null };
 
 	const { cameras, weather, places } = getCatalog();
@@ -43,6 +56,8 @@ export const load: PageServerLoad = async ({ url, setHeaders }) => {
 	}
 	if (!from) return { ...base, error: `Couldn't find “${fromQ}”.`, trip: null };
 	if (!to) return { ...base, error: `Couldn't find “${toQ}”.`, trip: null };
+	if (fromLabel) from.label = fromLabel;
+	base.toQ = to.featured?.name ?? toQ;
 
 	let route;
 	try {
@@ -86,7 +101,7 @@ export const load: PageServerLoad = async ({ url, setHeaders }) => {
 				.filter((s) => isOffline(s.camera))
 				.map((s) => ({ ...s.camera, distance: s.along }) as Nearby<Camera>),
 			// Streamed: the page shows cameras right away while live weather loads.
-			conditions: Promise.all(wx.sort((a, b) => a.distance - b.distance).map(getConditions))
+			conditions: Promise.all(inDrivingOrder(wx, route.coords).map(getConditions))
 		}
 	};
 };

@@ -76,6 +76,21 @@
 		<p>Pick your start and where you're headed. Cameras show in the order you'll pass them.</p>
 		<TripForm places={chips} />
 	</section>
+	{#if data.drives.length}
+		<nav class="drives" aria-label="Popular drives">
+			{#each data.drives as d (d.id)}
+				<a
+					class="drive"
+					href="/trip?from={encodeURIComponent(d.from)}&to={encodeURIComponent(d.to)}{d.from_label
+						? `&fl=${encodeURIComponent(d.from_label)}`
+						: ''}"
+				>
+					<span class="place-name">{d.name}</span>
+					{#if d.blurb}<span class="place-sub">{d.blurb}</span>{/if}
+				</a>
+			{/each}
+		</nav>
+	{/if}
 
 	{#if data.collections.length}
 		<h2 class="section-title">Ferries &amp; border</h2>

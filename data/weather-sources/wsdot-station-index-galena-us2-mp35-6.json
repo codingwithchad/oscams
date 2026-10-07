@@ -1,0 +1,19 @@
+{
+  "id": "wsdot-station-index-galena-us2-mp35-6",
+  "name": "Index (US 2 at Galena Road)",
+  "lat": 47.8139,
+  "lon": -121.5709,
+  "kind": "station",
+  "provider": "wsdot-weather",
+  "provider_ref": "3271",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "tags": [
+    "us-2"
+  ],
+  "created_at": "2026-10-07T00:00:00Z",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "requires_key": "WSDOT_CODE",
+  "attribution_text": "Washington State Department of Transportation"
+}

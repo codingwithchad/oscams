@@ -1,0 +1,19 @@
+{
+  "id": "wsdot-station-everett-i5-sr2",
+  "name": "Everett (I-5 and US 2)",
+  "lat": 47.9803,
+  "lon": -122.188,
+  "kind": "station",
+  "provider": "wsdot-weather",
+  "provider_ref": "3269",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "tags": [
+    "us-2"
+  ],
+  "created_at": "2026-10-07T00:00:00Z",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "requires_key": "WSDOT_CODE",
+  "attribution_text": "Washington State Department of Transportation"
+}

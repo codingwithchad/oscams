@@ -1,0 +1,22 @@
+{
+  "id": "wsdot-us2-mp0-6-homeacres-rd",
+  "name": "US 2 at MP 0.6: Homeacres Rd",
+  "lat": 47.978345,
+  "lon": -122.178886,
+  "feed_url": "https://images.wsdot.wa.gov/nw/002vc00068.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road",
+    "us-2"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "US 2",
+  "milepost": 0.6
+}

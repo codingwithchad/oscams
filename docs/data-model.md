@@ -73,3 +73,7 @@ A collection (`data/collections/`, schema `collection.schema.json`) is a section
 - **Border crossings:** one place per crossing (`border-<name>`), each with nearby WSDOT cameras and a `border` source (`provider: wsdot-border`, `provider_ref` = comma-separated WSDOT crossing names) that shows wait times by lane. WSDOT reports -1 when a lane has no data.
 
 Both use the WSDOT access code (`WSDOT_CODE`). Places overlap by distance, so a camera near two crossings appears in both.
+
+## Featured drives
+
+Files in `data/drives/` (schema `drive.schema.json`) are ready-made trips shown on the home page under Plan a drive. `from` and `to` can be a town, zip, address, a place id, or `lat,lon` (coordinates skip the place search; set `from_label` to name them). Example: `us2-everett-stevens-pass`.

@@ -1,0 +1,18 @@
+{
+  "id": "nws-forecast-everett",
+  "name": "Everett forecast",
+  "lat": 47.9769,
+  "lon": -122.209,
+  "kind": "forecast",
+  "provider": "nws",
+  "provider_ref": "47.9769,-122.209",
+  "source": "National Weather Service",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "tags": [
+    "us-2"
+  ],
+  "created_at": "2026-10-07T00:00:00Z",
+  "page_url": "https://forecast.weather.gov/MapClick.php?lat=47.9769&lon=-122.209",
+  "attribution_text": "National Weather Service"
+}

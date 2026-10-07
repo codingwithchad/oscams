@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/codingwithchad/oscams/schema/drive.schema.json",
+  "title": "Featured drive",
+  "description": "A ready-made trip shown on the home page, opening trip mode with From and To filled in.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "name",
+    "from",
+    "to"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "blurb": {
+      "type": "string"
+    },
+    "from": {
+      "type": "string",
+      "minLength": 1,
+      "description": "A town, zip, address, place id, or \"lat,lon\" (coordinates avoid a place search)."
+    },
+    "to": {
+      "type": "string",
+      "minLength": 1,
+      "description": "A town, zip, address or place id."
+    },
+    "order": {
+      "type": "number"
+    },
+    "from_label": {
+      "type": "string",
+      "description": "Name to show when `from` is coordinates."
+    }
+  }
+}

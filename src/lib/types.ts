@@ -57,6 +57,16 @@ export interface Collection {
 	order?: number;
 }
 
+export interface Drive {
+	id: string;
+	name: string;
+	blurb?: string;
+	from: string;
+	from_label?: string;
+	to: string;
+	order?: number;
+}
+
 export interface Place {
 	lat: number;
 	lon: number;

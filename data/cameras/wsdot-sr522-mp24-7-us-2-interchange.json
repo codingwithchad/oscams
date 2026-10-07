@@ -1,0 +1,22 @@
+{
+  "id": "wsdot-sr522-mp24-7-us-2-interchange",
+  "name": "SR 522 at MP 24.7: US 2 Interchange",
+  "lat": 47.863043,
+  "lon": -121.983023,
+  "feed_url": "https://images.wsdot.wa.gov/nw/522vc02474.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://wsdot.com/travel/real-time/map/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road",
+    "us-2"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "route": "SR 522",
+  "milepost": 24.7
+}

@@ -32,7 +32,11 @@
 		{#each live as c (c.id)}
 			<div class="wx">
 				<span class="wx-kind"
-					>{c.kind === 'border' ? c.name.replace(/ wait times$/, '') : label[c.kind]}</span
+					>{c.kind === 'border'
+						? c.name.replace(/ wait times$/, '')
+						: c.kind === 'forecast' || c.kind === 'station'
+							? c.name
+							: label[c.kind]}</span
 				>
 				{#if c.kind === 'ferry'}
 					<ul class="wx-list">

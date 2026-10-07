@@ -1,0 +1,18 @@
+{
+  "id": "nws-forecast-skykomish",
+  "name": "Skykomish forecast",
+  "lat": 47.7096,
+  "lon": -121.3615,
+  "kind": "forecast",
+  "provider": "nws",
+  "provider_ref": "47.7096,-121.3615",
+  "source": "National Weather Service",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "tags": [
+    "us-2"
+  ],
+  "created_at": "2026-10-07T00:00:00Z",
+  "page_url": "https://forecast.weather.gov/MapClick.php?lat=47.7096&lon=-121.3615",
+  "attribution_text": "National Weather Service"
+}
