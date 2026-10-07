@@ -1,0 +1,23 @@
+{
+  "id": "wsdot-us2-mp64-3-west-stevens-pass-ski-lodge",
+  "name": "US 2 at MP 64.3: West Stevens Pass - Ski Lodge",
+  "lat": 47.745193,
+  "lon": -121.090291,
+  "feed_url": "https://images.wsdot.wa.gov/nc/002vc06430.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "page_url": "https://wsdot.com/travel/real-time/mountainpasses/stevens",
+  "route": "US 2",
+  "milepost": 64.3,
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "tags": [
+    "road",
+    "mountain-pass",
+    "stevens-pass"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "approved_by": "codingwithchad"
+}

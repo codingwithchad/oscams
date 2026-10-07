@@ -1,0 +1,23 @@
+{
+  "id": "wsdot-us2-mp61-9-old-faithful-avalanche-zone",
+  "name": "US 2 at MP 61.9: Old Faithful Avalanche Zone",
+  "lat": 47.732665,
+  "lon": -121.133813,
+  "feed_url": "https://images.wsdot.wa.gov/nc/002vc06190.jpg",
+  "feed_type": "image",
+  "source": "WSDOT",
+  "status": "approved",
+  "page_url": "https://wsdot.com/travel/real-time/mountainpasses/stevens",
+  "route": "US 2",
+  "milepost": 61.9,
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "tags": [
+    "road",
+    "mountain-pass",
+    "stevens-pass"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z",
+  "approved_by": "codingwithchad"
+}
