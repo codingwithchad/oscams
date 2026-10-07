@@ -33,3 +33,7 @@ The home page opens with one card with two modes: "One place" (search, recent se
 Long drives (I-5 has a camera every half mile) show spaced-out key cameras by default, up to 40, always keeping cameras from other sources; "Show all" lists every one. Trip weather shows forecasts at both ends plus a few roadside stations, and ferry, border and airport reports only when the drive ends there.
 
 Drives are filled in with `scripts/import-wsdot-route.mjs`, which adds every working WSDOT camera and reporting weather station within about 0.6 miles of the route (it downloads each picture first and skips dead ones). Current drives: Everett to Stevens Pass, Seattle, Bellevue; Seattle to Bellevue, Tacoma, Snoqualmie Pass.
+
+## 2026-10-07: No walls of text before the cameras
+
+A zip search used to show 22 weather blocks (about 2,400 px) and 308 cameras. Now: a place search defaults to 10 miles; the weather strip shows at most 3 reports (the nearest forecast plus the nearest others; on trips, the forecasts at both ends plus one report on the way) and folds the rest under "N more reports"; each report is one or two lines (river level and forecast high, next sailing only, with the detail behind a small toggle); and the camera list shows the nearest 24 with "Show all". Featured places keep their own radius.

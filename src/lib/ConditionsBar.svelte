@@ -1,8 +1,10 @@
 <script lang="ts">
+	import { pickHeadlines } from './headlines';
 	import { returnLabel } from './format';
 	import type { Conditions } from './types';
 
-	let { conditions }: { conditions: Conditions[] } = $props();
+	let { conditions, mode = 'place' }: { conditions: Conditions[]; mode?: 'place' | 'trip' } =
+		$props();
 
 	const label: Record<Conditions['kind'], string> = {
 		forecast: 'Forecast',
@@ -17,6 +19,8 @@
 	};
 	const live = $derived(conditions.filter((c) => c.state === 'ok'));
 	const quiet = $derived(conditions.filter((c) => c.state !== 'ok'));
+	// A few reports up front; the rest wait behind "more reports" so cameras are never far down the page.
+	const picked = $derived(pickHeadlines(live, mode));
 	const quietText = $derived(
 		quiet
 			.map((c) => {
@@ -27,41 +31,72 @@
 			})
 			.join(' · ')
 	);
+
+	const title = (c: Conditions) =>
+		c.kind === 'border'
+			? c.name.replace(/ wait times$/, '')
+			: c.kind === 'forecast' || c.kind === 'station' || c.kind === 'river'
+				? c.name
+				: label[c.kind];
+	const row = (c: Conditions, name: string) => c.rows.find((r) => r.label === name)?.value;
 </script>
+
+{#snippet item(c: Conditions)}
+	<div class="wx">
+		<span class="wx-kind"
+			>{title(c)}{c.kind === 'forecast' && c.at ? ' · when you get there' : ''}</span
+		>
+		{#if c.kind === 'river'}
+			<span
+				>{row(c, 'Level')}{row(c, 'Forecast high')
+					? ` · forecast high ${row(c, 'Forecast high')}`
+					: ''}</span
+			>
+			{#if row(c, 'Flood stage')}
+				<details>
+					<summary>Flood stage</summary>
+					<ul>
+						<li>{row(c, 'Flood stage')}</li>
+					</ul>
+				</details>
+			{/if}
+		{:else if c.kind === 'ferry'}
+			<span>{c.rows[0].label} {c.rows[0].value}</span>
+			{#if c.rows.length > 1}
+				<details>
+					<summary>Next sailings</summary>
+					<ul>
+						{#each c.rows.slice(1) as r (r.label)}<li>{r.label} {r.value}</li>{/each}
+					</ul>
+				</details>
+			{/if}
+		{:else if c.kind === 'airport'}
+			<span>{c.rows.map((r) => `${r.label}: ${r.value}`).join(' · ')}</span>
+		{:else if c.kind === 'forecast'}
+			<span>{c.rows[0].label}: {c.rows[0].value}</span>
+			{#if c.rows.length > 1}
+				<details>
+					<summary>Next</summary>
+					<ul>
+						{#each c.rows.slice(1) as r (r.label)}<li>{r.label}: {r.value}</li>{/each}
+					</ul>
+				</details>
+			{/if}
+		{:else}
+			<span>{c.rows.map((r) => `${r.label} ${r.value}`).join(' · ')}</span>
+		{/if}
+	</div>
+{/snippet}
 
 {#if conditions.length}
 	<section class="wx-bar" aria-label="Current conditions">
-		{#each live as c (c.id)}
-			<div class="wx">
-				<span class="wx-kind"
-					>{c.kind === 'border'
-						? c.name.replace(/ wait times$/, '')
-						: c.kind === 'forecast' || c.kind === 'station' || c.kind === 'river'
-							? c.name
-							: label[c.kind]}{c.kind === 'forecast' && c.at ? ' · when you get there' : ''}</span
-				>
-				{#if c.kind === 'ferry' || c.kind === 'airport' || c.kind === 'river'}
-					<ul class="wx-list">
-						{#each c.rows as row (row.label)}<li>
-								<strong>{row.label}</strong>
-								{row.value}
-							</li>{/each}
-					</ul>
-				{:else if c.kind === 'forecast'}
-					<span>{c.rows[0].label}: {c.rows[0].value}</span>
-					{#if c.rows.length > 1}
-						<details>
-							<summary>Next</summary>
-							<ul>
-								{#each c.rows.slice(1) as row (row.label)}<li>{row.label}: {row.value}</li>{/each}
-							</ul>
-						</details>
-					{/if}
-				{:else}
-					<span>{c.rows.map((r) => `${r.label} ${r.value}`).join(' · ')}</span>
-				{/if}
-			</div>
-		{/each}
+		{#each picked.primary as c (c.id)}{@render item(c)}{/each}
+		{#if picked.more.length}
+			<details class="wx-more">
+				<summary>{picked.more.length} more reports</summary>
+				{#each picked.more as c (c.id)}{@render item(c)}{/each}
+			</details>
+		{/if}
 		{#if quietText}<p class="wx-quiet">{quietText}</p>{/if}
 	</section>
 {/if}

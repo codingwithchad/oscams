@@ -17,7 +17,7 @@
 				: { kind: 'search', q: data.q, label: data.place.label }
 		);
 	});
-	const radii = [10, 25, 50, 75];
+	const radii = [5, 10, 25, 50];
 	const base = $derived(
 		data.placeId
 			? `/search?place=${encodeURIComponent(data.placeId)}`
@@ -54,8 +54,15 @@
 		{#await data.conditions}
 			<p class="loading">Loading conditions…</p>
 		{:then conditions}
-			<ConditionsBar {conditions} />
+			<ConditionsBar {conditions} mode="place" />
 		{/await}
+
+		{#if !data.showingAll}
+			<p class="thinned">
+				Showing the nearest {data.cameras.length} of {data.totalCameras} cameras.
+				<a href="{base}&r={data.radius}&all=1">Show all {data.totalCameras}</a>
+			</p>
+		{/if}
 
 		{#if data.cameras.length}
 			<div class="grid">

@@ -7,7 +7,8 @@ import { withLiveLinks } from '../../lib/server/live';
 import type { Camera, Nearby, Place } from '../../lib/types';
 import type { PageServerLoad } from './$types';
 
-const DEFAULT_RADIUS = 25;
+const DEFAULT_RADIUS = 10;
+const CAMERA_LIMIT = 24;
 const MAX_RADIUS = 75;
 
 export const load: PageServerLoad = async ({ url, setHeaders }) => {
@@ -20,6 +21,7 @@ export const load: PageServerLoad = async ({ url, setHeaders }) => {
 		Math.max(asked || featured?.radius_miles || DEFAULT_RADIUS, 1),
 		MAX_RADIUS
 	);
+	const showAll = url.searchParams.get('all') === '1';
 	const empty = {
 		q,
 		placeId: featured?.id ?? null,
@@ -47,10 +49,13 @@ export const load: PageServerLoad = async ({ url, setHeaders }) => {
 	setHeaders({ 'cache-control': 'private, max-age=60' });
 	const found = await withLiveLinks(nearby(cameras, place, radius));
 	const offline = (c: Nearby<Camera>) => isDormant(c) || !c.feed_url;
+	const live = found.filter((c) => !offline(c));
 	return {
 		...empty,
 		place,
-		cameras: found.filter((c) => !offline(c)),
+		cameras: showAll ? live : live.slice(0, CAMERA_LIMIT),
+		totalCameras: live.length,
+		showingAll: showAll || live.length <= CAMERA_LIMIT,
 		offline: found.filter(offline),
 		// Streamed: the page shows cameras right away while live weather loads.
 		conditions: Promise.all(nearby(weather, place, radius).map((w) => getConditions(w)))

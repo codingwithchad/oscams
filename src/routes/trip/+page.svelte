@@ -157,7 +157,7 @@
 		{#await trip.conditions}
 			<p class="loading">Loading conditions…</p>
 		{:then conditions}
-			<ConditionsBar {conditions} />
+			<ConditionsBar {conditions} mode="trip" />
 		{/await}
 
 		{#if !trip.showingAll}
