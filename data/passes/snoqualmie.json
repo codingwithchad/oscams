@@ -1,0 +1,12 @@
+{
+  "id": "snoqualmie",
+  "name": "Snoqualmie Pass",
+  "pass_id": 11,
+  "route": "I-90",
+  "connects": "Seattle and Bellevue to Ellensburg, Yakima and Spokane",
+  "group": "Cross-Cascades",
+  "lat": 47.41,
+  "lon": -121.405833,
+  "elevation_ft": 3022,
+  "place": "snoqualmie-pass"
+}

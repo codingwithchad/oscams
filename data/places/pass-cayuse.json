@@ -1,0 +1,10 @@
+{
+  "id": "pass-cayuse",
+  "name": "Cayuse Pass (SR 123)",
+  "region": "Washington",
+  "blurb": "Mount Rainier: SR 410 to Packwood (closes in winter)",
+  "lat": 46.865575,
+  "lon": -121.53611,
+  "radius_miles": 8,
+  "collection": "passes"
+}

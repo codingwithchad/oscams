@@ -92,3 +92,11 @@ To add a drive's cameras in one step: `node --env-file=.env scripts/import-wsdot
 ## Rivers
 
 A `river` weather source (`provider: nwps`, `provider_ref` = NOAA gauge id such as `SNAW1`) shows the river level now, whether it is rising or falling, the forecast high and where flood stage starts, from NOAA's National Water Prediction Service. Gauges along a drive appear in its weather strip. Find a gauge id with `https://api.water.noaa.gov/nwps/v1/gauges?bbox.xmin=...` (a bounding box around the place).
+
+## Mountain passes
+
+`data/passes/` (schema `pass.schema.json`) lists the 16 passes in WSDOT's pass reports: WSDOT's `pass_id`, the road, which towns it connects, a group, and the `place` page that shows its cameras and weather. The `/passes` page reads WSDOT's live reports for all of them and shows a status tag: Open, Traction tires advised, Chains required, Closed, or Off-season (WSDOT has stopped reporting for the year). `src/lib/passes.ts` turns WSDOT's hand-written restriction text into that status, taking the worse of the two directions. WSDOT reports are mostly November to April, so most passes read "Off-season" in summer.
+
+## Camera replay
+
+The server saves a small picture from each camera within 6 miles of a pass (WSDOT, WSDOT Aviation and National Park Service only, never Windy) about every 5 minutes and keeps the last 2 hours in memory. Enlarging a camera shows a replay with play, pause and a slider. The replay starts empty after each restart and fills in as the server runs, so it works best on an always-on plan. `HISTORY=off` turns recording off; `HISTORY_EVERY_SECONDS` changes the interval.

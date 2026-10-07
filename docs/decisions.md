@@ -61,3 +61,7 @@ Windy was searched widely around all seven ski areas (2026-10-07). Nothing usabl
 - Home page counts are computed once every 10 minutes, and all data is read when the server starts.
 - A camera picture that fails to load is retried once, then shows "Camera unavailable right now" until its next refresh.
 - All working WSDOT cameras and reporting weather stations in the state were imported (`node --env-file=.env scripts/import-wsdot-route.mjs all`), so a trip between any two Washington places finds cameras along the way. Re-run it to pick up new WSDOT cameras; it skips ones we already have and ones that do not serve a real picture.
+
+## 2026-10-07: Mountain passes and camera replay
+
+Added a Mountain passes page (live status for every WSDOT pass) and a replay of the last 2 hours of pass-camera pictures so people can see snow building up. The status wording rules were written from WSDOT's usual phrasing and tested with sample text, but real winter wording was not available in October, so check chain-required and closure cases once WSDOT starts reporting around November 1 and adjust `classifyRestriction` if the wording differs. WSDOT has no public camera on the North Cascades Highway pass itself. Snow depth sources (for example NWAC weather stations) are a possible later addition.

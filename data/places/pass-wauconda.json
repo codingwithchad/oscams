@@ -1,0 +1,10 @@
+{
+  "id": "pass-wauconda",
+  "name": "Wauconda Pass (SR 20)",
+  "region": "Washington",
+  "blurb": "Tonasket to Republic",
+  "lat": 48.726184869,
+  "lon": -118.959520117,
+  "radius_miles": 8,
+  "collection": "passes"
+}

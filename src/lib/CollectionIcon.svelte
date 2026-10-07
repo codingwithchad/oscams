@@ -35,6 +35,9 @@
 		<circle cx="4" cy="6" r="1" />
 		<circle cx="4" cy="12" r="1" />
 		<circle cx="4" cy="18" r="1" />
+	{:else if name === 'pass'}
+		<path d="M2 18l6-10 3.5 6L14 11l8 7z" />
+		<path d="M6 21c3-1.5 5-1.5 8 0s4 1.5 6 0" />
 	{:else if name === 'mountain'}
 		<path d="M2 20l7-12 4 7 2-3 7 8z" />
 		<path d="M9 8l1.5 2.5" />

@@ -1,0 +1,10 @@
+{
+  "id": "pass-north-cascades",
+  "name": "North Cascades Highway (SR 20)",
+  "region": "Washington",
+  "blurb": "Skagit Valley to Winthrop and the Methow (closes in winter)",
+  "lat": 48.503490448,
+  "lon": -120.711911906,
+  "radius_miles": 25,
+  "collection": "passes"
+}

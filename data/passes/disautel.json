@@ -1,0 +1,12 @@
+{
+  "id": "disautel",
+  "name": "Disautel Pass",
+  "pass_id": 15,
+  "route": "SR 155",
+  "connects": "Omak to Nespelem and Grand Coulee",
+  "group": "Eastern Washington",
+  "lat": 48.281757946,
+  "lon": -119.143406439,
+  "elevation_ft": 3252,
+  "place": "pass-disautel"
+}

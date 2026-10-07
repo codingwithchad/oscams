@@ -1,6 +1,7 @@
 import { isDormant } from '../geo';
 import type { Conditions, Nearby, WeatherSource } from '../types';
 import { riverRows, type GaugeInfo, type StageFlow } from '../river';
+import { classifyPass, STATUS_LABEL, type RawPass } from '../passes';
 import { faaRows, observationRows } from '../airport';
 import { hourlyRows, type HourlyPeriod } from '../forecast';
 import { borderRows, ferryRows, type BorderReading, type TerminalSpace } from '../transit';
@@ -78,23 +79,19 @@ function wsdotKey(src: WeatherSource): string {
 
 async function fetchWsdotPass(src: WeatherSource): Promise<Row[]> {
 	const key = encodeURIComponent(wsdotKey(src));
-	const p = await getJson<{
-		RoadCondition?: string;
-		WeatherCondition?: string;
-		TemperatureInFahrenheit?: number | null;
-		TravelAdvisoryActive?: boolean;
-		RestrictionOne?: { TravelDirection: string; RestrictionText: string };
-		RestrictionTwo?: { TravelDirection: string; RestrictionText: string };
-	}>(
+	const raw = await getJson<RawPass>(
 		`${WSDOT}/MountainPassConditions/MountainPassConditionsREST.svc/GetMountainPassConditionAsJson?AccessCode=${key}&PassConditionID=${encodeURIComponent(src.provider_ref ?? '')}`
 	);
+	const pass = classifyPass(raw);
 	return compact([
-		['Road', show(p.RoadCondition)],
-		['Weather', show(p.WeatherCondition)],
-		['Temperature', show(p.TemperatureInFahrenheit, '°F')],
-		[p.RestrictionOne?.TravelDirection ?? 'Restriction', show(p.RestrictionOne?.RestrictionText)],
-		[p.RestrictionTwo?.TravelDirection ?? 'Restriction', show(p.RestrictionTwo?.RestrictionText)],
-		['Travel advisory', p.TravelAdvisoryActive ? 'Active' : null]
+		['Status', pass.label],
+		...pass.restrictions
+			.filter((r) => !/^no restrictions/i.test(r.text))
+			.map((r): [string, string | null] => [r.direction || 'Restriction', r.text]),
+		['Road', show(pass.road)],
+		['Weather', show(pass.weather)],
+		['Temperature', show(pass.tempF, '°F')],
+		['Travel advisory', pass.advisory ? 'Active' : null]
 	]);
 }
 
@@ -211,6 +208,13 @@ async function fetchRiver(src: WeatherSource): Promise<Row[]> {
 	return riverRows(gauge, flow, Date.now());
 }
 
+const PASS_TONE: Record<string, NonNullable<Conditions['badge']>['tone']> = Object.fromEntries(
+	(Object.entries(STATUS_LABEL) as [keyof typeof STATUS_LABEL, string][]).map(([tone, label]) => [
+		label,
+		tone
+	])
+);
+
 const adapters: Record<
 	NonNullable<WeatherSource['provider']>,
 	(s: WeatherSource, at?: number) => Promise<Row[]>
@@ -265,10 +269,13 @@ export async function getConditions(
 				note: src.seasonal_note ?? 'No current readings.',
 				rows: []
 			};
+		// Road-condition reports lead with a one-word status that gets a coloured tag.
+		const tone = src.provider === 'wsdot-pass' ? PASS_TONE[rows[0]?.value ?? ''] : undefined;
 		return {
 			...base,
 			state: 'ok',
 			rows,
+			badge: tone ? { label: rows[0].value, tone } : undefined,
 			at: at !== undefined && rows[0]?.label.startsWith('About') ? at : undefined
 		};
 	} catch (err) {

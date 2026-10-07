@@ -1,0 +1,10 @@
+{
+  "id": "pass-blewett",
+  "name": "Blewett Pass (US 97)",
+  "region": "Washington",
+  "blurb": "Cle Elum and Ellensburg to Leavenworth and Wenatchee",
+  "lat": 47.335298205,
+  "lon": -120.581068216,
+  "radius_miles": 8,
+  "collection": "passes"
+}

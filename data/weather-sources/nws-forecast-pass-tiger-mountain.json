@@ -1,0 +1,18 @@
+{
+  "id": "nws-forecast-pass-tiger-mountain",
+  "name": "Tiger Mountain forecast",
+  "lat": 47.465743292,
+  "lon": -121.926995269,
+  "kind": "forecast",
+  "provider": "nws",
+  "provider_ref": "47.465743292,-121.926995269",
+  "source": "National Weather Service",
+  "page_url": "https://forecast.weather.gov/MapClick.php?lat=47.465743292&lon=-121.926995269",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "attribution_text": "National Weather Service",
+  "tags": [
+    "pass"
+  ],
+  "created_at": "2026-10-07T00:00:00Z"
+}

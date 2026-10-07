@@ -1,0 +1,12 @@
+{
+  "id": "sherman",
+  "name": "Sherman Pass",
+  "pass_id": 9,
+  "route": "SR 20",
+  "connects": "Kettle Falls to Republic",
+  "group": "Eastern Washington",
+  "lat": 48.606667,
+  "lon": -118.48,
+  "elevation_ft": 5575,
+  "place": "pass-sherman"
+}

@@ -1,4 +1,5 @@
 <script lang="ts">
+	import StatusPill from './StatusPill.svelte';
 	import { pickHeadlines } from './headlines';
 	import { returnLabel } from './format';
 	import type { Conditions } from './types';
@@ -48,7 +49,15 @@
 		<span class="wx-kind"
 			>{title(c)}{c.kind === 'forecast' && c.at ? ' · when you get there' : ''}</span
 		>
-		{#if c.kind === 'river'}
+		{#if c.kind === 'pass-conditions'}
+			{#if c.badge}<StatusPill tone={c.badge.tone} label={c.badge.label} />{/if}
+			<span
+				>{c.rows
+					.slice(1)
+					.map((r) => `${r.label}: ${r.value}`)
+					.join(' · ')}</span
+			>
+		{:else if c.kind === 'river'}
 			<span
 				>{row(c, 'Level')}{row(c, 'Forecast high')
 					? ` · forecast high ${row(c, 'Forecast high')}`

@@ -1,0 +1,18 @@
+{
+  "id": "nws-forecast-pass-cayuse",
+  "name": "Cayuse Pass forecast",
+  "lat": 46.865575,
+  "lon": -121.53611,
+  "kind": "forecast",
+  "provider": "nws",
+  "provider_ref": "46.865575,-121.53611",
+  "source": "National Weather Service",
+  "page_url": "https://forecast.weather.gov/MapClick.php?lat=46.865575&lon=-121.53611",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "attribution_text": "National Weather Service",
+  "tags": [
+    "pass"
+  ],
+  "created_at": "2026-10-07T00:00:00Z"
+}

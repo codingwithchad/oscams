@@ -1,0 +1,18 @@
+{
+  "id": "nws-forecast-pass-manastash-ridge",
+  "name": "Manastash Ridge forecast",
+  "lat": 46.881665326,
+  "lon": -120.424877484,
+  "kind": "forecast",
+  "provider": "nws",
+  "provider_ref": "46.881665326,-120.424877484",
+  "source": "National Weather Service",
+  "page_url": "https://forecast.weather.gov/MapClick.php?lat=46.881665326&lon=-120.424877484",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "attribution_text": "National Weather Service",
+  "tags": [
+    "pass"
+  ],
+  "created_at": "2026-10-07T00:00:00Z"
+}

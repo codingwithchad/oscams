@@ -1,0 +1,12 @@
+{
+  "id": "white-pass",
+  "name": "White Pass",
+  "pass_id": 12,
+  "route": "US 12",
+  "connects": "Packwood to Naches and Yakima",
+  "group": "Cross-Cascades",
+  "lat": 46.638333,
+  "lon": -121.39,
+  "elevation_ft": 4500,
+  "place": "pass-white-pass"
+}

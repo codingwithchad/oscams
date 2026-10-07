@@ -1,0 +1,10 @@
+{
+  "id": "pass-chinook",
+  "name": "Chinook Pass (SR 410)",
+  "region": "Washington",
+  "blurb": "Enumclaw to Yakima (closes in winter)",
+  "lat": 46.8717,
+  "lon": -121.515483,
+  "radius_miles": 8,
+  "collection": "passes"
+}

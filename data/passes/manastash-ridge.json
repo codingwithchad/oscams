@@ -1,0 +1,12 @@
+{
+  "id": "manastash-ridge",
+  "name": "Manastash Ridge",
+  "pass_id": 13,
+  "route": "I-82",
+  "connects": "Ellensburg to Yakima",
+  "group": "Foothills and ski roads",
+  "lat": 46.881665326,
+  "lon": -120.424877484,
+  "elevation_ft": 2672,
+  "place": "pass-manastash-ridge"
+}

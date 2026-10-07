@@ -1,0 +1,18 @@
+{
+  "id": "nws-forecast-pass-blewett",
+  "name": "Blewett Pass forecast",
+  "lat": 47.335298205,
+  "lon": -120.581068216,
+  "kind": "forecast",
+  "provider": "nws",
+  "provider_ref": "47.335298205,-120.581068216",
+  "source": "National Weather Service",
+  "page_url": "https://forecast.weather.gov/MapClick.php?lat=47.335298205&lon=-120.581068216",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "attribution_text": "National Weather Service",
+  "tags": [
+    "pass"
+  ],
+  "created_at": "2026-10-07T00:00:00Z"
+}

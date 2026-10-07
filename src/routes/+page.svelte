@@ -61,7 +61,11 @@
 		<h2 class="section-title">Browse</h2>
 		<nav class="collections" aria-label="Browse by type">
 			{#each data.collections as c (c.id)}
-				<a class="collection" href="/collections/{encodeURIComponent(c.id)}" title={c.blurb}>
+				<a
+					class="collection"
+					href={c.id === 'passes' ? '/passes' : `/collections/${encodeURIComponent(c.id)}`}
+					title={c.blurb}
+				>
 					<CollectionIcon name={c.icon} />
 					<span class="collection-name">{c.name}</span>
 					<span class="collection-count">{c.places} places</span>

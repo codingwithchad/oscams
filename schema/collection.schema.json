@@ -32,7 +32,8 @@
         "airfield",
         "mountain",
         "pin",
-        "ski"
+        "ski",
+        "pass"
       ],
       "description": "Small icon shown on the home page tile."
     },

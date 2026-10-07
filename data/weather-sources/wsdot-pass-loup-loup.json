@@ -1,0 +1,23 @@
+{
+  "id": "wsdot-pass-loup-loup",
+  "name": "Loup Loup Pass road conditions",
+  "lat": 48.387763059,
+  "lon": -119.889745723,
+  "kind": "pass-conditions",
+  "provider": "wsdot-pass",
+  "provider_ref": "14",
+  "source": "WSDOT",
+  "page_url": "https://wsdot.com/travel/real-time/mountainpasses",
+  "requires_key": "WSDOT_CODE",
+  "elevation_ft": 4020,
+  "availability": "seasonal",
+  "expected_return": "2026-11",
+  "seasonal_note": "Not broken. WSDOT reports road conditions here from about November 1 to April 1.",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "tags": [
+    "pass"
+  ],
+  "attribution_text": "Washington State Department of Transportation",
+  "created_at": "2026-10-07T00:00:00Z"
+}

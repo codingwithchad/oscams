@@ -1,0 +1,18 @@
+{
+  "id": "nws-forecast-pass-white-pass",
+  "name": "White Pass forecast",
+  "lat": 46.638333,
+  "lon": -121.39,
+  "kind": "forecast",
+  "provider": "nws",
+  "provider_ref": "46.638333,-121.39",
+  "source": "National Weather Service",
+  "page_url": "https://forecast.weather.gov/MapClick.php?lat=46.638333&lon=-121.39",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "attribution_text": "National Weather Service",
+  "tags": [
+    "pass"
+  ],
+  "created_at": "2026-10-07T00:00:00Z"
+}

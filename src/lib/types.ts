@@ -121,7 +121,23 @@ export interface Conditions {
 	returns?: string;
 	/** For forecasts: the time (ms) this forecast is for, when it is not "now". */
 	at?: number;
+	/** For road-conditions reports: the one-word state of the pass, shown as a coloured tag. */
+	badge?: { label: string; tone: 'closed' | 'chains' | 'traction' | 'open' | 'off-season' };
 	state: 'ok' | 'dormant' | 'error';
 	note?: string;
 	rows: { label: string; value: string }[];
+}
+
+export interface PassInfo {
+	id: string;
+	name: string;
+	pass_id: number;
+	route: string;
+	connects: string;
+	group: string;
+	lat: number;
+	lon: number;
+	elevation_ft?: number;
+	/** The place page for this pass (its cameras and weather). */
+	place: string;
 }

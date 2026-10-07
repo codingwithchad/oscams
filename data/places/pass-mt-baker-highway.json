@@ -1,0 +1,10 @@
+{
+  "id": "pass-mt-baker-highway",
+  "name": "Mt. Baker Highway (SR 542)",
+  "region": "Washington",
+  "blurb": "Glacier to the Mt. Baker ski area",
+  "lat": 48.864609918,
+  "lon": -121.668538475,
+  "radius_miles": 8,
+  "collection": "passes"
+}

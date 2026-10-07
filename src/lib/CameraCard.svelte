@@ -1,4 +1,5 @@
 <script lang="ts">
+	import HistoryPlayer from './HistoryPlayer.svelte';
 	import { ago } from './format';
 	import type { Camera, Nearby } from './types';
 
@@ -11,6 +12,7 @@
 	let modified = $state<string | null>(null);
 	let providerUrl = $state<string | null>(null);
 	let dialog: HTMLDialogElement | undefined = $state();
+	let opened = $state(false);
 	// A picture that fails to load gets one retry, then a clear "unavailable" tile until the next refresh.
 	let retry = $state(0);
 	let failed = $state(false);
@@ -90,7 +92,10 @@
 	{:else if isImage}
 		<button
 			class="image-button"
-			onclick={() => dialog?.showModal()}
+			onclick={() => {
+				opened = true;
+				dialog?.showModal();
+			}}
 			aria-label="Enlarge {camera.name}"
 		>
 			{#if failed}
@@ -132,6 +137,7 @@
 			<button class="secondary" onclick={() => dialog?.close()}>Close</button>
 		</div>
 		<img src={imageSrc} alt={camera.name} />
+		{#if opened}<HistoryPlayer id={camera.id} />{/if}
 		{#if camera.page_url}
 			<p class="sub"><a href={camera.page_url} target="_blank" rel="noopener">Source page</a></p>
 		{/if}

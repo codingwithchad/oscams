@@ -1,0 +1,10 @@
+{
+  "id": "pass-satus",
+  "name": "Satus Pass (US 97)",
+  "region": "Washington",
+  "blurb": "Yakima Valley to Goldendale and the Columbia",
+  "lat": 45.984722,
+  "lon": -120.653611,
+  "radius_miles": 8,
+  "collection": "passes"
+}

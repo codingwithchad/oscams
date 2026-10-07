@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/codingwithchad/oscams/schema/pass.schema.json",
+  "title": "Mountain pass",
+  "description": "A mountain pass tracked by WSDOT's pass reports.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "name",
+    "pass_id",
+    "route",
+    "connects",
+    "group",
+    "lat",
+    "lon",
+    "place"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+    },
+    "name": {
+      "type": "string"
+    },
+    "pass_id": {
+      "type": "integer",
+      "description": "WSDOT's MountainPassId."
+    },
+    "route": {
+      "type": "string"
+    },
+    "connects": {
+      "type": "string",
+      "description": "Which towns the pass connects."
+    },
+    "group": {
+      "type": "string"
+    },
+    "lat": {
+      "type": "number"
+    },
+    "lon": {
+      "type": "number"
+    },
+    "elevation_ft": {
+      "type": "number"
+    },
+    "place": {
+      "type": "string",
+      "description": "Id of the place page showing this pass's cameras and weather."
+    }
+  }
+}

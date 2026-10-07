@@ -1,0 +1,12 @@
+{
+  "id": "loup-loup",
+  "name": "Loup Loup Pass",
+  "pass_id": 14,
+  "route": "SR 20",
+  "connects": "Twisp to Okanogan",
+  "group": "Eastern Washington",
+  "lat": 48.387763059,
+  "lon": -119.889745723,
+  "elevation_ft": 4020,
+  "place": "pass-loup-loup"
+}

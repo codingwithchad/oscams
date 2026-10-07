@@ -1,6 +1,6 @@
 import { readdirSync, readFileSync } from 'node:fs';
 import path from 'node:path';
-import type { Camera, Collection, Drive, FeaturedPlace, WeatherSource } from '../types';
+import type { Camera, Collection, Drive, PassInfo, FeaturedPlace, WeatherSource } from '../types';
 
 function dataDir(): string {
 	return process.env.DATA_DIR ?? path.resolve(process.cwd(), 'data');
@@ -37,6 +37,7 @@ let cache: {
 	places: FeaturedPlace[];
 	collections: Collection[];
 	drives: Drive[];
+	passes: PassInfo[];
 } | null = null;
 
 /** Approved items only. Loaded once per server start. */
@@ -49,6 +50,7 @@ export function getCatalog() {
 			drives: readFolder<Drive>('drives').sort(
 				(a, b) => (a.order ?? 100) - (b.order ?? 100) || a.name.localeCompare(b.name)
 			),
+			passes: readFolder<PassInfo>('passes'),
 			places: readFolder<FeaturedPlace>('places').sort(
 				(a, b) => (a.order ?? 100) - (b.order ?? 100) || a.name.localeCompare(b.name)
 			),

@@ -897,3 +897,119 @@ button.wide {
 	max-width: 400px;
 	margin: 0 auto;
 }
+
+/* Mountain passes */
+.pill {
+	display: inline-block;
+	padding: 2px 10px;
+	border-radius: 999px;
+	font-size: 0.78rem;
+	font-weight: 700;
+	white-space: nowrap;
+	background: var(--line);
+	color: var(--text);
+}
+.pill-open {
+	background: #1f8a4c;
+	color: #fff;
+}
+.pill-traction {
+	background: #e0a800;
+	color: #1b1500;
+}
+.pill-chains {
+	background: #e8590c;
+	color: #fff;
+}
+.pill-closed {
+	background: #c92a2a;
+	color: #fff;
+}
+.pill-off-season {
+	background: var(--line);
+	color: var(--muted);
+}
+.pass-summary {
+	margin: 0 0 6px;
+	color: var(--muted);
+}
+.pass-summary strong {
+	color: var(--text);
+}
+.pass-list {
+	list-style: none;
+	margin: 0 0 8px;
+	padding: 0;
+	display: grid;
+	gap: 10px;
+}
+.pass-list a {
+	display: grid;
+	gap: 3px;
+	padding: 14px;
+	border-radius: 14px;
+	text-decoration: none;
+	color: var(--text);
+	background: var(--card);
+	border: 1px solid var(--line);
+}
+.pass-list a:active,
+.pass-list a:hover {
+	border-color: var(--accent);
+}
+.pass-top {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 10px;
+}
+.pass-detail {
+	font-size: 0.88rem;
+	color: var(--muted);
+}
+.pass-detail strong {
+	color: var(--text);
+}
+.wx .pill {
+	margin-right: 6px;
+}
+
+/* Replay of recent camera pictures */
+.replay {
+	margin-top: 12px;
+	padding-top: 10px;
+	border-top: 1px solid var(--line);
+}
+.replay-head {
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+	gap: 10px;
+	margin-bottom: 6px;
+}
+.replay img {
+	display: block;
+	width: 100%;
+	max-height: 52vh;
+	object-fit: contain;
+	background: #000;
+	border-radius: 8px;
+}
+.replay-controls {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	margin-top: 8px;
+}
+.replay-controls button {
+	min-height: 40px;
+	padding: 8px 16px;
+}
+.replay-controls input[type='range'] {
+	flex: 1;
+	min-width: 0;
+	accent-color: var(--accent);
+}
+.replay-note {
+	margin: 10px 0 0;
+}

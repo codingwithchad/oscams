@@ -1,0 +1,10 @@
+{
+  "id": "pass-loup-loup",
+  "name": "Loup Loup Pass (SR 20)",
+  "region": "Washington",
+  "blurb": "Twisp to Okanogan",
+  "lat": 48.387763059,
+  "lon": -119.889745723,
+  "radius_miles": 8,
+  "collection": "passes"
+}

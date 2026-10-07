@@ -1,0 +1,12 @@
+{
+  "id": "satus",
+  "name": "Satus Pass",
+  "pass_id": 8,
+  "route": "US 97",
+  "connects": "Yakima Valley to Goldendale and the Columbia",
+  "group": "Eastern Washington",
+  "lat": 45.984722,
+  "lon": -120.653611,
+  "elevation_ft": 3107,
+  "place": "pass-satus"
+}

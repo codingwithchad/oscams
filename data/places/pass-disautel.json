@@ -1,0 +1,10 @@
+{
+  "id": "pass-disautel",
+  "name": "Disautel Pass (SR 155)",
+  "region": "Washington",
+  "blurb": "Omak to Nespelem and Grand Coulee",
+  "lat": 48.281757946,
+  "lon": -119.143406439,
+  "radius_miles": 8,
+  "collection": "passes"
+}

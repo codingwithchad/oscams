@@ -1,0 +1,18 @@
+{
+  "id": "nws-forecast-pass-chinook",
+  "name": "Chinook Pass forecast",
+  "lat": 46.8717,
+  "lon": -121.515483,
+  "kind": "forecast",
+  "provider": "nws",
+  "provider_ref": "46.8717,-121.515483",
+  "source": "National Weather Service",
+  "page_url": "https://forecast.weather.gov/MapClick.php?lat=46.8717&lon=-121.515483",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "attribution_text": "National Weather Service",
+  "tags": [
+    "pass"
+  ],
+  "created_at": "2026-10-07T00:00:00Z"
+}

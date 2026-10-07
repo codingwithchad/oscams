@@ -1,0 +1,10 @@
+{
+  "id": "pass-sherman",
+  "name": "Sherman Pass (SR 20)",
+  "region": "Washington",
+  "blurb": "Kettle Falls to Republic",
+  "lat": 48.606667,
+  "lon": -118.48,
+  "radius_miles": 8,
+  "collection": "passes"
+}

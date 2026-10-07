@@ -1,0 +1,18 @@
+{
+  "id": "nws-forecast-pass-wauconda",
+  "name": "Wauconda Pass forecast",
+  "lat": 48.726184869,
+  "lon": -118.959520117,
+  "kind": "forecast",
+  "provider": "nws",
+  "provider_ref": "48.726184869,-118.959520117",
+  "source": "National Weather Service",
+  "page_url": "https://forecast.weather.gov/MapClick.php?lat=48.726184869&lon=-118.959520117",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "attribution_text": "National Weather Service",
+  "tags": [
+    "pass"
+  ],
+  "created_at": "2026-10-07T00:00:00Z"
+}

@@ -1,0 +1,12 @@
+{
+  "id": "wauconda",
+  "name": "Wauconda Pass",
+  "pass_id": 16,
+  "route": "SR 20",
+  "connects": "Tonasket to Republic",
+  "group": "Eastern Washington",
+  "lat": 48.726184869,
+  "lon": -118.959520117,
+  "elevation_ft": 4310,
+  "place": "pass-wauconda"
+}

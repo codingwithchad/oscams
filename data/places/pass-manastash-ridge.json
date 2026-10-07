@@ -1,0 +1,10 @@
+{
+  "id": "pass-manastash-ridge",
+  "name": "Manastash Ridge (I-82)",
+  "region": "Washington",
+  "blurb": "Ellensburg to Yakima",
+  "lat": 46.881665326,
+  "lon": -120.424877484,
+  "radius_miles": 8,
+  "collection": "passes"
+}

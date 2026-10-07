@@ -1,0 +1,10 @@
+{
+  "id": "pass-white-pass",
+  "name": "White Pass (US 12)",
+  "region": "Washington",
+  "blurb": "Packwood to Naches and Yakima",
+  "lat": 46.638333,
+  "lon": -121.39,
+  "radius_miles": 8,
+  "collection": "passes"
+}

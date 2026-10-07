@@ -1,0 +1,12 @@
+{
+  "id": "blewett",
+  "name": "Blewett Pass",
+  "pass_id": 1,
+  "route": "US 97",
+  "connects": "Cle Elum and Ellensburg to Leavenworth and Wenatchee",
+  "group": "Cross-Cascades",
+  "lat": 47.335298205,
+  "lon": -120.581068216,
+  "elevation_ft": 4102,
+  "place": "pass-blewett"
+}

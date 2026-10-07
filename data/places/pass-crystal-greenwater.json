@@ -1,0 +1,10 @@
+{
+  "id": "pass-crystal-greenwater",
+  "name": "Crystal to Greenwater (SR 410)",
+  "region": "Washington",
+  "blurb": "Enumclaw to Crystal Mountain",
+  "lat": 47.073008417,
+  "lon": -121.577912874,
+  "radius_miles": 8,
+  "collection": "passes"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "nws-forecast-pass-sherman",
+  "name": "Sherman Pass forecast",
+  "lat": 48.606667,
+  "lon": -118.48,
+  "kind": "forecast",
+  "provider": "nws",
+  "provider_ref": "48.606667,-118.48",
+  "source": "National Weather Service",
+  "page_url": "https://forecast.weather.gov/MapClick.php?lat=48.606667&lon=-118.48",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "attribution_text": "National Weather Service",
+  "tags": [
+    "pass"
+  ],
+  "created_at": "2026-10-07T00:00:00Z"
+}

@@ -1,0 +1,12 @@
+{
+  "id": "tiger-mountain",
+  "name": "Tiger Mountain",
+  "pass_id": 17,
+  "route": "SR 18",
+  "connects": "Issaquah to Maple Valley",
+  "group": "Foothills and ski roads",
+  "lat": 47.465743292,
+  "lon": -121.926995269,
+  "elevation_ft": 1377,
+  "place": "pass-tiger-mountain"
+}

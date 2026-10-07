@@ -1,0 +1,18 @@
+{
+  "id": "nws-forecast-pass-loup-loup",
+  "name": "Loup Loup Pass forecast",
+  "lat": 48.387763059,
+  "lon": -119.889745723,
+  "kind": "forecast",
+  "provider": "nws",
+  "provider_ref": "48.387763059,-119.889745723",
+  "source": "National Weather Service",
+  "page_url": "https://forecast.weather.gov/MapClick.php?lat=48.387763059&lon=-119.889745723",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "attribution_text": "National Weather Service",
+  "tags": [
+    "pass"
+  ],
+  "created_at": "2026-10-07T00:00:00Z"
+}
