@@ -1,0 +1,18 @@
+{
+  "id": "nws-forecast-ski-mission-ridge",
+  "name": "Mission Ridge forecast",
+  "lat": 47.2928,
+  "lon": -120.3998,
+  "kind": "forecast",
+  "provider": "nws",
+  "provider_ref": "47.2928,-120.3998",
+  "source": "National Weather Service",
+  "page_url": "https://forecast.weather.gov/MapClick.php?lat=47.2928&lon=-120.3998",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "attribution_text": "National Weather Service",
+  "tags": [
+    "ski"
+  ],
+  "created_at": "2026-10-07T00:00:00Z"
+}

@@ -51,6 +51,14 @@
 			</nav>
 		</section>
 
+		{#if data.note}
+			<p class="place-note">
+				{data.note}
+				{#if data.link}<a href={data.link.url} target="_blank" rel="noopener">{data.link.label} ↗</a
+					>{/if}
+			</p>
+		{/if}
+
 		{#await data.conditions}
 			<p class="loading">Loading conditions…</p>
 		{:then conditions}

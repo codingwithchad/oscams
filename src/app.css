@@ -833,3 +833,49 @@ button.wide {
 	padding-top: 8px;
 	border-top: 1px solid var(--line);
 }
+
+/* All places / near me lists, place notes */
+.filter {
+	width: 100%;
+	font: inherit;
+	padding: 12px 14px;
+	margin: 4px 0 6px;
+	border-radius: 12px;
+	border: 1px solid var(--line);
+	background: var(--card);
+	color: var(--text);
+}
+.place-list {
+	list-style: none;
+	margin: 0 0 8px;
+	padding: 0;
+	background: var(--card);
+	border: 1px solid var(--line);
+	border-radius: 14px;
+	overflow: hidden;
+}
+.place-list li + li {
+	border-top: 1px solid var(--line);
+}
+.place-list a {
+	display: grid;
+	gap: 1px;
+	padding: 12px 14px;
+	text-decoration: none;
+	color: var(--text);
+}
+.place-list a:active,
+.place-list a:hover {
+	background: var(--bg);
+}
+.place-note {
+	margin: 4px 0 12px;
+	padding: 10px 14px;
+	border-radius: 12px;
+	background: var(--warn-bg);
+	border: 1px solid var(--warn-line);
+	font-size: 0.92rem;
+}
+.collection.utility .ci {
+	color: var(--muted);
+}

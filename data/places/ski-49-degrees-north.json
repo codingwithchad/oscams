@@ -1,0 +1,15 @@
+{
+  "id": "ski-49-degrees-north",
+  "name": "49 Degrees North",
+  "region": "Washington",
+  "blurb": "Northeast Washington: about 2,300 acres",
+  "lat": 48.7939,
+  "lon": -117.5617,
+  "radius_miles": 10,
+  "collection": "ski-areas",
+  "note": "The resort's own cameras are on its website but are not published for reuse, so we cannot show them yet.",
+  "link": {
+    "label": "49 Degrees North's website",
+    "url": "https://49degrees.com/"
+  }
+}

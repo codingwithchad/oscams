@@ -1,0 +1,15 @@
+{
+  "id": "ski-crystal-mountain",
+  "name": "Crystal Mountain",
+  "region": "Washington",
+  "blurb": "Washington's largest: about 2,600 acres",
+  "lat": 46.9282,
+  "lon": -121.5045,
+  "radius_miles": 8,
+  "collection": "ski-areas",
+  "note": "The resort's own cameras are on its website but are not published for reuse, so we cannot show them yet.",
+  "link": {
+    "label": "Crystal Mountain's cameras",
+    "url": "https://www.crystalmountainresort.com/the-mountain/mountain-cams/"
+  }
+}

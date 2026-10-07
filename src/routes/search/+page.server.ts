@@ -12,6 +12,12 @@ const DEFAULT_RADIUS = 10;
 const CAMERA_LIMIT = 24;
 const MAX_RADIUS = 75;
 
+/** Several forecasts a few miles apart say the same thing, so keep only the nearest one. */
+function oneForecast<T extends { kind: string }>(sources: T[]): T[] {
+	let seen = false;
+	return sources.filter((w) => w.kind !== 'forecast' || (seen ? false : (seen = true)));
+}
+
 export const load: PageServerLoad = async ({ url, setHeaders }) => {
 	const { cameras, weather, places } = getCatalog();
 	const placeId = url.searchParams.get('place');
@@ -24,6 +30,8 @@ export const load: PageServerLoad = async ({ url, setHeaders }) => {
 	);
 	const showAll = url.searchParams.get('all') === '1';
 	const empty = {
+		note: featured?.note ?? null,
+		link: featured?.link ?? null,
 		q,
 		placeId: featured?.id ?? null,
 		radius,
@@ -62,10 +70,12 @@ export const load: PageServerLoad = async ({ url, setHeaders }) => {
 		offline: found.filter(offline),
 		// Streamed: the page shows cameras right away while live weather loads.
 		conditions: Promise.all(
-			nearby(
-				weather.filter((w) => kinds.has(w.kind)),
-				place,
-				radius
+			oneForecast(
+				nearby(
+					weather.filter((w) => kinds.has(w.kind)),
+					place,
+					radius
+				)
 			).map((w) => getConditions(w))
 		)
 	};

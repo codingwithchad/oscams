@@ -37,7 +37,7 @@ export const load: PageServerLoad = () => {
 	return {
 		collections: collections.map((c) => ({
 			...c,
-			places: places.filter((p) => p.collection === c.id).length
+			places: places.filter((p) => p.collection === c.id || c.also?.includes(p.id)).length
 		})),
 		drives,
 		places: cards,

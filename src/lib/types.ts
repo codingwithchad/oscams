@@ -70,6 +70,8 @@ export interface FeaturedPlace {
 	collection?: string;
 	/** Report kinds to show for this place beyond the usual ones, e.g. ["ferry"]. */
 	include_kinds?: string[];
+	note?: string;
+	link?: { label: string; url: string };
 }
 
 export interface Collection {
@@ -77,6 +79,7 @@ export interface Collection {
 	name: string;
 	blurb?: string;
 	icon?: string;
+	also?: string[];
 	order?: number;
 }
 

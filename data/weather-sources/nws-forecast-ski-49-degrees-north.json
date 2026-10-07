@@ -1,0 +1,18 @@
+{
+  "id": "nws-forecast-ski-49-degrees-north",
+  "name": "49 Degrees North forecast",
+  "lat": 48.7939,
+  "lon": -117.5617,
+  "kind": "forecast",
+  "provider": "nws",
+  "provider_ref": "48.7939,-117.5617",
+  "source": "National Weather Service",
+  "page_url": "https://forecast.weather.gov/MapClick.php?lat=48.7939&lon=-117.5617",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "attribution_text": "National Weather Service",
+  "tags": [
+    "ski"
+  ],
+  "created_at": "2026-10-07T00:00:00Z"
+}

@@ -45,3 +45,9 @@ Sailings, flight delays and border waits are shown only when the place (or the d
 ## 2026-10-07: Home page polish pass 1
 
 Slim header (about a quarter of its old height): camera mark, "OS Cams" and the slogan "Live views along your way." ("Know before you go" is what DOT sites say.) Browse became two-across tiles with an icon, name and place count; each collection sets its `icon` in its data file. The start card now sits right under the header so search and the tiles are visible without scrolling.
+
+## 2026-10-07: Discovery and ski areas
+
+Browse now ends with two utility tiles: "All places" (a filterable directory grouped by list) and "Near me" (the places we cover closest to you, using the phone's location). A state level was skipped since everything is Washington for now.
+
+"Ski areas" lists the biggest Washington ski areas by skiable acres (Crystal Mountain about 2,600, 49 Degrees North about 2,300, Mission Ridge about 2,000, The Summit at Snoqualmie about 2,000, and Stevens Pass tied with Mt. Baker at about 1,125; sources disagree, so check before quoting). Only Stevens Pass (Windy cameras plus WSDOT) and Snoqualmie (WSDOT) have cameras we can reuse. Crystal, 49 Degrees North and Mission Ridge show a forecast plus a note and a link to the resort's own cameras. Places can carry a `note` and `link`, and a collection can list places from other lists with `also`. A place page shows only its nearest forecast.

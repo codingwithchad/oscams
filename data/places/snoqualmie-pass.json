@@ -2,9 +2,14 @@
   "id": "snoqualmie-pass",
   "name": "Snoqualmie Pass",
   "region": "Washington",
-  "blurb": "I-90 pass, ski areas and Seattle's closest snow",
+  "blurb": "I-90 pass and The Summit at Snoqualmie, Seattle's closest snow",
   "lat": 47.4254,
   "lon": -121.4137,
   "radius_miles": 9,
-  "order": 1
+  "order": 1,
+  "note": "The resort's own cameras are on its website but are not published for reuse, so we cannot show them yet.",
+  "link": {
+    "label": "The Summit's cameras",
+    "url": "https://www.summitatsnoqualmie.com/webcams"
+  }
 }

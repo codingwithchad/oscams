@@ -31,9 +31,18 @@
         "plane",
         "airfield",
         "mountain",
-        "pin"
+        "pin",
+        "ski"
       ],
       "description": "Small icon shown on the home page tile."
+    },
+    "also": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true,
+      "description": "Ids of places that belong to other lists but should also be listed here (e.g. Stevens Pass under Ski areas)."
     }
   }
 }

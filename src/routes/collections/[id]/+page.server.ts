@@ -10,7 +10,7 @@ export const load: PageServerLoad = ({ params }) => {
 	return {
 		collection,
 		places: places
-			.filter((p) => p.collection === collection.id)
+			.filter((p) => p.collection === collection.id || collection.also?.includes(p.id))
 			.map((p) => {
 				const live = nearby(cameras, p, p.radius_miles ?? 2).filter(
 					(c) => !isDormant(c) && c.feed_url && c.feed_type === 'image'

@@ -27,6 +27,14 @@
 		<path d="M6 21V4" />
 		<path d="M6 5l13 2.5L6 11z" />
 		<path d="M3 21h8" />
+	{:else if name === 'ski'}
+		<path d="M12 3v18M4.5 7.5l15 9M19.5 7.5l-15 9" />
+		<path d="M9.5 4.5L12 7l2.5-2.5M9.5 19.5L12 17l2.5 2.5" />
+	{:else if name === 'list'}
+		<path d="M8 6h12M8 12h12M8 18h12" />
+		<circle cx="4" cy="6" r="1" />
+		<circle cx="4" cy="12" r="1" />
+		<circle cx="4" cy="18" r="1" />
 	{:else if name === 'mountain'}
 		<path d="M2 20l7-12 4 7 2-3 7 8z" />
 		<path d="M9 8l1.5 2.5" />

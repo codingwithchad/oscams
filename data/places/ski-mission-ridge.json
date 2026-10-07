@@ -1,0 +1,15 @@
+{
+  "id": "ski-mission-ridge",
+  "name": "Mission Ridge",
+  "region": "Washington",
+  "blurb": "Above Wenatchee: about 2,000 acres",
+  "lat": 47.2928,
+  "lon": -120.3998,
+  "radius_miles": 8,
+  "collection": "ski-areas",
+  "note": "The resort's own cameras are on its website but are not published for reuse, so we cannot show them yet.",
+  "link": {
+    "label": "Mission Ridge's cameras",
+    "url": "https://www.missionridge.com/webcams/"
+  }
+}

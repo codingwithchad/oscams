@@ -61,6 +61,28 @@
       },
       "uniqueItems": true,
       "description": "Ferry, airport or border reports to show for this place even though it is not in that collection (for example the Mukilteo ferry town)."
+    },
+    "note": {
+      "type": "string",
+      "description": "A short note shown above the results, e.g. why there are no cameras yet."
+    },
+    "link": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "label",
+        "url"
+      ],
+      "properties": {
+        "label": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string",
+          "format": "uri"
+        }
+      },
+      "description": "A small link out, e.g. to the resort's own camera page."
     }
   }
 }

@@ -67,6 +67,16 @@
 					<span class="collection-count">{c.places} places</span>
 				</a>
 			{/each}
+			<a class="collection utility" href="/places">
+				<CollectionIcon name="list" />
+				<span class="collection-name">All places</span>
+				<span class="collection-count">{data.places.length} to explore</span>
+			</a>
+			<a class="collection utility" href="/nearby">
+				<CollectionIcon name="pin" />
+				<span class="collection-name">Near me</span>
+				<span class="collection-count">closest places</span>
+			</a>
 		</nav>
 	{/if}
 
