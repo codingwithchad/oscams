@@ -10,7 +10,6 @@
     "name",
     "lat",
     "lon",
-    "feed_url",
     "feed_type",
     "source",
     "status",
@@ -122,6 +121,30 @@
       },
       "uniqueItems": true,
       "description": "Optional free-form labels, e.g. road, mountain, summit, surf, weather."
+    },
+    "availability": {
+      "enum": [
+        "live",
+        "seasonal"
+      ],
+      "default": "live",
+      "description": "seasonal = feed is off right now but expected to return. The app shows a clearly labeled placeholder, not an error."
+    },
+    "expected_return": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}(-\\d{2})?$",
+      "description": "When a seasonal camera is expected back, e.g. 2026-11."
+    },
+    "seasonal_note": {
+      "type": "string",
+      "description": "Shown to users on the placeholder, e.g. Opens with the ski season."
+    },
+    "location_precision": {
+      "enum": [
+        "exact",
+        "approximate"
+      ],
+      "default": "exact"
     }
   },
   "if": {
@@ -138,5 +161,44 @@
     "required": [
       "approved_by"
     ]
-  }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "availability": {
+            "const": "seasonal"
+          }
+        },
+        "required": [
+          "availability"
+        ]
+      },
+      "then": {
+        "required": [
+          "page_url",
+          "expected_return"
+        ]
+      }
+    },
+    {
+      "if": {
+        "not": {
+          "properties": {
+            "availability": {
+              "const": "seasonal"
+            }
+          },
+          "required": [
+            "availability"
+          ]
+        }
+      },
+      "then": {
+        "required": [
+          "feed_url"
+        ]
+      }
+    }
+  ]
 }

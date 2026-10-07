@@ -1,0 +1,23 @@
+{
+  "id": "stevens-pass-resort-ski-and-snowboard-school",
+  "name": "Stevens Pass Resort: Ski and Snowboard School",
+  "description": "Learning area at the base.",
+  "lat": 47.7448,
+  "lon": -121.089,
+  "location_precision": "approximate",
+  "feed_type": "image",
+  "source": "Stevens Pass Resort",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "availability": "seasonal",
+  "expected_return": "2026-11",
+  "seasonal_note": "Not broken. This camera comes back when the ski season opens, around November.",
+  "page_url": "https://www.stevenspass.com/the-mountain/mountain-conditions/mountain-cams.aspx",
+  "tags": [
+    "ski-resort",
+    "mountain",
+    "stevens-pass"
+  ],
+  "attribution_text": "Stevens Pass Resort",
+  "created_at": "2026-10-07T00:00:00Z"
+}

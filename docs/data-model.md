@@ -38,3 +38,11 @@ A camera does not belong to an area. Search returns every approved camera within
 ## Not stored here
 
 Live health data (last checked, is live) changes constantly and does not belong in git. It will live in a separate store later.
+
+## Seasonal cameras
+
+Some cameras are off for part of the year (ski resort cams in the off-season). Set `availability: seasonal` with `expected_return` (YYYY-MM) and a `seasonal_note`. `feed_url` is then optional, but `page_url` is required so we keep the link in the data.
+
+The app should show these as a clearly labeled placeholder ("not broken, back in November"), not as an error and not as a bare link. When the feed is live, set `availability: live` and add `feed_url`.
+
+`location_precision: approximate` marks coordinates that are a best guess (e.g. the base area) until exact positions are known.
