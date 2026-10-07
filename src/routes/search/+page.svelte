@@ -3,9 +3,13 @@
 	import ConditionsBar from '../../lib/ConditionsBar.svelte';
 	import OfflineCameras from '../../lib/OfflineCameras.svelte';
 	import SearchBox from '../../lib/SearchBox.svelte';
+	import { rememberPlace } from '../../lib/lastPlace';
 	import type { PageProps } from './$types';
 
 	let { data }: PageProps = $props();
+	$effect(() => {
+		if (data.place) rememberPlace(location.pathname + location.search);
+	});
 	const radii = [10, 25, 50, 75];
 	const base = $derived(
 		data.placeId

@@ -7,6 +7,23 @@
 		<link rel="manifest" href="/manifest.webmanifest" />
 		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 		<meta name="mobile-web-app-capable" content="yes" />
+		<script>
+			// First open of a session: jump straight back to the last place viewed.
+			try {
+				var first = !sessionStorage.getItem('oscams:started');
+				sessionStorage.setItem('oscams:started', '1');
+				var last = localStorage.getItem('oscams:last');
+				if (
+					first &&
+					last &&
+					location.pathname === '/' &&
+					!location.search &&
+					last.charAt(0) === '/'
+				) {
+					location.replace(last);
+				}
+			} catch (e) {}
+		</script>
 		%sveltekit.head%
 	</head>
 	<body data-sveltekit-preload-data="hover">
