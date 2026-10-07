@@ -1,11 +1,17 @@
 <script lang="ts">
 	import CameraCard from '../../lib/CameraCard.svelte';
-	import ConditionsCard from '../../lib/ConditionsCard.svelte';
+	import ConditionsBar from '../../lib/ConditionsBar.svelte';
+	import OfflineCameras from '../../lib/OfflineCameras.svelte';
 	import SearchBox from '../../lib/SearchBox.svelte';
 	import type { PageProps } from './$types';
 
 	let { data }: PageProps = $props();
 	const radii = [10, 25, 50, 75];
+	const base = $derived(
+		data.placeId
+			? `/search?place=${encodeURIComponent(data.placeId)}`
+			: `/search?q=${encodeURIComponent(data.q)}`
+	);
 </script>
 
 <svelte:head>
@@ -14,7 +20,7 @@
 
 <header class="top">
 	<a class="brand" href="/">OS Cams</a>
-	<SearchBox value={data.q} />
+	<SearchBox value={data.placeId ? '' : data.q} />
 </header>
 
 <main>
@@ -29,40 +35,25 @@
 			<h1>{data.place.label}</h1>
 			<nav class="radius" aria-label="Search radius">
 				{#each radii as r (r)}
-					<a
-						href="/search?q={encodeURIComponent(data.q)}&r={r}"
-						aria-current={r === data.radius ? 'true' : undefined}
-					>
-						{r} mi
-					</a>
+					<a href="{base}&r={r}" aria-current={r === data.radius ? 'true' : undefined}>{r} mi</a>
 				{/each}
 			</nav>
 		</section>
 
-		<section>
-			<h2>Weather &amp; roads</h2>
-			{#await data.conditions}
-				<p class="loading">Loading current conditions…</p>
-			{:then conditions}
-				{#if conditions.length}
-					<div class="grid">
-						{#each conditions as c (c.id)}<ConditionsCard {c} />{/each}
-					</div>
-				{:else}
-					<p class="empty">No weather sources within {data.radius} miles yet.</p>
-				{/if}
-			{/await}
-		</section>
+		{#await data.conditions}
+			<p class="loading">Loading conditions…</p>
+		{:then conditions}
+			<ConditionsBar {conditions} />
+		{/await}
 
-		<section>
-			<h2>Cameras</h2>
-			{#if data.cameras.length}
-				<div class="grid">
-					{#each data.cameras as camera (camera.id)}<CameraCard {camera} />{/each}
-				</div>
-			{:else}
-				<p class="empty">No cameras within {data.radius} miles yet. Try a larger radius.</p>
-			{/if}
-		</section>
+		{#if data.cameras.length}
+			<div class="grid">
+				{#each data.cameras as camera (camera.id)}<CameraCard {camera} />{/each}
+			</div>
+		{:else}
+			<p class="empty">No live cameras within {data.radius} miles. Try a larger radius.</p>
+		{/if}
+
+		<OfflineCameras cameras={data.offline} />
 	{/if}
 </main>

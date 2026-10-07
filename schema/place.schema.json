@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/codingwithchad/oscams/schema/place.schema.json",
+  "title": "Featured place",
+  "description": "A place shown as a one-tap button on the home page. Cameras are never attached to a place; results come from distance.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "name", "lat", "lon"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" },
+    "name": { "type": "string", "minLength": 1 },
+    "region": { "type": "string" },
+    "blurb": { "type": "string" },
+    "lat": { "type": "number", "minimum": -90, "maximum": 90 },
+    "lon": { "type": "number", "minimum": -180, "maximum": 180 },
+    "radius_miles": { "type": "number", "minimum": 1, "maximum": 75, "description": "Default search radius for this place." },
+    "order": { "type": "number", "description": "Lower numbers first. Popular places can go first later." }
+  }
+}

@@ -1,13 +1,13 @@
 import { readdirSync, readFileSync } from 'node:fs';
 import path from 'node:path';
-import type { Camera, WeatherSource } from '../types';
+import type { Camera, FeaturedPlace, WeatherSource } from '../types';
 
 function dataDir(): string {
 	return process.env.DATA_DIR ?? path.resolve(process.cwd(), 'data');
 }
 
 /** Read every JSON file in a data subfolder. Bad files are skipped with a warning. */
-export function readFolder<T extends { id: string; status: string }>(folder: string): T[] {
+export function readFolder<T extends { id: string }>(folder: string): T[] {
 	const dir = path.join(dataDir(), folder);
 	let names: string[];
 	try {
@@ -31,14 +31,21 @@ export function readFolder<T extends { id: string; status: string }>(folder: str
 	return items;
 }
 
-let cache: { cameras: Camera[]; weather: WeatherSource[] } | null = null;
+let cache: { cameras: Camera[]; weather: WeatherSource[]; places: FeaturedPlace[] } | null = null;
 
 /** Approved items only. Loaded once per server start. */
 export function getCatalog() {
 	if (!cache) {
 		cache = {
-			cameras: readFolder<Camera>('cameras').filter((c) => c.status === 'approved'),
-			weather: readFolder<WeatherSource>('weather-sources').filter((w) => w.status === 'approved')
+			places: readFolder<FeaturedPlace>('places').sort(
+				(a, b) => (a.order ?? 100) - (b.order ?? 100) || a.name.localeCompare(b.name)
+			),
+			cameras: readFolder<Camera & { status: string }>('cameras').filter(
+				(c) => c.status === 'approved'
+			),
+			weather: readFolder<WeatherSource & { status: string }>('weather-sources').filter(
+				(w) => w.status === 'approved'
+			)
 		};
 	}
 	return cache;

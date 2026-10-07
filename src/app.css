@@ -170,9 +170,6 @@ button:disabled {
 	background: #000;
 }
 .meta,
-.conditions {
-	padding: 12px 14px;
-}
 .sub {
 	color: var(--muted);
 	font-size: 0.85rem;
@@ -187,38 +184,6 @@ button:disabled {
 	color: var(--text);
 }
 .badge.seasonal,
-.placeholder .badge {
-	background: var(--warn-line);
-	color: #1b1500;
-}
-.placeholder {
-	aspect-ratio: 4 / 3;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	text-align: center;
-	padding: 16px;
-	background: var(--warn-bg);
-	border-bottom: 2px dashed var(--warn-line);
-}
-.placeholder p {
-	margin: 6px 0 0;
-}
-.placeholder .big {
-	font-size: 1.2rem;
-	font-weight: 700;
-}
-.conditions.dormant {
-	background: var(--warn-bg);
-	border-style: dashed;
-	border-color: var(--warn-line);
-}
-.conditions header {
-	display: flex;
-	gap: 6px;
-	margin-bottom: 6px;
-}
 dl {
 	display: grid;
 	grid-template-columns: auto 1fr;
@@ -241,4 +206,98 @@ dd {
 }
 .summary {
 	padding-top: 8px;
+}
+
+/* Home: available places */
+.places {
+	display: grid;
+	gap: 10px;
+	margin: 20px 0 8px;
+	text-align: left;
+}
+.place {
+	display: grid;
+	gap: 2px;
+	padding: 16px;
+	border-radius: 14px;
+	text-decoration: none;
+	background: var(--card);
+	border: 1px solid var(--line);
+	color: var(--text);
+}
+.place:active,
+.place:hover {
+	border-color: var(--accent);
+}
+.place-name {
+	font-size: 1.15rem;
+	font-weight: 700;
+}
+.place-sub {
+	color: var(--muted);
+	font-size: 0.9rem;
+}
+.place-count {
+	color: var(--accent);
+	font-size: 0.85rem;
+}
+.or {
+	color: var(--muted);
+	margin: 18px 0 0;
+	font-size: 0.9rem;
+}
+
+/* Conditions strip */
+.wx-bar {
+	margin: 4px 0 14px;
+	padding: 10px 14px;
+	background: var(--card);
+	border: 1px solid var(--line);
+	border-radius: 12px;
+	display: grid;
+	gap: 6px;
+	font-size: 0.95rem;
+}
+.wx {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 4px 10px;
+	align-items: baseline;
+}
+.wx-kind {
+	font-size: 0.75rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.04em;
+	color: var(--accent);
+}
+.wx details {
+	flex-basis: 100%;
+}
+.wx summary {
+	cursor: pointer;
+	color: var(--muted);
+	font-size: 0.85rem;
+}
+.wx ul {
+	margin: 4px 0 0;
+	padding-left: 18px;
+	color: var(--muted);
+}
+.wx-quiet {
+	margin: 0;
+	color: var(--muted);
+	font-size: 0.85rem;
+}
+
+/* Cameras off right now */
+.offline {
+	list-style: none;
+	margin: 18px 0 0;
+	padding: 0;
+	color: var(--muted);
+	font-size: 0.85rem;
+}
+.offline li {
+	padding: 2px 0;
 }

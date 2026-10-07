@@ -24,3 +24,14 @@ describe('data files', () => {
 		}
 	});
 });
+
+describe('places', () => {
+	it('have valid coordinates', () => {
+		const places = readFolder<{ id: string; lat: number; lon: number }>('places');
+		expect(places.length).toBeGreaterThan(0);
+		for (const p of places) {
+			expect(Math.abs(p.lat), p.id).toBeLessThanOrEqual(90);
+			expect(Math.abs(p.lon), p.id).toBeLessThanOrEqual(180);
+		}
+	});
+});

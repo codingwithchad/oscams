@@ -120,7 +120,8 @@ export async function getConditions(src: Nearby<WeatherSource>): Promise<Conditi
 		source: src.source,
 		attribution: src.attribution_text,
 		page_url: src.page_url,
-		distance: src.distance
+		distance: src.distance,
+		returns: src.expected_return
 	};
 	if (isDormant(src)) return { ...base, state: 'dormant', note: src.seasonal_note, rows: [] };
 	const adapter = src.provider ? adapters[src.provider] : undefined;

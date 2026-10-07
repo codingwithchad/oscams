@@ -34,6 +34,17 @@ export interface WeatherSource extends Located {
 	elevation_ft?: number;
 }
 
+export interface FeaturedPlace {
+	id: string;
+	name: string;
+	region?: string;
+	blurb?: string;
+	lat: number;
+	lon: number;
+	radius_miles?: number;
+	order?: number;
+}
+
 export interface Place {
 	lat: number;
 	lon: number;
@@ -50,6 +61,7 @@ export interface Conditions {
 	attribution?: string;
 	page_url?: string;
 	distance: number;
+	returns?: string;
 	state: 'ok' | 'dormant' | 'error';
 	note?: string;
 	rows: { label: string; value: string }[];
