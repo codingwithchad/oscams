@@ -30,9 +30,6 @@
 	const searches = $derived(
 		recents.filter((r): r is Extract<Recent, { kind: 'search' }> => r.kind === 'search').slice(0, 4)
 	);
-	const chips = $derived(
-		data.places.filter((p) => !p.collection).map((p) => ({ id: p.id, name: p.name }))
-	);
 </script>
 
 <svelte:head><title>{APP_NAME}: {TAGLINE}</title></svelte:head>
@@ -78,7 +75,6 @@
 
 <main class="home">
 	<StartCard
-		{chips}
 		drives={data.drives}
 		searches={searches.map((x) => ({ q: x.q, label: x.label }))}
 		{trips}

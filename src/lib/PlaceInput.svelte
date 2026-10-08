@@ -89,7 +89,7 @@
 		bind:value
 		oninput={onInput}
 		onkeydown={onKey}
-		onblur={() => setTimeout(() => (open = false), 150)}
+		onblur={() => setTimeout(() => (open = false), 300)}
 	/>
 	{#if open}
 		<ul class="suggest" id={listId} role="listbox">
@@ -98,10 +98,8 @@
 					<button
 						type="button"
 						class:active={i === active}
-						onpointerdown={(e) => {
-							e.preventDefault();
-							pick(s);
-						}}
+						onmousedown={(e) => e.preventDefault()}
+						onclick={() => pick(s)}
 					>
 						<span class="suggest-name">{s.label}</span>
 						{#if s.sub}<span class="suggest-sub">{s.sub}</span>{/if}
