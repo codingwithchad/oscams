@@ -1,0 +1,23 @@
+{
+  "id": "mt-baker-from-the-west",
+  "name": "Mt. Baker from the west",
+  "description": "A view toward Mt. Baker from the lowlands west of the mountain. It is often hazy.",
+  "lat": 48.84612,
+  "lon": -121.69913,
+  "feed_type": "image",
+  "source": "snow2day via Windy.com",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "provider": "windy",
+  "provider_ref": "1754508997",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "page_url": "https://windy.com/webcams/1754508997",
+  "tags": [
+    "mt-baker",
+    "mountain",
+    "scenic"
+  ],
+  "attribution_text": "snow2day via Windy.com",
+  "created_at": "2026-10-08T00:00:00Z"
+}

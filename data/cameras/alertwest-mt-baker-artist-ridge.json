@@ -1,0 +1,22 @@
+{
+  "id": "alertwest-mt-baker-artist-ridge",
+  "name": "Artist Ridge lookout",
+  "description": "A wildfire lookout camera near Artist Point on the Mt. Baker Highway. The view can change from one picture to the next.",
+  "lat": 48.84382,
+  "lon": -121.68746,
+  "feed_type": "image",
+  "source": "AlertWest via Windy.com",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "provider": "windy",
+  "provider_ref": "1793910003",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "page_url": "https://windy.com/webcams/1793910003",
+  "tags": [
+    "mt-baker",
+    "mountain"
+  ],
+  "attribution_text": "AlertWest via Windy.com",
+  "created_at": "2026-10-08T00:00:00Z"
+}

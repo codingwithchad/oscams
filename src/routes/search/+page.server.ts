@@ -38,6 +38,9 @@ export const load: PageServerLoad = async ({ url, setHeaders }) => {
 		radius,
 		failed: false,
 		cameras: [],
+		totalCameras: 0,
+		showingAll: true,
+		fallback: false,
 		offline: [],
 		conditions: Promise.resolve([])
 	};
@@ -63,13 +66,23 @@ export const load: PageServerLoad = async ({ url, setHeaders }) => {
 		nearby(featured ? forPlace(cameras, featured) : cameras, place, radius)
 	);
 	const offline = (c: Nearby<Camera>) => isDormant(c) || !c.feed_url;
-	const live = found.filter((c) => !offline(c));
+	let live = found.filter((c) => !offline(c));
+
+	// Never leave the page empty: if nothing is close, show the nearest working cameras, labelled by distance.
+	let fallback = false;
+	if (!live.length) {
+		const pool = featured ? forPlace(cameras, featured) : cameras;
+		const near = await withLiveLinks(nearby(pool, place, MAX_RADIUS).slice(0, 12));
+		live = near.filter((c) => !offline(c)).slice(0, 6);
+		fallback = live.length > 0;
+	}
 	return {
 		...empty,
 		place,
-		cameras: showAll ? live : live.slice(0, CAMERA_LIMIT),
+		fallback,
+		cameras: showAll || fallback ? live : live.slice(0, CAMERA_LIMIT),
 		totalCameras: live.length,
-		showingAll: showAll || live.length <= CAMERA_LIMIT,
+		showingAll: showAll || fallback || live.length <= CAMERA_LIMIT,
 		offline: found.filter(offline),
 		// Streamed: the page shows cameras right away while live weather loads.
 		conditions: Promise.all(

@@ -72,6 +72,13 @@
 			</p>
 		{/if}
 
+		{#if data.fallback}
+			<p class="thinned">
+				No live cameras within {data.radius} miles of {data.place.label}. These are the nearest
+				ones, with their distance.
+			</p>
+		{/if}
+
 		{#if data.cameras.length}
 			<div class="grid">
 				{#each data.cameras as camera (camera.id)}<CameraCard {camera} />{/each}

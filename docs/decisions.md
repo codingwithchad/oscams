@@ -52,7 +52,7 @@ Browse now ends with two utility tiles: "All places" (a filterable directory gro
 
 "Ski areas" lists the biggest Washington ski areas by skiable acres (Crystal Mountain about 2,600, 49 Degrees North about 2,300, Mission Ridge about 2,000, The Summit at Snoqualmie about 2,000, and Stevens Pass tied with Mt. Baker at about 1,125; sources disagree, so check before quoting). Only Stevens Pass (Windy cameras plus WSDOT) and Snoqualmie (WSDOT) have cameras we can reuse. Crystal, 49 Degrees North and Mission Ridge show a forecast plus a note and a link to the resort's own cameras. Places can carry a `note` and `link`, and a collection can list places from other lists with `also`. A place page shows only its nearest forecast.
 
-Windy was searched widely around all seven ski areas (2026-10-07). Nothing usable was added: Windy's three "Mt. Baker" entries are a small airstrip, a distant hazy peak and a duplicate of the North Cascades park camera, so they are not shown. White Pass has WSDOT's summit camera. Each resort road has a seasonal WSDOT road-conditions report (Crystal also has Chinook Pass).
+Windy was searched widely around all seven ski areas (2026-10-07). A first pass skipped Windy's three "Mt. Baker" entries because they did not look like the ski area; on 2026-10-08, after a wider search, they were added with honest descriptions (an AlertWest lookout whose view can change, a distant view of Mt. Baker from the west, and a view from Acme toward the Twin Sisters and Baker), and the duplicate of the North Cascades park camera was left out. White Pass has WSDOT's summit camera. Each resort road has a seasonal WSDOT road-conditions report (Crystal also has Chinook Pass).
 
 ## 2026-10-07: Reliability pass and statewide cameras
 
@@ -65,3 +65,7 @@ Windy was searched widely around all seven ski areas (2026-10-07). Nothing usabl
 ## 2026-10-07: Mountain passes and camera replay
 
 Added a Mountain passes page (live status for every WSDOT pass) and a replay of the last 2 hours of pass-camera pictures so people can see snow building up. The status wording rules were written from WSDOT's usual phrasing and tested with sample text, but real winter wording was not available in October, so check chain-required and closure cases once WSDOT starts reporting around November 1 and adjust `classifyRestriction` if the wording differs. WSDOT has no public camera on the North Cascades Highway pass itself. Snow depth sources (for example NWAC weather stations) are a possible later addition.
+
+## 2026-10-08: Pages are never empty
+
+If a place has no live cameras inside its radius, the page shows the nearest working cameras (up to 6, within 75 miles) with their distance and a line saying so, instead of an empty message. This applies to every place and search. Eight places had been empty (Mt. Baker, Crystal Mountain, 49 Degrees North, Mission Ridge, three passes, and Sunrise); Mt. Baker now has its own cameras and the others show the nearest ones.

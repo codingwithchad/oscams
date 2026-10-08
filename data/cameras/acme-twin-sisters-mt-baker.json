@@ -1,0 +1,23 @@
+{
+  "id": "acme-twin-sisters-mt-baker",
+  "name": "Acme: Twin Sisters and Mt. Baker",
+  "description": "A view from the Nooksack valley at Acme toward the Twin Sisters and Mt. Baker.",
+  "lat": 48.7527,
+  "lon": -122.06768,
+  "feed_type": "image",
+  "source": "Acme webcam via Windy.com",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "provider": "windy",
+  "provider_ref": "1793898636",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "page_url": "https://windy.com/webcams/1793898636",
+  "tags": [
+    "mt-baker",
+    "mountain",
+    "scenic"
+  ],
+  "attribution_text": "Acme webcam via Windy.com",
+  "created_at": "2026-10-08T00:00:00Z"
+}
