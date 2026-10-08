@@ -1,4 +1,5 @@
 import { isDormant, nearby } from '../../lib/geo';
+import { forPlace } from '../../lib/placeCameras';
 import { getCatalog } from '../../lib/server/catalog';
 import { getConditions } from '../../lib/server/conditions';
 import { allowedKinds } from '../../lib/kinds';
@@ -58,7 +59,9 @@ export const load: PageServerLoad = async ({ url, setHeaders }) => {
 	// Ferry, airport and border reports only appear when the place itself is one of those.
 	const kinds = allowedKinds(featured);
 	setHeaders({ 'cache-control': 'private, max-age=60' });
-	const found = await withLiveLinks(nearby(cameras, place, radius));
+	const found = await withLiveLinks(
+		nearby(featured ? forPlace(cameras, featured) : cameras, place, radius)
+	);
 	const offline = (c: Nearby<Camera>) => isDormant(c) || !c.feed_url;
 	const live = found.filter((c) => !offline(c));
 	return {
@@ -74,7 +77,7 @@ export const load: PageServerLoad = async ({ url, setHeaders }) => {
 				nearby(
 					weather.filter((w) => kinds.has(w.kind)),
 					place,
-					radius
+					featured?.weather_radius_miles ?? radius
 				)
 			).map((w) => getConditions(w))
 		)

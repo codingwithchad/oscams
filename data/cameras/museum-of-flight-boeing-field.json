@@ -1,0 +1,23 @@
+{
+  "id": "museum-of-flight-boeing-field",
+  "name": "Museum of Flight and Boeing Field",
+  "description": "The airfield at the Museum of Flight, where the planes come and go.",
+  "lat": 47.52798,
+  "lon": -122.29671,
+  "feed_type": "image",
+  "source": "WASAR.org via Windy.com",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "provider": "windy",
+  "provider_ref": "1343577880",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "page_url": "https://windy.com/webcams/1343577880",
+  "tags": [
+    "scenic",
+    "airport",
+    "seattle"
+  ],
+  "attribution_text": "WASAR.org via Windy.com",
+  "created_at": "2026-10-07T00:00:00Z"
+}

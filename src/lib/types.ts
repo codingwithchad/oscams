@@ -70,6 +70,10 @@ export interface FeaturedPlace {
 	collection?: string;
 	/** Report kinds to show for this place beyond the usual ones, e.g. ["ferry"]. */
 	include_kinds?: string[];
+	/** List only cameras carrying one of these tags (a themed place, e.g. scenic views). */
+	camera_tags?: string[];
+	/** How far to look for weather reports, when that should be smaller than the camera radius. */
+	weather_radius_miles?: number;
 	note?: string;
 	link?: { label: string; url: string };
 }

@@ -1,0 +1,23 @@
+{
+  "id": "spu-martin-square",
+  "name": "Seattle Pacific University: Martin Square",
+  "description": "The campus plaza at Seattle Pacific University, best in fall color.",
+  "lat": 47.64954,
+  "lon": -122.36392,
+  "feed_type": "image",
+  "source": "Seattle Pacific University via Windy.com",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "provider": "windy",
+  "provider_ref": "1263929393",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "page_url": "https://windy.com/webcams/1263929393",
+  "tags": [
+    "scenic",
+    "campus",
+    "seattle"
+  ],
+  "attribution_text": "Seattle Pacific University via Windy.com",
+  "created_at": "2026-10-07T00:00:00Z"
+}

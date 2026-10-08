@@ -83,6 +83,20 @@
         }
       },
       "description": "A small link out, e.g. to the resort's own camera page."
+    },
+    "camera_tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true,
+      "description": "If set, this place lists only cameras that carry one of these tags (for a themed place such as scenic views) instead of every camera within its radius."
+    },
+    "weather_radius_miles": {
+      "type": "number",
+      "minimum": 1,
+      "maximum": 75,
+      "description": "How far to look for weather reports, when that should be smaller than radius_miles (used by wide themed places)."
     }
   }
 }

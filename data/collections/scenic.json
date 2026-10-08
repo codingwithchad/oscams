@@ -1,0 +1,13 @@
+{
+  "id": "scenic",
+  "name": "Scenic views",
+  "blurb": "Skylines, lakes, mountains and landmarks, just for the view",
+  "icon": "eye",
+  "order": 7,
+  "also": [
+    "mount-rainier",
+    "olympic-hurricane-ridge",
+    "olympic-lake-crescent",
+    "north-cascades-newhalem"
+  ]
+}

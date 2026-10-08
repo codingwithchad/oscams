@@ -1,0 +1,23 @@
+{
+  "id": "kirkland-marina-park-dock",
+  "name": "Kirkland Marina Park",
+  "description": "Boats and the Lake Washington shoreline at the Kirkland city dock.",
+  "lat": 47.67583,
+  "lon": -122.20917,
+  "feed_type": "image",
+  "source": "City of Kirkland via Windy.com",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "provider": "windy",
+  "provider_ref": "1793911141",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "page_url": "https://windy.com/webcams/1793911141",
+  "tags": [
+    "scenic",
+    "lake",
+    "seattle"
+  ],
+  "attribution_text": "City of Kirkland via Windy.com",
+  "created_at": "2026-10-07T00:00:00Z"
+}

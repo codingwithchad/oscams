@@ -1,4 +1,5 @@
 import { isDormant, nearby, parseLatLon } from '../../lib/geo';
+import { forPlace } from '../../lib/placeCameras';
 import { getCatalog } from '../../lib/server/catalog';
 import type { PageServerLoad } from './$types';
 
@@ -18,7 +19,7 @@ export const load: PageServerLoad = ({ url }) => {
 			name: p.name,
 			kind: label(p.collection),
 			distance: p.distance,
-			liveCameras: nearby(cameras, p, p.radius_miles ?? 10).filter(
+			liveCameras: nearby(forPlace(cameras, p), p, p.radius_miles ?? 10).filter(
 				(c) => !isDormant(c) && (c.feed_url || c.provider)
 			).length
 		}));

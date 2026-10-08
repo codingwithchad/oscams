@@ -28,3 +28,9 @@ Checked every NPS unit page for webcams. Only three parks have them: Mount Raini
 ## Snoqualmie Pass
 
 WSDOT cameras on I-90 from Seattle to the pass and east past Hyak to Stampede Pass, the WSDOT Aviation cameras at Hyak, three WSDOT roadside weather stations, the pass road-conditions report (seasonal, about Nov 1 to Apr 1) and an NWS forecast. The Summit at Snoqualmie publishes its mountain cameras only as video embeds on its own site (camstreamer.com), with no reuse terms, and Windy.com does not list them, so they are not used.
+
+## Scenic views (Seattle and around)
+
+Six cameras through the Windy.com Webcams API (credit and link rules apply): KOMO News (Columbia Center skyline), KING 5 (downtown and the Space Needle; Tacoma Dome with Mount Rainier), the City of Kirkland (Marina Park), Seattle Pacific University (Martin Square) and WASAR.org (Museum of Flight at Boeing Field). The pictures were checked by eye; Windy's labels and map positions are sometimes wrong, so only cameras that show what their name says were added. The National Park Service cameras and the Westport ocean view are tagged `scenic` too.
+
+Not used: the University of Washington's Red Square camera and the other UW campus cameras (washington.edu/cambots) are public but state no reuse terms; Seattle Waterfront and Space Needle webcams are private businesses; some Windy entries are private home or business cameras.

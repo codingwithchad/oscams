@@ -1,0 +1,23 @@
+{
+  "id": "seattle-downtown-space-needle",
+  "name": "Downtown Seattle and the Space Needle",
+  "description": "A rooftop view across downtown to the Space Needle.",
+  "lat": 47.60383,
+  "lon": -122.33006,
+  "feed_type": "image",
+  "source": "KING 5 via Windy.com",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "provider": "windy",
+  "provider_ref": "1793887677",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "page_url": "https://windy.com/webcams/1793887677",
+  "tags": [
+    "scenic",
+    "city",
+    "seattle"
+  ],
+  "attribution_text": "KING 5 via Windy.com",
+  "created_at": "2026-10-07T00:00:00Z"
+}

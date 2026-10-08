@@ -1,4 +1,5 @@
 import { isDormant, nearby } from '../lib/geo';
+import { forPlace } from '../lib/placeCameras';
 import { getCatalog } from '../lib/server/catalog';
 import { viewCount } from '../lib/server/popularity';
 import type { PageServerLoad } from './$types';
@@ -12,7 +13,7 @@ let memo: { at: number; value: ReturnType<typeof compute> } | null = null;
 function compute() {
 	const { places, cameras, collections, drives } = getCatalog();
 	const cards = places.map((p) => {
-		const live = nearby(cameras, p, p.radius_miles ?? DEFAULT_RADIUS).filter(
+		const live = nearby(forPlace(cameras, p), p, p.radius_miles ?? DEFAULT_RADIUS).filter(
 			(c) => !isDormant(c) && (c.feed_url || c.provider) && c.feed_type === 'image'
 		);
 		const direct = live.find((c) => c.feed_url);

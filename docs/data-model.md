@@ -100,3 +100,7 @@ A `river` weather source (`provider: nwps`, `provider_ref` = NOAA gauge id such 
 ## Camera replay
 
 The server saves a small picture from each camera within 6 miles of a pass (WSDOT, WSDOT Aviation and National Park Service only, never Windy) about every 5 minutes and keeps the last 2 hours in memory. Enlarging a camera shows a replay with play, pause and a slider. The replay starts empty after each restart and fills in as the server runs, so it works best on an always-on plan. `HISTORY=off` turns recording off; `HISTORY_EVERY_SECONDS` changes the interval.
+
+## Themed places
+
+A place can set `camera_tags` (for example `["scenic"]`) to list only cameras carrying one of those tags instead of every camera within its radius. "Seattle sights" uses this so six landmark cameras are not buried under a hundred road cameras. `weather_radius_miles` keeps such a wide place from pulling in far-away weather reports.

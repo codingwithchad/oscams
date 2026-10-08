@@ -1,5 +1,6 @@
 import { error } from '@sveltejs/kit';
 import { isDormant, nearby } from '../../../lib/geo';
+import { forPlace } from '../../../lib/placeCameras';
 import { getCatalog } from '../../../lib/server/catalog';
 import type { PageServerLoad } from './$types';
 
@@ -12,8 +13,8 @@ export const load: PageServerLoad = ({ params }) => {
 		places: places
 			.filter((p) => p.collection === collection.id || collection.also?.includes(p.id))
 			.map((p) => {
-				const live = nearby(cameras, p, p.radius_miles ?? 2).filter(
-					(c) => !isDormant(c) && c.feed_url && c.feed_type === 'image'
+				const live = nearby(forPlace(cameras, p), p, p.radius_miles ?? 2).filter(
+					(c) => !isDormant(c) && (c.feed_url || c.provider) && c.feed_type === 'image'
 				);
 				return {
 					id: p.id,

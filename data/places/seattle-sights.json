@@ -1,0 +1,14 @@
+{
+  "id": "seattle-sights",
+  "name": "Seattle sights",
+  "region": "Washington",
+  "blurb": "Skyline, lakes, campus and Mount Rainier: just for the view",
+  "lat": 47.6062,
+  "lon": -122.3321,
+  "radius_miles": 40,
+  "camera_tags": [
+    "scenic"
+  ],
+  "collection": "scenic",
+  "weather_radius_miles": 6
+}
