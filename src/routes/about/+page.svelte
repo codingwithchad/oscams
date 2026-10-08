@@ -29,8 +29,9 @@
 				rel="noopener">OpenStreetMap contributors</a
 			>, through the open-source
 			<a href="https://project-osrm.org/" target="_blank" rel="noopener">OSRM</a> routing service and
-			Nominatim, and Washington town and ZIP locations from the US Census Bureau. The app uses a route
-			only as a line on the map to find the cameras along it; it doesn't give turn-by-turn directions.
+			Nominatim and Photon (by Komoot), and Washington town and ZIP locations from the US Census Bureau.
+			The app uses a route only as a line on the map to find the cameras along it; it doesn't give turn-by-turn
+			directions.
 		</li>
 		<li>
 			Cameras and road reports: the Washington State Department of Transportation (WSDOT), WSDOT

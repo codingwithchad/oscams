@@ -66,3 +66,22 @@ export function lookupWashington(query: string): Place | null {
 	const row = idx.towns.get(name);
 	return row ? { lat: row[1], lon: row[2], label: `${row[0]}, WA` } : null;
 }
+
+/** Towns whose names start with what has been typed so far, for the as-you-type list (instant, no outside service). */
+export function suggestTowns(
+	prefix: string,
+	limit = 3
+): { label: string; sub: string; lat: number; lon: number }[] {
+	const key = normalize(prefix);
+	if (key.length < 2) return [];
+	return [...load().towns.entries()]
+		.filter(([name]) => name.startsWith(key))
+		.map(([, row]) => row)
+		.sort(
+			(a, b) =>
+				(a[3] === 'city' || a[3] === 'town' ? 0 : 1) -
+					(b[3] === 'city' || b[3] === 'town' ? 0 : 1) || a[0].localeCompare(b[0])
+		)
+		.slice(0, limit)
+		.map((row) => ({ label: row[0], sub: 'WA', lat: row[1], lon: row[2] }));
+}

@@ -1,15 +1,18 @@
 <script lang="ts">
+	import PlaceInput from './PlaceInput.svelte';
+
 	let { value = '' }: { value?: string } = $props();
+	// svelte-ignore state_referenced_locally
+	let text = $state(value);
 </script>
 
 <form action="/search" method="GET" class="search" role="search">
-	<input
-		type="search"
+	<PlaceInput
 		name="q"
-		{value}
+		type="search"
+		bind:value={text}
 		placeholder="Zip code, town or place"
-		aria-label="Search a location"
-		autocomplete="off"
+		label="Search a location"
 		required
 	/>
 	<button type="submit">Search</button>

@@ -1,7 +1,9 @@
 import { parseLatLon } from '../geo';
 import type { Place } from '../types';
 import { cached } from './cache';
+import { queryVariants, similarity } from '../queryVariants';
 import { lookupWashington } from './gazetteer';
+import { photonSearch } from './photon';
 
 const USER_AGENT = 'WhatsUpAhead (https://github.com/codingwithchad/whatsupahead)';
 const BIG_AREAS = new Set(['county', 'state', 'region', 'country', 'state_district', 'province']);
@@ -30,6 +32,30 @@ export async function geocode(query: string): Promise<Place | null> {
 	if (local) return local;
 
 	return cached(`geo:${q.toLowerCase()}`, DAY, async () => {
+		// Main search: forgives typos and prefers the Northwest. People write names differently from the map
+		// (split or joined words, "mall"), so try other spellings and keep the result that looks most like what was typed.
+		try {
+			let best: { score: number; place: Place } | null = null;
+			for (const variant of queryVariants(q)) {
+				for (const hit of await photonSearch(variant, 3)) {
+					const score = similarity(q, hit.label);
+					if (!best || score > best.score) {
+						best = {
+							score,
+							place: {
+								lat: hit.lat,
+								lon: hit.lon,
+								label: [hit.label, hit.sub.split(',')[0]].filter(Boolean).join(', ')
+							}
+						};
+					}
+				}
+				if (best && best.score >= 0.85) break;
+			}
+			if (best && best.score >= 0.3) return best.place;
+		} catch (err) {
+			console.warn(`[geocode] photon failed (${(err as Error).message}); trying the backup`);
+		}
 		try {
 			return await inLine(() => nominatim(q));
 		} catch (err) {
@@ -41,7 +67,15 @@ export async function geocode(query: string): Promise<Place | null> {
 
 async function nominatim(q: string): Promise<Place | null> {
 	const url = new URL('https://nominatim.openstreetmap.org/search');
-	url.search = new URLSearchParams({ q, format: 'jsonv2', limit: '5' }).toString();
+	url.search = new URLSearchParams({
+		q,
+		format: 'jsonv2',
+		limit: '5',
+		// Prefer the Northwest (so "Bellevue Square" is not the one in London), without excluding anywhere else in the US.
+		viewbox: '-125.5,49.5,-116.0,45.5',
+		bounded: '0',
+		countrycodes: 'us'
+	}).toString();
 	const res = await fetch(url, {
 		headers: { 'User-Agent': USER_AGENT },
 		signal: AbortSignal.timeout(8000)

@@ -1,4 +1,5 @@
 <script lang="ts">
+	import PlaceInput from './PlaceInput.svelte';
 	let {
 		places = [],
 		from = '',
@@ -35,11 +36,11 @@
 	<label>
 		From
 		<span class="row">
-			<input
+			<PlaceInput
 				name="from"
 				bind:value={fromText}
 				placeholder="Town, zip or address"
-				autocomplete="off"
+				label="Start"
 				required
 			/>
 			<button type="button" class="secondary" onclick={useMyLocation} disabled={locating}>
@@ -49,11 +50,11 @@
 	</label>
 	<label>
 		To
-		<input
+		<PlaceInput
 			name="to"
 			bind:value={toText}
 			placeholder="Place, town or zip"
-			autocomplete="off"
+			label="Destination"
 			required
 		/>
 	</label>
