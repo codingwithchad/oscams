@@ -23,6 +23,16 @@
 	<h2>Where the information comes from</h2>
 	<ul>
 		<li>
+			Routes and place search: map data from <a
+				href="https://www.openstreetmap.org/copyright"
+				target="_blank"
+				rel="noopener">OpenStreetMap contributors</a
+			>, through the open-source
+			<a href="https://project-osrm.org/" target="_blank" rel="noopener">OSRM</a> routing service and
+			Nominatim, and Washington town and ZIP locations from the US Census Bureau. The app uses a route
+			only as a line on the map to find the cameras along it; it doesn't give turn-by-turn directions.
+		</li>
+		<li>
 			Cameras and road reports: the Washington State Department of Transportation (WSDOT), WSDOT
 			Aviation and the National Park Service.
 		</li>
