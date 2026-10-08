@@ -1328,6 +1328,22 @@ button.wide {
 	margin-right: 0.4rem;
 }
 
-.about .button { display: inline-block; padding: 0.7rem 1.1rem; border-radius: 10px; background: #0b2540; color: #fff; font-weight: 600; text-decoration: none; }
-.about pre { overflow-x: auto; padding: 0.6rem 0.8rem; border-radius: 8px; background: #0b254012; font-size: 0.8rem; }
-.about code { font-size: 0.9em; }
+.about .button {
+	display: inline-block;
+	padding: 0.7rem 1.1rem;
+	border-radius: 10px;
+	background: #0b2540;
+	color: #fff;
+	font-weight: 600;
+	text-decoration: none;
+}
+.about pre {
+	overflow-x: auto;
+	padding: 0.6rem 0.8rem;
+	border-radius: 8px;
+	background: #0b254012;
+	font-size: 0.8rem;
+}
+.about code {
+	font-size: 0.9em;
+}
