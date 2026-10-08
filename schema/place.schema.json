@@ -97,6 +97,10 @@
       "minimum": 1,
       "maximum": 75,
       "description": "How far to look for weather reports, when that should be smaller than radius_miles (used by wide themed places)."
+    },
+    "state": {
+      "type": "string",
+      "description": "The state this place is in, used to group the places directory. Defaults to Washington."
     }
   }
 }

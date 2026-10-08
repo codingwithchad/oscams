@@ -104,3 +104,7 @@ The server saves a small picture from each camera within 6 miles of a pass (WSDO
 ## Themed places
 
 A place can set `camera_tags` (for example `["scenic"]`) to list only cameras carrying one of those tags instead of every camera within its radius. "Seattle sights" uses this so six landmark cameras are not buried under a hundred road cameras. `weather_radius_miles` keeps such a wide place from pulling in far-away weather reports.
+
+## The All places directory
+
+`/places` shows every place as a tree: state, then the kind of place (featured places, mountain passes, ferries, airfields and so on), then the places. Kinds start folded; typing in the search box opens only the kinds with matches. A place's state comes from its optional `state` field and defaults to Washington; set it when adding places in another state so they group under their own state.

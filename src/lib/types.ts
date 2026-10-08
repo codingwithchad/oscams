@@ -62,6 +62,8 @@ export interface FeaturedPlace {
 	id: string;
 	name: string;
 	region?: string;
+	/** The state, for grouping the places directory. Defaults to Washington. */
+	state?: string;
 	blurb?: string;
 	lat: number;
 	lon: number;

@@ -85,8 +85,8 @@
 	/>
 
 	{#if data.collections.length}
-		<h2 class="section-title">Browse</h2>
-		<nav class="collections" aria-label="Browse by type">
+		<h2 class="section-title">Where will your adventure take you next?</h2>
+		<nav class="collections" aria-label="Where will your adventure take you next?">
 			{#each data.collections as c (c.id)}
 				<a
 					class="collection"
