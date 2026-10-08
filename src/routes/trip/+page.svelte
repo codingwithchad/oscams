@@ -169,6 +169,7 @@
 		{#await trip.snow then snow}
 			{#if snow}<SnowLine
 					{snow}
+					demo={trip.demoWinter}
 					miles={trip.miles}
 					minutes={trip.minutes}
 					stops={trip.stops}

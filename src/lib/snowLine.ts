@@ -45,3 +45,9 @@ export function snowStretches(samples: SnowSample[]): SnowStretch[] {
 	}
 	return out;
 }
+
+/** A made-up winter day for testing: freezing from about 2,500 ft up, snowing above that, 3.6 °F colder per 1,000 ft. */
+export function winterDay(feet: number): { tempF: number; snowIn: number } {
+	const tempF = Math.round(32 - (feet - 2500) * 0.0036);
+	return { tempF, snowIn: tempF <= 32 ? 0.15 : 0 };
+}

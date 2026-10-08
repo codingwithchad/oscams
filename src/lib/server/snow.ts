@@ -1,6 +1,6 @@
 import { cached } from './cache';
 import { cumulativeMiles, type LatLon } from '../route';
-import { snowStretches, type SnowSample, type SnowStretch } from '../snowLine';
+import { snowStretches, winterDay, type SnowSample, type SnowStretch } from '../snowLine';
 
 const MAX_POINTS = 24;
 const MIN_SPACING_MILES = 3;
@@ -37,12 +37,13 @@ type Place = { elevation: number; hourly: Hourly };
 export async function snowAlong(
 	route: LatLon[],
 	startAt: number,
-	minutes: number
+	minutes: number,
+	demo = false
 ): Promise<SnowReport | null> {
 	const points = samplePoints(route);
 	const total = points[points.length - 1].along || 1;
 	const hour = Math.floor(startAt / 3_600_000);
-	const key = `snow:${hour}:${points.map((p) => `${p.lat.toFixed(2)},${p.lon.toFixed(2)}`).join(';')}:${Math.round(minutes / 15)}`;
+	const key = `snow${demo ? '-demo' : ''}:${hour}:${points.map((p) => `${p.lat.toFixed(2)},${p.lon.toFixed(2)}`).join(';')}:${Math.round(minutes / 15)}`;
 	try {
 		return await cached(key, 30 * 60 * 1000, async () => {
 			const url = new URL('https://api.open-meteo.com/v1/forecast');
@@ -66,12 +67,12 @@ export async function snowAlong(
 					.slice(0, 13);
 				let idx = hourly.time.findIndex((t) => t.startsWith(target));
 				if (idx < 0) idx = 0;
-				return {
-					along: p.along,
-					feet: Math.round(elevation * METERS_TO_FEET),
-					tempF: Math.round(hourly.temperature_2m[idx]),
-					snowIn: hourly.snowfall[idx] ?? 0
-				};
+				const feet = Math.round(elevation * METERS_TO_FEET);
+				// The demo keeps the real heights of the road but swaps in an invented winter day.
+				const weather = demo
+					? winterDay(feet)
+					: { tempF: Math.round(hourly.temperature_2m[idx]), snowIn: hourly.snowfall[idx] ?? 0 };
+				return { along: p.along, feet, ...weather };
 			});
 			return { samples, stretches: snowStretches(samples) };
 		});

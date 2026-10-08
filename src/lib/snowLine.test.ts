@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { snowStretches, type SnowSample } from './snowLine';
+import { snowStretches, winterDay, type SnowSample } from './snowLine';
 
 const s = (along: number, tempF: number, snowIn = 0, feet = 500): SnowSample => ({
 	along,
@@ -26,5 +26,14 @@ describe('snowStretches', () => {
 	it('handles going back down: snow ends', () => {
 		const r = snowStretches([s(0, 30, 0.1), s(10, 31, 0.1), s(20, 45)]);
 		expect(r).toEqual([{ level: 'snow', from: 0, to: 10, feet: 500 }]);
+	});
+});
+
+describe('winterDay', () => {
+	it('is warm at sea level and snowy on a pass', () => {
+		expect(winterDay(100).snowIn).toBe(0);
+		expect(winterDay(100).tempF).toBeGreaterThan(38);
+		expect(winterDay(4000).snowIn).toBeGreaterThan(0);
+		expect(winterDay(4000).tempF).toBeLessThan(32);
 	});
 });

@@ -7,12 +7,14 @@
 		snow,
 		miles,
 		minutes,
-		stops
+		stops,
+		demo = false
 	}: {
 		snow: SnowReport;
 		miles: number;
 		minutes: number;
 		stops: { camera: Camera; along: number }[];
+		demo?: boolean;
 	} = $props();
 
 	const total = $derived(snow.samples[snow.samples.length - 1]?.along || miles || 1);
@@ -20,12 +22,21 @@
 	const first = $derived(snow.stretches.find((s) => s.level === 'snow') ?? snow.stretches[0]);
 	const at = (along: number) => duration((minutes * along) / total);
 	const nextCamera = (along: number) => stops.find((s) => s.along >= along)?.camera.name;
+	const snowyMiles = $derived(
+		Math.round(
+			snow.stretches.filter((s) => s.level === 'snow').reduce((n, s) => n + (s.to - s.from), 0)
+		)
+	);
+	const snowy = $derived(snowyMiles > 0);
 	const highest = $derived(Math.max(...snow.samples.map((s) => s.feet)));
 </script>
 
 {#if snow.stretches.length || highest >= 2500}
 	<section class="snow-line" aria-label="Where snow starts on this drive">
 		<h2>Snow on this drive</h2>
+		{#if demo}
+			<p class="snow-demo">Example only: this is an invented winter forecast, not real weather.</p>
+		{/if}
 		{#if first}
 			<p class="snow-headline">
 				{first.level === 'snow' ? 'Snow likely starts' : 'Freezing temperatures start'} about
@@ -59,6 +70,13 @@
 				<span>Start</span><span>{miles.toFixed(0)} mi</span>
 			</span>
 		</p>
+		{#if snowy}
+			<p class="snow-advice">
+				About {snowyMiles} of the {Math.round(total)} miles are expected to be snowing. Expect traction
+				tires or chains on the snowy part (required on most WA passes), and without them or 4WD it may
+				not be worth the trip. Check WSDOT's pass report before you go.
+			</p>
+		{/if}
 		<p class="snow-note">
 			A forecast for when you'll get there, from Open-Meteo. Check the pass cameras and WSDOT before
 			you go.

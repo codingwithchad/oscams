@@ -42,6 +42,8 @@ export const load: PageServerLoad = async ({ url, setHeaders }) => {
 	const toQ = url.searchParams.get('to')?.trim() ?? '';
 	const fromLabel = url.searchParams.get('fl')?.trim().slice(0, 80) ?? '';
 	const toLabel = url.searchParams.get('tl')?.trim().slice(0, 80) ?? '';
+	// ?demo=winter swaps in an invented cold day so the snow section can be tried out in summer.
+	const demoWinter = url.searchParams.get('demo') === 'winter';
 	const showAll = url.searchParams.get('all') === '1';
 	// Minutes until you leave (0 = now), so forecasts can be for the time you will actually be there.
 	const leaveIn = Math.min(Math.max(Number(url.searchParams.get('in')) || 0, 0), 12 * 60);
@@ -125,6 +127,7 @@ export const load: PageServerLoad = async ({ url, setHeaders }) => {
 			miles: total,
 			minutes: route.minutes,
 			leaveIn,
+			demoWinter,
 			route: route.coords,
 			stops: shown,
 			totalCameras: live.length,
@@ -133,7 +136,7 @@ export const load: PageServerLoad = async ({ url, setHeaders }) => {
 				.filter((s) => isOffline(s.camera))
 				.map((s) => ({ ...s.camera, distance: s.along }) as Nearby<Camera>),
 			// Streamed like the conditions: where snow or freezing starts, for when you will be there.
-			snow: snowAlong(route.coords, Date.now() + leaveIn * 60_000, route.minutes),
+			snow: snowAlong(route.coords, Date.now() + leaveIn * 60_000, route.minutes, demoWinter),
 			// Streamed: the page shows cameras right away while live weather loads.
 			conditions: Promise.all(
 				thinToTarget(
