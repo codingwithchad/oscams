@@ -1,0 +1,24 @@
+{
+  "feed_type": "image",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "provider": "windy",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "created_at": "2026-10-08T00:00:00Z",
+  "id": "new-dungeness-lighthouse",
+  "name": "New Dungeness Lighthouse",
+  "description": "Lighthouse and Strait of Juan de Fuca near Sequim.",
+  "lat": 48.18194,
+  "lon": -123.11042,
+  "provider_ref": "1387692005",
+  "source": "New Dungeness Lighthouse via Windy.com",
+  "page_url": "https://windy.com/webcams/1387692005",
+  "tags": [
+    "lighthouse",
+    "coast",
+    "scenic",
+    "strait"
+  ],
+  "attribution_text": "New Dungeness Lighthouse via Windy.com"
+}

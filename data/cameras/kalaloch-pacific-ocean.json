@@ -1,0 +1,24 @@
+{
+  "feed_type": "image",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "provider": "windy",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "created_at": "2026-10-08T00:00:00Z",
+  "id": "kalaloch-pacific-ocean",
+  "name": "Kalaloch beach",
+  "description": "Pacific Ocean from the Kalaloch coast of Olympic National Park.",
+  "lat": 47.60452,
+  "lon": -124.37242,
+  "provider_ref": "1523123725",
+  "source": "Pixelcaster via Windy.com",
+  "page_url": "https://windy.com/webcams/1523123725",
+  "tags": [
+    "beach",
+    "coast",
+    "scenic",
+    "olympic"
+  ],
+  "attribution_text": "Pixelcaster via Windy.com"
+}
