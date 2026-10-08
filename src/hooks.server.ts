@@ -14,3 +14,12 @@ getCatalog();
 
 // Start saving the pass-camera pictures that power the replay. Off in development; set HISTORY=off to disable anywhere.
 if (!dev && process.env.HISTORY !== 'off') startHistory();
+
+// A missing key does not stop the app, but those cameras and reports show as offline, so say so loudly in the logs.
+for (const [name, what] of [
+	['WSDOT_CODE', 'WSDOT road reports, ferry space, border waits and weather stations'],
+	['WINDY_API_KEY', 'the Windy.com cameras (resorts, Westport, Seattle sights and more)']
+] as const) {
+	if (!process.env[name])
+		console.warn(`[config] ${name} is not set: ${what} will show as unavailable.`);
+}

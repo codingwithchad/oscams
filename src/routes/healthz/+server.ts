@@ -8,7 +8,9 @@ export const GET = () => {
 			ok: true,
 			cameras: cameras.length,
 			weather: weather.length,
-			places: places.length
+			places: places.length,
+			// Whether each key is set (never the key itself). Without them some cameras and reports show as offline.
+			keys: { windy: Boolean(process.env.WINDY_API_KEY), wsdot: Boolean(process.env.WSDOT_CODE) }
 		}),
 		{
 			headers: { 'content-type': 'application/json', 'cache-control': 'no-store' }

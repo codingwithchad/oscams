@@ -30,7 +30,7 @@ npm test           # unit tests and the data checks
 npm run check      # type check
 ```
 
-Some live data (WSDOT road reports, ferry sailing space, border waits, weather stations) needs a free WSDOT access code. To use it, copy `.env.example` to `.env` and fill it in. Everything else works without it.
+Some live data needs free keys: a WSDOT access code (road reports, ferry sailing space, border waits, weather stations) and a Windy.com Webcams API key (the resort, Westport and Seattle cameras that come through Windy). Copy `.env.example` to `.env` and fill them in. Everything else works without them. On a host, set the same names as environment variables; `/healthz` shows `keys.windy` and `keys.wsdot` as true or false so you can confirm they're set.
 
 ## How it's built
 
