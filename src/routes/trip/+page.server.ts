@@ -11,6 +11,7 @@ import type { Camera, FeaturedPlace, Nearby, Place, WeatherSource } from '../../
 import type { PageServerLoad } from './$types';
 
 const DEFAULT_DESTINATION_RADIUS = 3;
+const NEAREST_FALLBACK_MILES = 15;
 
 async function resolve(
 	q: string,
@@ -80,7 +81,26 @@ export const load: PageServerLoad = async ({ url, setHeaders }) => {
 
 	setHeaders({ 'cache-control': 'private, max-age=60' });
 	const total = route.miles;
-	const found = alongRoute(cameras, route.coords);
+	// Along the road only road cameras count; skyline, park and other views only show up near the destination.
+	const destRadius = to.featured?.radius_miles ?? DEFAULT_DESTINATION_RADIUS;
+	const isRoad = (c: Camera) => c.tags?.includes('road') ?? false;
+	const found = [
+		...alongRoute(cameras.filter(isRoad), route.coords),
+		...alongRoute(
+			cameras.filter((c) => !isRoad(c)),
+			route.coords,
+			{ corridor: 0, endBuffer: 0, destinationRadius: destRadius }
+		)
+	].sort((a, b) => a.along - b.along || a.off - b.off);
+	// Always finish on a camera near the destination: if nothing is within reach, take the closest one.
+	if (!found.some((f) => distanceMiles(f.item, to) <= destRadius)) {
+		const closest = nearby(
+			cameras.filter((c) => !isDormant(c) && c.feed_url),
+			to,
+			NEAREST_FALLBACK_MILES
+		)[0];
+		if (closest) found.push({ item: closest, along: total, off: closest.distance });
+	}
 	const withLinks = await withLiveLinks(found.map((f) => f.item));
 	const stops = found.map((f, i) => ({ camera: withLinks[i], along: f.along, off: f.off }));
 	const isOffline = (c: Camera) => isDormant(c) || !c.feed_url;
@@ -95,7 +115,7 @@ export const load: PageServerLoad = async ({ url, setHeaders }) => {
 	const shown = showAll ? live : thinToTarget(candidates, MAX_SHOWN);
 
 	// Weather: anything along the road, plus anything that serves the destination.
-	const radius = to.featured?.radius_miles ?? DEFAULT_DESTINATION_RADIUS;
+	const radius = destRadius;
 	const sources = new Map<string, WeatherSource>();
 	// Along the road only forecasts, roadside stations and pass conditions matter; ferries, border and
 	// airport reports show up when the drive ends at one of them.
