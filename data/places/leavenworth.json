@@ -1,0 +1,10 @@
+{
+  "id": "leavenworth",
+  "name": "Leavenworth",
+  "region": "Washington",
+  "blurb": "Bavarian village on US 2, Oktoberfest and fall colors",
+  "lat": 47.5962,
+  "lon": -120.6615,
+  "order": 20,
+  "weather_radius_miles": 10
+}
