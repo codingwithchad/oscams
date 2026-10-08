@@ -7,6 +7,7 @@
 	import TripForm from '../../lib/TripForm.svelte';
 	import { duration } from '../../lib/format';
 	import { rememberPlace } from '../../lib/lastPlace';
+	import { rememberRecent } from '../../lib/recents';
 	import { cumulativeMiles, projectOnRoute } from '../../lib/route';
 	import type { PageProps } from './$types';
 
@@ -14,7 +15,9 @@
 	const trip = $derived(data.trip);
 
 	$effect(() => {
-		if (trip) rememberPlace(location.pathname + location.search);
+		if (!trip) return;
+		rememberPlace(location.pathname + location.search);
+		rememberRecent({ kind: 'trip', from: trip.from, to: trip.to });
 	});
 
 	// Follow mode: use the phone's location to drop cameras you have already passed.
@@ -118,6 +121,13 @@
 			<p class="sub">
 				{trip.miles.toFixed(0)} mi · about {duration(trip.minutes)} · {trip.stops.length} cameras on the
 				way
+			</p>
+			<p class="reverse">
+				<a
+					class="chip"
+					href={`/trip?from=${encodeURIComponent(page.url.searchParams.get('to') ?? '')}&to=${encodeURIComponent(page.url.searchParams.get('from') ?? '')}`}
+					>⇄ Reverse this drive</a
+				>
 			</p>
 			<nav class="leave" aria-label="When are you leaving?">
 				<span class="leave-label">Leave</span>

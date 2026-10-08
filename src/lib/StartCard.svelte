@@ -7,11 +7,13 @@
 	let {
 		chips = [],
 		drives = [],
-		searches = []
+		searches = [],
+		trips = []
 	}: {
 		chips?: { id: string; name: string }[];
 		drives?: Drive[];
 		searches?: { q: string; label: string }[];
+		trips?: { from: string; to: string }[];
 	} = $props();
 
 	const MODE_KEY = 'oscams:mode';
@@ -95,6 +97,17 @@
 	{:else}
 		<p class="start-help">Pick a start and a finish. Cameras show in the order you'll pass them.</p>
 		<TripForm places={chips} />
+		{#if trips.length}
+			<div class="chips recent-searches" aria-label="Recent drives">
+				{#each trips as t (t.from + '|' + t.to)}
+					<a
+						class="chip"
+						href="/trip?from={encodeURIComponent(t.from)}&to={encodeURIComponent(t.to)}"
+						>{t.from} → {t.to}</a
+					>
+				{/each}
+			</div>
+		{/if}
 		{#if drives.length}
 			<h3 class="mini-title">Popular drives</h3>
 			<nav class="drives" aria-label="Popular drives">

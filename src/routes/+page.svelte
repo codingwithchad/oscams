@@ -17,16 +17,15 @@
 	const SHOWN = 3;
 	const byId = $derived(new Map(data.places.map((p) => [p.id, p])));
 
-	// Places this person looked at recently come first, then whatever is most viewed by everyone.
+	// Only places this person looked at on this device; what is popular for one visitor is not for another.
 	const shown = $derived.by(() => {
 		const ids: string[] = [];
 		for (const r of recents)
 			if (r.kind === 'place' && byId.has(r.id) && !ids.includes(r.id)) ids.push(r.id);
-		for (const id of data.popular) if (!ids.includes(id)) ids.push(id);
 		return ids.slice(0, SHOWN).map((id) => byId.get(id)!);
 	});
-	const more = $derived(
-		data.popular.filter((id) => !shown.some((s) => s.id === id)).map((id) => byId.get(id)!)
+	const trips = $derived(
+		recents.filter((r): r is Extract<Recent, { kind: 'trip' }> => r.kind === 'trip').slice(0, 3)
 	);
 	const searches = $derived(
 		recents.filter((r): r is Extract<Recent, { kind: 'search' }> => r.kind === 'search').slice(0, 4)
@@ -82,6 +81,7 @@
 		{chips}
 		drives={data.drives}
 		searches={searches.map((x) => ({ q: x.q, label: x.label }))}
+		{trips}
 	/>
 
 	{#if data.collections.length}
@@ -112,8 +112,8 @@
 	{/if}
 
 	{#if shown.length}
-		<h2 class="section-title">Places</h2>
-		<nav class="places" aria-label="Places">
+		<h2 class="section-title">Recent places</h2>
+		<nav class="places" aria-label="Recent places">
 			{#each shown as place (place.id)}
 				<a class="place" href="/search?place={encodeURIComponent(place.id)}">
 					<span class="cover">
@@ -130,16 +130,6 @@
 				</a>
 			{/each}
 		</nav>
-		{#if more.length}
-			<details class="more-places">
-				<summary>All places ({more.length} more)</summary>
-				<ul>
-					{#each more as place (place.id)}
-						<li><a href="/search?place={encodeURIComponent(place.id)}">{place.name}</a></li>
-					{/each}
-				</ul>
-			</details>
-		{/if}
 	{/if}
 
 	<InstallHelp />
