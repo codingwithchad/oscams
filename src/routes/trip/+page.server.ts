@@ -5,6 +5,7 @@ import { getConditions } from '../../lib/server/conditions';
 import { geocode } from '../../lib/server/geocode';
 import { withLiveLinks } from '../../lib/server/live';
 import { drivingRoute } from '../../lib/server/routing';
+import { snowAlong } from '../../lib/server/snow';
 import { alongRoute, cumulativeMiles, projectOnRoute, thinToTarget } from '../../lib/route';
 import type { Camera, FeaturedPlace, Nearby, Place, WeatherSource } from '../../lib/types';
 import type { PageServerLoad } from './$types';
@@ -131,6 +132,8 @@ export const load: PageServerLoad = async ({ url, setHeaders }) => {
 			offline: stops
 				.filter((s) => isOffline(s.camera))
 				.map((s) => ({ ...s.camera, distance: s.along }) as Nearby<Camera>),
+			// Streamed like the conditions: where snow or freezing starts, for when you will be there.
+			snow: snowAlong(route.coords, Date.now() + leaveIn * 60_000, route.minutes),
 			// Streamed: the page shows cameras right away while live weather loads.
 			conditions: Promise.all(
 				thinToTarget(

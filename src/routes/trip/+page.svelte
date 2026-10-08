@@ -3,6 +3,7 @@
 	import { page } from '$app/state';
 	import CameraCard from '../../lib/CameraCard.svelte';
 	import ConditionsBar from '../../lib/ConditionsBar.svelte';
+	import SnowLine from '../../lib/SnowLine.svelte';
 	import OfflineCameras from '../../lib/OfflineCameras.svelte';
 	import TripForm from '../../lib/TripForm.svelte';
 	import { duration } from '../../lib/format';
@@ -164,6 +165,15 @@
 				</p>
 			{/if}
 		</section>
+
+		{#await trip.snow then snow}
+			{#if snow}<SnowLine
+					{snow}
+					miles={trip.miles}
+					minutes={trip.minutes}
+					stops={trip.stops}
+				/>{/if}
+		{/await}
 
 		{#await trip.conditions}
 			<p class="loading">Loading conditions…</p>

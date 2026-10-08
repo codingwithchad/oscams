@@ -1215,3 +1215,66 @@ button.wide {
 .trip-form .row .place-input {
 	flex: 1;
 }
+
+.snow-line {
+	margin: 0.75rem 0;
+	padding: 0.75rem 1rem;
+	border-radius: 12px;
+	background: var(--card, #fff);
+	border: 1px solid #0001;
+}
+.snow-line h2 {
+	margin: 0 0 0.35rem;
+	font-size: 1rem;
+}
+.snow-headline {
+	margin: 0 0 0.6rem;
+}
+.snow-bar {
+	display: flex;
+	height: 14px;
+	border-radius: 7px;
+	overflow: hidden;
+	background: #e6eef2;
+}
+.snow-bar span {
+	display: block;
+}
+.snow-bar .snow,
+.snow-key i.snow {
+	background: #5b8def;
+}
+.snow-bar .cold,
+.snow-key i.cold {
+	background: #9fd3e6;
+}
+.snow-bar .clear,
+.snow-key i.clear {
+	background: #cfe3c8;
+}
+.snow-key {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.25rem 0.75rem;
+	align-items: center;
+	margin: 0.4rem 0;
+	font-size: 0.85rem;
+}
+.snow-key i {
+	display: inline-block;
+	width: 0.8rem;
+	height: 0.8rem;
+	border-radius: 3px;
+	margin-right: 0.25rem;
+}
+.snow-end {
+	margin-left: auto;
+	display: flex;
+	gap: 0.5rem;
+	opacity: 0.7;
+}
+.snow-note {
+	margin: 0;
+	font-size: 0.8rem;
+	opacity: 0.7;
+}
