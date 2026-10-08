@@ -36,6 +36,7 @@
 	<nav aria-label="About">
 		<a href="/about">About</a>
 		<a href="/passes">Passes</a>
+		<a href="/contribute">Add a camera</a>
 		<a href="{REPO_URL}/blob/main/docs/sources.md" target="_blank" rel="noopener">Sources</a>
 		<a href={REPO_URL} target="_blank" rel="noopener">Open source</a>
 	</nav>

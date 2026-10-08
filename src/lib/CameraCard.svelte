@@ -111,7 +111,7 @@
 		{#if watching}
 			<iframe
 				class="live-embed"
-				src="{camera.feed_url}?autoplay=1&mute=1&rel=0"
+				src="{camera.feed_url}{camera.feed_url?.includes('?') ? '&' : '?'}autoplay=1&mute=1&rel=0"
 				title={camera.name}
 				allow="autoplay; picture-in-picture; fullscreen"
 				referrerpolicy="strict-origin-when-cross-origin"

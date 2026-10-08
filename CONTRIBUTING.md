@@ -57,3 +57,7 @@ Most of the first version was written with an AI coding assistant, directed by v
 ## Behavior
 
 Be kind and assume good faith. See [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md).
+
+## Adding a YouTube live stream
+
+Run `node scripts/add-youtube-camera.mjs <link> --lat <lat> --lon <lon> --source "Owner" --use-channel`. It checks that the video can be embedded and is live, shows the channel owner, and with `--write` creates a `pending` camera file. Only use the owner's own channel. See https://whatsupahead.com/contribute.
