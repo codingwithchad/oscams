@@ -11,5 +11,7 @@ services:
     envVars:
       - key: NODE_VERSION
         value: 24
+      - key: PROTOCOL_HEADER
+        value: x-forwarded-proto # lets forms (like Add a camera) pass the same-site check behind Render's proxy
       - key: WSDOT_CODE
         sync: false # paste your WSDOT access code in the Render dashboard
