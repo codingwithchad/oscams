@@ -1,0 +1,19 @@
+{
+  "id": "port-of-everett-boat-launch",
+  "name": "Everett Marina boat launch",
+  "description": "Live view of the Port of Everett boat launch, from the Port's own YouTube channel.",
+  "lat": 47.9835,
+  "lon": -122.2225,
+  "location_precision": "approximate",
+  "feed_type": "stream",
+  "feed_url": "https://www.youtube-nocookie.com/embed/ywLLbC8AUyQ",
+  "embed_mode": "iframe",
+  "source": "Port of Everett",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://www.portofeverett.com/marina/boat_launch_camera.php",
+  "license_or_terms": "Published by the Port of Everett on its own YouTube channel with embedding turned on; shown through YouTube's official embed player, only after you tap Watch live.",
+  "tags": ["marina", "boat-launch", "everett"],
+  "attribution_text": "Port of Everett (via YouTube)",
+  "created_at": "2026-10-08T00:00:00Z"
+}

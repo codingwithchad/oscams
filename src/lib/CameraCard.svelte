@@ -13,6 +13,7 @@
 	let providerUrl = $state<string | null>(null);
 	let dialog: HTMLDialogElement | undefined = $state();
 	let opened = $state(false);
+	let watching = $state(false);
 	// A picture that fails to load gets one retry, then a clear "unavailable" tile until the next refresh.
 	let retry = $state(0);
 	let failed = $state(false);
@@ -105,6 +106,23 @@
 			{/if}
 			{#if age}<span class="age" class:stale>{stale ? 'Stale · ' : ''}{age}</span>{/if}
 		</button>
+	{:else if camera.embed_mode === 'iframe'}
+		<!-- A live YouTube video loads only after a tap, so nothing from YouTube runs until someone asks for it. -->
+		{#if watching}
+			<iframe
+				class="live-embed"
+				src="{camera.feed_url}?autoplay=1&mute=1&rel=0"
+				title={camera.name}
+				allow="autoplay; picture-in-picture; fullscreen"
+				referrerpolicy="strict-origin-when-cross-origin"
+				allowfullscreen
+			></iframe>
+		{:else}
+			<button class="live-play" onclick={() => (watching = true)}>
+				<span class="live-dot"></span> Watch live
+				<small>Plays from YouTube</small>
+			</button>
+		{/if}
 	{:else}
 		<video src={camera.feed_url} controls muted playsinline preload="none"></video>
 	{/if}
