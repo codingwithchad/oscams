@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/codingwithchad/oscams/schema/pass.schema.json",
+  "$id": "https://github.com/codingwithchad/whatsupahead/schema/pass.schema.json",
   "title": "Mountain pass",
   "description": "A mountain pass tracked by WSDOT's pass reports.",
   "type": "object",

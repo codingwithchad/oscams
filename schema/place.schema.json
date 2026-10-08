@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/codingwithchad/oscams/schema/place.schema.json",
+  "$id": "https://github.com/codingwithchad/whatsupahead/schema/place.schema.json",
   "title": "Featured place",
   "description": "A place shown as a one-tap button on the home page. Cameras are never attached to a place; results come from distance.",
   "type": "object",

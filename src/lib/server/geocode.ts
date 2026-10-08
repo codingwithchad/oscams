@@ -3,7 +3,7 @@ import type { Place } from '../types';
 import { cached } from './cache';
 import { lookupWashington } from './gazetteer';
 
-const USER_AGENT = 'WhatsUpAhead (https://github.com/codingwithchad/oscams)';
+const USER_AGENT = 'WhatsUpAhead (https://github.com/codingwithchad/whatsupahead)';
 const BIG_AREAS = new Set(['county', 'state', 'region', 'country', 'state_district', 'province']);
 const DAY = 24 * 60 * 60 * 1000;
 

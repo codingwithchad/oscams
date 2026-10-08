@@ -3,7 +3,7 @@ import { cached } from './cache';
 import type { LatLon } from '../route';
 
 const OSRM = 'https://router.project-osrm.org/route/v1/driving';
-const USER_AGENT = 'WhatsUpAhead (https://github.com/codingwithchad/oscams)';
+const USER_AGENT = 'WhatsUpAhead (https://github.com/codingwithchad/whatsupahead)';
 
 export interface DrivingRoute {
 	coords: LatLon[];

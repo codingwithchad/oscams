@@ -2,4 +2,4 @@
 export const APP_NAME = "What's Up Ahead";
 export const APP_SHORT = 'Up Ahead';
 export const TAGLINE = 'Cameras, weather and waits along your way.';
-export const REPO_URL = 'https://github.com/codingwithchad/oscams';
+export const REPO_URL = 'https://github.com/codingwithchad/whatsupahead';

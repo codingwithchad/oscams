@@ -2,7 +2,7 @@
 
 The app is a single Node server (`node build`). `render.yaml` describes it.
 
-1. In Render, choose New > Blueprint and connect the `codingwithchad/oscams` GitHub repo.
+1. In Render, choose New > Blueprint and connect the `codingwithchad/whatsupahead` GitHub repo.
 2. When asked for `WSDOT_CODE`, paste your WSDOT access code (never commit it).
 3. Render builds and gives you an https URL. Camera and data changes go live when you push to `main`.
 

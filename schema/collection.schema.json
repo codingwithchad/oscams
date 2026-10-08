@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/codingwithchad/oscams/schema/collection.schema.json",
+  "$id": "https://github.com/codingwithchad/whatsupahead/schema/collection.schema.json",
   "title": "Collection",
   "description": "A group of related places shown as one section on the home page, e.g. every ferry terminal. Places join by setting `collection` to this id.",
   "type": "object",

@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/codingwithchad/oscams/schema/drive.schema.json",
+  "$id": "https://github.com/codingwithchad/whatsupahead/schema/drive.schema.json",
   "title": "Featured drive",
   "description": "A ready-made trip shown on the home page, opening trip mode with From and To filled in.",
   "type": "object",

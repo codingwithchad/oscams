@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/codingwithchad/oscams/schema/weather-source.schema.json",
+  "$id": "https://github.com/codingwithchad/whatsupahead/schema/weather-source.schema.json",
   "title": "Weather source",
   "description": "One place to get conditions for a point. Data only: the app reads these and fetches live values. API keys are never stored here.",
   "type": "object",

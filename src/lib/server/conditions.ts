@@ -8,7 +8,7 @@ import { borderRows, ferryRows, type BorderReading, type TerminalSpace } from '.
 import { localStamp, parseBuoy, upcomingTides, type TidePrediction } from '../marine';
 import { cached } from './cache';
 
-const USER_AGENT = 'WhatsUpAhead (https://github.com/codingwithchad/oscams)';
+const USER_AGENT = 'WhatsUpAhead (https://github.com/codingwithchad/whatsupahead)';
 const TEN_MINUTES = 10 * 60 * 1000;
 const WSDOT = 'https://wsdot.wa.gov/Traffic/api';
 

@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/codingwithchad/oscams/schema/camera.schema.json",
+  "$id": "https://github.com/codingwithchad/whatsupahead/schema/camera.schema.json",
   "title": "Camera",
   "description": "One public camera. One file per camera in data/cameras/.",
   "type": "object",
