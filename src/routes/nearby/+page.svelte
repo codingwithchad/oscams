@@ -20,10 +20,10 @@
 	});
 </script>
 
-<svelte:head><title>Near me · OS Cams</title></svelte:head>
+<svelte:head><title>Near me · What's Up Ahead</title></svelte:head>
 
 <header class="top">
-	<a class="brand" href="/">OS Cams</a>
+	<a class="brand" href="/">What's Up Ahead</a>
 	<span class="top-title">Near me</span>
 </header>
 

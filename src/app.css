@@ -334,36 +334,46 @@ dd {
 	--hero-b: #0f7a9c;
 }
 .hero {
+	position: relative;
+	overflow: hidden;
+	min-height: 112px;
+	color: #fff;
+	border-radius: 0 0 18px 18px;
+	background: #0b2540;
+}
+.hero-art {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+}
+.hero-content {
+	position: relative;
 	display: flex;
 	align-items: center;
 	gap: 12px;
-	padding: 14px 16px;
-	color: #fff;
-	background: radial-gradient(
-		120% 220% at 15% 0%,
-		var(--hero-b) 0%,
-		var(--hero-a) 65%,
-		#082a40 100%
-	);
-	border-radius: 0 0 18px 18px;
+	padding: 16px 16px 18px;
+	text-shadow: 0 1px 8px rgb(0 0 0 / 0.45);
 }
-.hero-mark {
-	width: 42px;
-	height: 42px;
+.logo {
+	width: 56px;
+	height: 56px;
 	flex: none;
-	color: #fff;
+	filter: drop-shadow(0 2px 6px rgb(0 0 0 / 0.35));
 }
 .hero h1 {
-	font-size: 1.5rem;
+	font-size: 1.65rem;
 	margin: 0;
-	line-height: 1.1;
+	line-height: 1.05;
 	letter-spacing: -0.02em;
+	font-weight: 800;
 }
 .tagline {
-	font-size: 0.95rem;
+	font-size: 0.86rem;
 	font-weight: 600;
-	margin: 2px 0 0;
-	color: #bfe6f7;
+	margin: 3px 0 0;
+	color: #ffe2b8;
+	max-width: 22ch;
 }
 .home {
 	max-width: 560px;
@@ -1012,4 +1022,79 @@ button.wide {
 }
 .replay-note {
 	margin: 10px 0 0;
+}
+
+/* Footer and About */
+.site-footer {
+	max-width: 1100px;
+	margin: 24px auto 0;
+	padding: 18px 16px 28px;
+	border-top: 1px solid var(--line);
+	text-align: center;
+	color: var(--muted);
+	font-size: 0.85rem;
+}
+.site-footer nav {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 6px 18px;
+	margin-bottom: 8px;
+}
+.site-footer a {
+	color: var(--muted);
+}
+.site-footer p {
+	margin: 0;
+}
+.about h2 {
+	font-size: 1.05rem;
+	margin: 1.4em 0 0.4em;
+}
+.about p,
+.about li {
+	line-height: 1.55;
+}
+.about ul {
+	padding-left: 20px;
+}
+:root {
+	--sun: #e8590c;
+}
+@media (prefers-color-scheme: dark) {
+	:root {
+		--sun: #ff9a2e;
+	}
+}
+.section-title::before {
+	content: '';
+	display: inline-block;
+	width: 9px;
+	height: 9px;
+	margin-right: 8px;
+	border-radius: 50%;
+	background: var(--sun);
+	vertical-align: 1px;
+}
+.collection .ci {
+	color: var(--sun);
+}
+.collection:hover,
+.collection:active {
+	border-color: var(--sun);
+}
+.place-count {
+	color: var(--sun);
+}
+.brand {
+	color: var(--text);
+}
+.brand::before {
+	content: '';
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	margin-right: 7px;
+	border-radius: 50%;
+	background: var(--sun);
 }

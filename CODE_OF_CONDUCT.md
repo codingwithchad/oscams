@@ -1,6 +1,6 @@
 # Code of Conduct
 
-We want OS Cams to be a friendly place to learn and build, for people of any background and experience.
+We want What's Up Ahead to be a friendly place to learn and build, for people of any background and experience.
 
 - Be kind. Assume good intent. Disagree about ideas, never attack people.
 - No harassment, discrimination or personal attacks.

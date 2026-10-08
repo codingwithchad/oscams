@@ -1,4 +1,6 @@
 <script lang="ts">
+	import Logo from '../lib/Logo.svelte';
+	import { APP_NAME, TAGLINE } from '../lib/brand';
 	import CollectionIcon from '../lib/CollectionIcon.svelte';
 	import InstallHelp from '../lib/InstallHelp.svelte';
 	import StartCard from '../lib/StartCard.svelte';
@@ -34,19 +36,44 @@
 	);
 </script>
 
-<svelte:head><title>OS Cams · Live views along your way</title></svelte:head>
+<svelte:head><title>{APP_NAME}: {TAGLINE}</title></svelte:head>
 
 <header class="hero">
-	<svg class="hero-mark" viewBox="0 0 64 64" aria-hidden="true">
-		<rect x="6" y="18" width="52" height="34" rx="9" fill="currentColor" opacity="0.95" />
-		<path d="M24 18l4-7h8l4 7z" fill="currentColor" />
-		<circle cx="32" cy="35" r="11" fill="var(--hero-a)" />
-		<circle cx="32" cy="35" r="7" fill="#5bb6e6" />
-		<circle cx="32" cy="35" r="2.5" fill="#fff" />
+	<svg
+		class="hero-art"
+		viewBox="0 0 400 110"
+		preserveAspectRatio="xMidYMax slice"
+		aria-hidden="true"
+	>
+		<defs>
+			<linearGradient id="hero-sky" x1="0" y1="0" x2="0" y2="1">
+				<stop offset="0" stop-color="#0b2540" />
+				<stop offset="0.6" stop-color="#16607a" />
+				<stop offset="1" stop-color="#f59e4b" />
+			</linearGradient>
+		</defs>
+		<rect width="400" height="110" fill="url(#hero-sky)" />
+		<circle cx="356" cy="92" r="13" fill="#ffd27a" opacity="0.9" />
+		<path
+			d="M0 110V76L40 50l22 16 38-28 40 34 30-14 40 28 40-32 40 24 40-18 70 22v22Z"
+			fill="#0d3a52"
+			opacity="0.9"
+		/>
+		<path d="M0 110V92l50-20 40 18 50-24 50 28 50-16 60 20 60-24 40 16v20Z" fill="#082b3f" />
+		<path
+			d="M200 110c10-9-10-13 5-19s10-9 3-13"
+			fill="none"
+			stroke="#ff9a2e"
+			stroke-width="3"
+			stroke-linecap="round"
+		/>
 	</svg>
-	<div class="hero-text">
-		<h1>OS Cams</h1>
-		<p class="tagline">Live views along your way.</p>
+	<div class="hero-content">
+		<Logo />
+		<div class="hero-text">
+			<h1>What's Up Ahead</h1>
+			<p class="tagline">{TAGLINE}</p>
+		</div>
 	</div>
 </header>
 

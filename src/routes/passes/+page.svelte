@@ -16,10 +16,10 @@
 	const firstSentence = (s: string) => (s.match(/^.*?[.!](\s|$)/)?.[0] ?? s).trim().slice(0, 140);
 </script>
 
-<svelte:head><title>Mountain passes · OS Cams</title></svelte:head>
+<svelte:head><title>Mountain passes · What's Up Ahead</title></svelte:head>
 
 <header class="top">
-	<a class="brand" href="/">OS Cams</a>
+	<a class="brand" href="/">What's Up Ahead</a>
 	<span class="top-title">Mountain passes</span>
 </header>
 

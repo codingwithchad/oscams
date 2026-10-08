@@ -1,8 +1,8 @@
-# OS Cams (Open Source Cameras)
+# What's Up Ahead
 
-**Live views along your way.** Public cameras and weather for the place you're headed, or for the whole drive. Works on iPhone and Android in the browser, nothing to install, free, no accounts, no ads.
+**Cameras, weather and waits along your way.** The public cameras, forecasts, pass conditions and ferry, border and airport waits for the place you're headed, or for the whole drive. Works on iPhone and Android in the browser, nothing to install, free, no accounts, no ads.
 
-**Try it: https://oscams.onrender.com**
+**Try it: https://whatsupahead.com** (during the move from the old address, https://oscams.onrender.com forwards there)
 
 ## What it does
 

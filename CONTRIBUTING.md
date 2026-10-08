@@ -1,4 +1,4 @@
-# Contributing to OS Cams
+# Contributing to What's Up Ahead
 
 Thanks for helping. You can contribute without writing any code, and nothing you do needs a password or API key.
 

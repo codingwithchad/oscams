@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { APP_NAME } from '../../lib/brand';
 	import { page } from '$app/state';
 	import CameraCard from '../../lib/CameraCard.svelte';
 	import ConditionsBar from '../../lib/ConditionsBar.svelte';
@@ -97,11 +98,11 @@
 </script>
 
 <svelte:head>
-	<title>{trip ? `${trip.from} to ${trip.to} · OS Cams` : 'Plan a drive · OS Cams'}</title>
+	<title>{trip ? `${trip.from} to ${trip.to} · ${APP_NAME}` : `Plan a drive · ${APP_NAME}`}</title>
 </svelte:head>
 
 <header class="top">
-	<a class="brand" href="/">OS Cams</a>
+	<a class="brand" href="/">What's Up Ahead</a>
 	<span class="top-title">Plan a drive</span>
 </header>
 

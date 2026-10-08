@@ -1,7 +1,7 @@
 {
-	"name": "OS Cams",
-	"short_name": "OS Cams",
-	"description": "Public cameras and weather near where you're going.",
+	"name": "What's Up Ahead",
+	"short_name": "Up Ahead",
+	"description": "Cameras, weather and waits along your way.",
 	"start_url": "/",
 	"scope": "/",
 	"display": "standalone",

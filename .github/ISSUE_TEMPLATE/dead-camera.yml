@@ -6,7 +6,7 @@ body:
     id: camera
     attributes:
       label: Which camera?
-      description: Its name, or the address of its page on oscams.onrender.com.
+      description: Its name, or the address of its page in the app.
     validations: { required: true }
   - type: dropdown
     id: problem

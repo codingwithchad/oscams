@@ -8,7 +8,7 @@ import { borderRows, ferryRows, type BorderReading, type TerminalSpace } from '.
 import { localStamp, parseBuoy, upcomingTides, type TidePrediction } from '../marine';
 import { cached } from './cache';
 
-const USER_AGENT = 'oscams (https://github.com/codingwithchad/oscams)';
+const USER_AGENT = 'WhatsUpAhead (https://github.com/codingwithchad/oscams)';
 const TEN_MINUTES = 10 * 60 * 1000;
 const WSDOT = 'https://wsdot.wa.gov/Traffic/api';
 
@@ -139,7 +139,7 @@ async function fetchTides(src: WeatherSource): Promise<Row[]> {
 	const url = new URL('https://api.tidesandcurrents.noaa.gov/api/prod/datagetter');
 	url.search = new URLSearchParams({
 		product: 'predictions',
-		application: 'oscams',
+		application: 'whatsupahead',
 		begin_date: stamp.slice(0, 10).replaceAll('-', ''),
 		range: '48',
 		datum: 'MLLW',

@@ -24,7 +24,7 @@
 
 {#if !installed}
 	<section class="install" aria-labelledby="install-title">
-		<h2 id="install-title">Put OS Cams on your phone</h2>
+		<h2 id="install-title">Put What's Up Ahead on your phone</h2>
 		<p>No app store. It opens like an app and keeps your last view when you lose signal.</p>
 
 		{#if prompt}

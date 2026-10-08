@@ -8,9 +8,9 @@ import { self as sw } from '$app/service-worker';
 //  - /api: always network (the age label simply disappears offline).
 
 const VERSION = 'v1';
-const SHELL = `oscams-shell-${VERSION}-${immutable.length}`;
-const PAGES = `oscams-pages-${VERSION}`;
-const IMAGES = `oscams-images-${VERSION}`;
+const SHELL = `whatsupahead-shell-${VERSION}-${immutable.length}`;
+const PAGES = `whatsupahead-pages-${VERSION}`;
+const IMAGES = `whatsupahead-images-${VERSION}`;
 const MAX_PAGES = 40;
 const MAX_IMAGES = 120;
 const NETWORK_TIMEOUT_MS = 6000;
@@ -86,7 +86,7 @@ async function networkFirst(
 }
 
 const OFFLINE_PAGE = `<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Offline · OS Cams</title>
+<title>Offline · What's Up Ahead</title>
 <body style="font:16px system-ui;padding:32px;max-width:480px;margin:auto">
 <h1>You're offline</h1>
 <p>This view hasn't been saved on your phone yet. Open it once with a connection and it will be here next time.</p>

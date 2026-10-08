@@ -17,10 +17,10 @@
 	);
 </script>
 
-<svelte:head><title>All places · OS Cams</title></svelte:head>
+<svelte:head><title>All places · What's Up Ahead</title></svelte:head>
 
 <header class="top">
-	<a class="brand" href="/">OS Cams</a>
+	<a class="brand" href="/">What's Up Ahead</a>
 	<span class="top-title">All places</span>
 </header>
 

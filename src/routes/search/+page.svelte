@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { APP_NAME } from '../../lib/brand';
 	import CameraCard from '../../lib/CameraCard.svelte';
 	import ConditionsBar from '../../lib/ConditionsBar.svelte';
 	import OfflineCameras from '../../lib/OfflineCameras.svelte';
@@ -26,11 +27,11 @@
 </script>
 
 <svelte:head>
-	<title>{data.place ? `${data.place.label} · OS Cams` : 'Search · OS Cams'}</title>
+	<title>{data.place ? `${data.place.label} · ${APP_NAME}` : `Search · ${APP_NAME}`}</title>
 </svelte:head>
 
 <header class="top">
-	<a class="brand" href="/">OS Cams</a>
+	<a class="brand" href="/">What's Up Ahead</a>
 	<SearchBox value={data.placeId ? '' : data.q} />
 </header>
 
