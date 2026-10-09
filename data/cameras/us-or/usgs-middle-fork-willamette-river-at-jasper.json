@@ -1,0 +1,20 @@
+{
+  "id": "usgs-middle-fork-willamette-river-at-jasper",
+  "name": "Middle Fork Willamette River at Jasper",
+  "description": "Middle Fork Willamette River at Jasper",
+  "lat": 43.9981816559059,
+  "lon": -122.905912564085,
+  "feed_url": "https://usgs-nims-images.s3.amazonaws.com/720/OR_Middle_Fork_Willamette_River_at_Jasper/OR_Middle_Fork_Willamette_River_at_Jasper_newest.jpg",
+  "feed_type": "image",
+  "source": "USGS",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://waterdata.usgs.gov/monitoring-location/14152000/",
+  "embed_mode": "direct",
+  "refresh_seconds": 900,
+  "tags": [
+    "river"
+  ],
+  "attribution_text": "U.S. Geological Survey",
+  "created_at": "2026-10-09T00:00:00Z"
+}

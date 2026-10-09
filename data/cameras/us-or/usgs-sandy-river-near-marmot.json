@@ -1,0 +1,20 @@
+{
+  "id": "usgs-sandy-river-near-marmot",
+  "name": "Sandy River near Marmot",
+  "description": "14137000 Sandy River nr Marmot",
+  "lat": 45.3995642184899,
+  "lon": -122.137306772233,
+  "feed_url": "https://usgs-nims-images.s3.amazonaws.com/720/OR_Sandy_River_near_Marmot/OR_Sandy_River_near_Marmot_newest.jpg",
+  "feed_type": "image",
+  "source": "USGS",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://waterdata.usgs.gov/monitoring-location/14137000/",
+  "embed_mode": "direct",
+  "refresh_seconds": 900,
+  "tags": [
+    "river"
+  ],
+  "attribution_text": "U.S. Geological Survey",
+  "created_at": "2026-10-09T00:00:00Z"
+}

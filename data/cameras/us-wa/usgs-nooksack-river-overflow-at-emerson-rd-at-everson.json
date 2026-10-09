@@ -1,0 +1,20 @@
+{
+  "id": "usgs-nooksack-river-overflow-at-emerson-rd-at-everson",
+  "name": "Nooksack River Overflow at Emerson Rd at Everson",
+  "description": "Nooksack River Overflow at Emerson Rd at Everson, WA",
+  "lat": 48.91339469,
+  "lon": -122.3404367,
+  "feed_url": "https://usgs-nims-images.s3.amazonaws.com/720/WA_Nooksack_River_Overflow_at_Emerson_Rd_at_Everson/WA_Nooksack_River_Overflow_at_Emerson_Rd_at_Everson_newest.jpg",
+  "feed_type": "image",
+  "source": "USGS",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://waterdata.usgs.gov/monitoring-location/12211190/",
+  "embed_mode": "direct",
+  "refresh_seconds": 900,
+  "tags": [
+    "river"
+  ],
+  "attribution_text": "U.S. Geological Survey",
+  "created_at": "2026-10-09T00:00:00Z"
+}

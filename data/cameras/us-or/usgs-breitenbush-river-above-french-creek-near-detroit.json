@@ -1,0 +1,20 @@
+{
+  "id": "usgs-breitenbush-river-above-french-creek-near-detroit",
+  "name": "Breitenbush River above French Creek near Detroit",
+  "description": "Updated 14179000 Breitenbush R. Abv. French Cr. Nr Detroit, OR",
+  "lat": 44.75262179,
+  "lon": -122.1289648,
+  "feed_url": "https://usgs-nims-images.s3.amazonaws.com/720/OR_Breitenbush_River_above_French_Creek_near_Detroit/OR_Breitenbush_River_above_French_Creek_near_Detroit_newest.jpg",
+  "feed_type": "image",
+  "source": "USGS",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://waterdata.usgs.gov/monitoring-location/14179000/",
+  "embed_mode": "direct",
+  "refresh_seconds": 900,
+  "tags": [
+    "river"
+  ],
+  "attribution_text": "U.S. Geological Survey",
+  "created_at": "2026-10-09T00:00:00Z"
+}

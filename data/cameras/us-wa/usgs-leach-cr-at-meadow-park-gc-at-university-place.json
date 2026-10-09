@@ -1,0 +1,20 @@
+{
+  "id": "usgs-leach-cr-at-meadow-park-gc-at-university-place",
+  "name": "Leach Cr at Meadow Park GC at University Place",
+  "description": "Leach Cr at Meadow Park GC at University Place, WA",
+  "lat": 47.1984316,
+  "lon": -122.5209584,
+  "feed_url": "https://usgs-nims-images.s3.amazonaws.com/720/WA_LEACH_CR_AT_MEADOW_PARK_GC_AT_UNIVERSITY_PLACE/WA_LEACH_CR_AT_MEADOW_PARK_GC_AT_UNIVERSITY_PLACE_newest.jpg",
+  "feed_type": "image",
+  "source": "USGS",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://waterdata.usgs.gov/monitoring-location/12091290/",
+  "embed_mode": "direct",
+  "refresh_seconds": 900,
+  "tags": [
+    "river"
+  ],
+  "attribution_text": "U.S. Geological Survey",
+  "created_at": "2026-10-09T00:00:00Z"
+}

@@ -1,0 +1,20 @@
+{
+  "id": "usgs-south-santiam-river-at-waterloo",
+  "name": "South Santiam River at Waterloo",
+  "description": "14187500 S Santiam at Waterloo, OR",
+  "lat": 44.4984564280628,
+  "lon": -122.823421371697,
+  "feed_url": "https://usgs-nims-images.s3.amazonaws.com/720/OR_South_Santiam_River_at_Waterloo/OR_South_Santiam_River_at_Waterloo_newest.jpg",
+  "feed_type": "image",
+  "source": "USGS",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://waterdata.usgs.gov/monitoring-location/14187500/",
+  "embed_mode": "direct",
+  "refresh_seconds": 900,
+  "tags": [
+    "river"
+  ],
+  "attribution_text": "U.S. Geological Survey",
+  "created_at": "2026-10-09T00:00:00Z"
+}

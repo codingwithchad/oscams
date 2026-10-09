@@ -11,7 +11,17 @@ Checked 2026-10-07. Rule: use a camera only if its owner publishes it for public
 | WSDOT Aviation (about 90 airfield cameras across Washington) | `airfields` collection | Same WSDOT feed and terms. WSDOT notes the pictures are for pilots, not an official weather briefing |
 | National Park Service (Mount Rainier Paradise and Longmire, Olympic Hurricane Ridge and Lake Crescent, North Cascades Newhalem) | 11 live cameras, 2 seasonal (Sunrise, down for the winter) | NPS content is generally public domain unless noted; credit appreciated (nps.gov/aboutus/disclaimer.htm). Served resized through our server |
 | Windy.com Webcams API | resort, Westport, Lake Wenatchee, AlertWest, airport cameras | Free API tier; their terms: use API image links unchanged, link each image to Windy, credit Windy, do not enlarge |
+| USGS river cameras (HIVIS, via the National Imagery Management System API; `scripts/import-usgs-cameras.mjs`) | about 25 streamgage cameras in Washington and Oregon (Skagit, Nooksack, Cowlitz, Sandy, McKenzie, Rogue...) | US government imagery, public domain for the most part; each camera links to its streamgage page with the water-level graph |
+| USGS Cascades Volcano Observatory | Mount St. Helens from Johnston Ridge | Public domain (USGS) |
 | NOAA / National Weather Service, FAA, USGS (data, not cameras) | forecasts, river gauges, delays, tides, buoys | US government data |
+
+## Looked at, not used yet (2026-10-09)
+
+- **WebCOOS** (NOAA-backed coastal cameras): API needs an account; only Ocean Shores is in our area.
+- **AlertWest / ALERTWildfire** fire cameras: the Oregon Hazards Lab allows media use with credit; no stated terms for apps. Ask before adding more than the two that come through Windy.
+- **CamStreamer gallery**: its public streams are YouTube and Windy uploads, already reachable through those.
+- **NWAC**: weather stations, no cameras of its own that we found.
+- **USGS volcano cameras for Rainier, Baker, Hood**: no public picture link found (Rainier's views come from the Park Service).
 
 ## Looked at and not used (from the UW Atmospheric Sciences list, a.atmos.washington.edu/data/webcams.html)
 

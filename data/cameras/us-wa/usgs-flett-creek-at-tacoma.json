@@ -1,0 +1,20 @@
+{
+  "id": "usgs-flett-creek-at-tacoma",
+  "name": "Flett Creek at Tacoma",
+  "description": "FLETT CREEK AT TACOMA, WA",
+  "lat": 47.1888583,
+  "lon": -122.5201028,
+  "feed_url": "https://usgs-nims-images.s3.amazonaws.com/720/WA_FLETT_CREEK_AT_TACOMA/WA_FLETT_CREEK_AT_TACOMA_newest.jpg",
+  "feed_type": "image",
+  "source": "USGS",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://waterdata.usgs.gov/monitoring-location/12091100/",
+  "embed_mode": "direct",
+  "refresh_seconds": 900,
+  "tags": [
+    "river"
+  ],
+  "attribution_text": "U.S. Geological Survey",
+  "created_at": "2026-10-09T00:00:00Z"
+}

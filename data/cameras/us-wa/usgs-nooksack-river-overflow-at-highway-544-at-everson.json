@@ -1,0 +1,20 @@
+{
+  "id": "usgs-nooksack-river-overflow-at-highway-544-at-everson",
+  "name": "Nooksack River Overflow at Highway 544 at Everson",
+  "description": "Nooksack River Overflow at Highway 544 at Everson, WA",
+  "lat": 48.92011729,
+  "lon": -122.3340474,
+  "feed_url": "https://usgs-nims-images.s3.amazonaws.com/720/WA_Nooksack_River_Overflow_at_Highway_544_at_Everson/WA_Nooksack_River_Overflow_at_Highway_544_at_Everson_newest.jpg",
+  "feed_type": "image",
+  "source": "USGS",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://waterdata.usgs.gov/monitoring-location/12211195/",
+  "embed_mode": "direct",
+  "refresh_seconds": 900,
+  "tags": [
+    "river"
+  ],
+  "attribution_text": "U.S. Geological Survey",
+  "created_at": "2026-10-09T00:00:00Z"
+}

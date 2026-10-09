@@ -1,0 +1,20 @@
+{
+  "id": "usgs-cowlitz-river-at-randle",
+  "name": "Cowlitz River at Randle",
+  "description": "Downstream view from bridge for hydrologic awareness.",
+  "lat": 46.531936,
+  "lon": -121.956973,
+  "feed_url": "https://usgs-nims-images.s3.amazonaws.com/720/WA_Cowlitz_River_at_Randle/WA_Cowlitz_River_at_Randle_newest.jpg",
+  "feed_type": "image",
+  "source": "USGS",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://waterdata.usgs.gov/monitoring-location/14231000/",
+  "embed_mode": "direct",
+  "refresh_seconds": 900,
+  "tags": [
+    "river"
+  ],
+  "attribution_text": "U.S. Geological Survey",
+  "created_at": "2026-10-09T00:00:00Z"
+}

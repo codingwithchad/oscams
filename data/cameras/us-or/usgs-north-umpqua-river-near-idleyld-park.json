@@ -1,0 +1,20 @@
+{
+  "id": "usgs-north-umpqua-river-near-idleyld-park",
+  "name": "North Umpqua River near Idleyld Park",
+  "description": "Network Camera at 14317450.",
+  "lat": 43.324563,
+  "lon": -122.9997836,
+  "feed_url": "https://usgs-nims-images.s3.amazonaws.com/720/OR_North_Umpqua_River_near_Idleyld_Park/OR_North_Umpqua_River_near_Idleyld_Park_newest.jpg",
+  "feed_type": "image",
+  "source": "USGS",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://waterdata.usgs.gov/monitoring-location/14317450/",
+  "embed_mode": "direct",
+  "refresh_seconds": 900,
+  "tags": [
+    "river"
+  ],
+  "attribution_text": "U.S. Geological Survey",
+  "created_at": "2026-10-09T00:00:00Z"
+}

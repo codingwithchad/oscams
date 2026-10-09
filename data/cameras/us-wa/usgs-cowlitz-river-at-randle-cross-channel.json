@@ -1,0 +1,20 @@
+{
+  "id": "usgs-cowlitz-river-at-randle-cross-channel",
+  "name": "Cowlitz River at Randle Cross Channel",
+  "description": "View north across the channel. Overflow channel and HWY12 visible in distance. Gage house in foreground.",
+  "lat": 46.53185,
+  "lon": -121.956706,
+  "feed_url": "https://usgs-nims-images.s3.amazonaws.com/720/WA_Cowlitz_River_at_Randle_Cross_Channel/WA_Cowlitz_River_at_Randle_Cross_Channel_newest.jpg",
+  "feed_type": "image",
+  "source": "USGS",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://waterdata.usgs.gov/monitoring-location/14231000/",
+  "embed_mode": "direct",
+  "refresh_seconds": 900,
+  "tags": [
+    "river"
+  ],
+  "attribution_text": "U.S. Geological Survey",
+  "created_at": "2026-10-09T00:00:00Z"
+}

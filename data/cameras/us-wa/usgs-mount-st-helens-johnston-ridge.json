@@ -1,0 +1,21 @@
+{
+  "id": "usgs-mount-st-helens-johnston-ridge",
+  "name": "Mount St. Helens from Johnston Ridge",
+  "description": "USGS Cascades Volcano Observatory research camera at Johnston Ridge, looking south into the crater. Clouds often hide the view.",
+  "lat": 46.2766,
+  "lon": -122.2166,
+  "feed_url": "https://volcanoes.usgs.gov/vsc/captures/st_helens/jro-webcam.jpg",
+  "feed_type": "image",
+  "source": "USGS",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://www.usgs.gov/media/webcams/johnston-ridge-observatory-webcam-mount-st-helens",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "tags": [
+    "scenic",
+    "volcano"
+  ],
+  "attribution_text": "U.S. Geological Survey, Cascades Volcano Observatory",
+  "created_at": "2026-10-09T00:00:00Z"
+}

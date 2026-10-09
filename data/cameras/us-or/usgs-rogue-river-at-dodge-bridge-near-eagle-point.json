@@ -1,0 +1,20 @@
+{
+  "id": "usgs-rogue-river-at-dodge-bridge-near-eagle-point",
+  "name": "Rogue River at Dodge Bridge near Eagle Point",
+  "description": "Network Camera at 143390000: Rogue River at Dodge Bridge.",
+  "lat": 42.5248471084891,
+  "lon": -122.842820258394,
+  "feed_url": "https://usgs-nims-images.s3.amazonaws.com/720/OR_Rogue_River_at_Dodge_Bridge_near_Eagle_Point/OR_Rogue_River_at_Dodge_Bridge_near_Eagle_Point_newest.jpg",
+  "feed_type": "image",
+  "source": "USGS",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://waterdata.usgs.gov/monitoring-location/14339000/",
+  "embed_mode": "direct",
+  "refresh_seconds": 900,
+  "tags": [
+    "river"
+  ],
+  "attribution_text": "U.S. Geological Survey",
+  "created_at": "2026-10-09T00:00:00Z"
+}

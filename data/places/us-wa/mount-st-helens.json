@@ -1,0 +1,15 @@
+{
+  "id": "mount-st-helens",
+  "name": "Mount St. Helens",
+  "region": "Washington",
+  "blurb": "The crater from Johnston Ridge (USGS volcano camera)",
+  "lat": 46.2766,
+  "lon": -122.2166,
+  "radius_miles": 12,
+  "collection": "national-parks",
+  "note": "A USGS research camera at Johnston Ridge. Check the Forest Service for road and visitor-center status before you go.",
+  "link": {
+    "label": "Mount St. Helens National Volcanic Monument",
+    "url": "https://www.fs.usda.gov/giftordpinchot"
+  }
+}
