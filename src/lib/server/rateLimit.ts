@@ -14,11 +14,12 @@ export function allow(key: string, limit: number, windowMs = 60_000, now = Date.
 /**
  * The visitor's address, for rate limits. Behind a proxy the left of X-Forwarded-For is whatever the visitor
  * chose to send, so count from the right instead: each proxy we sit behind adds one real entry there.
- * TRUSTED_PROXIES is how many proxies are in front of the app (Render: 1). Without the header (local runs),
- * the connection's own address is used.
+ * TRUSTED_PROXIES is how many entries the proxies in front of the app add. Render adds 3 (measured on the live
+ * site through /healthz "forwarded_hops", 2026-10-09). Check it again after moving hosts or adding a CDN.
+ * Without enough entries (local runs), the connection's own address is used.
  */
 export function visitorAddress(request: Request, connection: () => string): string {
-	const proxies = Math.max(1, Number(process.env.TRUSTED_PROXIES) || 1);
+	const proxies = Math.max(1, Number(process.env.TRUSTED_PROXIES) || 3);
 	const list = (request.headers.get('x-forwarded-for') ?? '')
 		.split(',')
 		.map((s) => s.trim())

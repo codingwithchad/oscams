@@ -28,8 +28,11 @@ describe('visitorAddress', () => {
 	const socket = () => '10.0.0.1';
 
 	it('uses the entry the proxy added, not one the visitor made up', () => {
-		expect(visitorAddress(req('6.6.6.6, 203.0.113.9'), socket)).toBe('203.0.113.9');
-		expect(visitorAddress(req('1.1.1.1, 2.2.2.2, 203.0.113.9'), socket)).toBe('203.0.113.9');
+		// Render's proxies add three entries: the visitor, then two of their own.
+		expect(visitorAddress(req('203.0.113.9, 10.1.1.1, 10.2.2.2'), socket)).toBe('203.0.113.9');
+		expect(visitorAddress(req('6.6.6.6, 203.0.113.9, 10.1.1.1, 10.2.2.2'), socket)).toBe(
+			'203.0.113.9'
+		);
 	});
 
 	it('uses the connection address when there is no proxy header', () => {
