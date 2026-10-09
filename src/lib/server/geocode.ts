@@ -1,6 +1,7 @@
 import { parseLatLon } from '../geo';
 import type { Place } from '../types';
 import { cached } from './cache';
+import { allow } from './rateLimit';
 import { queryVariants, similarity } from '../queryVariants';
 import { lookupWashington } from './gazetteer';
 import { photonSearch } from './photon';
@@ -10,9 +11,14 @@ const BIG_AREAS = new Set(['county', 'state', 'region', 'country', 'state_distri
 const DAY = 24 * 60 * 60 * 1000;
 
 // Nominatim allows at most one request per second, so uncached lookups wait in line.
+// If too many are already waiting, give up at once (the caller falls back to the backup service).
+const MAX_WAITING = 10;
 let lastLookup = Promise.resolve();
+let waiting = 0;
 function inLine<T>(job: () => Promise<T>): Promise<T> {
-	const run = lastLookup.then(job, job);
+	if (waiting >= MAX_WAITING) return Promise.reject(new Error('lookup queue full'));
+	waiting++;
+	const run = lastLookup.then(job, job).finally(() => waiting--);
 	lastLookup = run.then(
 		() => new Promise<void>((r) => setTimeout(r, 1100)),
 		() => new Promise<void>((r) => setTimeout(r, 1100))
@@ -152,6 +158,7 @@ const STATES: Record<string, string> = {
 async function openMeteo(q: string): Promise<Place | null> {
 	const [name, ...rest] = q.split(',').map((s) => s.trim());
 	const hint = rest.join(' ').trim();
+	if (!allow('upstream:open-meteo', 60)) throw new Error('backup place search busy');
 	const wanted = (STATES[hint.toUpperCase()] ?? hint).toLowerCase();
 	const url = new URL('https://geocoding-api.open-meteo.com/v1/search');
 	url.search = new URLSearchParams({

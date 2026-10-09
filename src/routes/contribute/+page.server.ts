@@ -1,6 +1,6 @@
 import { fail } from '@sveltejs/kit';
 import { REPO_URL } from '../../lib/brand';
-import { allow } from '../../lib/server/rateLimit';
+import { allow, visitorAddress } from '../../lib/server/rateLimit';
 import { checkYoutube } from '../../lib/server/youtubeCheck';
 import type { Actions } from './$types';
 
@@ -9,6 +9,9 @@ const clean = (v: FormDataEntryValue | null, max: number) =>
 		.replace(/[\u0000-\u0008\u000b\u000c\u000e-\u001f]/g, '')
 		.trim()
 		.slice(0, max);
+
+const DAY = 24 * 60 * 60_000;
+const DAILY_LIMIT = 30;
 
 /** The public repository the suggestions go to, taken from the project's own address. */
 const repo = REPO_URL.replace('https://github.com/', '');
@@ -26,7 +29,7 @@ export const actions: Actions = {
 		const name = clean(form.get('name'), 60);
 		const values = { link, where, owner, terms, name };
 
-		const who = request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || getClientAddress();
+		const who = visitorAddress(request, getClientAddress);
 		if (!allow(`contribute:${who}`, 5, 60 * 60_000))
 			return fail(429, {
 				error: 'That is a lot of suggestions at once. Please try again later.',
@@ -44,6 +47,13 @@ export const actions: Actions = {
 		if (!token)
 			return fail(503, {
 				error: 'Suggestions are not switched on yet. Please check back soon.',
+				values
+			});
+
+		// However many visitors there are, never file more than this many issues a day (stops a flood of spam).
+		if (!allow('contribute:all', DAILY_LIMIT, DAY))
+			return fail(429, {
+				error: 'We have had a lot of suggestions today. Please try again tomorrow.',
 				values
 			});
 

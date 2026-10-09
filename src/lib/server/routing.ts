@@ -1,5 +1,6 @@
 import type { Point } from '../geo';
 import { cached } from './cache';
+import { allow } from './rateLimit';
 import type { LatLon } from '../route';
 
 const OSRM = 'https://router.project-osrm.org/route/v1/driving';
@@ -49,6 +50,8 @@ export function toDrivingRoute(route: OsrmRoute): DrivingRoute {
 export function drivingRoute(from: Point, to: Point): Promise<DrivingRoute> {
 	const key = `route:${from.lat.toFixed(3)},${from.lon.toFixed(3)}>${to.lat.toFixed(3)},${to.lon.toFixed(3)}`;
 	return cached(key, 10 * 60 * 1000, async () => {
+		// The demo server allows about one request a second for everyone using it; stay well under that.
+		if (!allow('upstream:osrm', 30)) throw new Error('routing busy');
 		const url = `${OSRM}/${from.lon},${from.lat};${to.lon},${to.lat}?overview=full&geometries=geojson&steps=true`;
 		const res = await fetch(url, {
 			headers: { 'User-Agent': USER_AGENT },

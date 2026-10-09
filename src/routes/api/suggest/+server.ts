@@ -1,13 +1,13 @@
 import { json } from '@sveltejs/kit';
 import { suggestTowns } from '../../../lib/server/gazetteer';
 import { photonSearch, type Suggestion } from '../../../lib/server/photon';
-import { allow } from '../../../lib/server/rateLimit';
+import { allow, visitorAddress } from '../../../lib/server/rateLimit';
 import type { RequestHandler } from './$types';
 
 /** Places that match what has been typed so far: Washington towns first (instant), then other places. */
 export const GET: RequestHandler = async ({ url, request, getClientAddress }) => {
 	const q = (url.searchParams.get('q') ?? '').trim().slice(0, 100);
-	const who = request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || getClientAddress();
+	const who = visitorAddress(request, getClientAddress);
 	if (!allow(`suggest:${who}`, 60)) return json({ suggestions: [] }, { status: 429 });
 	if (q.length < 2) return json({ suggestions: [] });
 

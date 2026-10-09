@@ -1,6 +1,7 @@
 import type { Handle } from '@sveltejs/kit/hooks';
 import { getCatalog } from './lib/server/catalog';
 import { startHistory } from './lib/server/history';
+import { allow, visitorAddress } from './lib/server/rateLimit';
 import { dev } from '$app/env';
 
 // Load secrets (e.g. WSDOT_CODE) from a local .env file when present. In production, set real environment variables.
@@ -40,7 +41,29 @@ const SECURITY_HEADERS: Record<string, string> = {
 	'strict-transport-security': 'max-age=31536000'
 };
 
+/**
+ * Requests per visitor per minute. Searches and trips can call free outside services (routing, place search),
+ * so they get a lower limit; pictures and small API calls come in bursts of 20 or more per page.
+ * Generous on purpose: many people can share one address (a ferry's wifi, a phone carrier).
+ */
+const PER_MINUTE: [prefix: string, limit: number][] = [
+	['/search', 60],
+	['/trip', 60],
+	['/api/', 600],
+	['/img/', 600]
+];
+
 export const handle: Handle = async ({ event, resolve }) => {
+	const rule = PER_MINUTE.find(([prefix]) => event.url.pathname.startsWith(prefix));
+	if (rule) {
+		const who = visitorAddress(event.request, event.getClientAddress);
+		if (!allow(`${rule[0]}:${who}`, rule[1]))
+			return new Response('Too many requests. Please wait a minute and try again.', {
+				status: 429,
+				headers: { 'retry-after': '60', 'content-type': 'text/plain; charset=utf-8' }
+			});
+	}
+
 	if (
 		CANONICAL_HOST &&
 		event.url.pathname !== '/healthz' &&
