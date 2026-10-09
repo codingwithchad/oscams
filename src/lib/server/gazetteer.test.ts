@@ -1,27 +1,37 @@
 import { describe, expect, it } from 'vitest';
-import { lookupWashington } from './gazetteer';
+import { lookupTown, suggestTowns } from './gazetteer';
 
-describe('lookupWashington', () => {
+describe('lookupTown', () => {
 	it('finds towns with or without the state', () => {
 		for (const q of ['Snohomish', 'snohomish, wa', 'Snohomish, Washington', 'City of Snohomish']) {
-			const p = lookupWashington(q);
+			const p = lookupTown(q);
 			expect(p?.label, q).toBe('Snohomish, WA');
 			expect(p?.lat).toBeGreaterThan(47.8);
 			expect(p?.lat).toBeLessThan(48.0);
 		}
 	});
 
+	it('finds Oregon towns, and picks the state that was asked for', () => {
+		expect(lookupTown('Bend, OR')?.label).toBe('Bend, OR');
+		expect(lookupTown('Hood River')?.label).toBe('Hood River, OR');
+		expect(lookupTown('Salem, Oregon')?.label).toBe('Salem, OR');
+		expect(lookupTown('Portland')?.lat).toBeLessThan(46);
+	});
+
 	it('finds ZIP codes and names the nearest town', () => {
-		expect(lookupWashington('98290')?.label).toBe('98290, Snohomish');
-		expect(lookupWashington('98101')?.label).toBe('98101, Seattle');
-		expect(lookupWashington('98595')?.label).toBe('98595, Westport');
+		expect(lookupTown('98290')?.label).toBe('98290, Snohomish, WA');
+		expect(lookupTown('98101')?.label).toBe('98101, Seattle, WA');
+		expect(lookupTown('97028')?.label).toMatch(/, OR$/);
 	});
 
 	it('leaves other states and unknown text to the online search', () => {
-		expect(lookupWashington('Portland, OR')).toBeNull();
-		expect(lookupWashington('Boise, Idaho')).toBeNull();
-		expect(lookupWashington('90210')).toBeNull();
-		expect(lookupWashington('Stevens Pass')).toBeNull();
-		expect(lookupWashington('1600 Pennsylvania Ave')).toBeNull();
+		expect(lookupTown('Boise, Idaho')).toBeNull();
+		expect(lookupTown('90210')).toBeNull();
+		expect(lookupTown('Stevens Pass')).toBeNull();
+		expect(lookupTown('1600 Pennsylvania Ave')).toBeNull();
+	});
+
+	it('suggests towns from every region as you type', () => {
+		expect(suggestTowns('Hood R').map((t) => `${t.label}, ${t.sub}`)).toContain('Hood River, OR');
 	});
 });

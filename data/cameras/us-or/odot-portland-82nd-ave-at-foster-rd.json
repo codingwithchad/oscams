@@ -1,0 +1,21 @@
+{
+  "id": "odot-portland-82nd-ave-at-foster-rd",
+  "name": "Portland - 82nd Ave at Foster Rd",
+  "lat": 45.48278,
+  "lon": -122.57889,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/ORE213%20at%20Foster%20Rd_pid2692.JPG",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "OR 213",
+  "milepost": 5.78
+}

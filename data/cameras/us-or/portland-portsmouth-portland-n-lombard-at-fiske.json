@@ -1,0 +1,21 @@
+{
+  "id": "portland-portsmouth-portland-n-lombard-at-fiske",
+  "name": "Portland: Portsmouth: Portland - N Lombard at Fiske",
+  "lat": 45.58041,
+  "lon": -122.7183,
+  "feed_type": "image",
+  "source": "ODOT TripCheck via Windy.com",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "provider": "windy",
+  "provider_ref": "1753305100",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "page_url": "https://windy.com/webcams/1753305100",
+  "tags": [
+    "road",
+    "portland"
+  ],
+  "attribution_text": "ODOT TripCheck via Windy.com",
+  "created_at": "2026-10-09T00:00:00Z"
+}

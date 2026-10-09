@@ -1,0 +1,11 @@
+{
+  "id": "portland",
+  "name": "Portland",
+  "region": "Oregon",
+  "state": "Oregon",
+  "blurb": "Downtown, the bridges and the freeways",
+  "lat": 45.5152,
+  "lon": -122.6784,
+  "radius_miles": 4,
+  "order": 5
+}

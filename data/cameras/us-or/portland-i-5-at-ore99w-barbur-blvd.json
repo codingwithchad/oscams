@@ -1,0 +1,21 @@
+{
+  "id": "portland-i-5-at-ore99w-barbur-blvd",
+  "name": "Portland: I-5 at ORE99W - Barbur Blvd",
+  "lat": 45.44359,
+  "lon": -122.74062,
+  "feed_type": "image",
+  "source": "ODOT TripCheck via Windy.com",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "provider": "windy",
+  "provider_ref": "1262741718",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "page_url": "https://windy.com/webcams/1262741718",
+  "tags": [
+    "road",
+    "portland"
+  ],
+  "attribution_text": "ODOT TripCheck via Windy.com",
+  "created_at": "2026-10-09T00:00:00Z"
+}

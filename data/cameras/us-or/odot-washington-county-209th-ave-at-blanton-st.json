@@ -1,0 +1,21 @@
+{
+  "id": "odot-washington-county-209th-ave-at-blanton-st",
+  "name": "Washington County - 209th Ave at Blanton St",
+  "lat": 45.49228,
+  "lon": -122.89173,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/209th%20Ave%20at%20Blanton%20St_pid5322.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "CNTY",
+  "milepost": 0
+}

@@ -1,0 +1,21 @@
+{
+  "id": "odot-i-5-at-upton-rd",
+  "name": "I-5 at Upton Rd",
+  "lat": 42.38952,
+  "lon": -122.91848,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/I-5%20NB%20at%20Upton%20Rd_pid4848.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "I 5",
+  "milepost": 33.8
+}

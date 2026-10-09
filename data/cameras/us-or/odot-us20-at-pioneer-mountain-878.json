@@ -1,0 +1,21 @@
+{
+  "id": "odot-us20-at-pioneer-mountain-878",
+  "name": "US20 at Pioneer Mountain",
+  "lat": 44.67438,
+  "lon": -123.89081,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/US20%20at%20Pioneer%20Mountain%20WB_pid3987.JPG",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "US 20",
+  "milepost": 10.12
+}

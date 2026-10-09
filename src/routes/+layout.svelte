@@ -41,7 +41,7 @@
 		<a href={REPO_URL} target="_blank" rel="noopener">Open source</a>
 	</nav>
 	<p>
-		Independent project, not affiliated with WSDOT or any agency. Check official sources before you
-		travel.
+		Independent project, not affiliated with any transportation department or agency. Check official
+		sources before you travel.
 	</p>
 </footer>

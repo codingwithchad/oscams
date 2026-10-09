@@ -1,0 +1,21 @@
+{
+  "id": "odot-portland-ne-mlk-jr-blvd-at-weidler",
+  "name": "Portland - NE MLK Jr Blvd at Weidler",
+  "lat": 45.5343,
+  "lon": -122.66164,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/NE%20MLK%20Jr%20Blvd%20at%20Weidler%20CAM276_pid5338.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "City",
+  "milepost": 0
+}

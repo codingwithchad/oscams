@@ -1,0 +1,20 @@
+{
+  "id": "portland-portland-downtown",
+  "name": "Portland: Portland Downtown",
+  "lat": 45.52676,
+  "lon": -122.64455,
+  "feed_type": "image",
+  "source": "daveinpdx.com via Windy.com",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "provider": "windy",
+  "provider_ref": "1751326016",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "page_url": "https://windy.com/webcams/1751326016",
+  "tags": [
+    "portland"
+  ],
+  "attribution_text": "daveinpdx.com via Windy.com",
+  "created_at": "2026-10-09T00:00:00Z"
+}

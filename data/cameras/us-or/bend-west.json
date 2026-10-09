@@ -1,0 +1,20 @@
+{
+  "id": "bend-west",
+  "name": "Bend – West",
+  "lat": 44.09419,
+  "lon": -121.20134,
+  "feed_type": "image",
+  "source": "friendsofbendairport.com via Windy.com",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "provider": "windy",
+  "provider_ref": "1671258624",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "page_url": "https://windy.com/webcams/1671258624",
+  "tags": [
+    "bend"
+  ],
+  "attribution_text": "friendsofbendairport.com via Windy.com",
+  "created_at": "2026-10-09T00:00:00Z"
+}

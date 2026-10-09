@@ -1,0 +1,21 @@
+{
+  "id": "odot-or222-eb-at-i-5-nb-ramps",
+  "name": "OR222 EB at I-5 NB Ramps",
+  "lat": 43.9181,
+  "lon": -123.01488,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/ORE222%20EB%20at%20I-5%20SB%20Ramps_pid4093.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "OR 222",
+  "milepost": 14.71
+}

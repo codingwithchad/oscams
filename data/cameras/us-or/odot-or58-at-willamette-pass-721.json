@@ -1,0 +1,21 @@
+{
+  "id": "odot-or58-at-willamette-pass-721",
+  "name": "OR58 at Willamette Pass",
+  "lat": 43.59702,
+  "lon": -122.03386,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/Willamette%20Pass_pid3351.JPG",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "OR 58",
+  "milepost": 62
+}

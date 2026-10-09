@@ -1,0 +1,21 @@
+{
+  "id": "fairview-i-84-at-223rd",
+  "name": "Fairview: I-84 at 223rd",
+  "lat": 45.54189,
+  "lon": -122.43399,
+  "feed_type": "image",
+  "source": "ODOT TripCheck via Windy.com",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "provider": "windy",
+  "provider_ref": "1459338200",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "page_url": "https://windy.com/webcams/1459338200",
+  "tags": [
+    "road",
+    "portland"
+  ],
+  "attribution_text": "ODOT TripCheck via Windy.com",
+  "created_at": "2026-10-09T00:00:00Z"
+}

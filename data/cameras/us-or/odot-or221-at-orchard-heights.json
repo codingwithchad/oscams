@@ -1,0 +1,21 @@
+{
+  "id": "odot-or221-at-orchard-heights",
+  "name": "OR221 at Orchard Heights",
+  "lat": 44.95327,
+  "lon": -123.05269,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/ORE221%20at%20Orchard%20Heights_pid3033.JPG",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "OR 221",
+  "milepost": 20.13
+}

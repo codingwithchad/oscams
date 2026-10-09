@@ -1,0 +1,21 @@
+{
+  "id": "odot-washington-county-tualatin-sherwood-rd-at-baler-way",
+  "name": "Washington County - Tualatin Sherwood Rd at Baler Way",
+  "lat": 45.36781,
+  "lon": -122.83897,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/Tualatin%20Sherwood%20Rd%20at%20Baler%20Way_pid2876.JPG",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "CNTY",
+  "milepost": 0
+}

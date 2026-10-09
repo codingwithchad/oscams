@@ -1,0 +1,21 @@
+{
+  "id": "odot-portland-sw-6th-at-i-405",
+  "name": "Portland - SW 6th at I-405",
+  "lat": 45.50978,
+  "lon": -122.68368,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/SW%206th%20at%20I-405_pid3698.JPG",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "CITY",
+  "milepost": 0
+}

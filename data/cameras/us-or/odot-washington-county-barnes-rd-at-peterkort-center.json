@@ -1,0 +1,21 @@
+{
+  "id": "odot-washington-county-barnes-rd-at-peterkort-center",
+  "name": "Washington County - Barnes Rd at Peterkort Center",
+  "lat": 45.51223,
+  "lon": -122.77927,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/Barnes%20Rd%20at%20Peterkort%20Center_pid4535.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "CNTY",
+  "milepost": 0
+}

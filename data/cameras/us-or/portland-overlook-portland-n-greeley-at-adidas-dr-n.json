@@ -1,0 +1,21 @@
+{
+  "id": "portland-overlook-portland-n-greeley-at-adidas-dr-n",
+  "name": "Portland: Overlook: Portland - N Greeley at Adidas Dr N",
+  "lat": 45.56019,
+  "lon": -122.69465,
+  "feed_type": "image",
+  "source": "ODOT TripCheck via Windy.com",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "provider": "windy",
+  "provider_ref": "1747861984",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "page_url": "https://windy.com/webcams/1747861984",
+  "tags": [
+    "road",
+    "portland"
+  ],
+  "attribution_text": "ODOT TripCheck via Windy.com",
+  "created_at": "2026-10-09T00:00:00Z"
+}

@@ -3,6 +3,7 @@
 //          [--source "Port of Everett"] [--page https://owner.example/camera] [--tags marina,everett] [--use-channel] [--approx] [--write]
 // Without --write it only reports what it found. Nothing is added unless every check passes.
 import { existsSync, writeFileSync } from 'node:fs';
+import { fileFor, regionAt } from './lib/data.mjs';
 
 const args = process.argv.slice(2);
 const link = args.find((a) => !a.startsWith('--') && /youtu/.test(a));
@@ -27,9 +28,9 @@ if (!idMatch) {
 const videoId = idMatch[1];
 const lat = Number(flag('lat'));
 const lon = Number(flag('lon'));
-if (!(lat >= 45 && lat <= 49.5 && lon >= -125 && lon <= -116)) {
+if (!regionAt(lat, lon)) {
 	console.error(
-		`Position ${lat}, ${lon} is outside Washington. Check the order: latitude first (about 47), then longitude (about -122).`
+		`Position ${lat}, ${lon} is outside the regions in data/regions.json. Check the order: latitude first (about 47), then longitude (about -122).`
 	);
 	process.exit(1);
 }
@@ -89,7 +90,7 @@ const slug = name
 	.toLowerCase()
 	.replace(/[^a-z0-9]+/g, '-')
 	.replace(/^-|-$/g, '');
-const file = `data/cameras/${slug}.json`;
+const file = fileFor('cameras', slug, lat, lon);
 const useChannel = has('use-channel');
 if (useChannel && !channelId) {
 	console.error('Could not read the channel id, so --use-channel cannot be used for this one.');

@@ -1,7 +1,8 @@
-// Build the offline list of Washington towns and ZIP codes from the US Census Bureau Gazetteer files
-// (public domain). Run: node scripts/build-gazetteer.mjs [year]
+// Build the offline list of towns and ZIP codes for every US region in data/regions.json, from the US Census
+// Bureau Gazetteer files (public domain). Writes data/gazetteer/<region folder>.json.
+// Run: node scripts/build-gazetteer.mjs [year]
 import { execFileSync } from 'node:child_process';
-import { mkdtempSync, writeFileSync } from 'node:fs';
+import { mkdirSync, mkdtempSync, readFileSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 
@@ -25,37 +26,46 @@ async function table(kind) {
 const KINDS = ['city', 'town', 'village', 'CDP', 'municipality'];
 const round = (n) => Math.round(Number(n) * 1e4) / 1e4;
 
-const places = (await table('place'))
-	.filter((r) => r.USPS === 'WA')
-	.map((r) => {
-		const m = r.NAME.match(new RegExp(`^(.*) (${KINDS.join('|')})$`));
-		return {
-			name: m ? m[1] : r.NAME,
-			type: m ? m[2] : '',
-			lat: round(r.INTPTLAT),
-			lon: round(r.INTPTLONG)
-		};
-	});
+mkdirSync('data/gazetteer', { recursive: true });
+const { regions } = JSON.parse(readFileSync('data/regions.json', 'utf8'));
+const placeRows = await table('place');
+const zipRows = await table('zcta');
 
-// Washington ZIP codes: 980-986 (west) and 990-994 (east).
-const zips = (await table('zcta'))
-	.filter((r) => /^(98\d{3}|99[0-4]\d{2})$/.test(r.GEOID))
-	.map((r) => ({ zip: r.GEOID, lat: round(r.INTPTLAT), lon: round(r.INTPTLONG) }));
+for (const region of regions.filter((r) => r.country === 'US')) {
+	const places = placeRows
+		.filter((r) => r.USPS === region.abbr)
+		.map((r) => {
+			const m = r.NAME.match(new RegExp(`^(.*) (${KINDS.join('|')})$`));
+			return {
+				name: m ? m[1] : r.NAME,
+				type: m ? m[2] : '',
+				lat: round(r.INTPTLAT),
+				lon: round(r.INTPTLONG)
+			};
+		});
 
-// Give each ZIP the name of the nearest city or town (not a tiny unincorporated area) so results say where it is.
-const towns = places.filter((p) => p.type === 'city' || p.type === 'town');
-const near = (z) =>
-	towns.reduce(
-		(best, p) => {
-			const d = (p.lat - z.lat) ** 2 + ((p.lon - z.lon) * 0.68) ** 2;
-			return d < best.d ? { d, p } : best;
-		},
-		{ d: Infinity }
-	).p.name;
-const out = {
-	source: `US Census Bureau Gazetteer ${year} (public domain)`,
-	places: places.map((p) => [p.name, p.lat, p.lon, p.type]),
-	zips: zips.map((z) => [z.zip, z.lat, z.lon, near(z)])
-};
-writeFileSync('data/gazetteer/wa.json', JSON.stringify(out) + '\n');
-console.log(`${places.length} Washington places, ${zips.length} ZIP codes`);
+	const zipPattern = new RegExp(region.zip);
+	const zips = zipRows
+		.filter((r) => zipPattern.test(r.GEOID))
+		.map((r) => ({ zip: r.GEOID, lat: round(r.INTPTLAT), lon: round(r.INTPTLONG) }));
+
+	// Give each ZIP the name of the nearest city or town (not a tiny unincorporated area) so results say where it is.
+	const towns = places.filter((p) => p.type === 'city' || p.type === 'town');
+	const near = (z) =>
+		towns.reduce(
+			(best, p) => {
+				const d = (p.lat - z.lat) ** 2 + ((p.lon - z.lon) * 0.68) ** 2;
+				return d < best.d ? { d, p } : best;
+			},
+			{ d: Infinity }
+		).p.name;
+	const out = {
+		source: `US Census Bureau Gazetteer ${year} (public domain)`,
+		region: region.code,
+		abbr: region.abbr,
+		places: places.map((p) => [p.name, p.lat, p.lon, p.type]),
+		zips: zips.map((z) => [z.zip, z.lat, z.lon, near(z)])
+	};
+	writeFileSync(`data/gazetteer/${region.folder}.json`, JSON.stringify(out) + '\n');
+	console.log(`${region.name}: ${places.length} places, ${zips.length} ZIP codes`);
+}

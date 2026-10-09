@@ -1,0 +1,21 @@
+{
+  "id": "odot-bend-nw-colorado-ave-at-nw-wall-st",
+  "name": "Bend NW Colorado Ave at NW Wall St",
+  "lat": 44.05231,
+  "lon": -121.31775,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/Bend%20Colorado%20Ave%20at%20Wall%20St_pid4756.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "City",
+  "milepost": 0
+}

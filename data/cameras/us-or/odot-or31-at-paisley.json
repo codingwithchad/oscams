@@ -1,0 +1,21 @@
+{
+  "id": "odot-or31-at-paisley",
+  "name": "OR31 at Paisley",
+  "lat": 42.69282,
+  "lon": -120.54261,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/Paisley_pid2415.JPG",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "OR 31",
+  "milepost": 98.5
+}

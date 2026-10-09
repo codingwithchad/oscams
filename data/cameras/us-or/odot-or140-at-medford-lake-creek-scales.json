@@ -1,0 +1,21 @@
+{
+  "id": "odot-or140-at-medford-lake-creek-scales",
+  "name": "OR140 at Medford Lake Creek Scales",
+  "lat": 42.43214,
+  "lon": -122.62033,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/ORE140%20at%20Medford%20Lake%20Creek%20Scales_pid4429.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "OR 140",
+  "milepost": 13.8
+}

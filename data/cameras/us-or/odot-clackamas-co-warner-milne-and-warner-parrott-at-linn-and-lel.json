@@ -1,0 +1,21 @@
+{
+  "id": "odot-clackamas-co-warner-milne-and-warner-parrott-at-linn-and-lel",
+  "name": "Clackamas Co - Warner Milne and Warner Parrott at Linn and Leland",
+  "lat": 45.33644,
+  "lon": -122.60494,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/Warner%20Milne%20and%20Warner%20Parrott%20at%20Linn%20and%20Leland_pid5046.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "CNTY",
+  "milepost": 0
+}

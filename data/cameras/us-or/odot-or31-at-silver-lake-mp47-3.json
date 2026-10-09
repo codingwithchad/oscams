@@ -1,0 +1,21 @@
+{
+  "id": "odot-or31-at-silver-lake-mp47-3",
+  "name": "OR31 at Silver Lake MP47.3",
+  "lat": 43.128,
+  "lon": -121.05044,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/SWZT011%20-%20Trailer%20K_pid4570.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "OR 31",
+  "milepost": 0
+}

@@ -1,0 +1,21 @@
+{
+  "id": "odot-or126-at-cushman",
+  "name": "OR126 at Cushman",
+  "lat": 43.98504,
+  "lon": -124.04531,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/ORE126%20at%20Cushman_pid2651.JPG",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "OR 126",
+  "milepost": 3.05
+}

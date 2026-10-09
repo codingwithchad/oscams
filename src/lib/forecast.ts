@@ -1,4 +1,4 @@
-import { pacificClock } from './format';
+import { localClock } from './format';
 
 export interface Row {
 	label: string;
@@ -29,14 +29,19 @@ function describe(p: HourlyPeriod): string {
 }
 
 /** The forecast for the hour containing `atMs`, then the next hours. Empty if that time is not covered. */
-export function hourlyRows(periods: HourlyPeriod[], atMs: number, count = 3): Row[] {
+export function hourlyRows(
+	periods: HourlyPeriod[],
+	atMs: number,
+	count = 3,
+	timeZone?: string
+): Row[] {
 	const i = periods.findIndex((p) => new Date(p.endTime).getTime() > atMs);
 	if (i === -1) return [];
 	return periods.slice(i, i + count).map((p, n) => ({
 		label:
 			n === 0
-				? `About ${pacificClock(Math.max(atMs, new Date(p.startTime).getTime()))}`
-				: pacificClock(new Date(p.startTime).getTime()),
+				? `About ${localClock(Math.max(atMs, new Date(p.startTime).getTime()), timeZone)}`
+				: localClock(new Date(p.startTime).getTime(), timeZone),
 		value: describe(p)
 	}));
 }

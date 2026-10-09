@@ -1,0 +1,21 @@
+{
+  "id": "odot-dead-indian-memorial-rd-at-clover-creek-rd",
+  "name": "Dead Indian Memorial Rd at Clover Creek Rd",
+  "lat": 42.29946,
+  "lon": -122.25116,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/Dead%20Indian%20Memorial%20Rd%20EB%20at%20Clover%20Creek%20MP28.35_pid4704.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "CNTY",
+  "milepost": 28.35
+}

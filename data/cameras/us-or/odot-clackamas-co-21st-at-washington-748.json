@@ -1,0 +1,21 @@
+{
+  "id": "odot-clackamas-co-21st-at-washington-748",
+  "name": "Clackamas Co - 21st at Washington",
+  "lat": 45.44261,
+  "lon": -122.6398,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/21st%20at%20Washington%20W_pid3463.JPG",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "CNTY",
+  "milepost": 0
+}

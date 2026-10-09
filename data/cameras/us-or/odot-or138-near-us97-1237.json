@@ -1,0 +1,21 @@
+{
+  "id": "odot-or138-near-us97-1237",
+  "name": "OR138 near US97",
+  "lat": 43.08096,
+  "lon": -121.82868,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/OR138%20near%20US97%20W_pid4846.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "OR 138",
+  "milepost": 100.63
+}

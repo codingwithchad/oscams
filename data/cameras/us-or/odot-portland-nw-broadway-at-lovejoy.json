@@ -1,0 +1,21 @@
+{
+  "id": "odot-portland-nw-broadway-at-lovejoy",
+  "name": "Portland - NW Broadway at Lovejoy",
+  "lat": 45.52975,
+  "lon": -122.6777,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/NW%20Broadway%20at%20Lovejoy_pid5355.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "City",
+  "milepost": 0
+}

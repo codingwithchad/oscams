@@ -1,0 +1,15 @@
+{
+  "id": "ski-mt-hood-meadows",
+  "name": "Mt. Hood Meadows",
+  "region": "Oregon",
+  "state": "Oregon",
+  "blurb": "Mount Hood's biggest ski area, up OR 35",
+  "lat": 45.3317,
+  "lon": -121.665,
+  "radius_miles": 8,
+  "collection": "ski-areas",
+  "link": {
+    "label": "Mt. Hood Meadows' webcams",
+    "url": "https://www.skihood.com/the-mountain/webcams"
+  }
+}

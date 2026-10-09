@@ -1,4 +1,5 @@
-import { pacificClock } from './format';
+import { localClock } from './format';
+import { DEFAULT_TIME_ZONE } from './regions';
 
 export interface Row {
 	label: string;
@@ -37,13 +38,16 @@ export function floodStatus(
 	return action !== undefined ? `${ft(action - level)} below the action stage (${action} ft)` : '';
 }
 
-const weekday = (ms: number) =>
-	new Intl.DateTimeFormat('en-US', { weekday: 'short', timeZone: 'America/Los_Angeles' }).format(
-		new Date(ms)
-	);
+const weekday = (ms: number, timeZone: string) =>
+	new Intl.DateTimeFormat('en-US', { weekday: 'short', timeZone }).format(new Date(ms));
 
 /** River level now, which way it is heading, the forecast high, and where flood stage starts. */
-export function riverRows(gauge: GaugeInfo, flow: StageFlow, nowMs: number): Row[] {
+export function riverRows(
+	gauge: GaugeInfo,
+	flow: StageFlow,
+	nowMs: number,
+	timeZone: string = DEFAULT_TIME_ZONE
+): Row[] {
 	const observed = (flow.observed?.data ?? []).filter(valid);
 	const latest = observed[observed.length - 1];
 	if (!latest) return [];
@@ -72,7 +76,7 @@ export function riverRows(gauge: GaugeInfo, flow: StageFlow, nowMs: number): Row
 		const t = new Date(high.validTime).getTime();
 		rows.push({
 			label: 'Forecast high',
-			value: `${ft(high.primary)} ${weekday(t)} ${pacificClock(t)}`
+			value: `${ft(high.primary)} ${weekday(t, timeZone)} ${localClock(t, timeZone)}`
 		});
 	}
 	return rows;

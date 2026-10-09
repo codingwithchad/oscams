@@ -1,0 +1,11 @@
+{
+  "id": "pass-santiam",
+  "name": "Santiam Pass (US 20)",
+  "region": "Oregon",
+  "state": "Oregon",
+  "blurb": "Salem and Albany to Sisters and Bend",
+  "lat": 44.4247,
+  "lon": -121.8583,
+  "radius_miles": 10,
+  "collection": "passes"
+}

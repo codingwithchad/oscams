@@ -1,0 +1,21 @@
+{
+  "id": "odot-portland-8th-at-division-place",
+  "name": "Portland - 8th at Division Place",
+  "lat": 45.50476,
+  "lon": -122.65796,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/8th%20at%20Division%20Place_pid3193.JPG",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "CITY",
+  "milepost": 0
+}

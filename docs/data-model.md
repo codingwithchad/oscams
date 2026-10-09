@@ -2,7 +2,18 @@
 
 Cameras are data, never code. Adding or removing a camera never requires a code change.
 
-Each camera is one JSON file in `data/cameras/`, named `<id>.json`, validated by `schema/camera.schema.json`.
+Each camera is one JSON file in `data/cameras/<region>/`, named `<id>.json`, validated by `schema/camera.schema.json`.
+
+## Regions
+
+The app covers the regions listed in `data/regions.json` (today Washington `us-wa` and Oregon `us-or`): name, bounds (and an
+outline where the border is a river), time zone and ZIP code pattern. Cameras, weather sources, places and passes live in a
+folder per region (`data/cameras/us-or/...`); drives and collections can cross borders and stay at the top level. The tests
+check every file sits inside its region.
+
+Adding a region: add it to `data/regions.json`, run `node scripts/build-gazetteer.mjs` for its offline town list, then
+add data files (or an import script for that state's DOT feed) under its folder. Place search, local times and
+automatic NWS forecasts follow from the regions file.
 
 | Field | Required | Notes |
 |---|---|---|

@@ -1,0 +1,21 @@
+{
+  "id": "odot-i-5-at-del-rio-rd",
+  "name": "I-5 at Del Rio Rd.",
+  "lat": 43.29019,
+  "lon": -123.35649,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/I-5%20at%20Del%20Rio%20Rd%20NB_pid3117.JPG",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "I 5",
+  "milepost": 128.2
+}

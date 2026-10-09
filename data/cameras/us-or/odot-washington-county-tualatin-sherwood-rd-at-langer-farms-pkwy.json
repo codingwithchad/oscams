@@ -1,0 +1,21 @@
+{
+  "id": "odot-washington-county-tualatin-sherwood-rd-at-langer-farms-pkwy",
+  "name": "Washington County - Tualatin Sherwood Rd at Langer Farms Pkwy",
+  "lat": 45.36761,
+  "lon": -122.83596,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/Tualatin%20Sherwood%20Rd%20at%20Langer%20Farms%20Pkwy_pid5334.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "CNTY",
+  "milepost": 0
+}

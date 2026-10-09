@@ -1,0 +1,21 @@
+{
+  "id": "odot-portland-se-grand-ave-at-se-madison-st",
+  "name": "Portland - SE Grand Ave at SE Madison St",
+  "lat": 45.51294,
+  "lon": -122.66092,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/SE%20Grand%20Ave%20at%20SE%20Madison%20St_pid4924.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "City",
+  "milepost": 0
+}

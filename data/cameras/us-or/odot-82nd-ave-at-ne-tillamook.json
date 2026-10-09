@@ -1,0 +1,21 @@
+{
+  "id": "odot-82nd-ave-at-ne-tillamook",
+  "name": "82nd Ave at NE Tillamook",
+  "lat": 45.53726,
+  "lon": -122.57897,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/ORE213%20at%20NE%20Tillamook_pid3201.JPG",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "OR 213",
+  "milepost": 2.025
+}

@@ -1,0 +1,21 @@
+{
+  "id": "odot-clackamas-co-92nd-at-jcb",
+  "name": "Clackamas Co - 92nd at JCB",
+  "lat": 45.45676,
+  "lon": -122.56868,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/92nd%20at%20JCB_pid3073.JPG",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "CNTY",
+  "milepost": 0
+}

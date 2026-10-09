@@ -1,11 +1,12 @@
 {
   "id": "passes",
   "name": "Mountain passes",
-  "blurb": "Open or closed, chains, snow and recent camera history for every Washington pass",
+  "blurb": "Open or closed, chains, snow and recent camera history for Northwest passes",
   "icon": "pass",
   "order": 0,
   "also": [
     "stevens-pass",
-    "snoqualmie-pass"
+    "snoqualmie-pass",
+    "mount-hood"
   ]
 }

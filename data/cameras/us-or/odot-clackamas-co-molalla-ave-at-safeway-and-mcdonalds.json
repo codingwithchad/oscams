@@ -1,0 +1,21 @@
+{
+  "id": "odot-clackamas-co-molalla-ave-at-safeway-and-mcdonalds",
+  "name": "Clackamas Co - Molalla Ave at Safeway and McDonalds",
+  "lat": 45.33534,
+  "lon": -122.58973,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/Molalla%20Ave%20at%20Safeway%20and%20McDonalds_pid5038.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "CNTY",
+  "milepost": 0
+}

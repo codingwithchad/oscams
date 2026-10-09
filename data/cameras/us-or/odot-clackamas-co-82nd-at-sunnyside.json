@@ -1,0 +1,21 @@
+{
+  "id": "odot-clackamas-co-82nd-at-sunnyside",
+  "name": "Clackamas Co - 82nd at Sunnyside",
+  "lat": 45.43255,
+  "lon": -122.57924,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/82nd%20at%20Sunnyside_pid3069.JPG",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "CNTY",
+  "milepost": 0
+}

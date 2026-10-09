@@ -1,0 +1,21 @@
+{
+  "id": "odot-clackamas-co-stafford-and-wilsonville-at-advance-and-boeckma",
+  "name": "Clackamas Co - Stafford and Wilsonville at Advance and Boeckman",
+  "lat": 45.31755,
+  "lon": -122.74374,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/Stafford%20and%20Wilsonville%20at%20Advance%20and%20Boeckman_pid5074.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "CNTY",
+  "milepost": 0
+}

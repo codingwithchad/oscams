@@ -1,0 +1,21 @@
+{
+  "id": "odot-i-5-at-barton-rd",
+  "name": "I-5 at Barton Rd",
+  "lat": 42.76678,
+  "lon": -123.331,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/I-5%20at%20Barton%20Rd_pid2392.JPG",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "I 5",
+  "milepost": 83.5
+}

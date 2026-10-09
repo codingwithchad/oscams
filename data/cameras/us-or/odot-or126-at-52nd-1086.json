@@ -1,0 +1,21 @@
+{
+  "id": "odot-or126-at-52nd-1086",
+  "name": "OR126 at 52nd",
+  "lat": 44.05551,
+  "lon": -122.93822,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/I-105%20at%2052nd%20E_pid4552.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "OR 126",
+  "milepost": 9.16
+}

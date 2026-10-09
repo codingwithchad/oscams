@@ -1,3 +1,5 @@
+import { DEFAULT_TIME_ZONE } from './regions';
+
 /** "2026-11" -> "November" (adds the year when it is not the current one). */
 export function returnLabel(expected?: string, now: Date = new Date()): string | null {
 	if (!expected) return null;
@@ -22,11 +24,11 @@ export function duration(minutes: number): string {
 	return m < 60 ? `${m} min` : `${Math.floor(m / 60)} h ${m % 60} min`;
 }
 
-/** "2:55 PM" in Washington time. */
-export function pacificClock(ms: number): string {
+/** "2:55 PM" in the local time of the place it is about (see timeZoneAt in regions.ts). */
+export function localClock(ms: number, timeZone: string = DEFAULT_TIME_ZONE): string {
 	return new Intl.DateTimeFormat('en-US', {
 		hour: 'numeric',
 		minute: '2-digit',
-		timeZone: 'America/Los_Angeles'
+		timeZone
 	}).format(new Date(ms));
 }

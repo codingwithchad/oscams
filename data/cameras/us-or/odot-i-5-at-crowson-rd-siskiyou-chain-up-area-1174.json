@@ -1,0 +1,21 @@
+{
+  "id": "odot-i-5-at-crowson-rd-siskiyou-chain-up-area-1174",
+  "name": "I-5 at Crowson Rd - Siskiyou Chain Up Area",
+  "lat": 42.17246,
+  "lon": -122.65788,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/I-5%20at%20Crowson%20Rd%20S_pid4726.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "I 5",
+  "milepost": 13
+}

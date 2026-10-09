@@ -1,0 +1,21 @@
+{
+  "id": "odot-washington-county-tualatin-valley-hwy-at-murray-blvd",
+  "name": "Washington County - Tualatin Valley Hwy at Murray Blvd",
+  "lat": 45.48954,
+  "lon": -122.82611,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/Tualatin%20Valley%20Hwy%20at%20Murray%20Blvd_pid4385.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "CNTY",
+  "milepost": 0
+}

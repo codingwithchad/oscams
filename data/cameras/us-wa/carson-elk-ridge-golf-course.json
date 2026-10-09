@@ -1,0 +1,20 @@
+{
+  "id": "carson-elk-ridge-golf-course",
+  "name": "Carson: Elk Ridge Golf Course",
+  "lat": 45.72797,
+  "lon": -121.80555,
+  "feed_type": "image",
+  "source": "elkridgegolfcourse.com via Windy.com",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "provider": "windy",
+  "provider_ref": "1746372596",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "page_url": "https://windy.com/webcams/1746372596",
+  "tags": [
+    "columbia-gorge"
+  ],
+  "attribution_text": "elkridgegolfcourse.com via Windy.com",
+  "created_at": "2026-10-09T00:00:00Z"
+}

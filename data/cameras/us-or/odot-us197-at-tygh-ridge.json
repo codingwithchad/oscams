@@ -1,0 +1,21 @@
+{
+  "id": "odot-us197-at-tygh-ridge",
+  "name": "US197 at Tygh Ridge",
+  "lat": 45.34324,
+  "lon": -121.14249,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/US197%20at%20Tygh%20Ridge%20N_pid4069.JPG",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "US 197",
+  "milepost": 21.11
+}

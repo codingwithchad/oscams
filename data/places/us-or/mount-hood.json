@@ -1,0 +1,11 @@
+{
+  "id": "mount-hood",
+  "name": "Mount Hood",
+  "region": "Oregon",
+  "state": "Oregon",
+  "blurb": "US 26 over Government Camp: Timberline, Meadows and Skibowl",
+  "lat": 45.3027,
+  "lon": -121.7539,
+  "radius_miles": 10,
+  "order": 4
+}

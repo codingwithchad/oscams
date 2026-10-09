@@ -1,0 +1,21 @@
+{
+  "id": "odot-us395-at-cape-horn",
+  "name": "US395 at Cape Horn",
+  "lat": 45.29958,
+  "lon": -119.00458,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/US395%20at%20Cape%20Horn%20S_pid5150.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "US 395",
+  "milepost": 35.76
+}

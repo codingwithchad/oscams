@@ -1,0 +1,21 @@
+{
+  "id": "odot-or569-at-or99",
+  "name": "OR569 at OR99",
+  "lat": 44.09658,
+  "lon": -123.1663,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/OR569%20at%20OR99_pid5124.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "OR 569",
+  "milepost": 6.53
+}

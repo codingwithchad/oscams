@@ -1,0 +1,21 @@
+{
+  "id": "odot-clackamas-co-21st-at-adams",
+  "name": "Clackamas Co - 21st at Adams",
+  "lat": 45.44194,
+  "lon": -122.63963,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/21st%20at%20Adams_pid3455.JPG",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "CNTY",
+  "milepost": 0
+}

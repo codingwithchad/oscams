@@ -1,8 +1,10 @@
 import Ajv2020 from 'ajv/dist/2020.js';
 import addFormats from 'ajv-formats';
-import { readdirSync, readFileSync } from 'node:fs';
+import { readFileSync } from 'node:fs';
 import path from 'node:path';
 import { describe, expect, it } from 'vitest';
+import { COVERAGE, REGIONS } from '../regions';
+import { dataFiles } from './catalog';
 
 // Every file in data/ must match its schema, and the files must agree with each other. This is what
 // makes a data-only pull request safe to review: if these pass, the data is well formed.
@@ -24,16 +26,30 @@ const json = (p: string) => JSON.parse(readFileSync(p, 'utf8'));
 const data: Record<string, { file: string; item: Record<string, any> }[]> = {};
 for (const [folder, schemaName] of Object.entries(FOLDERS)) {
 	const validate = ajv.compile(json(path.join(root, 'schema', `${schemaName}.schema.json`)));
-	data[folder] = readdirSync(path.join(root, 'data', folder))
-		.filter((f) => f.endsWith('.json'))
-		.map((file) => ({ file, item: json(path.join(root, 'data', folder, file)) }));
+	data[folder] = dataFiles(folder).map((file) => ({
+		file,
+		item: json(path.join(root, 'data', folder, file))
+	}));
 	describe(`data/${folder}`, () => {
 		it('every file matches its schema and is named after its id', () => {
 			const problems: string[] = [];
 			for (const { file, item } of data[folder]) {
 				if (!validate(item)) problems.push(`${file}: ${ajv.errorsText(validate.errors)}`);
-				if (item.id !== file.replace(/\.json$/, ''))
+				if (item.id !== path.basename(file, '.json'))
 					problems.push(`${file}: id "${item.id}" must match the file name`);
+			}
+			expect(problems).toEqual([]);
+		});
+		it('ids are unique across region folders and sit in a known region folder', () => {
+			const folders = new Set(REGIONS.map((r) => r.folder));
+			const seen = new Set<string>();
+			const problems: string[] = [];
+			for (const { file, item } of data[folder]) {
+				if (seen.has(item.id)) problems.push(`${file}: id "${item.id}" is used twice`);
+				seen.add(item.id);
+				const sub = file.includes('/') ? file.split('/')[0] : null;
+				if (sub && !folders.has(sub))
+					problems.push(`${file}: "${sub}" is not a region folder in data/regions.json`);
 			}
 			expect(problems).toEqual([]);
 		});
@@ -56,11 +72,16 @@ describe('data agrees with itself', () => {
 		expect(problems).toEqual([]);
 	});
 
-	it('coordinates are in the Pacific Northwest (catches swapped latitude and longitude)', () => {
+	it('coordinates are inside their region (catches swapped latitude and longitude)', () => {
 		const problems: string[] = [];
+		const byFolder = new Map(REGIONS.map((r) => [r.folder, r.bbox]));
+		// A little slack: cameras on a border river or a pass road can sit just outside the state line.
+		const near = (b: number[], lat: number, lon: number) =>
+			lon >= b[0] - 0.3 && lat >= b[1] - 0.3 && lon <= b[2] + 0.3 && lat <= b[3] + 0.3;
 		for (const folder of ['cameras', 'weather-sources', 'places', 'passes']) {
 			for (const { file, item } of data[folder]) {
-				if (!(item.lat >= 41 && item.lat <= 49.5 && item.lon >= -125.5 && item.lon <= -116))
+				const box = byFolder.get(file.split('/')[0]) ?? COVERAGE;
+				if (!near(box, item.lat, item.lon))
 					problems.push(`${folder}/${file}: ${item.lat}, ${item.lon}`);
 			}
 		}

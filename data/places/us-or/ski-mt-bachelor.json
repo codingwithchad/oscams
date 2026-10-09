@@ -1,0 +1,15 @@
+{
+  "id": "ski-mt-bachelor",
+  "name": "Mt. Bachelor",
+  "region": "Oregon",
+  "state": "Oregon",
+  "blurb": "Central Oregon's big mountain, west of Bend",
+  "lat": 43.979,
+  "lon": -121.6886,
+  "radius_miles": 20,
+  "collection": "ski-areas",
+  "link": {
+    "label": "Mt. Bachelor's website",
+    "url": "https://www.mtbachelor.com/"
+  }
+}

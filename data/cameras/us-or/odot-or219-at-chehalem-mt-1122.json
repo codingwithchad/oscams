@@ -1,0 +1,21 @@
+{
+  "id": "odot-or219-at-chehalem-mt-1122",
+  "name": "OR219 at Chehalem Mt.",
+  "lat": 45.35468,
+  "lon": -122.96428,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/ORE219%20at%20Chehalem%20S_pid4624.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "OR 219",
+  "milepost": 14.2
+}

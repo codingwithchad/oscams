@@ -1,0 +1,21 @@
+{
+  "id": "odot-i-405-at-sw-alder",
+  "name": "I-405 at SW Alder",
+  "lat": 45.52175,
+  "lon": -122.68541,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/I-405%20at%20SW%20Alder%20NB_pid4797.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "I 405",
+  "milepost": 2.12
+}

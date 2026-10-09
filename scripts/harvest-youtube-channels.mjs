@@ -2,7 +2,8 @@
 // Usage: node --env-file=.env scripts/harvest-youtube-channels.mjs [--write]
 // Without --write it only reports. Costs about 100 YouTube quota units per channel.
 import { execFileSync } from 'node:child_process';
-import { readdirSync, readFileSync } from 'node:fs';
+import { readFileSync } from 'node:fs';
+import { loadAll } from './lib/data.mjs';
 
 const key = process.env.YOU_TUBE_DATA_API_KEY;
 if (!key) {
@@ -12,9 +13,8 @@ if (!key) {
 const write = process.argv.includes('--write');
 const channels = JSON.parse(readFileSync('scripts/youtube-channels.json', 'utf8'));
 const known = () =>
-	readdirSync('data/cameras')
-		.filter((f) => f.endsWith('.json'))
-		.map((f) => readFileSync(`data/cameras/${f}`, 'utf8'))
+	loadAll('cameras')
+		.map((c) => JSON.stringify(c))
 		.join('\n');
 const decode = (s) =>
 	s

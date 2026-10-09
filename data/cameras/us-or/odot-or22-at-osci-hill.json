@@ -1,0 +1,21 @@
+{
+  "id": "odot-or22-at-osci-hill",
+  "name": "OR22 at OSCI Hill",
+  "lat": 44.88624,
+  "lon": -122.92135,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/ORE22%20at%20OSCI%20Hill%20WB_pid3894.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "OR 22",
+  "milepost": 5.34
+}

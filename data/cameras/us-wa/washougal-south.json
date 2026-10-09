@@ -1,0 +1,20 @@
+{
+  "id": "washougal-south",
+  "name": "Washougal – South",
+  "lat": 45.57832,
+  "lon": -122.38089,
+  "feed_type": "image",
+  "source": "portcw.com via Windy.com",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "provider": "windy",
+  "provider_ref": "1692459921",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "page_url": "https://windy.com/webcams/1692459921",
+  "tags": [
+    "portland"
+  ],
+  "attribution_text": "portcw.com via Windy.com",
+  "created_at": "2026-10-09T00:00:00Z"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "odot-or78-at-folly-farm-1449",
+  "name": "OR78 at Folly Farm",
+  "lat": 43.09677,
+  "lon": -118.22841,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/OR78%20at%20Folly%20Farm%20WB%20MP60.88_pid5270.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "OR 78",
+  "milepost": 60.88
+}

@@ -1,0 +1,11 @@
+{
+  "id": "pass-willamette",
+  "name": "Willamette Pass (OR 58)",
+  "region": "Oregon",
+  "state": "Oregon",
+  "blurb": "Eugene to Klamath Falls and US 97",
+  "lat": 43.5975,
+  "lon": -122.0372,
+  "radius_miles": 8,
+  "collection": "passes"
+}

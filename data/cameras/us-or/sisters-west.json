@@ -1,0 +1,20 @@
+{
+  "id": "sisters-west",
+  "name": "Sisters – West",
+  "lat": 44.377,
+  "lon": -121.65357,
+  "feed_type": "image",
+  "source": "blackbutteranch.com via Windy.com",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "provider": "windy",
+  "provider_ref": "1582164074",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "page_url": "https://windy.com/webcams/1582164074",
+  "tags": [
+    "santiam-pass"
+  ],
+  "attribution_text": "blackbutteranch.com via Windy.com",
+  "created_at": "2026-10-09T00:00:00Z"
+}

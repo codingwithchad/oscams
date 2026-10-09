@@ -1,0 +1,21 @@
+{
+  "id": "odot-clackamas-co-95th-ave-at-commerce-cir",
+  "name": "Clackamas Co - 95th Ave at Commerce Cir",
+  "lat": 45.335,
+  "lon": -122.77339,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/95th%20Ave%20at%20Commerce%20Cir_pid5062.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "CNTY",
+  "milepost": 0
+}

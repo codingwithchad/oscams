@@ -1,0 +1,21 @@
+{
+  "id": "odot-washington-county-185th-ave-at-walker-rd",
+  "name": "Washington County - 185th Ave at Walker Rd",
+  "lat": 45.5278,
+  "lon": -122.86727,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/185th%20Ave%20at%20Walker%20Rd_pid2832.JPG",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "CNTY",
+  "milepost": 0
+}

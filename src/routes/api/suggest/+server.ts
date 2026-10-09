@@ -4,7 +4,7 @@ import { photonSearch, type Suggestion } from '../../../lib/server/photon';
 import { allow, visitorAddress } from '../../../lib/server/rateLimit';
 import type { RequestHandler } from './$types';
 
-/** Places that match what has been typed so far: Washington towns first (instant), then other places. */
+/** Places that match what has been typed so far: towns in the covered regions first (instant), then other places. */
 export const GET: RequestHandler = async ({ url, request, getClientAddress }) => {
 	const q = (url.searchParams.get('q') ?? '').trim().slice(0, 100);
 	const who = visitorAddress(request, getClientAddress);

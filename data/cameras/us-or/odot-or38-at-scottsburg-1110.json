@@ -1,0 +1,21 @@
+{
+  "id": "odot-or38-at-scottsburg-1110",
+  "name": "OR38 at Scottsburg",
+  "lat": 43.65537,
+  "lon": -123.82343,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/ORE38%20at%20ScottsburgE_pid4600.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "OR 38",
+  "milepost": 16.6
+}

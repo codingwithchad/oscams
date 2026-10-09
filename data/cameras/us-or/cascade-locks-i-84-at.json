@@ -1,0 +1,21 @@
+{
+  "id": "cascade-locks-i-84-at",
+  "name": "Cascade Locks: I-84 at",
+  "lat": 45.66931,
+  "lon": -121.88484,
+  "feed_type": "image",
+  "source": "ODOT TripCheck via Windy.com",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "provider": "windy",
+  "provider_ref": "1498079508",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "page_url": "https://windy.com/webcams/1498079508",
+  "tags": [
+    "road",
+    "columbia-gorge"
+  ],
+  "attribution_text": "ODOT TripCheck via Windy.com",
+  "created_at": "2026-10-09T00:00:00Z"
+}

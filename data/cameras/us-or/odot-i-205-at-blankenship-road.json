@@ -1,0 +1,21 @@
+{
+  "id": "odot-i-205-at-blankenship-road",
+  "name": "I-205 at Blankenship Road",
+  "lat": 45.35742,
+  "lon": -122.66501,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/i205blnk_pid664.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "I 205",
+  "milepost": 5.39
+}

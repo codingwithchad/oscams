@@ -1,0 +1,21 @@
+{
+  "id": "odot-clackamas-co-kinsman-at-barber-st",
+  "name": "Clackamas Co - Kinsman at Barber St",
+  "lat": 45.31027,
+  "lon": -122.77864,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/Kinsman%20at%20Barber%20St_pid3585.JPG",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "CNTY",
+  "milepost": 0
+}

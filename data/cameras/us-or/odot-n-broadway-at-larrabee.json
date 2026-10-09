@@ -1,0 +1,21 @@
+{
+  "id": "odot-n-broadway-at-larrabee",
+  "name": "N Broadway at Larrabee",
+  "lat": 45.53347,
+  "lon": -122.67141,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/N%20Broadway%20at%20Larrabee%20CAM231_pid5286.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "City",
+  "milepost": 0
+}

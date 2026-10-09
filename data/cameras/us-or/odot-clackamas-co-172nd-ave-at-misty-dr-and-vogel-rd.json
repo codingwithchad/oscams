@@ -1,0 +1,21 @@
+{
+  "id": "odot-clackamas-co-172nd-ave-at-misty-dr-and-vogel-rd",
+  "name": "Clackamas Co - 172nd Ave at Misty Dr and Vogel Rd",
+  "lat": 45.42919,
+  "lon": -122.48575,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/172nd%20Ave%20at%20Misty%20Dr%20and%20Vogel%20Rd_pid4972.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "CNTY",
+  "milepost": 0
+}

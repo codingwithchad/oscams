@@ -1,4 +1,4 @@
-import { pacificClock } from './format';
+import { localClock } from './format';
 
 export interface Row {
 	label: string;
@@ -29,12 +29,8 @@ export interface TerminalSpace {
 	}[];
 }
 
-const clock = (ms: number) =>
-	new Intl.DateTimeFormat('en-US', {
-		hour: 'numeric',
-		minute: '2-digit',
-		timeZone: 'America/Los_Angeles'
-	}).format(new Date(ms));
+// Washington State Ferries sail in Pacific time.
+const clock = (ms: number) => localClock(ms, 'America/Los_Angeles');
 
 /** The next few sailings from a terminal, with drive-up space when WSF reports it. */
 export function ferryRows(space: TerminalSpace, nowMs: number, count = 3): Row[] {

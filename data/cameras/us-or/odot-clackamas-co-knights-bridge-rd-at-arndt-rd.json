@@ -1,0 +1,21 @@
+{
+  "id": "odot-clackamas-co-knights-bridge-rd-at-arndt-rd",
+  "name": "Clackamas Co - Knights Bridge Rd at Arndt Rd",
+  "lat": 45.26058,
+  "lon": -122.733,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/Knights%20Bridge%20Rd%20at%20Arndt%20Rd_pid5034.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "CNTY",
+  "milepost": 0
+}

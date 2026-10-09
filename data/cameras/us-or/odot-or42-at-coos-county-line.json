@@ -1,0 +1,21 @@
+{
+  "id": "odot-or42-at-coos-county-line",
+  "name": "OR42 at Coos County Line",
+  "lat": 42.96334,
+  "lon": -123.84756,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/ORE42%20at%20Coos%20County%20Line_pid2502.JPG",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "OR 42",
+  "milepost": 43.5
+}

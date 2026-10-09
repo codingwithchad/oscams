@@ -4,6 +4,7 @@ import { riverRows, type GaugeInfo, type StageFlow } from '../river';
 import { classifyPass, STATUS_LABEL, type RawPass } from '../passes';
 import { faaRows, observationRows } from '../airport';
 import { hourlyRows, type HourlyPeriod } from '../forecast';
+import { timeZoneAt } from '../regions';
 import { borderRows, ferryRows, type BorderReading, type TerminalSpace } from '../transit';
 import { localStamp, parseBuoy, upcomingTides, type TidePrediction } from '../marine';
 import { cached } from './cache';
@@ -44,7 +45,7 @@ async function fetchNws(src: WeatherSource, at?: number): Promise<Row[]> {
 				point.properties.forecastHourly,
 				headers
 			);
-			const rows = hourlyRows(hourly.properties.periods, at);
+			const rows = hourlyRows(hourly.properties.periods, at, 3, timeZoneAt(src.lat, src.lon));
 			if (rows.length) return rows;
 		} catch (err) {
 			console.warn(
@@ -134,7 +135,7 @@ async function fetchBuoy(src: WeatherSource): Promise<Row[]> {
 
 async function fetchTides(src: WeatherSource): Promise<Row[]> {
 	const now = new Date();
-	const tz = 'America/Los_Angeles';
+	const tz = timeZoneAt(src.lat, src.lon);
 	const stamp = localStamp(now, tz);
 	const url = new URL('https://api.tidesandcurrents.noaa.gov/api/prod/datagetter');
 	url.search = new URLSearchParams({
@@ -205,7 +206,7 @@ async function fetchRiver(src: WeatherSource): Promise<Row[]> {
 		getJson<GaugeInfo>(`${base}/${id}`, headers)
 	);
 	const flow = await getJson<StageFlow>(`${base}/${id}/stageflow`, headers);
-	return riverRows(gauge, flow, Date.now());
+	return riverRows(gauge, flow, Date.now(), timeZoneAt(src.lat, src.lon));
 }
 
 const PASS_TONE: Record<string, NonNullable<Conditions['badge']>['tone']> = Object.fromEntries(

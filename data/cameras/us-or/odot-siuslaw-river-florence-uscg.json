@@ -1,0 +1,21 @@
+{
+  "id": "odot-siuslaw-river-florence-uscg",
+  "name": "Siuslaw River Florence (USCG)",
+  "lat": 44.01861,
+  "lon": -124.13636,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/Siuslaw%20River%20Florence_pid4901.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "City",
+  "milepost": 0
+}

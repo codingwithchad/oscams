@@ -1,0 +1,21 @@
+{
+  "id": "odot-us20-at-waverly-dr-se-1173",
+  "name": "US20 at Waverly Dr SE",
+  "lat": 44.6321,
+  "lon": -123.07323,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/US20%20at%20Waverly%20Dr%20EB_pid4724.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "US 20",
+  "milepost": 0.49
+}

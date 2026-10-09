@@ -1,0 +1,21 @@
+{
+  "id": "odot-clackamas-co-sunnybrook-blvd-at-84th-ave",
+  "name": "Clackamas Co - Sunnybrook Blvd at 84th Ave",
+  "lat": 45.43005,
+  "lon": -122.57699,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/Sunnybrook%20Blvd%20at%2084th%20Ave_pid4974.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "CNTY",
+  "milepost": 0
+}

@@ -1,0 +1,21 @@
+{
+  "id": "odot-washington-county-185th-ave-at-baseline-rd",
+  "name": "Washington County - 185th Ave at Baseline Rd",
+  "lat": 45.51578,
+  "lon": -122.86768,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/185th%20Ave%20at%20Baseline%20Rd_pid2932.JPG",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "CNTY",
+  "milepost": 0
+}

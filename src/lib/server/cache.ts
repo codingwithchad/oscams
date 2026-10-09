@@ -27,6 +27,32 @@ export function cached<T>(key: string, ttlMs: number, load: () => Promise<T>): P
 	return promise;
 }
 
+/**
+ * Like `cached`, for many keys at once: fresh entries come from memory and all the missing ones are loaded in
+ * one call (for APIs that answer many ids per request). Missing keys that `load` does not return stay missing.
+ */
+export async function cachedMany<T>(
+	keys: string[],
+	ttlMs: number,
+	load: (missing: string[]) => Promise<Map<string, T>>
+): Promise<Map<string, T>> {
+	const out = new Map<string, T>();
+	const missing: string[] = [];
+	for (const key of new Set(keys)) {
+		const hit = store.get(key);
+		if (hit && Date.now() - hit.at < ttlMs) out.set(key, hit.value as T);
+		else missing.push(key);
+	}
+	if (missing.length) {
+		for (const [key, value] of await load(missing)) {
+			if (store.size >= MAX_ENTRIES) store.delete(store.keys().next().value as string);
+			store.set(key, { at: Date.now(), value });
+			out.set(key, value);
+		}
+	}
+	return out;
+}
+
 /** For tests: forget everything. */
 export function clearCache() {
 	store.clear();

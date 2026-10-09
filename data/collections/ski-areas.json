@@ -1,11 +1,12 @@
 {
   "id": "ski-areas",
   "name": "Ski areas",
-  "blurb": "Washington's biggest ski areas: conditions and cameras",
+  "blurb": "The Northwest's biggest ski areas: conditions and cameras",
   "icon": "ski",
   "order": 6,
   "also": [
     "stevens-pass",
-    "snoqualmie-pass"
+    "snoqualmie-pass",
+    "mount-hood"
   ]
 }

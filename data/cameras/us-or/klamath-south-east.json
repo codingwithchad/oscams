@@ -1,0 +1,20 @@
+{
+  "id": "klamath-south-east",
+  "name": "Klamath – South-east",
+  "lat": 42.86587,
+  "lon": -122.16886,
+  "feed_type": "image",
+  "source": "nps.gov via Windy.com",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "provider": "windy",
+  "provider_ref": "1631756654",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "page_url": "https://windy.com/webcams/1631756654",
+  "tags": [
+    "crater-lake"
+  ],
+  "attribution_text": "nps.gov via Windy.com",
+  "created_at": "2026-10-09T00:00:00Z"
+}

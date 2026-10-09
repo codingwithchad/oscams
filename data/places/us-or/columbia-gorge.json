@@ -1,0 +1,11 @@
+{
+  "id": "columbia-gorge",
+  "name": "Columbia River Gorge",
+  "region": "Oregon",
+  "state": "Oregon",
+  "blurb": "I-84 and the falls, from Troutdale to Hood River",
+  "lat": 45.62,
+  "lon": -121.95,
+  "radius_miles": 20,
+  "collection": "scenic"
+}

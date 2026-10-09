@@ -1,0 +1,21 @@
+{
+  "id": "odot-or22-at-santiam-park",
+  "name": "OR22 at Santiam Park",
+  "lat": 44.77653,
+  "lon": -122.56339,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/ORE22%20at%20Santiam%20Park%20EB_pid2993.JPG",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "OR 22",
+  "milepost": 25.4
+}

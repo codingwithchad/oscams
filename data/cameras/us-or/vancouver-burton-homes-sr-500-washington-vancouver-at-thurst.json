@@ -1,0 +1,21 @@
+{
+  "id": "vancouver-burton-homes-sr-500-washington-vancouver-at-thurst",
+  "name": "Vancouver: Burton Homes: SR-500 Washington - Vancouver at Thurston",
+  "lat": 45.65451,
+  "lon": -122.58713,
+  "feed_type": "image",
+  "source": "ODOT TripCheck via Windy.com",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "provider": "windy",
+  "provider_ref": "1746047528",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "page_url": "https://windy.com/webcams/1746047528",
+  "tags": [
+    "road",
+    "portland"
+  ],
+  "attribution_text": "ODOT TripCheck via Windy.com",
+  "created_at": "2026-10-09T00:00:00Z"
+}

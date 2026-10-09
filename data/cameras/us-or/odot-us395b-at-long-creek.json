@@ -1,0 +1,21 @@
+{
+  "id": "odot-us395b-at-long-creek",
+  "name": "US395B at Long Creek",
+  "lat": 44.706,
+  "lon": -119.10822,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/US395B%20at%20Long%20Creek_pid3495.JPG",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "US 395B",
+  "milepost": 94
+}

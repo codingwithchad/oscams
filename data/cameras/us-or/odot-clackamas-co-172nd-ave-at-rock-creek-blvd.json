@@ -1,0 +1,21 @@
+{
+  "id": "odot-clackamas-co-172nd-ave-at-rock-creek-blvd",
+  "name": "Clackamas Co - 172nd Ave at Rock Creek Blvd",
+  "lat": 45.41466,
+  "lon": -122.48554,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/172nd%20Ave%20at%20Rock%20Creek%20Blvd_pid4970.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "CNTY",
+  "milepost": 0
+}

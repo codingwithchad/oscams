@@ -1,0 +1,21 @@
+{
+  "id": "odot-jackson-county-dead-indian-memorial-rd-summit",
+  "name": "Jackson County - Dead Indian Memorial Rd. Summit",
+  "lat": 42.25023,
+  "lon": -122.50944,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/Dead%20Indian%20Memorial%20Rd%20E_pid2554.JPG",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "CNTY",
+  "milepost": 13
+}

@@ -1,0 +1,21 @@
+{
+  "id": "odot-i-5-at-rogue-river",
+  "name": "I-5 at Rogue River",
+  "lat": 42.43191,
+  "lon": -123.17028,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/I-5%20at%20Rogue%20River%20NB_pid3503.JPG",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "I 5",
+  "milepost": 48.82
+}

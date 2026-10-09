@@ -1,0 +1,21 @@
+{
+  "id": "odot-eugene-11th-at-bailey-hill",
+  "name": "Eugene - 11th at Bailey Hill",
+  "lat": 44.04803,
+  "lon": -123.14801,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/11th%20at%20Bailey%20Hill_pid4137.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "City",
+  "milepost": 0
+}

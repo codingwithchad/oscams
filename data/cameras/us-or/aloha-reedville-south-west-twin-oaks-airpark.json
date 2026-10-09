@@ -1,0 +1,20 @@
+{
+  "id": "aloha-reedville-south-west-twin-oaks-airpark",
+  "name": "Aloha-Reedville – South-west: Twin Oaks Airpark",
+  "lat": 45.42969,
+  "lon": -122.9402,
+  "feed_type": "image",
+  "source": "twinoakswx.com via Windy.com",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "provider": "windy",
+  "provider_ref": "1586030781",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "page_url": "https://windy.com/webcams/1586030781",
+  "tags": [
+    "portland"
+  ],
+  "attribution_text": "twinoakswx.com via Windy.com",
+  "created_at": "2026-10-09T00:00:00Z"
+}

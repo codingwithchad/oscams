@@ -1,0 +1,21 @@
+{
+  "id": "odot-or6-at-fairview-wb",
+  "name": "OR6 at Fairview WB",
+  "lat": 45.46689,
+  "lon": -123.75859,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/ORE6%20at%20Fairview%20WB_pid4399.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "OR 6",
+  "milepost": 4.2
+}

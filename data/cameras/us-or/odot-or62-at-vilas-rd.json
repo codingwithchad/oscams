@@ -1,0 +1,21 @@
+{
+  "id": "odot-or62-at-vilas-rd",
+  "name": "OR62 at Vilas Rd",
+  "lat": 42.38967,
+  "lon": -122.86539,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/ORE62%20at%20Vilas%20Rd_pid4658.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "OR 62",
+  "milepost": 3.51
+}

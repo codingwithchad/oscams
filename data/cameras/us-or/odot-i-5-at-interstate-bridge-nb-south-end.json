@@ -1,0 +1,19 @@
+{
+  "id": "odot-i-5-at-interstate-bridge-nb-south-end",
+  "name": "I-5 at Interstate Bridge NB, south end",
+  "lat": 45.614696,
+  "lon": -122.677032,
+  "feed_url": "https://www.tripcheck.com/RoadCams/cams/i5brnbn_pid552.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-07T00:00:00Z"
+}

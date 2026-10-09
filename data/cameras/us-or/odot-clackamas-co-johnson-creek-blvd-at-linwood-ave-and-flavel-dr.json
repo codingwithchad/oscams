@@ -1,0 +1,21 @@
+{
+  "id": "odot-clackamas-co-johnson-creek-blvd-at-linwood-ave-and-flavel-dr",
+  "name": "Clackamas Co - Johnson Creek Blvd at Linwood Ave and Flavel Dr",
+  "lat": 45.45611,
+  "lon": -122.59899,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/Johnson%20Creek%20Blvd%20at%20Linwood%20Ave%20and%20Flavel%20Dr_pid4984.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "CNTY",
+  "milepost": 0
+}

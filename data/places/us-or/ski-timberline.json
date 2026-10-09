@@ -1,0 +1,15 @@
+{
+  "id": "ski-timberline",
+  "name": "Timberline Lodge",
+  "region": "Oregon",
+  "state": "Oregon",
+  "blurb": "Mount Hood's year-round ski area, above Government Camp",
+  "lat": 45.3311,
+  "lon": -121.711,
+  "radius_miles": 6,
+  "collection": "ski-areas",
+  "link": {
+    "label": "Timberline's conditions page",
+    "url": "https://www.timberlinelodge.com/conditions"
+  }
+}

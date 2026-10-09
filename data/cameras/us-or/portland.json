@@ -1,0 +1,20 @@
+{
+  "id": "portland",
+  "name": "Portland",
+  "lat": 45.50565,
+  "lon": -122.66443,
+  "feed_type": "image",
+  "source": "allclassical.org via Windy.com",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "provider": "windy",
+  "provider_ref": "1639956971",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "page_url": "https://windy.com/webcams/1639956971",
+  "tags": [
+    "portland"
+  ],
+  "attribution_text": "allclassical.org via Windy.com",
+  "created_at": "2026-10-09T00:00:00Z"
+}

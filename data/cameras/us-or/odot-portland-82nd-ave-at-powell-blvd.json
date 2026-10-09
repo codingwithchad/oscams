@@ -1,0 +1,21 @@
+{
+  "id": "odot-portland-82nd-ave-at-powell-blvd",
+  "name": "Portland - 82nd Ave at Powell Blvd",
+  "lat": 45.49743,
+  "lon": -122.57875,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/ORE213%20at%20Powell%20Blvd%20E_pid2704.JPG",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "OR 213",
+  "milepost": 4.77
+}

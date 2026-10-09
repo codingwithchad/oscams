@@ -2,7 +2,8 @@
 // Usage: node --env-file=.env scripts/import-wsdot-route.mjs "<from lat,lon>" "<to lat,lon>" [corridor_miles=0.6] [tag]
 //        node --env-file=.env scripts/import-wsdot-route.mjs all     (every working camera and reporting station in the state)
 // Only working cameras are added (each picture is downloaded and checked), and ones we already have are skipped.
-import { readdirSync, readFileSync, writeFileSync } from 'node:fs';
+import { mkdirSync, writeFileSync } from 'node:fs';
+import { loadAll } from './lib/data.mjs';
 
 const [fromArg, toArg, corridorArg = '0.6', tagArg = ''] = process.argv.slice(2);
 const key = process.env.WSDOT_CODE;
@@ -58,12 +59,11 @@ const slug = (s) =>
 		.toLowerCase()
 		.replace(/[^a-z0-9]+/g, '-')
 		.replace(/^-|-$/g, '');
-const load = (dir) =>
-	readdirSync(dir)
-		.filter((f) => f.endsWith('.json'))
-		.map((f) => JSON.parse(readFileSync(`${dir}/${f}`, 'utf8')));
+const load = (dir) => loadAll(dir.replace(/^data\//, ''));
 const haveUrls = new Set(load('data/cameras').map((c) => c.feed_url));
 const ids = new Set(load('data/cameras').map((c) => c.id));
+mkdirSync('data/cameras/us-wa', { recursive: true });
+mkdirSync('data/weather-sources/us-wa', { recursive: true });
 
 const cams = await (
 	await fetch(
@@ -74,6 +74,8 @@ const candidates = cams.filter(
 	(c) =>
 		c.IsActive &&
 		!haveUrls.has(c.ImageURL) &&
+		// WSDOT's list includes Oregon cameras near Portland that TripCheck publishes; those belong to Oregon.
+		!/tripcheck\.com/i.test(c.ImageURL) &&
 		offRoute(c.CameraLocation.Latitude, c.CameraLocation.Longitude) <= corridor
 );
 
@@ -125,7 +127,7 @@ for (let i = 0; i < candidates.length; i += 8) {
 			cam.route = `${m[1].toUpperCase()} ${m[2]}`;
 			cam.milepost = Number(m[3]);
 		}
-		writeFileSync(`data/cameras/${id}.json`, JSON.stringify(cam, null, 2) + '\n');
+		writeFileSync(`data/cameras/us-wa/${id}.json`, JSON.stringify(cam, null, 2) + '\n');
 		added++;
 	});
 }
@@ -151,7 +153,7 @@ for (const s of stations) {
 		continue;
 	const id = `wsdot-station-${slug(s.StationName).slice(0, 48)}-${s.StationID}`;
 	writeFileSync(
-		`data/weather-sources/${id}.json`,
+		`data/weather-sources/us-wa/${id}.json`,
 		JSON.stringify(
 			{
 				id,

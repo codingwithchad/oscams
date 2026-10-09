@@ -1,0 +1,21 @@
+{
+  "id": "odot-clackamas-co-johnson-rd-at-deer-creek-ln",
+  "name": "Clackamas Co - Johnson Rd at Deer Creek Ln",
+  "lat": 45.42399,
+  "lon": -122.58289,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/Johnson%20Rd%20at%20Deer%20Creek%20Ln_pid5008.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "CNTY",
+  "milepost": 0
+}

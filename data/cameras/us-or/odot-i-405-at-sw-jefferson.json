@@ -1,0 +1,21 @@
+{
+  "id": "odot-i-405-at-sw-jefferson",
+  "name": "I-405 at SW Jefferson",
+  "lat": 45.51696,
+  "lon": -122.6883,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/I-405%20at%20SW%20Jefferson_pid4799.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "I 405",
+  "milepost": 1.77
+}

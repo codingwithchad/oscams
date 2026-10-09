@@ -1,0 +1,19 @@
+{
+  "id": "odot-us-26-at-east-vista-ridge-tunnel",
+  "name": "US 26 at East Vista Ridge Tunnel",
+  "lat": 45.51538,
+  "lon": -122.69277,
+  "feed_url": "https://www.tripcheck.com/RoadCams/cams/26tunnelE_pid529.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-07T00:00:00Z"
+}

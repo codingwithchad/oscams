@@ -1,0 +1,21 @@
+{
+  "id": "odot-clackamas-co-sequoia-pkwy-at-hazel-dell-way",
+  "name": "Clackamas Co - Sequoia Pkwy at Hazel Dell Way",
+  "lat": 45.26738,
+  "lon": -122.67481,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/Sequoia%20Pkwy%20at%20Hazel%20Dell%20Way_pid5088.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "CNTY",
+  "milepost": 0
+}

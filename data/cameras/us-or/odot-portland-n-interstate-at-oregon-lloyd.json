@@ -1,0 +1,21 @@
+{
+  "id": "odot-portland-n-interstate-at-oregon-lloyd",
+  "name": "Portland - N Interstate at Oregon/Lloyd",
+  "lat": 45.52858,
+  "lon": -122.66578,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/N%20Interstate%20at%20Oregon%20Lloyd_pid5345.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "City",
+  "milepost": 0
+}

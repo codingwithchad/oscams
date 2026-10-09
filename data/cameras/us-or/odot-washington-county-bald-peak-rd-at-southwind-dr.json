@@ -1,0 +1,21 @@
+{
+  "id": "odot-washington-county-bald-peak-rd-at-southwind-dr",
+  "name": "Washington County - Bald Peak Rd at Southwind Dr",
+  "lat": 45.41907,
+  "lon": -123.0511,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/Bald%20Peak%20Rd%20at%20Southwind%20Dr_pid4541.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "CNTY",
+  "milepost": 0
+}

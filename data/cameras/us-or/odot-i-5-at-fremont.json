@@ -1,0 +1,19 @@
+{
+  "id": "odot-i-5-at-fremont",
+  "name": "I-5 at Fremont",
+  "lat": 45.546633,
+  "lon": -122.677927,
+  "feed_url": "https://www.tripcheck.com/RoadCams/cams/i5fremont_pid560.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-07T00:00:00Z"
+}

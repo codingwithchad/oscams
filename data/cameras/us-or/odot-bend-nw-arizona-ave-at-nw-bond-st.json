@@ -1,0 +1,21 @@
+{
+  "id": "odot-bend-nw-arizona-ave-at-nw-bond-st",
+  "name": "Bend NW Arizona Ave at NW Bond St",
+  "lat": 44.05157,
+  "lon": -121.31637,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/Bend%20NW%20Arizona%20Ave%20at%20NW%20Bond%20St_pid4754.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "City",
+  "milepost": 0
+}

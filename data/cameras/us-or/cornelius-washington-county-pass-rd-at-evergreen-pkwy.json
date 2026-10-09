@@ -1,0 +1,21 @@
+{
+  "id": "cornelius-washington-county-pass-rd-at-evergreen-pkwy",
+  "name": "Cornelius: Washington County - Pass Rd at Evergreen Pkwy",
+  "lat": 45.54637,
+  "lon": -122.89994,
+  "feed_type": "image",
+  "source": "ODOT TripCheck via Windy.com",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "provider": "windy",
+  "provider_ref": "1515014072",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "page_url": "https://windy.com/webcams/1515014072",
+  "tags": [
+    "road",
+    "portland"
+  ],
+  "attribution_text": "ODOT TripCheck via Windy.com",
+  "created_at": "2026-10-09T00:00:00Z"
+}

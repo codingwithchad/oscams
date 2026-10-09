@@ -1,0 +1,20 @@
+{
+  "id": "stevenson-east-point-kite-beach",
+  "name": "Stevenson: East Point Kite Beach",
+  "lat": 45.69329,
+  "lon": -121.87813,
+  "feed_type": "image",
+  "source": "visitstevensonwa.com via Windy.com",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "provider": "windy",
+  "provider_ref": "1644875672",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "page_url": "https://windy.com/webcams/1644875672",
+  "tags": [
+    "columbia-gorge"
+  ],
+  "attribution_text": "visitstevensonwa.com via Windy.com",
+  "created_at": "2026-10-09T00:00:00Z"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "odot-coburg-i-5-at-van-duyn-rd",
+  "name": "Coburg - I-5 at Van Duyn Rd",
+  "lat": 44.13704,
+  "lon": -123.0514,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/I-5%20at%20Van%20Duyn%20Rd%20N_pid4249.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "City",
+  "milepost": 199.15
+}

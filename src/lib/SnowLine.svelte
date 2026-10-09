@@ -74,13 +74,13 @@
 		{#if snowy}
 			<p class="snow-advice">
 				About {snowyMiles} of the {Math.round(total)} miles are expected to be snowing. Expect traction
-				tires or chains on the snowy part (required on most WA passes), and without them or 4WD it may
-				not be worth the trip. Check WSDOT's pass report before you go.
+				tires or chains on the snowy part (often required on mountain passes), and without them or 4WD
+				it may not be worth the trip. Check the state's pass report before you go.
 			</p>
 		{/if}
 		<p class="snow-note">
-			A forecast for when you'll get there, from Open-Meteo. Check the pass cameras and WSDOT before
-			you go.
+			A forecast for when you'll get there, from Open-Meteo. Check the pass cameras and the state's
+			road report before you go.
 		</p>
 	</section>
 {/if}

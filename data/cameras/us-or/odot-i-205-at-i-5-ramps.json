@@ -1,0 +1,21 @@
+{
+  "id": "odot-i-205-at-i-5-ramps",
+  "name": "I-205 at I-5 Ramps",
+  "lat": 45.36985,
+  "lon": -122.75002,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/I-205%20at%20I-5%20Ramps_pid4459.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "I 205",
+  "milepost": 0.95
+}

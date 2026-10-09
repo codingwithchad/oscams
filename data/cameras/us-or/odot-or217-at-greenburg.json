@@ -1,0 +1,21 @@
+{
+  "id": "odot-or217-at-greenburg",
+  "name": "OR217 at Greenburg",
+  "lat": 45.44269,
+  "lon": -122.77623,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/217green_pid517.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "OR 217",
+  "milepost": 4.95
+}

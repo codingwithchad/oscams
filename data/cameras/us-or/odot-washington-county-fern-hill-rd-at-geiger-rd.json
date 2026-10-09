@@ -1,0 +1,21 @@
+{
+  "id": "odot-washington-county-fern-hill-rd-at-geiger-rd",
+  "name": "Washington County - Fern Hill Rd at Geiger Rd",
+  "lat": 45.50185,
+  "lon": -123.08944,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/Fern%20Hill%20Rd%20at%20Geiger%20Rd_pid4521.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "CNTY",
+  "milepost": 0
+}

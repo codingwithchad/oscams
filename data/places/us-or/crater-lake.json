@@ -1,0 +1,11 @@
+{
+  "id": "crater-lake",
+  "name": "Crater Lake",
+  "region": "Oregon",
+  "state": "Oregon",
+  "blurb": "Rim Village and the lake, plus OR 138 at Diamond Lake",
+  "lat": 42.9446,
+  "lon": -122.109,
+  "radius_miles": 15,
+  "collection": "national-parks"
+}

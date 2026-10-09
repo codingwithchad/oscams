@@ -1,0 +1,21 @@
+{
+  "id": "odot-portland-se-82nd-at-schiller",
+  "name": "Portland - SE 82nd at Schiller",
+  "lat": 45.48797,
+  "lon": -122.57878,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/SE%2082nd%20at%20Schiller_pid5130.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "City",
+  "milepost": 0
+}

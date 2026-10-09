@@ -1,0 +1,21 @@
+{
+  "id": "cook-i-84-at-wyeth-scale-ramp",
+  "name": "Cook: I-84 at Wyeth Scale Ramp",
+  "lat": 45.68788,
+  "lon": -121.70189,
+  "feed_type": "image",
+  "source": "ODOT TripCheck via Windy.com",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "provider": "windy",
+  "provider_ref": "1641417097",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "page_url": "https://windy.com/webcams/1641417097",
+  "tags": [
+    "road",
+    "columbia-gorge"
+  ],
+  "attribution_text": "ODOT TripCheck via Windy.com",
+  "created_at": "2026-10-09T00:00:00Z"
+}

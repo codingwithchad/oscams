@@ -3,6 +3,7 @@ import { distanceMiles, isDormant, nearby, parseLatLon } from '../../lib/geo';
 import { getCatalog } from '../../lib/server/catalog';
 import { getConditions } from '../../lib/server/conditions';
 import { geocode } from '../../lib/server/geocode';
+import { withForecast } from '../../lib/server/autoForecast';
 import { withLiveLinks } from '../../lib/server/live';
 import { drivingRoute } from '../../lib/server/routing';
 import { snowAlong } from '../../lib/server/snow';
@@ -134,6 +135,8 @@ export const load: PageServerLoad = async ({ url, setHeaders }) => {
 		radius
 	))
 		sources.set(w.id, w);
+	// Always a forecast for where you are going, even where we have no weather files yet.
+	for (const w of withForecast([...sources.values()], to, radius)) sources.set(w.id, w);
 	const wx: Nearby<WeatherSource>[] = [...sources.values()].map((w) => ({
 		...w,
 		distance: distanceMiles(w, to)

@@ -3,7 +3,8 @@ import type { Place } from '../types';
 import { cached } from './cache';
 import { allow } from './rateLimit';
 import { queryVariants, similarity } from '../queryVariants';
-import { lookupWashington } from './gazetteer';
+import { lookupTown } from './gazetteer';
+import { COVERAGE } from '../regions';
 import { photonSearch } from './photon';
 
 const USER_AGENT = 'WhatsUpAhead (https://github.com/codingwithchad/whatsupahead)';
@@ -33,8 +34,8 @@ export async function geocode(query: string): Promise<Place | null> {
 	const direct = parseLatLon(q);
 	if (direct) return { ...direct, label: `${direct.lat.toFixed(3)}, ${direct.lon.toFixed(3)}` };
 
-	// Washington towns and ZIP codes come from the offline list: instant, and no outside service needed.
-	const local = lookupWashington(q);
+	// Towns and ZIP codes in the covered regions come from the offline list: instant, no outside service needed.
+	const local = lookupTown(q);
 	if (local) return local;
 
 	return cached(`geo:${q.toLowerCase()}`, DAY, async () => {
@@ -77,8 +78,9 @@ async function nominatim(q: string): Promise<Place | null> {
 		q,
 		format: 'jsonv2',
 		limit: '5',
-		// Prefer the Northwest (so "Bellevue Square" is not the one in London), without excluding anywhere else in the US.
-		viewbox: '-125.5,49.5,-116.0,45.5',
+		// Prefer the regions the app covers (so "Bellevue Square" is not the one in London), without excluding
+		// anywhere else in the US.
+		viewbox: [COVERAGE[0], COVERAGE[3], COVERAGE[2], COVERAGE[1]].join(','),
 		bounded: '0',
 		countrycodes: 'us'
 	}).toString();

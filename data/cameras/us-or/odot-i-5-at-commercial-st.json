@@ -1,0 +1,21 @@
+{
+  "id": "odot-i-5-at-commercial-st",
+  "name": "I-5 at Commercial St",
+  "lat": 44.85577,
+  "lon": -123.01253,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/I-5%20at%20Commercial%20St%20SB_pid5213.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "I 5",
+  "milepost": 249.33
+}

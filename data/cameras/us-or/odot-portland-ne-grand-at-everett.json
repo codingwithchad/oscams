@@ -1,0 +1,21 @@
+{
+  "id": "odot-portland-ne-grand-at-everett",
+  "name": "Portland - NE Grand at Everett",
+  "lat": 45.52519,
+  "lon": -122.66072,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/NE%20Grand%20at%20Everett_pid5340.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "City",
+  "milepost": 0
+}

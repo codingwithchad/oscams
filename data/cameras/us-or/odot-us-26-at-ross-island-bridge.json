@@ -1,0 +1,19 @@
+{
+  "id": "odot-us-26-at-ross-island-bridge",
+  "name": "US 26 at Ross Island Bridge",
+  "lat": 45.50181,
+  "lon": -122.66433,
+  "feed_url": "https://tripcheck.com/RoadCams/cams/26ribridge_pid591.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-07T00:00:00Z"
+}

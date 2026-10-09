@@ -1,0 +1,21 @@
+{
+  "id": "odot-or66-green-springs-hwy-at-or140",
+  "name": "OR66 Green Springs Hwy at OR140",
+  "lat": 42.19105,
+  "lon": -121.80386,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/OR66%20Green%20Springs%20Hwy%20at%20OR140_pid5142.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "OR 66",
+  "milepost": 58.8
+}

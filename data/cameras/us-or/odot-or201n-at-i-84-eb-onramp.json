@@ -1,0 +1,21 @@
+{
+  "id": "odot-or201n-at-i-84-eb-onramp",
+  "name": "OR201N at I-84 EB Onramp",
+  "lat": 44.25949,
+  "lon": -117.17915,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/ORE201N%20at%20I-84%20EB%20Onramp_pid3907.JPG",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "OR 201",
+  "milepost": 356
+}

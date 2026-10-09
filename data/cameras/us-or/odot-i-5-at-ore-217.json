@@ -1,0 +1,19 @@
+{
+  "id": "odot-i-5-at-ore-217",
+  "name": "I-5 at ORE 217",
+  "lat": 45.420754,
+  "lon": -122.74439,
+  "feed_url": "https://www.tripcheck.com/RoadCams/cams/i5217_pid548.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-07T00:00:00Z"
+}

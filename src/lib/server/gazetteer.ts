@@ -1,38 +1,55 @@
-import { readFileSync } from 'node:fs';
+import { readdirSync, readFileSync } from 'node:fs';
 import path from 'node:path';
+import { REGIONS } from '../regions';
 import type { Place } from '../types';
 
-type PlaceRow = [name: string, lat: number, lon: number, type: string];
-type ZipRow = [zip: string, lat: number, lon: number, near: string];
+// The offline list of towns and ZIP codes for every region the app covers (data/gazetteer/<region>.json,
+// built from the US Census by scripts/build-gazetteer.mjs). Answers most searches instantly, without going online.
+
+type Town = { name: string; lat: number; lon: number; type: string; abbr: string };
+type Zip = { zip: string; lat: number; lon: number; near: string; abbr: string };
 
 interface Index {
-	towns: Map<string, PlaceRow>;
-	zips: Map<string, ZipRow>;
+	towns: Map<string, Town[]>;
+	zips: Map<string, Zip>;
 }
 
 let index: Index | null = null;
 
+// Cities and towns win over unincorporated areas that share a name; then the order of data/regions.json.
+const ORDER = new Map(REGIONS.map((r, i) => [r.abbr, i]));
+const rank = (t: Town) =>
+	(t.type === 'city' || t.type === 'town' ? 0 : 100) + (ORDER.get(t.abbr) ?? 50);
+
 function load(): Index {
 	if (index) return index;
-	const dir = process.env.DATA_DIR ?? path.resolve(process.cwd(), 'data');
-	const towns = new Map<string, PlaceRow>();
-	const zips = new Map<string, ZipRow>();
+	const dir = path.join(process.env.DATA_DIR ?? path.resolve(process.cwd(), 'data'), 'gazetteer');
+	const towns = new Map<string, Town[]>();
+	const zips = new Map<string, Zip>();
+	let files: string[] = [];
 	try {
-		const raw = JSON.parse(readFileSync(path.join(dir, 'gazetteer', 'wa.json'), 'utf8')) as {
-			places: PlaceRow[];
-			zips: ZipRow[];
-		};
-		// Cities and towns win over unincorporated areas that share a name.
-		const rank = (t: string) => (t === 'city' || t === 'town' ? 0 : 1);
-		for (const row of raw.places) {
-			const key = normalize(row[0]);
-			const old = towns.get(key);
-			if (!old || rank(row[3]) < rank(old[3])) towns.set(key, row);
-		}
-		for (const row of raw.zips) zips.set(row[0], row);
+		files = readdirSync(dir).filter((f) => f.endsWith('.json'));
 	} catch (err) {
 		console.warn(`[gazetteer] not loaded: ${(err as Error).message}`);
 	}
+	for (const file of files) {
+		try {
+			const raw = JSON.parse(readFileSync(path.join(dir, file), 'utf8')) as {
+				abbr: string;
+				places: [string, number, number, string][];
+				zips: [string, number, number, string][];
+			};
+			for (const [name, lat, lon, type] of raw.places) {
+				const key = normalize(name);
+				towns.set(key, [...(towns.get(key) ?? []), { name, lat, lon, type, abbr: raw.abbr }]);
+			}
+			for (const [zip, lat, lon, near] of raw.zips)
+				zips.set(zip, { zip, lat, lon, near, abbr: raw.abbr });
+		} catch (err) {
+			console.warn(`[gazetteer] ${file}: ${(err as Error).message}`);
+		}
+	}
+	for (const list of towns.values()) list.sort((a, b) => rank(a) - rank(b));
 	return (index = { towns, zips });
 }
 
@@ -44,27 +61,39 @@ const normalize = (s: string) =>
 		.replace(/\s+/g, ' ')
 		.trim();
 
-const STATE = /^(.*?)[,\s]+(wa|washington)$/i;
-const OTHER_STATE = /,\s*(?!wa\b|washington\b)[a-z .]{2,}$/i;
+/** "Snohomish, WA" / "Salem Oregon" -> name and state abbreviation; null state when none was written. */
+function splitState(q: string): { name: string; abbr: string | null } {
+	const m = q.match(/^(.*?)[,\s]+([a-z .]{2,})$/i);
+	if (m) {
+		const said = m[2].trim().toLowerCase();
+		const region = REGIONS.find(
+			(r) => r.abbr.toLowerCase() === said || r.name.toLowerCase() === said
+		);
+		if (region) return { name: m[1], abbr: region.abbr };
+		// Looks like "Boise, Idaho": a state we do not cover, unless the comma was part of the name itself.
+		if (q.includes(',')) return { name: m[1], abbr: '??' };
+	}
+	return { name: q, abbr: null };
+}
 
 /**
- * Look up a Washington town or ZIP code without going online. Returns null when the text is not
- * one of those (so the caller can try an online search), and for places in other states.
+ * Look up a town or ZIP code in the covered regions without going online. Returns null when the text is not
+ * one of those (so the caller can try an online search), including places in states we do not cover.
  */
-export function lookupWashington(query: string): Place | null {
+export function lookupTown(query: string): Place | null {
 	const q = query.trim();
 	const idx = load();
 
 	const zip = q.match(/^(\d{5})(?:-\d{4})?$/);
 	if (zip) {
-		const row = idx.zips.get(zip[1]);
-		return row ? { lat: row[1], lon: row[2], label: `${row[0]}, ${row[3]}` } : null;
+		const z = idx.zips.get(zip[1]);
+		return z ? { lat: z.lat, lon: z.lon, label: `${z.zip}, ${z.near}, ${z.abbr}` } : null;
 	}
 
-	if (OTHER_STATE.test(q) && !STATE.test(q)) return null;
-	const name = normalize((STATE.exec(q)?.[1] ?? q).replace(/,$/, ''));
-	const row = idx.towns.get(name);
-	return row ? { lat: row[1], lon: row[2], label: `${row[0]}, WA` } : null;
+	const { name, abbr } = splitState(q.replace(/,$/, ''));
+	const list = idx.towns.get(normalize(name)) ?? idx.towns.get(normalize(q));
+	const town = list?.find((t) => !abbr || t.abbr === abbr);
+	return town ? { lat: town.lat, lon: town.lon, label: `${town.name}, ${town.abbr}` } : null;
 }
 
 /** Towns whose names start with what has been typed so far, for the as-you-type list (instant, no outside service). */
@@ -76,12 +105,8 @@ export function suggestTowns(
 	if (key.length < 2) return [];
 	return [...load().towns.entries()]
 		.filter(([name]) => name.startsWith(key))
-		.map(([, row]) => row)
-		.sort(
-			(a, b) =>
-				(a[3] === 'city' || a[3] === 'town' ? 0 : 1) -
-					(b[3] === 'city' || b[3] === 'town' ? 0 : 1) || a[0].localeCompare(b[0])
-		)
+		.flatMap(([, list]) => list)
+		.sort((a, b) => rank(a) - rank(b) || a.name.localeCompare(b.name))
 		.slice(0, limit)
-		.map((row) => ({ label: row[0], sub: 'WA', lat: row[1], lon: row[2] }));
+		.map((t) => ({ label: t.name, sub: t.abbr, lat: t.lat, lon: t.lon }));
 }

@@ -1,0 +1,21 @@
+{
+  "id": "maywood-park-portland-sandy-blvd-at-77th",
+  "name": "Maywood Park: Portland - Sandy Blvd at 77th",
+  "lat": 45.55036,
+  "lon": -122.58374,
+  "feed_type": "image",
+  "source": "ODOT TripCheck via Windy.com",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "provider": "windy",
+  "provider_ref": "1461273485",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "page_url": "https://windy.com/webcams/1461273485",
+  "tags": [
+    "road",
+    "portland"
+  ],
+  "attribution_text": "ODOT TripCheck via Windy.com",
+  "created_at": "2026-10-09T00:00:00Z"
+}

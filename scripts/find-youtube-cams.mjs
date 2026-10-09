@@ -2,7 +2,7 @@
 // Usage: node --env-file=.env scripts/find-youtube-cams.mjs <lat> <lon> [radius_km] [search words]
 // Example: node --env-file=.env scripts/find-youtube-cams.mjs 47.6 -120.66 50 "town square"
 // Costs about 101 of the 10,000 daily YouTube quota units per run. Radius can be at most 1000 km.
-import { readdirSync, readFileSync } from 'node:fs';
+import { loadAll } from './lib/data.mjs';
 
 const [lat, lon, radius = '50', ...words] = process.argv.slice(2);
 const key = process.env.YOU_TUBE_DATA_API_KEY;
@@ -40,9 +40,8 @@ if (!ids.length) {
 }
 
 // Already in the app? Match on video id or channel id inside existing feed urls.
-const known = readdirSync('data/cameras')
-	.filter((f) => f.endsWith('.json'))
-	.map((f) => JSON.parse(readFileSync(`data/cameras/${f}`, 'utf8')).feed_url ?? '')
+const known = loadAll('cameras')
+	.map((c) => c.feed_url ?? '')
 	.join('\n');
 
 const details = await api('videos', { part: 'snippet,recordingDetails', id: ids.join(',') });

@@ -1,0 +1,21 @@
+{
+  "id": "odot-i-5-at-wilsonville-rd",
+  "name": "I-5 at Wilsonville Rd.",
+  "lat": 45.30315,
+  "lon": -122.76901,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/i5wilson_pid575.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "I 5",
+  "milepost": 283.9
+}

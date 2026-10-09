@@ -7,6 +7,7 @@ Checked 2026-10-07. Rule: use a camera only if its owner publishes it for public
 | Source | Cameras | Basis |
 |---|---|---|
 | WSDOT (highway, pass, ferry, border cameras via the Traveler Information API) | most of the data | Public agency data, used through its official API with an access code |
+| Oregon DOT TripCheck (CCTV inventory through the TripCheck Data API) | about 940 Oregon road cameras, `data/cameras/us-or/odot-*` | Public agency data through ODOT's official API with a subscription key; cameras may belong to ODOT or partner agencies (cities, counties). TripCheck's API page states no reuse terms, so check the developer portal terms if anything changes |
 | WSDOT Aviation (about 90 airfield cameras across Washington) | `airfields` collection | Same WSDOT feed and terms. WSDOT notes the pictures are for pilots, not an official weather briefing |
 | National Park Service (Mount Rainier Paradise and Longmire, Olympic Hurricane Ridge and Lake Crescent, North Cascades Newhalem) | 11 live cameras, 2 seasonal (Sunrise, down for the winter) | NPS content is generally public domain unless noted; credit appreciated (nps.gov/aboutus/disclaimer.htm). Served resized through our server |
 | Windy.com Webcams API | resort, Westport, Lake Wenatchee, AlertWest, airport cameras | Free API tier; their terms: use API image links unchanged, link each image to Windy, credit Windy, do not enlarge |
@@ -19,7 +20,7 @@ The list is old: of 164 unique links, 66 respond and only 14 are direct image fe
 - **Private and commercial** (Space Needle, TV stations, desticam, islandcam, resorts, hotels, wunderground users, personal sites): no reuse permission stated. Ask the owner first.
 - **Public bodies with no stated licence** (Port of Edmonds, Port of Port Angeles, City of Lynden, Sno-Isle libraries, UW and WWU cameras): likely approachable by email, but not assumed.
 - **US Forest Service visibility cameras** (fsvisimages.com): federal, but the site is a .com and states no terms. Check before using.
-- **Outside Washington/Oregon** (BC, Montana, Alaska): out of scope.
+- **Outside Washington/Oregon** (BC, Montana, Alaska): out of scope for now. To add a region, see docs/data-model.md, Regions.
 
 ## National parks in Washington
 

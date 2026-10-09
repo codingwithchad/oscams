@@ -1,0 +1,21 @@
+{
+  "id": "odot-portland-sw-capitol-hwy-at-sunset-blvd",
+  "name": "Portland - SW Capitol Hwy at Sunset Blvd",
+  "lat": 45.47877,
+  "lon": -122.69322,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/SW%20Capitol%20Hwy%20at%20Sunset%20Blvd_pid4932.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "City",
+  "milepost": 0
+}

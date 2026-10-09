@@ -1,0 +1,21 @@
+{
+  "id": "odot-or140-at-quartz-mountain",
+  "name": "OR140 at Quartz Mountain",
+  "lat": 42.32098,
+  "lon": -120.81385,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/Quartz%20Mtn_pid2640.JPG",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "OR 140",
+  "milepost": 67
+}

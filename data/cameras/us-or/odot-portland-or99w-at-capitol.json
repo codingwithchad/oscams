@@ -1,0 +1,21 @@
+{
+  "id": "odot-portland-or99w-at-capitol",
+  "name": "Portland - OR99W at Capitol",
+  "lat": 45.45335,
+  "lon": -122.72113,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/ORE99W%20at%20Capitol_pid3209.JPG",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "OR 99W",
+  "milepost": 0
+}

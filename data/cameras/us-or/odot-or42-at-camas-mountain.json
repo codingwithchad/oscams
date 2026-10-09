@@ -1,0 +1,21 @@
+{
+  "id": "odot-or42-at-camas-mountain",
+  "name": "OR42 at Camas Mountain",
+  "lat": 43.0652,
+  "lon": -123.64956,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/ORE42%20at%20Camas%20Mountain_pid2396.JPG",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "OR 42",
+  "milepost": 57.5
+}

@@ -29,13 +29,13 @@
 				rel="noopener">OpenStreetMap contributors</a
 			>, through the open-source
 			<a href="https://project-osrm.org/" target="_blank" rel="noopener">OSRM</a> routing service and
-			Nominatim and Photon (by Komoot), and Washington town and ZIP locations from the US Census Bureau.
-			The app uses a route only as a line on the map to find the cameras along it; it doesn't give turn-by-turn
+			Nominatim and Photon (by Komoot), and town and ZIP locations from the US Census Bureau. The app
+			uses a route only as a line on the map to find the cameras along it; it doesn't give turn-by-turn
 			directions.
 		</li>
 		<li>
 			Cameras and road reports: the Washington State Department of Transportation (WSDOT), WSDOT
-			Aviation and the National Park Service.
+			Aviation, the Oregon Department of Transportation (TripCheck) and the National Park Service.
 		</li>
 		<li>
 			Weather, rivers, tides and flights: the National Weather Service, NOAA, USGS and the FAA.
@@ -66,8 +66,9 @@
 
 	<h2>Please note</h2>
 	<p>
-		This is an independent project and is <strong>not affiliated with WSDOT or any agency</strong>.
-		Pictures can be late, frozen or missing, and road conditions change quickly. Always check the
+		This is an independent project and is <strong
+			>not affiliated with WSDOT, ODOT or any agency</strong
+		>. Pictures can be late, frozen or missing, and road conditions change quickly. Always check the
 		official source (for passes,
 		<a href="https://wsdot.com/travel/real-time/mountainpasses" target="_blank" rel="noopener"
 			>WSDOT's pass page</a

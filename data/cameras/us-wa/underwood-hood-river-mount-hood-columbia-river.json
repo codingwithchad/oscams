@@ -1,0 +1,20 @@
+{
+  "id": "underwood-hood-river-mount-hood-columbia-river",
+  "name": "Underwood: Hood River - Mount Hood - Columbia River",
+  "lat": 45.73099,
+  "lon": -121.52857,
+  "feed_type": "image",
+  "source": "niknas.net via Windy.com",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "provider": "windy",
+  "provider_ref": "1350045029",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "page_url": "https://windy.com/webcams/1350045029",
+  "tags": [
+    "hood-river"
+  ],
+  "attribution_text": "niknas.net via Windy.com",
+  "created_at": "2026-10-09T00:00:00Z"
+}

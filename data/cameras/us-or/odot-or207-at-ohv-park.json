@@ -1,0 +1,21 @@
+{
+  "id": "odot-or207-at-ohv-park",
+  "name": "OR207 at OHV Park",
+  "lat": 45.0263,
+  "lon": -119.67786,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/OR207%20at%20OHV%20Park%20SB%20MP21.72_pid5223.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "OR 207",
+  "milepost": 21.72
+}

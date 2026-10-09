@@ -1,5 +1,6 @@
 /** The parts of a Windy Webcams API v3 response we use. */
 export interface WindyWebcam {
+	webcamId?: number | string;
 	status?: string;
 	lastUpdatedOn?: string;
 	images?: {

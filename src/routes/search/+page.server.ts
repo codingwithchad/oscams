@@ -4,6 +4,7 @@ import { getCatalog } from '../../lib/server/catalog';
 import { getConditions } from '../../lib/server/conditions';
 import { allowedKinds } from '../../lib/kinds';
 import { geocode } from '../../lib/server/geocode';
+import { withForecast } from '../../lib/server/autoForecast';
 import { recordView } from '../../lib/server/popularity';
 import { withLiveLinks } from '../../lib/server/live';
 import type { Camera, Nearby, Place } from '../../lib/types';
@@ -22,7 +23,11 @@ function oneForecast<T extends { kind: string }>(sources: T[]): T[] {
 export const load: PageServerLoad = async ({ url, setHeaders }) => {
 	const { cameras, weather, places } = getCatalog();
 	const placeId = url.searchParams.get('place');
-	const featured = places.find((p) => p.id === placeId);
+	// A search that names one of our places ("Mount Hood", "stevens pass") opens that place.
+	const typed = url.searchParams.get('q')?.trim().toLowerCase();
+	const featured =
+		places.find((p) => p.id === placeId) ??
+		(typed ? places.find((p) => p.name.toLowerCase() === typed) : undefined);
 	const q = featured ? featured.name : (url.searchParams.get('q')?.trim() ?? '');
 	const asked = Number(url.searchParams.get('r'));
 	const radius = Math.min(
@@ -88,7 +93,11 @@ export const load: PageServerLoad = async ({ url, setHeaders }) => {
 		conditions: Promise.all(
 			oneForecast(
 				nearby(
-					weather.filter((w) => kinds.has(w.kind)),
+					withForecast(
+						weather.filter((w) => kinds.has(w.kind)),
+						place,
+						featured?.weather_radius_miles ?? radius
+					),
 					place,
 					featured?.weather_radius_miles ?? radius
 				)

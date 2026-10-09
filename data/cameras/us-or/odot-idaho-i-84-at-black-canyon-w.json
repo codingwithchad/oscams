@@ -1,0 +1,21 @@
+{
+  "id": "odot-idaho-i-84-at-black-canyon-w",
+  "name": "Idaho - I-84\u00a0at Black Canyon W",
+  "lat": 43.86522,
+  "lon": -116.77713,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/ID%20I-84%20at%20Black%20Canyon%20N_pid4237.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "I 84",
+  "milepost": 13.03
+}

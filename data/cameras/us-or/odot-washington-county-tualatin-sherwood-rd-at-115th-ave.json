@@ -1,0 +1,21 @@
+{
+  "id": "odot-washington-county-tualatin-sherwood-rd-at-115th-ave",
+  "name": "Washington County - Tualatin Sherwood Rd at 115th Ave",
+  "lat": 45.37106,
+  "lon": -122.79558,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/Tualatin%20Sherwood%20Rd%20at%20115th%20Ave_pid4517.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "CNTY",
+  "milepost": 0
+}

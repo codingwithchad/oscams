@@ -1,0 +1,21 @@
+{
+  "id": "odot-or34-at-columbus-1097",
+  "name": "OR34 at Columbus",
+  "lat": 44.55599,
+  "lon": -123.08273,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/ORE34%20at%20Columbus%20WB_pid4574.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "OR 34",
+  "milepost": 9
+}

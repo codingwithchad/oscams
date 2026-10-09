@@ -1,0 +1,21 @@
+{
+  "id": "odot-us97-at-us26-jct",
+  "name": "US97 at US26 Jct",
+  "lat": 44.6388,
+  "lon": -121.12957,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/US97%20at%20US26%20Jct%20NB_pid3511.JPG",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "US 97",
+  "milepost": 91.94
+}

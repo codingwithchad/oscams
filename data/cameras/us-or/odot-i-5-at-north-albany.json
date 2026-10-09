@@ -1,0 +1,21 @@
+{
+  "id": "odot-i-5-at-north-albany",
+  "name": "I-5 at North Albany",
+  "lat": 44.68103,
+  "lon": -123.05409,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/NorthAlbany_pid1489.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "I 5",
+  "milepost": 236.78
+}

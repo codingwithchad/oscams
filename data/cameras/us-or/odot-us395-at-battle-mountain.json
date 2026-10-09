@@ -1,0 +1,21 @@
+{
+  "id": "odot-us395-at-battle-mountain",
+  "name": "US395 at Battle Mountain",
+  "lat": 45.27005,
+  "lon": -118.97776,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/US395%20at%20Battle%20Mountain_pid3536.JPG",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "US 395",
+  "milepost": 39.7
+}

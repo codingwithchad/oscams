@@ -1,0 +1,21 @@
+{
+  "id": "odot-washington-county-roy-rogers-rd-at-beef-bend-rd",
+  "name": "Washington County - Roy Rogers Rd at Beef Bend Rd",
+  "lat": 45.40053,
+  "lon": -122.85193,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/Roy%20Rogers%20at%20Beef%20Bend_pid2956.JPG",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "CNTY",
+  "milepost": 0
+}

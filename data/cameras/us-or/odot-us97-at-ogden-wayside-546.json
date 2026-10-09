@@ -1,0 +1,21 @@
+{
+  "id": "odot-us97-at-ogden-wayside-546",
+  "name": "US97 at Ogden Wayside",
+  "lat": 44.39091,
+  "lon": -121.19013,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/US97%20at%20Ogden%20Wayside%20S_pid2647.JPG",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "US 97",
+  "milepost": 112.68
+}

@@ -1,0 +1,21 @@
+{
+  "id": "odot-us97-at-green-springs-interchange",
+  "name": "US97 at Green Springs Interchange",
+  "lat": 42.19257,
+  "lon": -121.79871,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/Green%20Springs%20Interchange_pid708.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "US 97",
+  "milepost": 277
+}

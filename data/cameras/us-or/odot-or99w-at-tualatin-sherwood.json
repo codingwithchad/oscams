@@ -1,0 +1,21 @@
+{
+  "id": "odot-or99w-at-tualatin-sherwood",
+  "name": "OR99W at Tualatin Sherwood",
+  "lat": 45.36988,
+  "lon": -122.84311,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/OR99W%20at%20Tualatin%20Sherwood_pid3129.JPG",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "OR 99W",
+  "milepost": 15
+}

@@ -1,0 +1,19 @@
+{
+  "id": "odot-i-84-at-67th",
+  "name": "I-84 at 67th",
+  "lat": 45.53367,
+  "lon": -122.59443,
+  "feed_url": "https://www.tripcheck.com/RoadCams/cams/i8467th_pid581.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-07T00:00:00Z"
+}

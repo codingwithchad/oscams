@@ -1,0 +1,21 @@
+{
+  "id": "odot-i-5-at-canyon-mt-590",
+  "name": "I-5 at Canyon Mt",
+  "lat": 42.82689,
+  "lon": -123.26019,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/I-5%20at%20Canyon%20Mt%20SB_pid2824.JPG",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "I 5",
+  "milepost": 90.1
+}

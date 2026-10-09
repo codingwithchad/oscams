@@ -1,3 +1,4 @@
+import { regionAt } from '../../lib/regions';
 import { getCatalog } from '../../lib/server/catalog';
 import type { PageServerLoad } from './$types';
 
@@ -19,11 +20,12 @@ export const load: PageServerLoad = () => {
 		}))
 	];
 
-	const regionNames = [...new Set(places.map((p) => p.state ?? 'Washington'))].sort((a, b) =>
-		a.localeCompare(b)
-	);
+	// Group by the state a place is in: its own "state" field, or the region its coordinates fall in.
+	const stateOf = (p: (typeof places)[number]) =>
+		p.state ?? regionAt(p.lat, p.lon)?.name ?? 'Other places';
+	const regionNames = [...new Set(places.map(stateOf))].sort((a, b) => a.localeCompare(b));
 	const regions = regionNames.map((name) => {
-		const inRegion = places.filter((p) => (p.state ?? 'Washington') === name);
+		const inRegion = places.filter((p) => stateOf(p) === name);
 		return {
 			name,
 			total: inRegion.length,

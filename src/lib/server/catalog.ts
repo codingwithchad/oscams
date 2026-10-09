@@ -6,20 +6,35 @@ function dataDir(): string {
 	return process.env.DATA_DIR ?? path.resolve(process.cwd(), 'data');
 }
 
-/** Read every JSON file in a data subfolder. Bad files are skipped with a warning. */
-export function readFolder<T extends { id: string }>(folder: string): T[] {
+/**
+ * The JSON files in a data folder and in its region subfolders (data/cameras/us-wa/..., data/cameras/us-or/...),
+ * as paths relative to the folder.
+ */
+export function dataFiles(folder: string): string[] {
 	const dir = path.join(dataDir(), folder);
-	let names: string[];
 	try {
-		names = readdirSync(dir).filter((n) => n.endsWith('.json'));
+		return readdirSync(dir, { withFileTypes: true }).flatMap((entry) =>
+			entry.isDirectory()
+				? readdirSync(path.join(dir, entry.name))
+						.filter((n) => n.endsWith('.json'))
+						.map((n) => `${entry.name}/${n}`)
+				: entry.name.endsWith('.json')
+					? [entry.name]
+					: []
+		);
 	} catch {
 		return [];
 	}
+}
+
+/** Read every JSON file in a data folder (and its region subfolders). Bad files are skipped with a warning. */
+export function readFolder<T extends { id: string }>(folder: string): T[] {
+	const dir = path.join(dataDir(), folder);
 	const items: T[] = [];
-	for (const name of names) {
+	for (const name of dataFiles(folder)) {
 		try {
 			const item = JSON.parse(readFileSync(path.join(dir, name), 'utf8')) as T;
-			if (item.id !== name.replace(/\.json$/, '')) {
+			if (item.id !== path.basename(name, '.json')) {
 				console.warn(`[catalog] ${folder}/${name}: id does not match filename, skipped`);
 				continue;
 			}

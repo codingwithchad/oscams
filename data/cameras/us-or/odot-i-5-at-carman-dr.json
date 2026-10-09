@@ -1,0 +1,19 @@
+{
+  "id": "odot-i-5-at-carman-dr",
+  "name": "I-5 at Carman Dr.",
+  "lat": 45.40804,
+  "lon": -122.743414,
+  "feed_url": "https://www.tripcheck.com/RoadCams/cams/i5carman_pid557.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-07T00:00:00Z"
+}

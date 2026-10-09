@@ -1,0 +1,21 @@
+{
+  "id": "odot-washington-county-cornell-rd-at-rock-creek-tr",
+  "name": "Washington County - Cornell Rd at Rock Creek Tr",
+  "lat": 45.53872,
+  "lon": -122.89072,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/Cornell%20Rd%20at%20Rock%20Creek%20Tr_pid3774.JPG",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "CNTY",
+  "milepost": 0
+}

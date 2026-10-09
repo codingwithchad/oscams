@@ -1,0 +1,21 @@
+{
+  "id": "odot-clackamas-co-wilsonville-rd-at-town-center-loop-west",
+  "name": "Clackamas Co - Wilsonville Rd at Town Center Loop West",
+  "lat": 45.30292,
+  "lon": -122.76581,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/Wilsonville%20Rd%20at%20Town%20Center%20Loop%20West_pid5070.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "CNTY",
+  "milepost": 0
+}

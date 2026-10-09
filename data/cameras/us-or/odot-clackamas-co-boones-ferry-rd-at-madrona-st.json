@@ -1,0 +1,21 @@
+{
+  "id": "odot-clackamas-co-boones-ferry-rd-at-madrona-st",
+  "name": "Clackamas Co - Boones Ferry Rd at Madrona St",
+  "lat": 45.40686,
+  "lon": -122.72619,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/Boones%20Ferry%20Rd%20at%20Madrona%20St_pid5084.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "CNTY",
+  "milepost": 0
+}

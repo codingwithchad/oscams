@@ -1,0 +1,21 @@
+{
+  "id": "odot-nw-murray-at-us26-eb",
+  "name": "NW Murray at US26 EB",
+  "lat": 45.52164,
+  "lon": -122.81563,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/NW%20Murray%20%40%20US26%20EB_pid4746.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "US 26",
+  "milepost": 67.14
+}

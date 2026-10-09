@@ -1,0 +1,19 @@
+{
+  "id": "odot-i-5-at-brier-place",
+  "name": "I-5 at Brier Place",
+  "lat": 45.46956,
+  "lon": -122.67958,
+  "feed_url": "https://www.tripcheck.com/RoadCams/cams/i5brier_pid551.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 120,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-07T00:00:00Z"
+}

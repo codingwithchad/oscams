@@ -1,0 +1,21 @@
+{
+  "id": "odot-us20-at-hampton",
+  "name": "US20 at Hampton",
+  "lat": 43.67444,
+  "lon": -120.23817,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/US20%20at%20Hampton_pid2565.JPG",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "US 20",
+  "milepost": 63.5
+}
