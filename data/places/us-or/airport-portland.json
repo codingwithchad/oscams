@@ -1,0 +1,11 @@
+{
+  "id": "airport-portland",
+  "name": "Portland International Airport (PDX)",
+  "region": "Oregon",
+  "state": "Oregon",
+  "blurb": "Portland International: Airport Way, I-205 and flight delays",
+  "lat": 45.5887,
+  "lon": -122.5975,
+  "radius_miles": 3,
+  "collection": "airports"
+}

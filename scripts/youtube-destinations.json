@@ -11,10 +11,30 @@
 		"lon": -121.089,
 		"why": "ski area, US 2 pass, route to Leavenworth"
 	},
-	{ "name": "Crystal Mountain", "lat": 46.9355, "lon": -121.4745, "why": "largest ski area" },
-	{ "name": "Mt. Baker", "lat": 48.857, "lon": -121.665, "why": "ski area, heavy snow" },
-	{ "name": "Mission Ridge", "lat": 47.294, "lon": -120.3996, "why": "ski area above Wenatchee" },
-	{ "name": "Leavenworth", "lat": 47.5962, "lon": -120.6615, "why": "Christmas Lighting Festival" },
+	{
+		"name": "Crystal Mountain",
+		"lat": 46.9355,
+		"lon": -121.4745,
+		"why": "largest ski area"
+	},
+	{
+		"name": "Mt. Baker",
+		"lat": 48.857,
+		"lon": -121.665,
+		"why": "ski area, heavy snow"
+	},
+	{
+		"name": "Mission Ridge",
+		"lat": 47.294,
+		"lon": -120.3996,
+		"why": "ski area above Wenatchee"
+	},
+	{
+		"name": "Leavenworth",
+		"lat": 47.5962,
+		"lon": -120.6615,
+		"why": "Christmas Lighting Festival"
+	},
 	{
 		"name": "Wenatchee",
 		"lat": 47.4235,
@@ -27,18 +47,48 @@
 		"lon": -120.017,
 		"why": "Lake Chelan holiday and winter getaway"
 	},
-	{ "name": "Winthrop", "lat": 48.4777, "lon": -120.1862, "why": "Methow Valley snow village" },
-	{ "name": "Cle Elum", "lat": 47.1951, "lon": -120.9392, "why": "Roslyn, Suncadia, I-90 stop" },
-	{ "name": "Poulsbo", "lat": 47.7359, "lon": -122.6465, "why": "Julefest Christmas" },
-	{ "name": "Port Townsend", "lat": 48.117, "lon": -122.7604, "why": "fall and holiday weekend" },
-	{ "name": "Seattle", "lat": 47.6062, "lon": -122.3321, "why": "holiday events, waterfront" },
+	{
+		"name": "Winthrop",
+		"lat": 48.4777,
+		"lon": -120.1862,
+		"why": "Methow Valley snow village"
+	},
+	{
+		"name": "Cle Elum",
+		"lat": 47.1951,
+		"lon": -120.9392,
+		"why": "Roslyn, Suncadia, I-90 stop"
+	},
+	{
+		"name": "Poulsbo",
+		"lat": 47.7359,
+		"lon": -122.6465,
+		"why": "Julefest Christmas"
+	},
+	{
+		"name": "Port Townsend",
+		"lat": 48.117,
+		"lon": -122.7604,
+		"why": "fall and holiday weekend"
+	},
+	{
+		"name": "Seattle",
+		"lat": 47.6062,
+		"lon": -122.3321,
+		"why": "holiday events, waterfront"
+	},
 	{
 		"name": "Bellevue",
 		"lat": 47.6101,
 		"lon": -122.2015,
 		"why": "Snowflake Lights, Garden d'Lights"
 	},
-	{ "name": "Tacoma", "lat": 47.2529, "lon": -122.4443, "why": "Zoolights, Point Defiance" },
+	{
+		"name": "Tacoma",
+		"lat": 47.2529,
+		"lon": -122.4443,
+		"why": "Zoolights, Point Defiance"
+	},
 	{
 		"name": "Bellingham",
 		"lat": 48.7519,
@@ -68,5 +118,65 @@
 		"lat": 48.5343,
 		"lon": -123.017,
 		"why": "San Juan Islands, ferry route"
+	},
+	{
+		"name": "Portland Oregon",
+		"lat": 45.5152,
+		"lon": -122.6784,
+		"why": "largest Oregon city, holiday events"
+	},
+	{
+		"name": "Mount Hood",
+		"lat": 45.3027,
+		"lon": -121.7539,
+		"why": "Timberline, Meadows, Skibowl, Government Camp"
+	},
+	{
+		"name": "Timberline Lodge",
+		"lat": 45.3311,
+		"lon": -121.711,
+		"why": "Mount Hood ski area"
+	},
+	{
+		"name": "Mt Hood Meadows",
+		"lat": 45.3317,
+		"lon": -121.665,
+		"why": "Mount Hood ski area"
+	},
+	{
+		"name": "Hood River",
+		"lat": 45.7054,
+		"lon": -121.5215,
+		"why": "Columbia Gorge town, fall harvest"
+	},
+	{
+		"name": "Columbia River Gorge",
+		"lat": 45.62,
+		"lon": -121.95,
+		"why": "Multnomah Falls, I-84"
+	},
+	{
+		"name": "Bend Oregon",
+		"lat": 44.0582,
+		"lon": -121.3153,
+		"why": "Central Oregon hub"
+	},
+	{
+		"name": "Mt Bachelor",
+		"lat": 43.979,
+		"lon": -121.6886,
+		"why": "Central Oregon ski area"
+	},
+	{
+		"name": "Sisters Oregon",
+		"lat": 44.291,
+		"lon": -121.5492,
+		"why": "US 20 town below Santiam Pass"
+	},
+	{
+		"name": "Crater Lake",
+		"lat": 42.9446,
+		"lon": -122.109,
+		"why": "national park"
 	}
 ]

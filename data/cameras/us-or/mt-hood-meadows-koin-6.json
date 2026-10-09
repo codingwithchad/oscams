@@ -1,0 +1,21 @@
+{
+  "id": "mt-hood-meadows-koin-6",
+  "name": "Mt. Hood Meadows (KOIN 6)",
+  "description": "Live view from KOIN 6's YouTube channel.",
+  "lat": 45.3317,
+  "lon": -121.665,
+  "location_precision": "approximate",
+  "feed_type": "stream",
+  "feed_url": "https://www.youtube-nocookie.com/embed/laaefYYpU_c",
+  "embed_mode": "iframe",
+  "source": "KOIN 6",
+  "status": "pending",
+  "page_url": "https://www.koin.com/weather/webcams/",
+  "license_or_terms": "Published by KOIN 6 on YouTube with embedding turned on; shown through YouTube's official player, only after a tap.",
+  "tags": [
+    "ski",
+    "mt-hood"
+  ],
+  "attribution_text": "KOIN 6 (via YouTube)",
+  "created_at": "2026-10-09T00:00:00Z"
+}

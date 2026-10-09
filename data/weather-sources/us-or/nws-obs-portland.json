@@ -1,0 +1,19 @@
+{
+  "id": "nws-obs-portland",
+  "name": "Portland International Airport weather now",
+  "lat": 45.5887,
+  "lon": -122.5975,
+  "kind": "station",
+  "provider": "nws-obs",
+  "provider_ref": "KPDX",
+  "source": "National Weather Service",
+  "page_url": "https://www.weather.gov/wrh/timeseries?site=KPDX",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "attribution_text": "National Weather Service",
+  "tags": [
+    "airport",
+    "pdx"
+  ],
+  "created_at": "2026-10-09T00:00:00Z"
+}

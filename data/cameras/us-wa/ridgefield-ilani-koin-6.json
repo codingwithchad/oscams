@@ -1,0 +1,20 @@
+{
+  "id": "ridgefield-ilani-koin-6",
+  "name": "Ridgefield, ilani (KOIN 6)",
+  "description": "Live view from KOIN 6's YouTube channel.",
+  "lat": 45.8394,
+  "lon": -122.7246,
+  "location_precision": "approximate",
+  "feed_type": "stream",
+  "feed_url": "https://www.youtube-nocookie.com/embed/6S8TYOOSjDY",
+  "embed_mode": "iframe",
+  "source": "KOIN 6",
+  "status": "pending",
+  "page_url": "https://www.koin.com/weather/webcams/",
+  "license_or_terms": "Published by KOIN 6 on YouTube with embedding turned on; shown through YouTube's official player, only after a tap.",
+  "tags": [
+    "ridgefield"
+  ],
+  "attribution_text": "KOIN 6 (via YouTube)",
+  "created_at": "2026-10-09T00:00:00Z"
+}

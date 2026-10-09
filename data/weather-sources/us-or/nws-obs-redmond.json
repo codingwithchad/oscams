@@ -1,0 +1,19 @@
+{
+  "id": "nws-obs-redmond",
+  "name": "Redmond Airport weather now",
+  "lat": 44.2541,
+  "lon": -121.15,
+  "kind": "station",
+  "provider": "nws-obs",
+  "provider_ref": "KRDM",
+  "source": "National Weather Service",
+  "page_url": "https://www.weather.gov/wrh/timeseries?site=KRDM",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "attribution_text": "National Weather Service",
+  "tags": [
+    "airport",
+    "rdm"
+  ],
+  "created_at": "2026-10-09T00:00:00Z"
+}

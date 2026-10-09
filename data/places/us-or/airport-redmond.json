@@ -1,0 +1,11 @@
+{
+  "id": "airport-redmond",
+  "name": "Redmond Airport (RDM)",
+  "region": "Oregon",
+  "state": "Oregon",
+  "blurb": "Central Oregon's airport for Bend and Mt. Bachelor: weather and delays",
+  "lat": 44.2541,
+  "lon": -121.15,
+  "radius_miles": 3,
+  "collection": "airports"
+}
