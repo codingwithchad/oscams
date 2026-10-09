@@ -1,0 +1,21 @@
+{
+  "id": "holiday-beach-south-west-pacific-ocean",
+  "name": "Holiday Beach – South-west: Pacific Ocean",
+  "lat": 44.58781,
+  "lon": -124.06748,
+  "feed_type": "image",
+  "source": "wormley.com via Windy.com",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "provider": "windy",
+  "provider_ref": "1515093581",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "page_url": "https://windy.com/webcams/1515093581",
+  "tags": [
+    "coast",
+    "central-coast"
+  ],
+  "attribution_text": "wormley.com via Windy.com",
+  "created_at": "2026-10-09T00:00:00Z"
+}

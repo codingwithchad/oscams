@@ -1,0 +1,11 @@
+{
+  "id": "coast-lincoln-city",
+  "name": "Lincoln City and Depoe Bay",
+  "region": "Oregon",
+  "state": "Oregon",
+  "blurb": "US 101, the D River and Depoe Bay harbor",
+  "lat": 44.92,
+  "lon": -124.03,
+  "radius_miles": 9,
+  "collection": "coast"
+}

@@ -2,6 +2,6 @@
   "id": "airports",
   "name": "Airports",
   "blurb": "Sea-Tac, Paine Field, Portland and Redmond: approach roads, cameras, weather and flight delays",
-  "order": 6,
+  "order": 7,
   "icon": "plane"
 }

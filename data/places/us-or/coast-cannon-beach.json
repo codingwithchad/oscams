@@ -1,0 +1,11 @@
+{
+  "id": "coast-cannon-beach",
+  "name": "Cannon Beach",
+  "region": "Oregon",
+  "state": "Oregon",
+  "blurb": "Haystack Rock, and US 26 over the Coast Range from Portland",
+  "lat": 45.8918,
+  "lon": -123.9615,
+  "radius_miles": 7,
+  "collection": "coast"
+}

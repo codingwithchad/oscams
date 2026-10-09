@@ -1,0 +1,11 @@
+{
+  "id": "coast-astoria",
+  "name": "Astoria",
+  "region": "Oregon",
+  "state": "Oregon",
+  "blurb": "Astoria-Megler Bridge, the Columbia River mouth and US 101",
+  "lat": 46.1879,
+  "lon": -123.8313,
+  "radius_miles": 6,
+  "collection": "coast"
+}

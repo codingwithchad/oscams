@@ -1,0 +1,18 @@
+{
+  "id": "noaa-tides-garibaldi",
+  "name": "Garibaldi (Tillamook Bay) tides",
+  "lat": 45.5546,
+  "lon": -123.9189,
+  "kind": "tides",
+  "provider": "noaa-tides",
+  "provider_ref": "9437540",
+  "source": "NOAA Tides and Currents",
+  "page_url": "https://tidesandcurrents.noaa.gov/noaatidepredictions.html?id=9437540",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "attribution_text": "NOAA Tides and Currents",
+  "tags": [
+    "coast"
+  ],
+  "created_at": "2026-10-09T00:00:00Z"
+}

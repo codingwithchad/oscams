@@ -1,0 +1,18 @@
+{
+  "id": "noaa-tides-charleston",
+  "name": "Charleston (Coos Bay) tides",
+  "lat": 43.3451,
+  "lon": -124.322,
+  "kind": "tides",
+  "provider": "noaa-tides",
+  "provider_ref": "9432780",
+  "source": "NOAA Tides and Currents",
+  "page_url": "https://tidesandcurrents.noaa.gov/noaatidepredictions.html?id=9432780",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "attribution_text": "NOAA Tides and Currents",
+  "tags": [
+    "coast"
+  ],
+  "created_at": "2026-10-09T00:00:00Z"
+}

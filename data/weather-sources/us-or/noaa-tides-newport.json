@@ -1,0 +1,18 @@
+{
+  "id": "noaa-tides-newport",
+  "name": "Newport (South Beach) tides",
+  "lat": 44.6254,
+  "lon": -124.0449,
+  "kind": "tides",
+  "provider": "noaa-tides",
+  "provider_ref": "9435380",
+  "source": "NOAA Tides and Currents",
+  "page_url": "https://tidesandcurrents.noaa.gov/noaatidepredictions.html?id=9435380",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "attribution_text": "NOAA Tides and Currents",
+  "tags": [
+    "coast"
+  ],
+  "created_at": "2026-10-09T00:00:00Z"
+}

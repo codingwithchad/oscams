@@ -1,0 +1,11 @@
+{
+  "id": "coast-brookings",
+  "name": "Brookings and Gold Beach",
+  "region": "Oregon",
+  "state": "Oregon",
+  "blurb": "Chetco River harbor and the south coast",
+  "lat": 42.2,
+  "lon": -124.33,
+  "radius_miles": 20,
+  "collection": "coast"
+}

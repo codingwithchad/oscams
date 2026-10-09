@@ -1,0 +1,11 @@
+{
+  "id": "coast-florence",
+  "name": "Florence",
+  "region": "Oregon",
+  "state": "Oregon",
+  "blurb": "Sea Lion Caves, the dunes and the Siuslaw River",
+  "lat": 43.9826,
+  "lon": -124.0998,
+  "radius_miles": 12,
+  "collection": "coast"
+}

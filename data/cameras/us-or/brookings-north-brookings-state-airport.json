@@ -1,0 +1,21 @@
+{
+  "id": "brookings-north-brookings-state-airport",
+  "name": "Brookings – North: Brookings State Airport",
+  "lat": 42.07605,
+  "lon": -124.29006,
+  "feed_type": "image",
+  "source": "brookingsflyingclub.org via Windy.com",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "provider": "windy",
+  "provider_ref": "1545639176",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "page_url": "https://windy.com/webcams/1545639176",
+  "tags": [
+    "coast",
+    "brookings-coast"
+  ],
+  "attribution_text": "brookingsflyingclub.org via Windy.com",
+  "created_at": "2026-10-09T00:00:00Z"
+}

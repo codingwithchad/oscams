@@ -1,0 +1,11 @@
+{
+  "id": "coast-newport",
+  "name": "Newport",
+  "region": "Oregon",
+  "state": "Oregon",
+  "blurb": "Yaquina Bay, the bridge, the jetty and the sea lions",
+  "lat": 44.6368,
+  "lon": -124.0535,
+  "radius_miles": 7,
+  "collection": "coast"
+}

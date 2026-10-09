@@ -1,0 +1,21 @@
+{
+  "id": "newport-port-dock-one-sea-lion-docks-yaquina-bay",
+  "name": "Newport: Port Dock One - Sea Lion Docks - Yaquina Bay",
+  "lat": 44.63027,
+  "lon": -124.05242,
+  "feed_type": "image",
+  "source": "newportsealions.com via Windy.com",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "provider": "windy",
+  "provider_ref": "1793912007",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "page_url": "https://windy.com/webcams/1793912007",
+  "tags": [
+    "coast",
+    "central-coast"
+  ],
+  "attribution_text": "newportsealions.com via Windy.com",
+  "created_at": "2026-10-09T00:00:00Z"
+}

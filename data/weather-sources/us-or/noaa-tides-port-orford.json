@@ -1,0 +1,18 @@
+{
+  "id": "noaa-tides-port-orford",
+  "name": "Port Orford tides",
+  "lat": 42.739,
+  "lon": -124.4983,
+  "kind": "tides",
+  "provider": "noaa-tides",
+  "provider_ref": "9431647",
+  "source": "NOAA Tides and Currents",
+  "page_url": "https://tidesandcurrents.noaa.gov/noaatidepredictions.html?id=9431647",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "attribution_text": "NOAA Tides and Currents",
+  "tags": [
+    "coast"
+  ],
+  "created_at": "2026-10-09T00:00:00Z"
+}

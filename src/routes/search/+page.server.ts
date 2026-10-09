@@ -14,11 +14,21 @@ const DEFAULT_RADIUS = 10;
 const CAMERA_LIMIT = 24;
 const MAX_RADIUS = 75;
 
-/** Several forecasts a few miles apart say the same thing, so keep only the nearest one. */
-function oneForecast<T extends { kind: string }>(sources: T[]): T[] {
-	let seen = false;
-	return sources.filter((w) => w.kind !== 'forecast' || (seen ? false : (seen = true)));
+/** Several forecasts, tide stations or buoys a few miles apart say the same thing, so keep only the nearest one of each. */
+const ONE_EACH = new Set(['forecast', 'tides', 'waves']);
+function oneEach<T extends { kind: string }>(sources: T[]): T[] {
+	const seen = new Set<string>();
+	return sources.filter((w) => {
+		if (!ONE_EACH.has(w.kind)) return true;
+		if (seen.has(w.kind)) return false;
+		seen.add(w.kind);
+		return true;
+	});
 }
+
+// Buoys sit 20 to 30 miles offshore and tide stations are far apart along the coast, so look further for them.
+const MARINE = new Set(['tides', 'waves']);
+const MARINE_RADIUS = 35;
 
 export const load: PageServerLoad = async ({ url, setHeaders }) => {
 	const { cameras, weather, places } = getCatalog();
@@ -91,7 +101,7 @@ export const load: PageServerLoad = async ({ url, setHeaders }) => {
 		offline: found.filter(offline),
 		// Streamed: the page shows cameras right away while live weather loads.
 		conditions: Promise.all(
-			oneForecast(
+			oneEach(
 				nearby(
 					withForecast(
 						weather.filter((w) => kinds.has(w.kind)),
@@ -99,7 +109,9 @@ export const load: PageServerLoad = async ({ url, setHeaders }) => {
 						featured?.weather_radius_miles ?? radius
 					),
 					place,
-					featured?.weather_radius_miles ?? radius
+					Math.max(featured?.weather_radius_miles ?? radius, MARINE_RADIUS)
+				).filter(
+					(w) => MARINE.has(w.kind) || w.distance <= (featured?.weather_radius_miles ?? radius)
 				)
 			).map((w) => getConditions(w))
 		)

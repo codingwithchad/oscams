@@ -1,0 +1,10 @@
+{
+  "id": "coast",
+  "name": "Coast and beaches",
+  "blurb": "Beach towns, harbors and US 101 from Westport to Brookings: cameras, surf, tides and weather",
+  "icon": "wave",
+  "order": 5,
+  "also": [
+    "westport"
+  ]
+}

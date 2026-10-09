@@ -1,0 +1,11 @@
+{
+  "id": "coast-coos-bay",
+  "name": "Coos Bay and Bandon",
+  "region": "Oregon",
+  "state": "Oregon",
+  "blurb": "The bay, McCullough Bridge and Bandon",
+  "lat": 43.25,
+  "lon": -124.3,
+  "radius_miles": 18,
+  "collection": "coast"
+}

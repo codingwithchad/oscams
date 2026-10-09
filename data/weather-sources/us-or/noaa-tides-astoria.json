@@ -1,0 +1,18 @@
+{
+  "id": "noaa-tides-astoria",
+  "name": "Astoria (Tongue Point) tides",
+  "lat": 46.2073,
+  "lon": -123.7683,
+  "kind": "tides",
+  "provider": "noaa-tides",
+  "provider_ref": "9439040",
+  "source": "NOAA Tides and Currents",
+  "page_url": "https://tidesandcurrents.noaa.gov/noaatidepredictions.html?id=9439040",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "attribution_text": "NOAA Tides and Currents",
+  "tags": [
+    "coast"
+  ],
+  "created_at": "2026-10-09T00:00:00Z"
+}

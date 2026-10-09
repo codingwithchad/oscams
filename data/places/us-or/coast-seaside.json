@@ -1,0 +1,11 @@
+{
+  "id": "coast-seaside",
+  "name": "Seaside and Gearhart",
+  "region": "Oregon",
+  "state": "Oregon",
+  "blurb": "The Prom, US 101 and the end of the Lewis and Clark trail",
+  "lat": 46.0,
+  "lon": -123.92,
+  "radius_miles": 6,
+  "collection": "coast"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "coast-tillamook",
+  "name": "Tillamook Bay and Netarts",
+  "region": "Oregon",
+  "state": "Oregon",
+  "blurb": "Bay City, Netarts Bay and OR 6 from Portland",
+  "lat": 45.46,
+  "lon": -123.87,
+  "radius_miles": 10,
+  "collection": "coast"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "ndbc-46229",
+  "name": "Umpqua Offshore waves",
+  "lat": 43.772,
+  "lon": -124.551,
+  "kind": "waves",
+  "provider": "ndbc",
+  "provider_ref": "46229",
+  "source": "NOAA National Data Buoy Center",
+  "page_url": "https://www.ndbc.noaa.gov/station_page.php?station=46229",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "attribution_text": "NOAA National Data Buoy Center",
+  "tags": [
+    "coast"
+  ],
+  "created_at": "2026-10-09T00:00:00Z"
+}
