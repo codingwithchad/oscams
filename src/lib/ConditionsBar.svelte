@@ -72,6 +72,7 @@
 				</details>
 			{/if}
 		{:else if c.kind === 'ferry'}
+			{#if c.glance}<span class="glance glance-{c.glance.tone}">{c.glance.text}</span>{/if}
 			<span>{c.rows[0].label} {c.rows[0].value}</span>
 			{#if c.rows.length > 1}
 				<details>

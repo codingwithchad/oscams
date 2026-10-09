@@ -1642,3 +1642,37 @@ div.image-button {
 .pass-top .pill {
 	flex: none;
 }
+
+/* Ferry space and border waits on a place card */
+.glance {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	margin: 4px 0 2px;
+	font-size: var(--fs-sm);
+	font-weight: 600;
+}
+.glance::before {
+	content: '';
+	width: 9px;
+	height: 9px;
+	flex: none;
+	border-radius: 50%;
+	background: #1f8a4c;
+}
+.glance-busy::before {
+	background: #e0a800;
+}
+.glance-full::before {
+	background: #c92a2a;
+}
+.glance-info::before {
+	background: var(--muted);
+}
+.glance-loading {
+	color: var(--muted);
+	font-weight: 400;
+}
+.glance-loading::before {
+	background: var(--line);
+}

@@ -2,11 +2,13 @@ import { error } from '@sveltejs/kit';
 import { isDormant, nearby } from '../../../lib/geo';
 import { coverPicture, forPlace } from '../../../lib/placeCameras';
 import { getCatalog } from '../../../lib/server/catalog';
+import { getGlance } from '../../../lib/server/conditions';
+import type { Glance } from '../../../lib/transit';
 import { REGIONS, regionAt } from '../../../lib/regions';
 import type { PageServerLoad } from './$types';
 
 export const load: PageServerLoad = ({ params }) => {
-	const { collections, places, cameras } = getCatalog();
+	const { collections, places, cameras, weather } = getCatalog();
 	const collection = collections.find((c) => c.id === params.id);
 	if (!collection) error(404, 'Unknown collection');
 	// Grouped by state, in the order of data/regions.json, when the collection spans more than one.
@@ -24,6 +26,8 @@ export const load: PageServerLoad = ({ params }) => {
 			);
 			return {
 				id: p.id,
+				lat: p.lat,
+				lon: p.lon,
 				state: stateOf(p),
 				name: p.name,
 				blurb: p.blurb,
@@ -32,8 +36,18 @@ export const load: PageServerLoad = ({ params }) => {
 			};
 		});
 	const states = [...new Set(list.map((p) => p.state))].sort((a, b) => rank(a) - rank(b));
+	// Ferry space and border waits on each card, so you can read them before opening a place. Streamed: the
+	// list shows at once and the lines fill in.
+	const live = weather.filter((w) => w.kind === 'ferry' || w.kind === 'border');
+	const sources = list.map((p) => ({ id: p.id, src: nearby(live, p, 3)[0] })).filter((x) => x.src);
+	const glances = sources.length
+		? Promise.all(sources.map(async ({ id, src }) => [id, await getGlance(src)] as const)).then(
+				(pairs) => Object.fromEntries(pairs.filter((x): x is [string, Glance] => x[1] !== null))
+			)
+		: null;
 	return {
 		collection,
-		groups: states.map((state) => ({ state, places: list.filter((p) => p.state === state) }))
+		groups: states.map((state) => ({ state, places: list.filter((p) => p.state === state) })),
+		glances
 	};
 };

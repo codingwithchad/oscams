@@ -1,5 +1,12 @@
 import { describe, expect, it } from 'vitest';
-import { borderRows, ferryRows, parseDotNetDate } from './transit';
+import {
+	borderGlance,
+	borderRows,
+	ferryGlance,
+	ferryRows,
+	nextSailingGlance,
+	parseDotNetDate
+} from './transit';
 
 describe('transit', () => {
 	it('reads WSDOT dates', () => {
@@ -66,5 +73,73 @@ describe('transit', () => {
 			{ label: 'NEXUS', value: 'no wait' },
 			{ label: 'Trucks', value: 'no data' }
 		]);
+	});
+
+	describe('at a glance', () => {
+		const T = 1791401400000; // 12:30 PM Pacific
+		const sailing = (minutes: number, spaces: number | null) => ({
+			Departure: `/Date(${T + minutes * 60_000}-0700)/`,
+			SpaceForArrivalTerminals: [
+				{
+					TerminalName: 'Kingston',
+					DisplayDriveUpSpace: spaces !== null,
+					DriveUpSpaceCount: spaces
+				}
+			]
+		});
+
+		it('shows the next sailing and its space when there is room', () => {
+			expect(ferryGlance({ DepartingSpaces: [sailing(10, 80)] }, T)).toEqual({
+				text: 'Next sailing 12:40 PM · 80 drive-up spaces',
+				tone: 'ok'
+			});
+			expect(ferryGlance({ DepartingSpaces: [sailing(10, 6)] }, T)?.tone).toBe('busy');
+		});
+
+		it('turns full boats into a boat wait', () => {
+			const space = { DepartingSpaces: [sailing(10, 0), sailing(50, 0), sailing(90, 30)] };
+			expect(ferryGlance(space, T)).toEqual({
+				text: 'Next 2 boats full · space on the 2:00 PM',
+				tone: 'full'
+			});
+			expect(ferryGlance({ DepartingSpaces: [sailing(10, 0), sailing(50, 4)] }, T)?.text).toBe(
+				'Next boat full · space on the 1:20 PM'
+			);
+		});
+
+		it('says when every listed sailing is full, and skips past sailings', () => {
+			const space = { DepartingSpaces: [sailing(-30, 50), sailing(10, 0), sailing(50, 0)] };
+			expect(ferryGlance(space, T)?.text).toBe('Next 2 sailings full for drive-up cars');
+			expect(ferryGlance({ DepartingSpaces: [] }, T)).toBeNull();
+		});
+
+		it('summarises the border car and NEXUS lanes', () => {
+			const readings = [
+				{ CrossingName: 'I5', WaitTime: 35 },
+				{ CrossingName: 'I5Nexus', WaitTime: 0 },
+				{ CrossingName: 'I5Trucks', WaitTime: 90 }
+			];
+			expect(borderGlance(readings, ['I5', 'I5Nexus', 'I5Trucks'])).toEqual({
+				text: 'Into the US: Cars 35 min · NEXUS no wait',
+				tone: 'busy'
+			});
+			expect(borderGlance([{ CrossingName: 'I5', WaitTime: -1 }], ['I5'])?.tone).toBe('info');
+			expect(borderGlance([], ['I5'])).toBeNull();
+		});
+
+		it('falls back to the next scheduled sailing when WSF has no space count', () => {
+			const at = (m: number) => ({ DepartingTime: `/Date(${T + m * 60_000}-0700)/` });
+			const combos = [
+				{ ArrivingTerminalName: 'Vashon Island', Times: [at(-5), at(25)] },
+				{ ArrivingTerminalName: 'Southworth', Times: [at(15)] }
+			];
+			expect(nextSailingGlance(combos, T)).toEqual({
+				text: 'Next sailing 12:45 PM to Southworth · no space count',
+				tone: 'info'
+			});
+			expect(nextSailingGlance([combos[0]], T)?.text).toBe(
+				'Next sailing 12:55 PM · no space count'
+			);
+		});
 	});
 });

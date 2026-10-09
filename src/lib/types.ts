@@ -134,6 +134,8 @@ export interface Conditions {
 	state: 'ok' | 'dormant' | 'error';
 	note?: string;
 	rows: { label: string; value: string }[];
+	/** For ferries: a one-line summary such as "Next 2 boats full", shown above the sailings. */
+	glance?: { text: string; tone: 'ok' | 'busy' | 'full' | 'info' };
 }
 
 export interface PassInfo {

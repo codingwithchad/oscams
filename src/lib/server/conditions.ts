@@ -5,7 +5,18 @@ import { classifyPass, STATUS_LABEL, type RawPass } from '../passes';
 import { faaRows, observationRows } from '../airport';
 import { hourlyRows, type HourlyPeriod } from '../forecast';
 import { timeZoneAt } from '../regions';
-import { borderRows, ferryRows, type BorderReading, type TerminalSpace } from '../transit';
+import {
+	borderGlance,
+	borderRows,
+	ferryGlance,
+	ferryRows,
+	nextSailingGlance,
+	scheduleRows,
+	type BorderReading,
+	type Glance,
+	type ScheduleCombo,
+	type TerminalSpace
+} from '../transit';
 import { localStamp, parseBuoy, upcomingTides, type TidePrediction } from '../marine';
 import { cached } from './cache';
 
@@ -156,25 +167,77 @@ async function fetchTides(src: WeatherSource): Promise<Row[]> {
 	return upcomingTides(data.predictions ?? [], stamp);
 }
 
-async function fetchFerry(src: WeatherSource): Promise<Row[]> {
+// Sailing space and border waits change by the minute: fetched at most every two minutes, shared by the place
+// pages and the at-a-glance lines on the ferry and border lists.
+// WSF answers 400 for terminals it publishes no space for (the Vashon triangle, Port Townsend, Lopez...):
+// treat that, and any outage, as "no space counts" so the schedule is shown instead.
+const spaceOrNone = (src: WeatherSource) => sailingSpace(src).catch((): TerminalSpace => ({}));
+
+function sailingSpace(src: WeatherSource): Promise<TerminalSpace> {
 	const key = encodeURIComponent(wsdotKey(src));
-	const space = await getJson<TerminalSpace>(
-		`https://www.wsdot.wa.gov/ferries/api/terminals/rest/terminalsailingspace/${encodeURIComponent(src.provider_ref ?? '')}?apiaccesscode=${key}`
+	const ref = encodeURIComponent(src.provider_ref ?? '');
+	return cached(`wsf:space:${ref}`, 2 * 60 * 1000, () =>
+		getJson<TerminalSpace>(
+			`https://www.wsdot.wa.gov/ferries/api/terminals/rest/terminalsailingspace/${ref}?apiaccesscode=${key}`
+		)
 	);
-	return ferryRows(space, Date.now());
 }
 
-async function fetchBorder(src: WeatherSource): Promise<Row[]> {
+function borderReadings(src: WeatherSource): Promise<BorderReading[]> {
 	const key = encodeURIComponent(wsdotKey(src));
-	const readings = await cached('wsdot:border', 2 * 60 * 1000, () =>
+	return cached('wsdot:border', 2 * 60 * 1000, () =>
 		getJson<BorderReading[]>(
 			`${WSDOT}/BorderCrossings/BorderCrossingsREST.svc/GetBorderCrossingsAsJson?AccessCode=${key}`
 		)
 	);
-	return borderRows(
-		readings,
-		(src.provider_ref ?? '').split(',').map((n) => n.trim())
+}
+
+const lanes = (src: WeatherSource) => (src.provider_ref ?? '').split(',').map((n) => n.trim());
+
+// Some terminals (the Vashon triangle, Port Townsend, Lopez...) have no drive-up space counts: list the schedule.
+async function fetchFerry(src: WeatherSource): Promise<Row[]> {
+	const rows = ferryRows(await spaceOrNone(src), Date.now());
+	return rows.length ? rows : scheduleRows(await scheduleToday(src), Date.now());
+}
+
+async function fetchBorder(src: WeatherSource): Promise<Row[]> {
+	return borderRows(await borderReadings(src), lanes(src));
+}
+
+/** Today's remaining sailings from a terminal to each of its destinations (WSF schedule API). */
+async function scheduleToday(src: WeatherSource): Promise<ScheduleCombo[]> {
+	const key = encodeURIComponent(wsdotKey(src));
+	const id = encodeURIComponent(src.provider_ref ?? '');
+	const base = 'https://www.wsdot.wa.gov/ferries/api/schedule/rest';
+	const day = new Date().toLocaleDateString('en-CA', { timeZone: 'America/Los_Angeles' });
+	const mates = await cached(`wsf:mates:${id}:${day}`, 6 * 60 * 60 * 1000, () =>
+		getJson<{ TerminalID: number }[]>(`${base}/terminalmates/${day}/${id}?apiaccesscode=${key}`)
 	);
+	const combos = await Promise.all(
+		mates.map((m) =>
+			cached(`wsf:today:${id}:${m.TerminalID}`, 10 * 60 * 1000, () =>
+				getJson<{ TerminalCombos: ScheduleCombo[] }>(
+					`${base}/scheduletoday/${id}/${m.TerminalID}/true?apiaccesscode=${key}`
+				)
+			)
+		)
+	);
+	return combos.flatMap((c) => c.TerminalCombos ?? []);
+}
+
+/** One line for a ferry or border card, before the place is opened. Null when there is nothing to say. */
+export async function getGlance(src: WeatherSource): Promise<Glance | null> {
+	try {
+		if (src.provider === 'wsdot-ferry')
+			return (
+				ferryGlance(await spaceOrNone(src), Date.now()) ??
+				nextSailingGlance(await scheduleToday(src), Date.now())
+			);
+		if (src.provider === 'wsdot-border') return borderGlance(await borderReadings(src), lanes(src));
+	} catch (err) {
+		console.warn(`[glance] ${src.id}: ${(err as Error).message}`);
+	}
+	return null;
 }
 
 async function fetchFaa(src: WeatherSource): Promise<Row[]> {
@@ -272,10 +335,13 @@ export async function getConditions(
 			};
 		// Road-condition reports lead with a one-word status that gets a coloured tag.
 		const tone = src.provider === 'wsdot-pass' ? PASS_TONE[rows[0]?.value ?? ''] : undefined;
+		// A boat wait is worth a line of its own at the top of the ferry report.
+		const glance = src.provider === 'wsdot-ferry' ? await getGlance(src) : null;
 		return {
 			...base,
 			state: 'ok',
 			rows,
+			...(glance?.tone === 'full' ? { glance } : {}),
 			badge: tone ? { label: rows[0].value, tone } : undefined,
 			at: at !== undefined && rows[0]?.label.startsWith('About') ? at : undefined
 		};

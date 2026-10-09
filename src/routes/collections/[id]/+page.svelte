@@ -26,6 +26,17 @@
 					<span class="place-body">
 						<span class="place-name">{place.name}</span>
 						{#if place.blurb}<span class="place-sub">{place.blurb}</span>{/if}
+						{#if data.glances}
+							{#await data.glances}
+								<span class="glance glance-loading">Checking the line…</span>
+							{:then glances}
+								{#if glances[place.id]}
+									<span class="glance glance-{glances[place.id].tone}"
+										>{glances[place.id].text}</span
+									>
+								{/if}
+							{/await}
+						{/if}
 						<span class="place-count">{place.liveCameras} live cameras</span>
 					</span>
 				</a>
