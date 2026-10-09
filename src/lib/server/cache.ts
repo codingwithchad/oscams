@@ -1,6 +1,28 @@
-const store = new Map<string, { at: number; value: unknown }>();
+const store = new Map<string, { at: number; value: unknown; bytes: number }>();
 const inFlight = new Map<string, Promise<unknown>>();
 const MAX_ENTRIES = 2000;
+// Pictures are the big entries; keep their total well inside a small server's memory.
+const MAX_BYTES = 64 * 1024 * 1024;
+let bytes = 0;
+
+const sizeOf = (value: unknown) => (value instanceof Uint8Array ? value.byteLength : 0);
+
+/** Store a value, dropping the oldest entries while over the entry or byte limit. */
+function put(key: string, value: unknown) {
+	const old = store.get(key);
+	if (old) {
+		bytes -= old.bytes;
+		store.delete(key);
+	}
+	const size = sizeOf(value);
+	while (store.size && (store.size >= MAX_ENTRIES || bytes + size > MAX_BYTES)) {
+		const [oldest, entry] = store.entries().next().value as [string, { bytes: number }];
+		bytes -= entry.bytes;
+		store.delete(oldest);
+	}
+	store.set(key, { at: Date.now(), value, bytes: size });
+	bytes += size;
+}
 
 /**
  * Tiny in-memory cache so upstream APIs are hit at most once per `ttlMs` per key.
@@ -16,8 +38,7 @@ export function cached<T>(key: string, ttlMs: number, load: () => Promise<T>): P
 	const promise = (async () => {
 		try {
 			const value = await load();
-			if (store.size >= MAX_ENTRIES) store.delete(store.keys().next().value as string);
-			store.set(key, { at: Date.now(), value });
+			put(key, value);
 			return value;
 		} finally {
 			inFlight.delete(key);
@@ -45,16 +66,19 @@ export async function cachedMany<T>(
 	}
 	if (missing.length) {
 		for (const [key, value] of await load(missing)) {
-			if (store.size >= MAX_ENTRIES) store.delete(store.keys().next().value as string);
-			store.set(key, { at: Date.now(), value });
+			put(key, value);
 			out.set(key, value);
 		}
 	}
 	return out;
 }
 
+/** How much picture data is held right now (for /healthz). */
+export const cacheBytes = () => bytes;
+
 /** For tests: forget everything. */
 export function clearCache() {
 	store.clear();
 	inFlight.clear();
+	bytes = 0;
 }

@@ -1,5 +1,5 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest';
-import { cached, clearCache } from './cache';
+import { cacheBytes, cached, clearCache } from './cache';
 
 beforeEach(() => {
 	clearCache();
@@ -44,5 +44,18 @@ describe('cached', () => {
 		const a = await cached('a', 1000, async () => 1);
 		const b = await cached('b', 1000, async () => 2);
 		expect([a, b]).toEqual([1, 2]);
+	});
+});
+
+describe('picture memory limit', () => {
+	it('drops the oldest pictures to stay under the byte limit', async () => {
+		const mb = () => new Uint8Array(1024 * 1024);
+		for (let i = 0; i < 80; i++) await cached(`pic:${i}`, 60_000, async () => mb());
+		expect(cacheBytes()).toBeLessThanOrEqual(64 * 1024 * 1024);
+		const reload = vi.fn(async () => mb());
+		await cached('pic:0', 60_000, reload);
+		expect(reload).toHaveBeenCalledTimes(1);
+		await cached('pic:79', 60_000, reload);
+		expect(reload).toHaveBeenCalledTimes(1);
 	});
 });

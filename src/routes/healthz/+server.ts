@@ -1,4 +1,5 @@
 import { getCatalog } from '../../lib/server/catalog';
+import { cacheBytes } from '../../lib/server/cache';
 
 /** Used by the host to check the app is up and the data loaded. */
 export const GET = ({ request }: { request: Request }) => {
@@ -15,6 +16,7 @@ export const GET = ({ request }: { request: Request }) => {
 			forwarded_hops: (request.headers.get('x-forwarded-for') ?? '')
 				.split(',')
 				.filter((s) => s.trim()).length,
+			cached_picture_mb: Math.round(cacheBytes() / 1048576),
 			keys: { windy: Boolean(process.env.WINDY_API_KEY), wsdot: Boolean(process.env.WSDOT_CODE) }
 		}),
 		{

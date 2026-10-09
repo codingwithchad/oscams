@@ -161,6 +161,10 @@
       "minimum": 200,
       "maximum": 2000,
       "description": "Serve a smaller copy of the picture (pixels wide) through our server. For sources that publish very large images."
+    },
+    "mirror": {
+      "type": "boolean",
+      "description": "Serve the picture from our own server as a copy refreshed every refresh_seconds, never straight from the owner's site. Required by owners whose terms say republishers must mirror (ODOT TripCheck)."
     }
   },
   "if": {

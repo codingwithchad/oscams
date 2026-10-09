@@ -17,5 +17,6 @@
   "attribution_text": "Oregon Department of Transportation (TripCheck)",
   "created_at": "2026-10-09T00:00:00Z",
   "route": "I 205",
-  "milepost": 8.72
+  "milepost": 8.72,
+  "mirror": true
 }

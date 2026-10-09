@@ -1623,3 +1623,13 @@ div.image-button {
 		margin: 0 auto;
 	}
 }
+.disclaimer {
+	margin: 8px 0 0;
+	padding: 10px 14px;
+	border-left: 3px solid var(--line);
+	background: var(--card);
+	border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+	color: var(--muted);
+	font-size: var(--fs-sm);
+	line-height: 1.5;
+}

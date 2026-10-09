@@ -17,5 +17,6 @@
   "attribution_text": "Oregon Department of Transportation (TripCheck)",
   "created_at": "2026-10-09T00:00:00Z",
   "route": "I 405",
-  "milepost": 2.12
+  "milepost": 2.12,
+  "mirror": true
 }

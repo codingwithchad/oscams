@@ -88,6 +88,8 @@ for (let i = 0; i < candidates.length; i += 10) {
 			page_url: 'https://tripcheck.com/',
 			embed_mode: 'direct',
 			refresh_seconds: 300,
+			// ODOT's terms: republishers must serve their own periodically refreshed copy.
+			mirror: true,
 			tags: ['road'],
 			attribution_text: 'Oregon Department of Transportation (TripCheck)',
 			created_at: new Date().toISOString().slice(0, 10) + 'T00:00:00Z',

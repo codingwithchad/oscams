@@ -17,5 +17,6 @@
   "attribution_text": "Oregon Department of Transportation (TripCheck)",
   "created_at": "2026-10-09T00:00:00Z",
   "route": "i5",
-  "milepost": 116.1
+  "milepost": 116.1,
+  "mirror": true
 }

@@ -59,7 +59,7 @@
 	const imageSrc = $derived(
 		view
 			? (providerUrl ?? camera.feed_url)
-			: camera.max_width
+			: camera.max_width || camera.mirror
 				? `/img/${encodeURIComponent(camera.id)}?t=${Math.floor(tick / refreshMs)}&r=${retry}`
 				: `${camera.feed_url}${camera.feed_url?.includes('?') ? '&' : '?'}t=${Math.floor(tick / refreshMs)}&r=${retry}`
 	);

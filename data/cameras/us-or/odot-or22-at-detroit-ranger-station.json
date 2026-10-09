@@ -17,5 +17,6 @@
   "attribution_text": "Oregon Department of Transportation (TripCheck)",
   "created_at": "2026-10-09T00:00:00Z",
   "route": "OR 22",
-  "milepost": 48.86
+  "milepost": 48.86,
+  "mirror": true
 }

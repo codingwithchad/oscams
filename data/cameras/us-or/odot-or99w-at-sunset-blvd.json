@@ -17,5 +17,6 @@
   "attribution_text": "Oregon Department of Transportation (TripCheck)",
   "created_at": "2026-10-09T00:00:00Z",
   "route": "OR 99W",
-  "milepost": 16.66
+  "milepost": 16.66,
+  "mirror": true
 }

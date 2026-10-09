@@ -75,6 +75,32 @@
 		>) before you travel, and don't use your phone while driving.
 	</p>
 
+	<h2>Oregon road cameras</h2>
+	<p>
+		Oregon road camera pictures are provided by the Oregon Department of Transportation and its
+		partner agencies through the
+		<a href="https://tripcheck.com/" target="_blank" rel="noopener">TripCheck</a> Data API. We show our
+		own copy of each picture, refreshed every few minutes. ODOT's disclaimer:
+	</p>
+	<blockquote class="disclaimer">
+		ODOT and public agencies providing the data on this portal attempt to provide the best service
+		reasonably available, but situations will occur that disrupt service. The updating and
+		dissemination of this information depends on a number of available resources, including Internet
+		availability, communications networks, and interconnected computer systems which may be beyond
+		the immediate control of ODOT. Availability at any given time is not guaranteed. Those relying
+		on information presented on this site do so at their own risk, and the State of Oregon, ODOT,
+		and the public agencies providing the data, and any of their officers, employees or agents shall
+		be held harmless and released from liability for the accuracy or completeness of this
+		information and from any actions taken based on the information. All information is provided "as
+		is" without warranty of any kind, either express or implied, including, but not limited to, the
+		implied warranties of merchantability, fitness for a particular purpose, or non-infringement.
+		ODOT assumes no responsibility for errors or omissions in the information or software or other
+		documents which are referenced by or linked to this portal. Under no circumstances, including,
+		but not limited to, negligence, shall ODOT or any public agency contributing data to this portal
+		be liable for any direct, indirect, incidental, special or consequential damages that result
+		from the use of, or the inability to use, this portal or its content.
+	</blockquote>
+
 	<h2>Who made it</h2>
 	<p>
 		One person, with voice dictation and <a
