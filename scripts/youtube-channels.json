@@ -1,0 +1,51 @@
+[
+	{
+		"channel": "UCKEFryZlrSRBFJ_EyPEOI6A",
+		"label": "The Summit at Snoqualmie",
+		"lat": 47.4245,
+		"lon": -121.4175,
+		"tags": ["ski", "snoqualmie-pass"]
+	},
+	{
+		"channel": "UCGfvmaJaYd2tKs-mtkZswpg",
+		"label": "Mission Ridge",
+		"lat": 47.294,
+		"lon": -120.3996,
+		"tags": ["ski", "wenatchee"]
+	},
+	{
+		"channel": "UCza48nR27_AEYbIbwMCOoFQ",
+		"label": "Visit Leavenworth",
+		"lat": 47.5962,
+		"lon": -120.6615,
+		"tags": ["leavenworth", "town"]
+	},
+	{
+		"channel": "UC4v5XLnIUGVk2mDrXYbkI-w",
+		"label": "Visit Chelan County",
+		"lat": 47.4235,
+		"lon": -120.3103,
+		"tags": ["wenatchee", "town"]
+	},
+	{
+		"channel": "UC5SGIeFEOa6YIOl3lThEzKA",
+		"label": "Mt. Spokane",
+		"lat": 47.9217,
+		"lon": -117.1176,
+		"tags": ["ski", "spokane"]
+	},
+	{
+		"channel": "UCwYQ0fEcfhpVdmzVF2jr2gA",
+		"label": "Port of Friday Harbor",
+		"lat": 48.5343,
+		"lon": -123.017,
+		"tags": ["marina", "friday-harbor"]
+	},
+	{
+		"channel": "UCM0qV6ZHBkjxBokQepECyFg",
+		"label": "Friday Harbor Airport",
+		"lat": 48.5219,
+		"lon": -123.0245,
+		"tags": ["airport", "friday-harbor"]
+	}
+]

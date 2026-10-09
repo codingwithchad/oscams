@@ -1,0 +1,21 @@
+{
+  "id": "mt-spokane-webcam-hidden-treasure-chair-4",
+  "name": "Mt. Spokane Webcam, Hidden Treasure, Chair 4",
+  "description": "Live view from Mt. Spokane's YouTube channel.",
+  "lat": 47.9217,
+  "lon": -117.1176,
+  "location_precision": "approximate",
+  "feed_type": "stream",
+  "feed_url": "https://www.youtube-nocookie.com/embed/rQnOjOnHrpw",
+  "embed_mode": "iframe",
+  "source": "Mt. Spokane",
+  "status": "pending",
+  "page_url": "https://www.youtube.com/watch?v=rQnOjOnHrpw",
+  "license_or_terms": "Published by Mt. Spokane on YouTube with embedding turned on; shown through YouTube's official player, only after a tap.",
+  "tags": [
+    "ski",
+    "spokane"
+  ],
+  "attribution_text": "Mt. Spokane (via YouTube)",
+  "created_at": "2026-10-09T00:00:00Z"
+}

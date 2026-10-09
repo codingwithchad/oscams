@@ -1,0 +1,21 @@
+{
+  "id": "port-of-friday-harbor-shipyard-cove-marina-live-stream",
+  "name": "Port of Friday Harbor - Shipyard Cove Marina Live Stream",
+  "description": "Live view from Port of Friday Harbor's YouTube channel.",
+  "lat": 48.5343,
+  "lon": -123.017,
+  "location_precision": "approximate",
+  "feed_type": "stream",
+  "feed_url": "https://www.youtube-nocookie.com/embed/g2_KQNjZ0vg",
+  "embed_mode": "iframe",
+  "source": "Port of Friday Harbor",
+  "status": "pending",
+  "page_url": "https://www.youtube.com/watch?v=g2_KQNjZ0vg",
+  "license_or_terms": "Published by Port of Friday Harbor on YouTube with embedding turned on; shown through YouTube's official player, only after a tap.",
+  "tags": [
+    "marina",
+    "friday-harbor"
+  ],
+  "attribution_text": "Port of Friday Harbor (via YouTube)",
+  "created_at": "2026-10-09T00:00:00Z"
+}

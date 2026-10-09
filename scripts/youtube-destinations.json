@@ -1,0 +1,72 @@
+[
+	{
+		"name": "Snoqualmie Pass",
+		"lat": 47.4245,
+		"lon": -121.4175,
+		"why": "closest ski area to Seattle, I-90 pass"
+	},
+	{
+		"name": "Stevens Pass",
+		"lat": 47.7448,
+		"lon": -121.089,
+		"why": "ski area, US 2 pass, route to Leavenworth"
+	},
+	{ "name": "Crystal Mountain", "lat": 46.9355, "lon": -121.4745, "why": "largest ski area" },
+	{ "name": "Mt. Baker", "lat": 48.857, "lon": -121.665, "why": "ski area, heavy snow" },
+	{ "name": "Mission Ridge", "lat": 47.294, "lon": -120.3996, "why": "ski area above Wenatchee" },
+	{ "name": "Leavenworth", "lat": 47.5962, "lon": -120.6615, "why": "Christmas Lighting Festival" },
+	{
+		"name": "Wenatchee",
+		"lat": 47.4235,
+		"lon": -120.3103,
+		"why": "gateway city for Leavenworth and Chelan"
+	},
+	{
+		"name": "Chelan",
+		"lat": 47.8407,
+		"lon": -120.017,
+		"why": "Lake Chelan holiday and winter getaway"
+	},
+	{ "name": "Winthrop", "lat": 48.4777, "lon": -120.1862, "why": "Methow Valley snow village" },
+	{ "name": "Cle Elum", "lat": 47.1951, "lon": -120.9392, "why": "Roslyn, Suncadia, I-90 stop" },
+	{ "name": "Poulsbo", "lat": 47.7359, "lon": -122.6465, "why": "Julefest Christmas" },
+	{ "name": "Port Townsend", "lat": 48.117, "lon": -122.7604, "why": "fall and holiday weekend" },
+	{ "name": "Seattle", "lat": 47.6062, "lon": -122.3321, "why": "holiday events, waterfront" },
+	{
+		"name": "Bellevue",
+		"lat": 47.6101,
+		"lon": -122.2015,
+		"why": "Snowflake Lights, Garden d'Lights"
+	},
+	{ "name": "Tacoma", "lat": 47.2529, "lon": -122.4443, "why": "Zoolights, Point Defiance" },
+	{
+		"name": "Bellingham",
+		"lat": 48.7519,
+		"lon": -122.4787,
+		"why": "gateway to Mt. Baker and Canada"
+	},
+	{
+		"name": "Spokane",
+		"lat": 47.6588,
+		"lon": -117.426,
+		"why": "largest eastern city, holiday events"
+	},
+	{
+		"name": "Snoqualmie Falls",
+		"lat": 47.5417,
+		"lon": -121.8374,
+		"why": "fall and winter day trip"
+	},
+	{
+		"name": "Mount Rainier",
+		"lat": 46.786,
+		"lon": -121.736,
+		"why": "Paradise snow play, Thanksgiving trips"
+	},
+	{
+		"name": "Friday Harbor",
+		"lat": 48.5343,
+		"lon": -123.017,
+		"why": "San Juan Islands, ferry route"
+	}
+]

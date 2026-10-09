@@ -1,0 +1,21 @@
+{
+  "id": "mt-spokane-web-cam-snow-stake",
+  "name": "Mt. Spokane Web Cam, Snow Stake",
+  "description": "Live view from Mt. Spokane's YouTube channel.",
+  "lat": 47.9217,
+  "lon": -117.1176,
+  "location_precision": "approximate",
+  "feed_type": "stream",
+  "feed_url": "https://www.youtube-nocookie.com/embed/lBgqL-YwCcE",
+  "embed_mode": "iframe",
+  "source": "Mt. Spokane",
+  "status": "pending",
+  "page_url": "https://www.youtube.com/watch?v=lBgqL-YwCcE",
+  "license_or_terms": "Published by Mt. Spokane on YouTube with embedding turned on; shown through YouTube's official player, only after a tap.",
+  "tags": [
+    "ski",
+    "spokane"
+  ],
+  "attribution_text": "Mt. Spokane (via YouTube)",
+  "created_at": "2026-10-09T00:00:00Z"
+}

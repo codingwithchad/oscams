@@ -1,0 +1,21 @@
+{
+  "id": "leavenworth-bavarian-lodge-view",
+  "name": "Leavenworth - Bavarian Lodge view",
+  "description": "Live view from Visit Leavenworth's YouTube channel.",
+  "lat": 47.5946,
+  "lon": -120.6672,
+  "location_precision": "approximate",
+  "feed_type": "stream",
+  "feed_url": "https://www.youtube-nocookie.com/embed/NdW8Mh0lmOo",
+  "embed_mode": "iframe",
+  "source": "Visit Leavenworth",
+  "status": "pending",
+  "page_url": "https://www.youtube.com/watch?v=NdW8Mh0lmOo",
+  "license_or_terms": "Published by Visit Leavenworth on YouTube with embedding turned on; shown through YouTube's official player, only after a tap.",
+  "tags": [
+    "leavenworth",
+    "town"
+  ],
+  "attribution_text": "Visit Leavenworth (via YouTube)",
+  "created_at": "2026-10-09T00:00:00Z"
+}

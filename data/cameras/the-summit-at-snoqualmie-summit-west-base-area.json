@@ -1,0 +1,21 @@
+{
+  "id": "the-summit-at-snoqualmie-summit-west-base-area",
+  "name": "The Summit at Snoqualmie - Summit West - Base Area",
+  "description": "Live view from The Summit at Snoqualmie's YouTube channel.",
+  "lat": 47.4245,
+  "lon": -121.4175,
+  "location_precision": "approximate",
+  "feed_type": "stream",
+  "feed_url": "https://www.youtube-nocookie.com/embed/vhO8nNqg9iw",
+  "embed_mode": "iframe",
+  "source": "The Summit at Snoqualmie",
+  "status": "pending",
+  "page_url": "https://www.youtube.com/watch?v=vhO8nNqg9iw",
+  "license_or_terms": "Published by The Summit at Snoqualmie on YouTube with embedding turned on; shown through YouTube's official player, only after a tap.",
+  "tags": [
+    "ski",
+    "snoqualmie-pass"
+  ],
+  "attribution_text": "The Summit at Snoqualmie (via YouTube)",
+  "created_at": "2026-10-09T00:00:00Z"
+}

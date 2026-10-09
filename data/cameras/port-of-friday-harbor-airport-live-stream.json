@@ -1,0 +1,21 @@
+{
+  "id": "port-of-friday-harbor-airport-live-stream",
+  "name": "Port of Friday Harbor Airport Live Stream",
+  "description": "Live view from Friday Harbor Airport's YouTube channel.",
+  "lat": 48.5219,
+  "lon": -123.0245,
+  "location_precision": "approximate",
+  "feed_type": "stream",
+  "feed_url": "https://www.youtube-nocookie.com/embed/4hw3XEvfUmk",
+  "embed_mode": "iframe",
+  "source": "Friday Harbor Airport",
+  "status": "pending",
+  "page_url": "https://www.youtube.com/watch?v=4hw3XEvfUmk",
+  "license_or_terms": "Published by Friday Harbor Airport on YouTube with embedding turned on; shown through YouTube's official player, only after a tap.",
+  "tags": [
+    "airport",
+    "friday-harbor"
+  ],
+  "attribution_text": "Friday Harbor Airport (via YouTube)",
+  "created_at": "2026-10-09T00:00:00Z"
+}

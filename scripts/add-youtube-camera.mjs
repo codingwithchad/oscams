@@ -1,6 +1,6 @@
 // Check a YouTube live stream and turn it into a camera data file (status "pending" until the owner approves it).
 // Usage: node scripts/add-youtube-camera.mjs <youtube link> --lat 47.98 --lon -122.22 [--name "Everett boat launch"]
-//          [--source "Port of Everett"] [--page https://owner.example/camera] [--tags marina,everett] [--use-channel] [--write]
+//          [--source "Port of Everett"] [--page https://owner.example/camera] [--tags marina,everett] [--use-channel] [--approx] [--write]
 // Without --write it only reports what it found. Nothing is added unless every check passes.
 import { existsSync, writeFileSync } from 'node:fs';
 
@@ -101,6 +101,7 @@ const camera = {
 	description: `Live view from ${source}'s YouTube channel.`,
 	lat,
 	lon,
+	...(has('approx') ? { location_precision: 'approximate' } : {}),
 	feed_type: 'stream',
 	feed_url: useChannel
 		? `https://www.youtube-nocookie.com/embed/live_stream?channel=${channelId}`
