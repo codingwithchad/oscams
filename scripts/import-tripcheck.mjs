@@ -101,6 +101,7 @@ for (let i = 0; i < candidates.length; i += 10) {
 		addedCams.push(camera);
 		added++;
 		if (write) writeFileSync(file, JSON.stringify(camera, null, 2) + '\n');
+		else console.log(`would add ${c.name}`);
 	});
 }
 

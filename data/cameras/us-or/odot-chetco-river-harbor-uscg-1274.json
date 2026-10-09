@@ -1,0 +1,22 @@
+{
+  "id": "odot-chetco-river-harbor-uscg-1274",
+  "name": "Chetco River Harbor (USCG)",
+  "lat": 42.04663,
+  "lon": -124.26788,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/Chetco%20River%20Harbor%20(USCG)_pid4918.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "mirror": true,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "City",
+  "milepost": 0
+}

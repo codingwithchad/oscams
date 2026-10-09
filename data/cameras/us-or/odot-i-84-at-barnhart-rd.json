@@ -1,0 +1,22 @@
+{
+  "id": "odot-i-84-at-barnhart-rd",
+  "name": "I-84 at Barnhart Rd",
+  "lat": 45.69109,
+  "lon": -118.93364,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/I-84%20at%20Barnhart%20EB_pid3385.JPG",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "mirror": true,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "I 84",
+  "milepost": 202.89
+}

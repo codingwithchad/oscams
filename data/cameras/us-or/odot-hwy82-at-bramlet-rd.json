@@ -1,0 +1,22 @@
+{
+  "id": "odot-hwy82-at-bramlet-rd",
+  "name": "Hwy82 at Bramlet Rd",
+  "lat": 45.61009,
+  "lon": -117.60111,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/Hwy82%20at%20Bramlet%20Rd%20W_pid4580.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "mirror": true,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "Hwy82",
+  "milepost": 42.2
+}

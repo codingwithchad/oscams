@@ -22,9 +22,24 @@ export function dataFiles(folder) {
 export const loadAll = (folder) =>
 	dataFiles(folder).map((f) => JSON.parse(readFileSync(f, 'utf8')));
 
-/** The region a point is in (first match in data/regions.json), or undefined when outside them all. */
+// Same rule as src/lib/regions.ts (src/lib/regions.test.ts checks the two agree): inside the outline when a
+// region has one (Washington's follows the Columbia River), otherwise inside its box.
+function inOutline(outline, lat, lon) {
+	let hit = false;
+	for (let i = 0, j = outline.length - 1; i < outline.length; j = i++) {
+		const [xi, yi] = outline[i];
+		const [xj, yj] = outline[j];
+		if (yi > lat !== yj > lat && lon < ((xj - xi) * (lat - yi)) / (yj - yi) + xi) hit = !hit;
+	}
+	return hit;
+}
+
+/** The region a point is in, or undefined when outside them all. */
 export const regionAt = (lat, lon) =>
-	regions.find(({ bbox: [w, s, e, n] }) => lon >= w && lat >= s && lon <= e && lat <= n);
+	regions.find(
+		({ bbox: [w, s, e, n], outline }) =>
+			lon >= w && lat >= s && lon <= e && lat <= n && (!outline || inOutline(outline, lat, lon))
+	);
 
 /** Where a new file for this point goes, e.g. data/cameras/us-or/<id>.json (the folder is created if needed). */
 export function fileFor(folder, id, lat, lon) {

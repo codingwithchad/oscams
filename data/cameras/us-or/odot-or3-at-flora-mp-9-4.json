@@ -1,0 +1,22 @@
+{
+  "id": "odot-or3-at-flora-mp-9-4",
+  "name": "OR3 at Flora MP 9.4",
+  "lat": 45.89137,
+  "lon": -117.26252,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/ORE3%20at%20Flora%20MP9.4_pid4660.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "mirror": true,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "OR 3",
+  "milepost": 9.4
+}

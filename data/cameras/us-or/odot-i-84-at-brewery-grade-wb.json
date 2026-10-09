@@ -1,0 +1,22 @@
+{
+  "id": "odot-i-84-at-brewery-grade-wb",
+  "name": "I-84 at Brewery Grade WB",
+  "lat": 45.59929,
+  "lon": -121.16899,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/I-84%20at%20Brewery%20Grade%20WB_pid4347.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "mirror": true,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "I 84",
+  "milepost": 85.5
+}

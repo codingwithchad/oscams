@@ -1,0 +1,22 @@
+{
+  "id": "odot-portland-ne-82nd-at-siskiyou",
+  "name": "Portland - NE 82nd at Siskiyou",
+  "lat": 45.54446,
+  "lon": -122.57888,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/NE%2082nd%20at%20Siskiyou_pid5351.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "mirror": true,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "City",
+  "milepost": 0
+}

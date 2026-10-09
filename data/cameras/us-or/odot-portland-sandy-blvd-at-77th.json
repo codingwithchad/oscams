@@ -1,0 +1,22 @@
+{
+  "id": "odot-portland-sandy-blvd-at-77th",
+  "name": "Portland - Sandy Blvd at 77th",
+  "lat": 45.55036,
+  "lon": -122.58374,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/Sandy%20Blvd%20at%2077th_pid3233.JPG",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "mirror": true,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "CITY",
+  "milepost": 0
+}

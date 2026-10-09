@@ -1,0 +1,22 @@
+{
+  "id": "odot-us97-at-biggs-jct",
+  "name": "US97 at Biggs Jct",
+  "lat": 45.66953,
+  "lon": -120.83333,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/US97%20at%20Biggs%20Jct_pid3105.JPG",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "mirror": true,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "US 97",
+  "milepost": 0.03
+}

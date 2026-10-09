@@ -1,0 +1,22 @@
+{
+  "id": "odot-i-84-at-echo-845",
+  "name": "I-84 at Echo",
+  "lat": 45.75381,
+  "lon": -119.15255,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/I-84%20at%20Echo%20EB_pid3854.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "mirror": true,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "I 84",
+  "milepost": 191.4
+}

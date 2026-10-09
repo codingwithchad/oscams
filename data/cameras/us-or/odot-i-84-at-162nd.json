@@ -1,0 +1,22 @@
+{
+  "id": "odot-i-84-at-162nd",
+  "name": "I-84 at 162nd",
+  "lat": 45.54217,
+  "lon": -122.49509,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/I-84%20EB%20at%20162nd_pid4789.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "mirror": true,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "I 84",
+  "milepost": 12.13
+}

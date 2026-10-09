@@ -1,0 +1,22 @@
+{
+  "id": "odot-or11-at-dry-creek",
+  "name": "OR11 at Dry Creek",
+  "lat": 45.85519,
+  "lon": -118.39943,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/OR11%20at%20Dry%20Creek%20NB_pid5170.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "mirror": true,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "OR 11",
+  "milepost": 20.02
+}

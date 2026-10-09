@@ -1,0 +1,22 @@
+{
+  "id": "odot-us101-at-astoria-odot-district-office",
+  "name": "US101 at Astoria - ODOT District Office",
+  "lat": 46.18785,
+  "lon": -123.85347,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/AstoriaUS101MeglerBrNB_pid392.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "mirror": true,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "US 101",
+  "milepost": 3.7
+}

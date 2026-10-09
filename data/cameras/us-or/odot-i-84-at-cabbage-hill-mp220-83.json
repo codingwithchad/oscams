@@ -1,0 +1,22 @@
+{
+  "id": "odot-i-84-at-cabbage-hill-mp220-83",
+  "name": "I-84 at Cabbage Hill MP220.83",
+  "lat": 45.59542,
+  "lon": -118.61732,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/I-84%20at%20Cabbage%20Hill%20MP220.83%20WB_pid4491.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "mirror": true,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "I 84",
+  "milepost": 220.83
+}

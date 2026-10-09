@@ -1,0 +1,22 @@
+{
+  "id": "odot-or47-at-stub-stewart-park",
+  "name": "OR47 at Stub Stewart Park",
+  "lat": 45.73924,
+  "lon": -123.19938,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/ORE47%20at%20Stub%20Stewart%20Park%20SB_pid4576.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "mirror": true,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "OR 47",
+  "milepost": 72.88
+}

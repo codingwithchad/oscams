@@ -1,0 +1,22 @@
+{
+  "id": "odot-i-84-at-hood-river-exit-64-a",
+  "name": "I-84 at Hood River Exit 64 A",
+  "lat": 45.71061,
+  "lon": -121.50208,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/Hood%20River%20Exit%2064a_pid1863.JPG",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "mirror": true,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "I 84",
+  "milepost": 64
+}

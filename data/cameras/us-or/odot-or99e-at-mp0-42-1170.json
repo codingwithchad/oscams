@@ -1,0 +1,22 @@
+{
+  "id": "odot-or99e-at-mp0-42-1170",
+  "name": "OR99E at MP0.42",
+  "lat": 44.64168,
+  "lon": -123.06632,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/OR99E%20NB%20@%20MP.42_pid4718.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "mirror": true,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "OR 99E",
+  "milepost": 0.42
+}

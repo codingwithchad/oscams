@@ -1,0 +1,22 @@
+{
+  "id": "odot-i-84-at-wyeth-scale-ramp",
+  "name": "I-84 at Wyeth Scale Ramp",
+  "lat": 45.68788,
+  "lon": -121.70189,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/I-84%20at%20Wyeth%20Scale%20Ramp%20W_pid4630.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "mirror": true,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "I 84",
+  "milepost": 54.37
+}

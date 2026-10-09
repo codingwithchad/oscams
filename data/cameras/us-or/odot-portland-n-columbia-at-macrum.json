@@ -1,0 +1,22 @@
+{
+  "id": "odot-portland-n-columbia-at-macrum",
+  "name": "Portland - N Columbia at Macrum",
+  "lat": 45.59531,
+  "lon": -122.73039,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/N%20Columbia%20at%20Macrum_pid4893.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "mirror": true,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "City",
+  "milepost": 0
+}

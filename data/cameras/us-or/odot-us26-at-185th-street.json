@@ -1,0 +1,22 @@
+{
+  "id": "odot-us26-at-185th-street",
+  "name": "US26 at 185th Street",
+  "lat": 45.54143,
+  "lon": -122.8678,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/26_185th_pid1329.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "mirror": true,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "US 26",
+  "milepost": 64.29
+}

@@ -1,0 +1,22 @@
+{
+  "id": "odot-portland-n-lombard-at-fiske",
+  "name": "Portland - N Lombard at Fiske",
+  "lat": 45.58041,
+  "lon": -122.7183,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/N%20Lombard%20at%20Fiske_pid4835.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "mirror": true,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "City",
+  "milepost": 0
+}

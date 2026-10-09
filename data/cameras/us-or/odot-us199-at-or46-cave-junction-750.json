@@ -1,0 +1,22 @@
+{
+  "id": "odot-us199-at-or46-cave-junction-750",
+  "name": "US199 at OR46 (Cave Junction)",
+  "lat": 42.16249,
+  "lon": -123.64674,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/US199%20at%20ORE46%20(Cave%20Junction)_pid3471.JPG",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "mirror": true,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "US 199",
+  "milepost": 28.95
+}

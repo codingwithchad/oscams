@@ -1,0 +1,22 @@
+{
+  "id": "odot-washington-county-185th-ave-at-springville-rd",
+  "name": "Washington County - 185th Ave at Springville Rd",
+  "lat": 45.56231,
+  "lon": -122.86757,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/185th%20Ave%20at%20Springville%20Rd_pid4373.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "mirror": true,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "CNTY",
+  "milepost": 0
+}

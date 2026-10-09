@@ -1,0 +1,22 @@
+{
+  "id": "odot-portand-ne-vancouver-st-at-ne-russell",
+  "name": "Portand - NE Vancouver St at NE Russell",
+  "lat": 45.54107,
+  "lon": -122.66801,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/NE%20Vancouver%20St%20at%20NE%20Russell%20CAM246_pid5367.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "mirror": true,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "City",
+  "milepost": 0
+}

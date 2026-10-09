@@ -1,0 +1,22 @@
+{
+  "id": "odot-i-84-at-marine-dr",
+  "name": "I-84 at Marine Dr",
+  "lat": 45.54446,
+  "lon": -122.40131,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/I-84%20at%20Marine%20Dr_pid4785.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "mirror": true,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "I 84",
+  "milepost": 16.9
+}

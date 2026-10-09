@@ -50,7 +50,7 @@ for (let offset = 0; offset < 1000; offset += 50) {
 }
 
 let added = 0;
-const skipped = { have: 0, near: 0, outside: 0, inactive: 0 };
+const skipped = { have: 0, near: 0, outside: 0, inactive: 0, agency: 0 };
 for (const w of webcams) {
 	const ref = String(w.webcamId);
 	const at = { lat: w.location.latitude, lon: w.location.longitude };
@@ -64,6 +64,12 @@ for (const w of webcams) {
 	}
 	if (!regionAt(at.lat, at.lon)) {
 		skipped.outside++;
+		continue;
+	}
+	// State DOT cameras come straight from the agencies (import-wsdot-route.mjs, import-tripcheck.mjs), never
+	// through Windy: bigger pictures, the right credit, and the agencies' own terms.
+	if (/tripcheck\.com|wsdot/i.test(w.urls?.provider ?? '')) {
+		skipped.agency++;
 		continue;
 	}
 	if (existing.some((c) => km(c, at) < 0.1)) {
@@ -112,5 +118,5 @@ for (const w of webcams) {
 	else console.log(`would add ${file}  (${owner})`);
 }
 console.log(
-	`${write ? 'Added' : 'Would add'} ${added} of ${webcams.length} Windy cameras. Skipped: ${skipped.have} already added, ${skipped.near} next to a camera we have, ${skipped.outside} outside our regions, ${skipped.inactive} inactive.`
+	`${write ? 'Added' : 'Would add'} ${added} of ${webcams.length} Windy cameras. Skipped: ${skipped.have} already added, ${skipped.near} next to a camera we have, ${skipped.outside} outside our regions, ${skipped.inactive} inactive, ${skipped.agency} state DOT cameras (imported from the agency instead).`
 );

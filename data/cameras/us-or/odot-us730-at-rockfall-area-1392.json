@@ -1,0 +1,22 @@
+{
+  "id": "odot-us730-at-rockfall-area-1392",
+  "name": "US730 at Rockfall Area",
+  "lat": 45.99975,
+  "lon": -118.97652,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/US730%20at%20Rockfall%20WB_pid5156.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "mirror": true,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "US 730",
+  "milepost": 203.27
+}

@@ -1,0 +1,22 @@
+{
+  "id": "odot-us30-at-rainier-summit-895",
+  "name": "US30 at Rainier Summit",
+  "lat": 46.09593,
+  "lon": -123.02109,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/US30%20at%20Rainier%20Summit%20EB_pid4055.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "mirror": true,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "US 30",
+  "milepost": 51.28
+}

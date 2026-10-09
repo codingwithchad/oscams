@@ -1,0 +1,22 @@
+{
+  "id": "odot-sr-14-washington-bridge-of-the-gods",
+  "name": "SR-14 Washington - Bridge of the Gods",
+  "lat": 45.66274,
+  "lon": -121.90538,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/SR14%20at%20Bridge%20of%20the%20Gods_pid4355.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "mirror": true,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "SR 14",
+  "milepost": 41.5
+}

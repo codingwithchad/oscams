@@ -1,0 +1,22 @@
+{
+  "id": "odot-or204-at-spout-springs",
+  "name": "OR204 at Spout Springs",
+  "lat": 45.75706,
+  "lon": -118.05435,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/ORE204%20at%20Spout%20Springs_pid4503.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "mirror": true,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "OR 204",
+  "milepost": 22.3
+}

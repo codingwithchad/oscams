@@ -1,0 +1,22 @@
+{
+  "id": "odot-portland-ne-airport-way-at-148th",
+  "name": "Portland - NE Airport Way at 148th",
+  "lat": 45.55957,
+  "lon": -122.51028,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/NE%20Airport%20Way%20@%20148th_pid4775.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "mirror": true,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "CITY",
+  "milepost": 0
+}

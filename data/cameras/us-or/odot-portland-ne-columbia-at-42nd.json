@@ -1,0 +1,22 @@
+{
+  "id": "odot-portland-ne-columbia-at-42nd",
+  "name": "Portland - NE Columbia at 42nd",
+  "lat": 45.57185,
+  "lon": -122.62069,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/NE%20Columbia%20at%2042nd_pid5274.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "mirror": true,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "City",
+  "milepost": 0
+}

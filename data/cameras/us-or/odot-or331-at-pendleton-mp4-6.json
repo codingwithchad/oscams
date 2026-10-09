@@ -1,0 +1,22 @@
+{
+  "id": "odot-or331-at-pendleton-mp4-6",
+  "name": "OR331 at Pendleton MP4.6",
+  "lat": 45.63716,
+  "lon": -118.6838,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/OR331%20at%20Pendleton%20MP4.6%20I-84%20MP216E_pid4946.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "mirror": true,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "OR 331",
+  "milepost": 4.6
+}

@@ -1,0 +1,22 @@
+{
+  "id": "odot-barview-jetty-lookout-uscg",
+  "name": "Barview Jetty Lookout (USCG)",
+  "lat": 45.5703,
+  "lon": -123.95608,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/Barview%20Jetty%20Lookout_pid4457.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "mirror": true,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "City",
+  "milepost": 0
+}

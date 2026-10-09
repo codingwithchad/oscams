@@ -1,0 +1,22 @@
+{
+  "id": "odot-us26-at-timber-jct",
+  "name": "US26 at Timber Jct",
+  "lat": 45.7596,
+  "lon": -123.30139,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/US26%20at%20Timber%20Jct_pid2736.JPG",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "mirror": true,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "US 26",
+  "milepost": 37.7
+}

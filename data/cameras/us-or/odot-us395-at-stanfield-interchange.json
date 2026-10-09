@@ -1,0 +1,22 @@
+{
+  "id": "odot-us395-at-stanfield-interchange",
+  "name": "US395 at Stanfield Interchange",
+  "lat": 45.76377,
+  "lon": -119.20434,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/US395%20at%20Stanfield%20Interchange_pid2317.JPG",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "mirror": true,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "US 395",
+  "milepost": 12.34
+}

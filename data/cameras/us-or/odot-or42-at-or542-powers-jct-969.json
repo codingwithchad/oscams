@@ -1,0 +1,22 @@
+{
+  "id": "odot-or42-at-or542-powers-jct-969",
+  "name": "OR42 at OR542 (Powers Jct.)",
+  "lat": 43.03214,
+  "lon": -124.11289,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/ORE42%20at%20ORE542%20(Powers%20Jct.)%20EB_pid4319.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "mirror": true,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "OR 42",
+  "milepost": 23.5
+}

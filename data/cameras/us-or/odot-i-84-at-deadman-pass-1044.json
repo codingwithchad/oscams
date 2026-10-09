@@ -1,0 +1,22 @@
+{
+  "id": "odot-i-84-at-deadman-pass-1044",
+  "name": "I-84 at Deadman Pass",
+  "lat": 45.59977,
+  "lon": -118.50186,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/I-84%20at%20DeadmanPassE_pid4469.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "mirror": true,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "I 84",
+  "milepost": 229.18
+}

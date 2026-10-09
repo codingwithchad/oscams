@@ -1,0 +1,22 @@
+{
+  "id": "odot-umpqua-river-winchester-bay-uscg-1276",
+  "name": "Umpqua River/Winchester Bay (USCG)",
+  "lat": 43.66689,
+  "lon": -124.20589,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/Umpqua%20River%20Winchester%20Bay%20(USCG)_pid4922.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "mirror": true,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "City",
+  "milepost": 0
+}

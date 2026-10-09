@@ -1,0 +1,22 @@
+{
+  "id": "odot-portland-ne-airport-way-at-122nd-swc",
+  "name": "Portland - NE Airport Way at 122nd SWC",
+  "lat": 45.56545,
+  "lon": -122.53396,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/NE%20Airport%20Way%20@%20122nd%20SWC_pid4779.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "mirror": true,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "CITY",
+  "milepost": 0
+}

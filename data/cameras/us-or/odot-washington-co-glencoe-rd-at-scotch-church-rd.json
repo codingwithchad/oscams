@@ -1,0 +1,22 @@
+{
+  "id": "odot-washington-co-glencoe-rd-at-scotch-church-rd",
+  "name": "Washington Co - Glencoe Rd at Scotch Church Rd",
+  "lat": 45.57266,
+  "lon": -123.00471,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/Glencoe%20Rd%20at%20Scotch%20Church%20Rd_pid3601.JPG",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "mirror": true,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "CNTY",
+  "milepost": 0
+}

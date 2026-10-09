@@ -1,0 +1,22 @@
+{
+  "id": "odot-us30-at-tongue-point-1120",
+  "name": "US30 at Tongue Point",
+  "lat": 46.1925,
+  "lon": -123.76105,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/US30%20at%20Tongue%20Pnt%20W_pid4620.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "mirror": true,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "US 30",
+  "milepost": 94.7
+}

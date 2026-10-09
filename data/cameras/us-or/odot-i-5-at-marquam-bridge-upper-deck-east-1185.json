@@ -1,0 +1,22 @@
+{
+  "id": "odot-i-5-at-marquam-bridge-upper-deck-east-1185",
+  "name": "I-5 at Marquam Bridge (Upper Deck East)",
+  "lat": 45.5092,
+  "lon": -122.66726,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/I-5%20at%20Marquam%20Bridge%20(Upper%20Deck%20East)_pid4744.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "mirror": true,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "I 5",
+  "milepost": 300.47
+}

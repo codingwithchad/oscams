@@ -1,0 +1,22 @@
+{
+  "id": "odot-i-82-at-i-84-westland-rd",
+  "name": "I-82 at I-84 - Westland Rd.",
+  "lat": 45.8008,
+  "lon": -119.3859,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/I-82%20at%20I-84_pid2321.JPG",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "mirror": true,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "I 82",
+  "milepost": 10
+}

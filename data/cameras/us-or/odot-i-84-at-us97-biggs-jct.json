@@ -1,0 +1,22 @@
+{
+  "id": "odot-i-84-at-us97-biggs-jct",
+  "name": "I-84 at US97 Biggs Jct.",
+  "lat": 45.6713,
+  "lon": -120.83428,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/I-84%20at%20US97%20Biggs%20Jct._pid3097.JPG",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "mirror": true,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "I 84",
+  "milepost": 104.56
+}

@@ -1,0 +1,22 @@
+{
+  "id": "odot-portland-n-lombard-at-wabash",
+  "name": "Portland - N Lombard at Wabash",
+  "lat": 45.57714,
+  "lon": -122.70278,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/N%20Lombard%20at%20Wabash_pid4831.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "mirror": true,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "City",
+  "milepost": 0
+}

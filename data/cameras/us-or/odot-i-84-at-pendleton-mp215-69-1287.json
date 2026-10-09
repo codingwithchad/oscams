@@ -1,0 +1,22 @@
+{
+  "id": "odot-i-84-at-pendleton-mp215-69-1287",
+  "name": "I-84 at Pendleton MP215.69",
+  "lat": 45.6418,
+  "lon": -118.68953,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/I-84%20at%20Pendleton%20215.69E_pid4944.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "mirror": true,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "I 84",
+  "milepost": 215.69
+}

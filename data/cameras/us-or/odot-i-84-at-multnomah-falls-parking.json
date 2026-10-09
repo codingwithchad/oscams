@@ -1,0 +1,22 @@
+{
+  "id": "odot-i-84-at-multnomah-falls-parking",
+  "name": "I-84 at Multnomah Falls Parking",
+  "lat": 45.57908,
+  "lon": -122.12074,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/I-84%20at%20Multnomah%20Falls%20Parking_pid2732.JPG",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "mirror": true,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "I 84",
+  "milepost": 31.25
+}

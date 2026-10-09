@@ -1,0 +1,22 @@
+{
+  "id": "odot-or82-at-minam-summit-1108",
+  "name": "OR82 at Minam Summit",
+  "lat": 45.60168,
+  "lon": -117.76889,
+  "feed_url": "https://www.TripCheck.com/roadcams/cams/ORE82%20at%20Minam%20Summit%20W_pid4596.jpg",
+  "feed_type": "image",
+  "source": "ODOT",
+  "status": "approved",
+  "approved_by": "codingwithchad",
+  "page_url": "https://tripcheck.com/",
+  "embed_mode": "direct",
+  "refresh_seconds": 300,
+  "mirror": true,
+  "tags": [
+    "road"
+  ],
+  "attribution_text": "Oregon Department of Transportation (TripCheck)",
+  "created_at": "2026-10-09T00:00:00Z",
+  "route": "OR 82",
+  "milepost": 28.49
+}
