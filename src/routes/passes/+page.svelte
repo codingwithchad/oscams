@@ -4,14 +4,18 @@
 	import type { PageProps } from './$types';
 
 	let { data }: PageProps = $props();
-	const order = ['closed', 'chains', 'traction', 'open', 'off-season'] as const;
+	// Passes without a report for the season are open; count them with the open ones.
+	const order = ['closed', 'chains', 'traction', 'open'] as const;
 	const names: Record<(typeof order)[number], string> = {
 		closed: 'closed',
 		chains: 'chains',
 		traction: 'traction advised',
-		open: 'open',
-		'off-season': 'off-season'
+		open: 'open'
 	};
+	const counts: Record<string, number> = $derived({
+		...data.counts,
+		open: (data.counts.open ?? 0) + (data.counts['off-season'] ?? 0)
+	});
 	// The first sentence of WSDOT's note, for passes that are not reporting right now.
 	const firstSentence = (s: string) => (s.match(/^.*?[.!](\s|$)/)?.[0] ?? s).trim().slice(0, 140);
 </script>
@@ -26,16 +30,21 @@
 <main>
 	<h1>Mountain passes</h1>
 	<p class="lede-dark">
-		Open or closed, chains, and conditions for every Washington pass, from WSDOT's pass reports.
+		Open or closed, chains, and conditions for every Washington pass from WSDOT's pass reports, plus
+		cameras and forecasts for Oregon's passes.
 	</p>
 
 	{#if data.reachable}
 		<p class="pass-summary">
-			{#each order.filter((o) => data.counts[o]) as o, i (o)}{i ? ' · ' : ''}<strong
-					>{data.counts[o]}</strong
-				>
+			{#each order.filter((o) => counts[o]) as o, i (o)}{i ? ' · ' : ''}<strong>{counts[o]}</strong>
 				{names[o]}{/each}
 		</p>
+		{#if data.counts['off-season']}
+			<p class="sub">
+				WSDOT's winter reports usually run November to April. Until they start, passes show as open
+				with no report: check the cameras.
+			</p>
+		{/if}
 	{:else}
 		<p class="place-note">
 			Pass reports aren't loading right now. Each pass page still shows its cameras and forecast.
@@ -53,7 +62,13 @@
 							{#if p.report}<StatusPill tone={p.report.status} label={p.report.label} />{/if}
 						</span>
 						<span class="place-sub"
-							>{p.route} · {p.elevation_ft?.toLocaleString()} ft · {p.connects}</span
+							>{[
+								p.route,
+								p.elevation_ft ? `${p.elevation_ft.toLocaleString()} ft` : null,
+								p.connects
+							]
+								.filter(Boolean)
+								.join(' · ')}</span
 						>
 						{#if p.report && p.report.status !== 'off-season'}
 							<span class="pass-detail">
@@ -73,6 +88,8 @@
 								>
 							{/each}
 							{#if p.report.road}<span class="pass-detail">{p.report.road.slice(0, 160)}</span>{/if}
+						{:else if !p.report}
+							<span class="pass-detail">Cameras and forecast. No live pass report here yet.</span>
 						{:else if p.report}
 							<span class="pass-detail"
 								>{firstSentence(p.report.road) ||
@@ -89,6 +106,7 @@
 		<a href="https://wsdot.com/travel/real-time/mountainpasses" target="_blank" rel="noopener"
 			>WSDOT's pass page</a
 		>
-		before you go. WSDOT has no public camera on the North Cascades Highway itself.
+		before you go. WSDOT has no public camera on the North Cascades Highway itself. For Oregon, check
+		<a href="https://tripcheck.com/" target="_blank" rel="noopener">TripCheck</a>.
 	</p>
 </main>

@@ -14,19 +14,22 @@
 <main>
 	<h1>{data.collection.name}</h1>
 	{#if data.collection.blurb}<p class="lede-dark">{data.collection.blurb}</p>{/if}
-	<nav class="places grid-places" aria-label={data.collection.name}>
-		{#each data.places as place (place.id)}
-			<a class="place" href="/search?place={encodeURIComponent(place.id)}">
-				<span class="cover">
-					{#if place.cover}<img src={place.cover.url} alt="" loading="lazy" />{/if}
-					<span class="live"><i></i> Live</span>
-				</span>
-				<span class="place-body">
-					<span class="place-name">{place.name}</span>
-					{#if place.blurb}<span class="place-sub">{place.blurb}</span>{/if}
-					<span class="place-count">{place.liveCameras} live cameras</span>
-				</span>
-			</a>
-		{/each}
-	</nav>
+	{#each data.groups as group (group.state)}
+		{#if data.groups.length > 1}<h2 class="section-title">{group.state}</h2>{/if}
+		<nav class="places grid-places" aria-label="{data.collection.name}: {group.state}">
+			{#each group.places as place (place.id)}
+				<a class="place" href="/search?place={encodeURIComponent(place.id)}">
+					<span class="cover">
+						{#if place.cover}<img src={place.cover.url} alt="" loading="lazy" />{/if}
+						<span class="live"><i></i> Live</span>
+					</span>
+					<span class="place-body">
+						<span class="place-name">{place.name}</span>
+						{#if place.blurb}<span class="place-sub">{place.blurb}</span>{/if}
+						<span class="place-count">{place.liveCameras} live cameras</span>
+					</span>
+				</a>
+			{/each}
+		</nav>
+	{/each}
 </main>

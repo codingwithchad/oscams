@@ -1,5 +1,5 @@
 import { isDormant, nearby } from '../lib/geo';
-import { forPlace } from '../lib/placeCameras';
+import { coverPicture, forPlace } from '../lib/placeCameras';
 import { getCatalog } from '../lib/server/catalog';
 import { viewCount } from '../lib/server/popularity';
 import type { PageServerLoad } from './$types';
@@ -16,7 +16,6 @@ function compute() {
 		const live = nearby(forPlace(cameras, p), p, p.radius_miles ?? DEFAULT_RADIUS).filter(
 			(c) => !isDormant(c) && (c.feed_url || c.provider) && c.feed_type === 'image'
 		);
-		const direct = live.find((c) => c.feed_url);
 		return {
 			id: p.id,
 			name: p.name,
@@ -25,12 +24,7 @@ function compute() {
 			collection: p.collection ?? null,
 			liveCameras: live.length,
 			// The nearest live picture becomes the place's cover photo.
-			cover: direct
-				? {
-						url: direct.max_width ? `/img/${direct.id}` : (direct.feed_url as string),
-						name: direct.name
-					}
-				: null
+			cover: coverPicture(live)
 		};
 	});
 	return {

@@ -973,8 +973,9 @@ button.wide {
 	color: #fff;
 }
 .pill-off-season {
-	background: var(--line);
-	color: var(--muted);
+	background: transparent;
+	color: var(--ok-text);
+	box-shadow: inset 0 0 0 1.5px #1f8a4c;
 }
 .pass-summary {
 	margin: 0 0 6px;
@@ -1632,4 +1633,12 @@ div.image-button {
 	color: var(--muted);
 	font-size: var(--fs-sm);
 	line-height: 1.5;
+}
+
+/* Pass names share the row with a status pill: keep them a size smaller so they rarely wrap */
+.pass-list .place-name {
+	font-size: var(--fs-lg);
+}
+.pass-top .pill {
+	flex: none;
 }

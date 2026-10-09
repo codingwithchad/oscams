@@ -3,7 +3,7 @@
   "name": "Ski areas",
   "blurb": "The Northwest's biggest ski areas: conditions and cameras",
   "icon": "ski",
-  "order": 6,
+  "order": 1,
   "also": [
     "stevens-pass",
     "snoqualmie-pass",

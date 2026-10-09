@@ -68,7 +68,7 @@ describe('classifyPass', () => {
 			})
 		);
 		expect(p.status).toBe('off-season');
-		expect(p.label).toBe('Off-season');
+		expect(p.label).toBe('Open · no report');
 	});
 
 	it('is open in season with no restrictions', () => {

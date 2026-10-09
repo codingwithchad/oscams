@@ -40,7 +40,9 @@ export const STATUS_LABEL: Record<PassStatus, string> = {
 	chains: 'Chains required',
 	traction: 'Traction tires advised',
 	open: 'Open',
-	'off-season': 'Off-season'
+	// WSDOT has stopped its hand-written reports for the season (usually April to November). The road is
+	// open unless the report says otherwise; there is just no live report.
+	'off-season': 'Open · no report'
 };
 
 // Worst first: this is how two directions are combined.

@@ -81,8 +81,8 @@
 	/>
 
 	{#if data.collections.length}
-		<h2 class="section-title">Where will your adventure take you next?</h2>
-		<nav class="collections" aria-label="Where will your adventure take you next?">
+		<h2 class="section-title">Explore</h2>
+		<nav class="collections" aria-label="Explore">
 			{#each data.collections as c (c.id)}
 				<a
 					class="collection"
@@ -129,5 +129,4 @@
 	{/if}
 
 	<InstallHelp />
-	<p class="hint">We're adding places. Search any town or zip to see what's nearby.</p>
 </main>
