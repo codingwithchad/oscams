@@ -9,7 +9,7 @@
   "feed_url": "https://www.youtube-nocookie.com/embed/s869fYS-TGY",
   "embed_mode": "iframe",
   "source": "Visit Leavenworth",
-  "status": "pending",
+  "status": "approved",
   "page_url": "https://www.youtube.com/watch?v=s869fYS-TGY",
   "license_or_terms": "Published by Visit Leavenworth on YouTube with embedding turned on; shown through YouTube's official player, only after a tap.",
   "tags": [
@@ -17,5 +17,6 @@
     "adventure-park"
   ],
   "attribution_text": "Visit Leavenworth (via YouTube)",
-  "created_at": "2026-10-09T00:00:00Z"
+  "created_at": "2026-10-09T00:00:00Z",
+  "approved_by": "codingwithchad"
 }

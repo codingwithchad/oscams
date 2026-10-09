@@ -9,7 +9,7 @@
   "feed_url": "https://www.youtube-nocookie.com/embed/AlJPPPl1yIw",
   "embed_mode": "iframe",
   "source": "Mission Ridge",
-  "status": "pending",
+  "status": "approved",
   "page_url": "https://www.youtube.com/watch?v=AlJPPPl1yIw",
   "license_or_terms": "Published by Mission Ridge on YouTube with embedding turned on; shown through YouTube's official player, only after a tap.",
   "tags": [
@@ -17,5 +17,6 @@
     "wenatchee"
   ],
   "attribution_text": "Mission Ridge (via YouTube)",
-  "created_at": "2026-10-09T00:00:00Z"
+  "created_at": "2026-10-09T00:00:00Z",
+  "approved_by": "codingwithchad"
 }

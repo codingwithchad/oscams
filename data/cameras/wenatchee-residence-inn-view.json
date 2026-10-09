@@ -9,7 +9,7 @@
   "feed_url": "https://www.youtube-nocookie.com/embed/mbJoGzY3KR8",
   "embed_mode": "iframe",
   "source": "Visit Chelan County",
-  "status": "pending",
+  "status": "approved",
   "page_url": "https://www.youtube.com/watch?v=mbJoGzY3KR8",
   "license_or_terms": "Published by Visit Chelan County on YouTube with embedding turned on; shown through YouTube's official player, only after a tap.",
   "tags": [
@@ -17,5 +17,6 @@
     "town"
   ],
   "attribution_text": "Visit Chelan County (via YouTube)",
-  "created_at": "2026-10-09T00:00:00Z"
+  "created_at": "2026-10-09T00:00:00Z",
+  "approved_by": "codingwithchad"
 }
