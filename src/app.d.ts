@@ -5,7 +5,10 @@ declare global {
 		// interface Error {}
 		// interface Locals {}
 		// interface PageData {}
-		// interface PageState {}
+		interface PageState {
+			/** Which camera the full-screen viewer shows (its place in the list), when it is open. */
+			camera?: number;
+		}
 		// interface Platform {}
 	}
 }

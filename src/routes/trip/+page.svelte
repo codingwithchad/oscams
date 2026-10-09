@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { APP_NAME } from '../../lib/brand';
 	import { page } from '$app/state';
-	import CameraCard from '../../lib/CameraCard.svelte';
+	import CameraList from '../../lib/CameraList.svelte';
 	import ConditionsBar from '../../lib/ConditionsBar.svelte';
 	import SnowLine from '../../lib/SnowLine.svelte';
 	import OfflineCameras from '../../lib/OfflineCameras.svelte';
@@ -194,14 +194,12 @@
 		{/if}
 
 		{#if ahead.length}
-			<div class="grid">
-				{#each ahead as stop (stop.camera.id)}
-					<CameraCard
-						camera={{ ...stop.camera, distance: stop.along }}
-						note={noteFor(stop.along)}
-					/>
-				{/each}
-			</div>
+			<CameraList
+				items={ahead.map((stop) => ({
+					camera: { ...stop.camera, distance: stop.along },
+					note: noteFor(stop.along)
+				}))}
+			/>
 		{:else if trip.stops.length}
 			<p class="empty">You've passed every camera on this drive.</p>
 		{:else}

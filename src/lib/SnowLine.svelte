@@ -64,8 +64,9 @@
 			{/each}
 		</div>
 		<p class="snow-key">
-			<i class="snow"></i> snowing <i class="cold"></i> freezing <i class="clear"></i> above
-			freezing
+			<span class="k"><i class="snow"></i> snowing</span>
+			<span class="k"><i class="cold"></i> freezing</span>
+			<span class="k"><i class="clear"></i> above freezing</span>
 			<span class="snow-end">
 				<span>Start</span><span>{miles.toFixed(0)} mi</span>
 			</span>

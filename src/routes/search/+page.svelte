@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { APP_NAME } from '../../lib/brand';
-	import CameraCard from '../../lib/CameraCard.svelte';
+	import CameraList from '../../lib/CameraList.svelte';
 	import ConditionsBar from '../../lib/ConditionsBar.svelte';
 	import OfflineCameras from '../../lib/OfflineCameras.svelte';
 	import SearchBox from '../../lib/SearchBox.svelte';
@@ -81,9 +81,7 @@
 		{/if}
 
 		{#if data.cameras.length}
-			<div class="grid">
-				{#each data.cameras as camera (camera.id)}<CameraCard {camera} />{/each}
-			</div>
+			<CameraList items={data.cameras.map((camera) => ({ camera }))} />
 		{:else}
 			<p class="empty">No live cameras within {data.radius} miles. Try a larger radius.</p>
 		{/if}
