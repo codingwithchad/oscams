@@ -1,0 +1,47 @@
+name: health
+
+# Once a day: is every outside source (WSDOT, ferries, Windy, TripCheck pictures, NWS) still answering, and is
+# the GitHub token for the Add a camera form far from expiring? Opens a "site-health" issue when not (GitHub
+# emails the owner), and closes it again when everything works. Reads the live site's /healthz; no secrets needed.
+on:
+  schedule:
+    - cron: '23 15 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  health:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - name: Check the live site
+        id: check
+        run: |
+          set +e
+          node scripts/check-health.mjs > report.md
+          echo "failed=$?" >> "$GITHUB_OUTPUT"
+          cat report.md
+      - name: Open, update or close the health issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+          FAILED: ${{ steps.check.outputs.failed }}
+        run: |
+          gh label create site-health --color d73a4a --description "Something the site depends on is not working" --force
+          open=$(gh issue list --label site-health --state open --json number --jq '.[0].number')
+          if [ "$FAILED" != "0" ]; then
+            body="$(printf 'The daily health check found a problem:\n\n%s\n\nDetails: https://whatsupahead.com/healthz' "$(cat report.md)")"
+            if [ -n "$open" ]; then
+              gh issue comment "$open" --body "$body"
+            else
+              gh issue create --title "Site health: something needs attention" --label site-health --body "$body"
+            fi
+          elif [ -n "$open" ]; then
+            gh issue close "$open" --comment "Everything is working again."
+          fi

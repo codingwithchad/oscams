@@ -1,6 +1,7 @@
 import type { Handle } from '@sveltejs/kit/hooks';
 import { getCatalog } from './lib/server/catalog';
 import { startHistory } from './lib/server/history';
+import { startHealthChecks } from './lib/server/health';
 import { allow, visitorAddress } from './lib/server/rateLimit';
 import { dev } from '$app/env';
 
@@ -16,6 +17,9 @@ getCatalog();
 
 // Start saving the pass-camera pictures that power the replay. Off in development; set HISTORY=off to disable anywhere.
 if (!dev && process.env.HISTORY !== 'off') startHistory();
+
+// Check every half hour that each outside source (and its key) still works; results are on /healthz.
+if (!dev && process.env.HEALTH_CHECKS !== 'off') startHealthChecks();
 
 // A missing key does not stop the app, but those cameras and reports show as offline, so say so loudly in the logs.
 for (const [name, what] of [
