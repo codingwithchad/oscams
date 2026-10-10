@@ -15,7 +15,7 @@ export function allow(key: string, limit: number, windowMs = 60_000, now = Date.
  * The visitor's address, for rate limits. Behind a proxy the left of X-Forwarded-For is whatever the visitor
  * chose to send, so count from the right instead: each proxy we sit behind adds one real entry there.
  * TRUSTED_PROXIES is how many entries the proxies in front of the app add. Render adds 3 (measured on the live
- * site through /healthz "forwarded_hops", 2026-10-09). Check it again after moving hosts or adding a CDN.
+ * site through /healthz "forwarded_hops", 2026-10-09); Azure App Service adds 1 (2026-10-10). Check it again after moving hosts or adding a CDN.
  * Without enough entries (local runs), the connection's own address is used.
  */
 export function visitorAddress(request: Request, connection: () => string): string {
@@ -24,5 +24,12 @@ export function visitorAddress(request: Request, connection: () => string): stri
 		.split(',')
 		.map((s) => s.trim())
 		.filter(Boolean);
-	return list.length >= proxies ? list[list.length - proxies] : connection();
+	return list.length >= proxies ? withoutPort(list[list.length - proxies]) : connection();
+}
+
+/** Azure App Service writes "203.0.113.5:51234" (and "[2001:db8::1]:51234"); the port changes per connection. */
+export function withoutPort(address: string): string {
+	const v6 = address.match(/^\[([^\]]+)\](?::\d+)?$/);
+	if (v6) return v6[1];
+	return /^[\d.]+:\d+$/.test(address) ? address.slice(0, address.lastIndexOf(':')) : address;
 }

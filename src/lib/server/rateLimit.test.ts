@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { allow, visitorAddress } from './rateLimit';
+import { allow, visitorAddress, withoutPort } from './rateLimit';
 
 describe('allow', () => {
 	it('lets calls through up to the limit, then says no', () => {
@@ -44,5 +44,14 @@ describe('visitorAddress', () => {
 		for (let i = 0; i < 5001; i++) allow(`test-flood-${i}`, 1, 1000, 0);
 		allow('test-trigger', 1, 1000, 10_000);
 		expect(allow('test-day', 1, 24 * 60 * 60_000, 10_000)).toBe(false);
+	});
+});
+
+describe('withoutPort', () => {
+	it('drops the port Azure adds, and leaves plain addresses alone', () => {
+		expect(withoutPort('203.0.113.5:51234')).toBe('203.0.113.5');
+		expect(withoutPort('[2001:db8::1]:51234')).toBe('2001:db8::1');
+		expect(withoutPort('203.0.113.5')).toBe('203.0.113.5');
+		expect(withoutPort('2001:db8::1')).toBe('2001:db8::1');
 	});
 });
