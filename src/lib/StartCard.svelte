@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { track } from './track';
 	import { goto } from '$app/navigation';
 	import SearchBox from './SearchBox.svelte';
 	import TripForm from './TripForm.svelte';
@@ -45,6 +46,7 @@
 			return;
 		}
 		locating = true;
+		track('use-location');
 		navigator.geolocation.getCurrentPosition(
 			(pos) =>
 				goto(`/search?q=${pos.coords.latitude.toFixed(4)},${pos.coords.longitude.toFixed(4)}`),

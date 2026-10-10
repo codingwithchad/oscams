@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { track } from './track';
 	import { ago } from './format';
 	import type { Camera } from './types';
 
@@ -115,7 +116,13 @@
 			allowfullscreen
 		></iframe>
 	{:else}
-		<button class="live-play" onclick={() => (watching = true)}>
+		<button
+			class="live-play"
+			onclick={() => {
+				watching = true;
+				track('watch-live');
+			}}
+		>
 			<span class="live-badge"><i></i> Live</span>
 			<span class="play-icon" aria-hidden="true"></span>
 			Watch live

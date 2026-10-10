@@ -30,7 +30,7 @@ function oneEach<T extends { kind: string }>(sources: T[]): T[] {
 const MARINE = new Set(['tides', 'waves']);
 const MARINE_RADIUS = 35;
 
-export const load: PageServerLoad = async ({ url, setHeaders }) => {
+export const load: PageServerLoad = async ({ url, setHeaders, locals }) => {
 	const { cameras, weather, places } = getCatalog();
 	const placeId = url.searchParams.get('place');
 	// A search that names one of our places ("Mount Hood", "stevens pass") opens that place.
@@ -71,6 +71,8 @@ export const load: PageServerLoad = async ({ url, setHeaders }) => {
 			failed = true;
 		}
 	}
+	// For the visit counter: did a typed search find somewhere? (Only whether it did, never what was typed.)
+	if (!featured && q && !url.searchParams.has('r')) locals.searchFound = Boolean(place);
 	if (!place) return { ...empty, place: null, failed };
 
 	if (featured) recordView(featured.id);

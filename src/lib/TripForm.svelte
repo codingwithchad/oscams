@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { track } from './track';
 	import PlaceInput from './PlaceInput.svelte';
 	let {
 		places = [],
@@ -18,6 +19,7 @@
 			return;
 		}
 		locating = true;
+		track('use-location');
 		navigator.geolocation.getCurrentPosition(
 			(pos) => {
 				fromText = `${pos.coords.latitude.toFixed(4)},${pos.coords.longitude.toFixed(4)}`;

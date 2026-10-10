@@ -21,3 +21,6 @@ Thumbs.db
 # Vite
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+
+# Visit counts saved by the server (src/lib/server/stats.ts)
+.stats

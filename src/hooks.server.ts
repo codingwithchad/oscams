@@ -3,6 +3,7 @@ import { getCatalog } from './lib/server/catalog';
 import { startHistory } from './lib/server/history';
 import { startHealthChecks } from './lib/server/health';
 import { allow, visitorAddress } from './lib/server/rateLimit';
+import { isPerson, pageOf, recordSearch, recordView, startStats } from './lib/server/stats';
 import { dev } from '$app/env';
 
 // Load secrets (e.g. WSDOT_CODE) from a local .env file when present. In production, set real environment variables.
@@ -20,6 +21,9 @@ if (!dev && process.env.HISTORY !== 'off') startHistory();
 
 // Check every half hour that each outside source (and its key) still works; results are on /healthz.
 if (!dev && process.env.HEALTH_CHECKS !== 'off') startHealthChecks();
+
+// Our own visit counter (counts only, no cookies); the numbers are on /stats.
+if (!dev) startStats();
 
 // A missing key does not stop the app, but those cameras and reports show as offline, so say so loudly in the logs.
 for (const [name, what] of [
@@ -86,7 +90,43 @@ export const handle: Handle = async ({ event, resolve }) => {
 		}
 	}
 	const response = await resolve(event);
+	if (event.request.method === 'GET' && response.status === 200) countVisit(event);
 	for (const [name, value] of Object.entries(SECURITY_HEADERS))
 		if (!response.headers.has(name)) response.headers.set(name, value);
 	return response;
 };
+
+// Our own hosts never count as "came from another site".
+const OWN_HOSTS = /(^|\.)(whatsupahead\.com|whatsupahead\.app|onrender\.com|localhost)$/;
+
+/** Count a page view (full page loads and in-app moves, which fetch the page's data). */
+function countVisit(event: Parameters<Handle>[0]['event']) {
+	const page = pageOf(event.url);
+	const userAgent = event.request.headers.get('user-agent') ?? '';
+	if (!page || !isPerson(userAgent)) return;
+	// A page someone opened, or moved to inside the app; not a background fetch (the offline helper refreshing
+	// its saved copy of the home page, for example). Older browsers send no Sec-Fetch-Dest: count those.
+	const dest = event.request.headers.get('sec-fetch-dest');
+	if (!event.isDataRequest && dest && dest !== 'document') return;
+	let from: string | null = null;
+	let source: string | null = null;
+	const referer = event.request.headers.get('referer');
+	if (referer) {
+		try {
+			const ref = new URL(referer);
+			if (OWN_HOSTS.test(ref.hostname)) from = pageOf(ref)?.page ?? null;
+			else if (!event.isDataRequest) source = ref.hostname.replace(/^www\./, '');
+		} catch {
+			// not a usable address
+		}
+	}
+	recordView({
+		address: visitorAddress(event.request, event.getClientAddress),
+		userAgent,
+		page: page.page,
+		place: page.place,
+		from,
+		source
+	});
+	if (event.locals.searchFound !== undefined) recordSearch(event.locals.searchFound);
+}

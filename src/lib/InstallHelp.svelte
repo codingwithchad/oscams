@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { track } from './track';
 	interface InstallPrompt extends Event {
 		prompt: () => Promise<void>;
 	}
@@ -28,7 +29,12 @@
 		<p>No app store. It opens like an app and keeps your last view when you lose signal.</p>
 
 		{#if prompt}
-			<button onclick={() => prompt?.prompt()}>Install now</button>
+			<button
+				onclick={() => {
+					track('install');
+					prompt?.prompt();
+				}}>Install now</button
+			>
 		{/if}
 
 		{#if platform !== 'android'}

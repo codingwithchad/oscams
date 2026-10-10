@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { track } from '../../lib/track';
 	import { APP_NAME } from '../../lib/brand';
 	import { page } from '$app/state';
 	import CameraList from '../../lib/CameraList.svelte';
@@ -75,6 +76,7 @@
 			return;
 		}
 		following = true;
+		track('follow-trip');
 		try {
 			wakeLock =
 				(await (
@@ -143,7 +145,9 @@
 					: ''} · {trip.stops.length} cameras on the way
 			</p>
 			<p class="reverse">
-				<a class="chip" href={reverseLink()}>⇄ Reverse this drive</a>
+				<a class="chip" href={reverseLink()} onclick={() => track('reverse-trip')}
+					>⇄ Reverse this drive</a
+				>
 			</p>
 			<nav class="leave" aria-label="When are you leaving?">
 				<span class="leave-label">Leave</span>
@@ -152,6 +156,7 @@
 						class="chip"
 						aria-current={trip.leaveIn === mins ? 'true' : undefined}
 						href={tripLink({ in: mins ? String(mins) : null })}
+						onclick={() => mins && track('leave-later')}
 					>
 						{text}
 					</a>

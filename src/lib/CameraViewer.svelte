@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { track } from './track';
 	import CameraMedia from './CameraMedia.svelte';
 	import HistoryPlayer from './HistoryPlayer.svelte';
 	import type { Camera, Nearby } from './types';
@@ -30,9 +31,11 @@
 		document.documentElement.style.overflow = item ? 'hidden' : '';
 	});
 
-	const go = (step: number) => {
+	const go = (step: number, how: 'viewer-next' | 'viewer-swipe' = 'viewer-next') => {
 		const to = index + step;
-		if (to >= 0 && to < items.length) onnavigate(to);
+		if (to < 0 || to >= items.length) return;
+		track(how);
+		onnavigate(to);
 	};
 
 	function onkeydown(e: KeyboardEvent) {
@@ -50,7 +53,7 @@
 	function onpointerup(e: PointerEvent) {
 		const dx = e.clientX - startX;
 		const dy = e.clientY - startY;
-		if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) go(dx < 0 ? 1 : -1);
+		if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) go(dx < 0 ? 1 : -1, 'viewer-swipe');
 	}
 </script>
 

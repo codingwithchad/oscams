@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { track } from './track';
 	import { pushState, replaceState } from '$app/navigation';
 	import { page } from '$app/state';
 	import CameraCard from './CameraCard.svelte';
@@ -14,7 +15,14 @@
 
 <div class="grid">
 	{#each items as item, i (item.camera.id)}
-		<CameraCard camera={item.camera} note={item.note} onopen={() => pushState('', { camera: i })} />
+		<CameraCard
+			camera={item.camera}
+			note={item.note}
+			onopen={() => {
+				track('viewer-open');
+				pushState('', { camera: i });
+			}}
+		/>
 	{/each}
 </div>
 

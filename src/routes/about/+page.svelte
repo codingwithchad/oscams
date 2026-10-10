@@ -63,6 +63,13 @@
 		places and cameras near you and is not stored. Like any website, the host's server logs may
 		briefly record ordinary request details.
 	</p>
+	<p>
+		To learn which parts are useful, the site counts page views and a few taps (like "Next" in the
+		camera viewer), and roughly how many different people visit each day. It uses no cookies and
+		keeps nothing about who you are: to tell visits apart for one day, the server scrambles your
+		network address and browser name with a random value that changes daily and is never saved. It
+		never records what you type into search.
+	</p>
 
 	<h2>Please note</h2>
 	<p>
