@@ -9,8 +9,6 @@ import { drivingRoute } from '../../lib/server/routing';
 import { snowAlong } from '../../lib/server/snow';
 import { alongRoute, cumulativeMiles, projectOnRoute, thinToTarget } from '../../lib/route';
 import type { Camera, FeaturedPlace, Nearby, Place, WeatherSource } from '../../lib/types';
-import { redirect } from '@sveltejs/kit';
-import { findMapsLink, routeFromLink } from '../../lib/server/mapsLink';
 import type { PageServerLoad } from './$types';
 
 const DEFAULT_DESTINATION_RADIUS = 3;
@@ -45,38 +43,6 @@ export const load: PageServerLoad = async ({ url, setHeaders }) => {
 	const fromQ = url.searchParams.get('from')?.trim() ?? '';
 	const toQ = url.searchParams.get('to')?.trim() ?? '';
 
-	// A Google Maps route, pasted (?maps=) or shared from the phone's Share menu (?text= / ?url=, see the
-	// share_target in static/manifest.webmanifest): open the same drive, with its stops.
-	const shared =
-		url.searchParams.get('maps')?.trim() ||
-		findMapsLink(`${url.searchParams.get('text') ?? ''} ${url.searchParams.get('url') ?? ''}`);
-	if (shared) {
-		let points = null;
-		try {
-			points = await routeFromLink(shared);
-		} catch {
-			// Google did not answer; say so below
-		}
-		if (!points)
-			return {
-				fromQ: '',
-				toQ: '',
-				trip: null,
-				error:
-					"Couldn't read that Google Maps link. In Google Maps, set a start and a destination, then use Share directions (or copy the address bar) and paste that link."
-			};
-		const [first, ...rest] = points;
-		const last = rest.pop()!;
-		const at = (p: { lat: number; lon: number }) => `${p.lat.toFixed(5)},${p.lon.toFixed(5)}`;
-		const q = new URLSearchParams({
-			from: at(first),
-			fl: first.label,
-			to: at(last),
-			tl: last.label
-		});
-		if (rest.length) q.set('via', rest.map(at).join(';'));
-		redirect(303, `/trip?${q}`);
-	}
 	// Stops along the way, in order: "lat,lon;lat,lon" (at most 8).
 	const via = (url.searchParams.get('via') ?? '')
 		.split(';')

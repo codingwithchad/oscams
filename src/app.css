@@ -1676,18 +1676,3 @@ div.image-button {
 .glance-loading::before {
 	background: var(--line);
 }
-
-/* Paste a Google Maps route */
-.maps-link {
-	margin-top: 12px;
-}
-.maps-link summary {
-	cursor: pointer;
-	color: var(--accent);
-	font-weight: 600;
-	font-size: var(--fs-sm);
-	padding: 6px 0;
-}
-.maps-link .search {
-	margin: 8px 0 4px;
-}
