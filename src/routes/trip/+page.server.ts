@@ -9,6 +9,8 @@ import { drivingRoute } from '../../lib/server/routing';
 import { snowAlong } from '../../lib/server/snow';
 import { alongRoute, cumulativeMiles, projectOnRoute, thinToTarget } from '../../lib/route';
 import type { Camera, FeaturedPlace, Nearby, Place, WeatherSource } from '../../lib/types';
+import { redirect } from '@sveltejs/kit';
+import { findMapsLink, routeFromLink } from '../../lib/server/mapsLink';
 import type { PageServerLoad } from './$types';
 
 const DEFAULT_DESTINATION_RADIUS = 3;
@@ -42,6 +44,45 @@ function inDrivingOrder<T extends { lat: number; lon: number }>(
 export const load: PageServerLoad = async ({ url, setHeaders }) => {
 	const fromQ = url.searchParams.get('from')?.trim() ?? '';
 	const toQ = url.searchParams.get('to')?.trim() ?? '';
+
+	// A Google Maps route, pasted (?maps=) or shared from the phone's Share menu (?text= / ?url=, see the
+	// share_target in static/manifest.webmanifest): open the same drive, with its stops.
+	const shared =
+		url.searchParams.get('maps')?.trim() ||
+		findMapsLink(`${url.searchParams.get('text') ?? ''} ${url.searchParams.get('url') ?? ''}`);
+	if (shared) {
+		let points = null;
+		try {
+			points = await routeFromLink(shared);
+		} catch {
+			// Google did not answer; say so below
+		}
+		if (!points)
+			return {
+				fromQ: '',
+				toQ: '',
+				trip: null,
+				error:
+					"Couldn't read that Google Maps link. In Google Maps, set a start and a destination, then use Share directions (or copy the address bar) and paste that link."
+			};
+		const [first, ...rest] = points;
+		const last = rest.pop()!;
+		const at = (p: { lat: number; lon: number }) => `${p.lat.toFixed(5)},${p.lon.toFixed(5)}`;
+		const q = new URLSearchParams({
+			from: at(first),
+			fl: first.label,
+			to: at(last),
+			tl: last.label
+		});
+		if (rest.length) q.set('via', rest.map(at).join(';'));
+		redirect(303, `/trip?${q}`);
+	}
+	// Stops along the way, in order: "lat,lon;lat,lon" (at most 8).
+	const via = (url.searchParams.get('via') ?? '')
+		.split(';')
+		.map((p) => parseLatLon(p))
+		.filter((p): p is NonNullable<typeof p> => p !== null)
+		.slice(0, 8);
 	const fromLabel = url.searchParams.get('fl')?.trim().slice(0, 80) ?? '';
 	const toLabel = url.searchParams.get('tl')?.trim().slice(0, 80) ?? '';
 	// ?demo=winter swaps in an invented cold day so the snow section can be tried out in summer.
@@ -71,7 +112,7 @@ export const load: PageServerLoad = async ({ url, setHeaders }) => {
 
 	let route;
 	try {
-		route = await drivingRoute(from, to);
+		route = await drivingRoute(from, to, via);
 	} catch {
 		return {
 			...base,
@@ -147,6 +188,7 @@ export const load: PageServerLoad = async ({ url, setHeaders }) => {
 		trip: {
 			from: from.label,
 			to: to.label,
+			viaCount: via.length,
 			miles: total,
 			minutes: route.minutes,
 			leaveIn,

@@ -29,6 +29,24 @@
 	let watchId: number | null = null;
 	let wakeLock: { release: () => Promise<void> } | null = null;
 
+	// The same drive the other way: start and destination swap, and the stops come in reverse order.
+	function reverseLink(): string {
+		const p = page.url.searchParams;
+		const q = new URLSearchParams();
+		for (const [key, other] of [
+			['from', 'to'],
+			['to', 'from'],
+			['fl', 'tl'],
+			['tl', 'fl']
+		]) {
+			const v = p.get(other);
+			if (v) q.set(key, v);
+		}
+		const via = p.get('via');
+		if (via) q.set('via', via.split(';').reverse().join(';'));
+		return `/trip?${q}`;
+	}
+
 	function tripLink(changes: Record<string, string | null>): string {
 		const u = new URL(page.url.href);
 		for (const [k, v] of Object.entries(changes)) {
@@ -120,15 +138,12 @@
 		<section class="summary">
 			<h1>{trip.from} → {trip.to}</h1>
 			<p class="sub">
-				{trip.miles.toFixed(0)} mi · about {duration(trip.minutes)} · {trip.stops.length} cameras on the
-				way
+				{trip.miles.toFixed(0)} mi · about {duration(trip.minutes)}{trip.viaCount
+					? ` · via ${trip.viaCount} ${trip.viaCount === 1 ? 'stop' : 'stops'}`
+					: ''} · {trip.stops.length} cameras on the way
 			</p>
 			<p class="reverse">
-				<a
-					class="chip"
-					href={`/trip?from=${encodeURIComponent(page.url.searchParams.get('to') ?? '')}&to=${encodeURIComponent(page.url.searchParams.get('from') ?? '')}`}
-					>⇄ Reverse this drive</a
-				>
+				<a class="chip" href={reverseLink()}>⇄ Reverse this drive</a>
 			</p>
 			<nav class="leave" aria-label="When are you leaving?">
 				<span class="leave-label">Leave</span>
@@ -136,7 +151,7 @@
 					<a
 						class="chip"
 						aria-current={trip.leaveIn === mins ? 'true' : undefined}
-						href={`/trip?from=${encodeURIComponent(page.url.searchParams.get('from') ?? '')}&to=${encodeURIComponent(page.url.searchParams.get('to') ?? '')}${page.url.searchParams.get('fl') ? `&fl=${encodeURIComponent(page.url.searchParams.get('fl') ?? '')}` : ''}${mins ? `&in=${mins}` : ''}`}
+						href={tripLink({ in: mins ? String(mins) : null })}
 					>
 						{text}
 					</a>

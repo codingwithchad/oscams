@@ -46,13 +46,17 @@ export function toDrivingRoute(route: OsrmRoute): DrivingRoute {
 	};
 }
 
-/** Driving route between two points. Uses the free public OSRM demo server, so results are cached. */
-export function drivingRoute(from: Point, to: Point): Promise<DrivingRoute> {
-	const key = `route:${from.lat.toFixed(3)},${from.lon.toFixed(3)}>${to.lat.toFixed(3)},${to.lon.toFixed(3)}`;
+/**
+ * Driving route between two points, through any stops in between (in order). Uses the free public OSRM demo
+ * server, so results are cached.
+ */
+export function drivingRoute(from: Point, to: Point, via: Point[] = []): Promise<DrivingRoute> {
+	const stops = [from, ...via, to];
+	const key = `route:${stops.map((p) => `${p.lat.toFixed(3)},${p.lon.toFixed(3)}`).join('>')}`;
 	return cached(key, 10 * 60 * 1000, async () => {
 		// The demo server allows about one request a second for everyone using it; stay well under that.
 		if (!allow('upstream:osrm', 30)) throw new Error('routing busy');
-		const url = `${OSRM}/${from.lon},${from.lat};${to.lon},${to.lat}?overview=full&geometries=geojson&steps=true`;
+		const url = `${OSRM}/${stops.map((p) => `${p.lon},${p.lat}`).join(';')}?overview=full&geometries=geojson&steps=true`;
 		const res = await fetch(url, {
 			headers: { 'User-Agent': USER_AGENT },
 			signal: AbortSignal.timeout(10000)

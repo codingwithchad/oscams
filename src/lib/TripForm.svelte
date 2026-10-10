@@ -75,3 +75,23 @@
 	{#if error}<p class="error">{error}</p>{/if}
 	<button type="submit">Show the drive</button>
 </form>
+
+<!-- Already planned the drive in Google Maps? Its Share directions link brings the same route, stops included. -->
+<details class="maps-link">
+	<summary>Have a route in Google Maps? Paste its link</summary>
+	<form action="/trip" method="GET" class="search">
+		<input
+			name="maps"
+			type="url"
+			inputmode="url"
+			placeholder="https://maps.app.goo.gl/…"
+			aria-label="Google Maps directions link"
+			required
+		/>
+		<button type="submit">Go</button>
+	</form>
+	<p class="sub">
+		In Google Maps, set your start, destination and any stops, then tap Share directions (or copy
+		the address bar on a computer). To keep a particular road, add a stop on it.
+	</p>
+</details>
