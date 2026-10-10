@@ -79,6 +79,22 @@ const candidates = cams.filter(
 		offRoute(c.CameraLocation.Latitude, c.CameraLocation.Longitude) <= corridor
 );
 
+// WSDOT's list includes cameras other people own (a telecom, a city, a lodge) and names the owner. Credit the
+// owner, not WSDOT, and link to their page. Some owner fields hold WSDOT's own text, not an owner.
+const OWNER_NAMES = {
+	'Whidbeytel.com': 'Whidbey Telecom',
+	'Lewiscounty.com Tiger Mountain Technologies': 'Lewiscounty.com / Tiger Mountain Technologies'
+};
+function credit(c) {
+	const owner = (c.CameraOwner ?? '').replace(/\s+/g, ' ').trim();
+	if (!owner || /^WSDOT\b|tripcheck|sign up/i.test(owner))
+		return { attribution_text: 'Washington State Department of Transportation' };
+	return {
+		attribution_text: `${OWNER_NAMES[owner] ?? owner}, via WSDOT`,
+		...(c.OwnerURL ? { page_url: c.OwnerURL.replace(/^http:/, 'https:') } : {})
+	};
+}
+
 async function isJpeg(url) {
 	try {
 		const res = await fetch(url, { signal: AbortSignal.timeout(10000) });
@@ -121,7 +137,8 @@ for (let i = 0; i < candidates.length; i += 8) {
 			refresh_seconds: 120,
 			tags: ['road', ...(tagArg ? [tagArg] : [])],
 			attribution_text: 'Washington State Department of Transportation',
-			created_at: new Date().toISOString().slice(0, 10) + 'T00:00:00Z'
+			created_at: new Date().toISOString().slice(0, 10) + 'T00:00:00Z',
+			...credit(c)
 		};
 		if (m) {
 			cam.route = `${m[1].toUpperCase()} ${m[2]}`;
