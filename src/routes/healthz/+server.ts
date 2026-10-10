@@ -20,6 +20,8 @@ export const GET = ({ request }: { request: Request }) => {
 			forwarded_hops: (request.headers.get('x-forwarded-for') ?? '')
 				.split(',')
 				.filter((s) => s.trim()).length,
+			// The form of the entries with every number blanked ("n.n.n.n:n"), to spot a host adding ports.
+			forwarded_shape: (request.headers.get('x-forwarded-for') ?? '').replace(/[0-9a-f]+/gi, 'n'),
 			cached_picture_mb: Math.round(cacheBytes() / 1048576),
 			// Whether each key is set (never the key itself). Without them some cameras and reports show as offline.
 			keys: {

@@ -139,11 +139,14 @@ function save() {
 }
 
 let started = false;
-/** Save every five minutes, and once more as the server shuts down (the host's stop signal ends in "exit"). */
+/** Save every five minutes, and once more as the server shuts down. adapter-node catches the host's stop signal
+ * and announces "sveltekit:shutdown"; our other timers can keep the process alive until it is killed, so "exit"
+ * alone may never come. */
 export function startStats() {
 	if (started) return;
 	started = true;
 	setInterval(save, 5 * 60 * 1000).unref();
+	process.on('sveltekit:shutdown' as 'exit', save);
 	process.on('exit', save);
 }
 
