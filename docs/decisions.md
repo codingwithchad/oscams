@@ -12,7 +12,7 @@
 
 Windy.com already offers a map of cameras, so OS Cams focuses on the drive: enter From and To, get the cameras (and conditions) along the road in the order you will pass them, stopping at the destination. "Follow my trip" uses the phone's location to hide cameras already passed and show the next one ahead.
 
-- Route comes from the free OSRM demo server (cached). Replace with a paid or self-hosted router before heavy use.
+- Routes and place search use Azure Maps when `AZURE_MAPS_KEY` is set (live traffic, business names), within a daily allowance per kind (`AZURE_MAPS_DAILY`, default 150) that keeps it inside the free monthly amount. Past the allowance, or when Azure finds no route (it knows about seasonal closures, and won't start from a point far from a road), the free services take over: the OSRM demo server for routes, Photon then Nominatim then Open-Meteo for places. As-you-type suggestions stay on Photon, with Azure only as its backup, so typing doesn't spend the allowance.
 - Corridor 1.5 mi either side of the road, 2 mi buffer past the destination, 2.5 mi radius around the destination for places like resorts that sit off the road.
 - Follow mode needs the page open and the screen on (it asks for a screen wake lock). It is meant for passengers and pre-trip checks, not for a driver to study.
 

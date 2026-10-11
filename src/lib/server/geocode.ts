@@ -5,7 +5,8 @@ import { allow } from './rateLimit';
 import { queryVariants, similarity } from '../queryVariants';
 import { lookupTown } from './gazetteer';
 import { COVERAGE } from '../regions';
-import { photonSearch } from './photon';
+import { photonSearch, type Suggestion } from './photon';
+import { azureMapsKey, azureSearch } from './azureMaps';
 
 const USER_AGENT = 'WhatsUpAhead (https://github.com/codingwithchad/whatsupahead)';
 const BIG_AREAS = new Set(['county', 'state', 'region', 'country', 'state_district', 'province']);
@@ -27,6 +28,18 @@ function inLine<T>(job: () => Promise<T>): Promise<T> {
 	return run;
 }
 
+/** Azure Maps when it is set up and within its daily allowance, otherwise Photon. */
+async function placeSearch(q: string, limit: number): Promise<Suggestion[]> {
+	if (azureMapsKey()) {
+		try {
+			return await azureSearch(q, limit);
+		} catch (err) {
+			console.warn(`[geocode] azure maps: ${(err as Error).message}; using photon`);
+		}
+	}
+	return photonSearch(q, limit);
+}
+
 /** Turn "98115", "Westport, WA", "Stevens Pass" or "47.7,-121.1" into a point. */
 export async function geocode(query: string): Promise<Place | null> {
 	const q = query.trim().slice(0, 200);
@@ -39,12 +52,12 @@ export async function geocode(query: string): Promise<Place | null> {
 	if (local) return local;
 
 	return cached(`geo:${q.toLowerCase()}`, DAY, async () => {
-		// Main search: forgives typos and prefers the Northwest. People write names differently from the map
+		// Main search (Azure Maps or Photon): forgives typos and prefers the Northwest. People write names differently from the map
 		// (split or joined words, "mall"), so try other spellings and keep the result that looks most like what was typed.
 		try {
 			let best: { score: number; place: Place } | null = null;
 			for (const variant of queryVariants(q)) {
-				for (const hit of await photonSearch(variant, 3)) {
+				for (const hit of await placeSearch(variant, 3)) {
 					const score = similarity(q, hit.label);
 					if (!best || score > best.score) {
 						best = {

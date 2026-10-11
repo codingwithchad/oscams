@@ -2,6 +2,7 @@ import type { Point } from '../geo';
 import { cached } from './cache';
 import { allow } from './rateLimit';
 import type { LatLon } from '../route';
+import { azureMapsKey, azureRoute } from './azureMaps';
 
 const OSRM = 'https://router.project-osrm.org/route/v1/driving';
 const USER_AGENT = 'WhatsUpAhead (https://github.com/codingwithchad/whatsupahead)';
@@ -47,13 +48,20 @@ export function toDrivingRoute(route: OsrmRoute): DrivingRoute {
 }
 
 /**
- * Driving route between two points, through any stops in between (in order). Uses the free public OSRM demo
- * server, so results are cached.
+ * Driving route between two points, through any stops in between (in order). Azure Maps first when it is set up
+ * (live traffic), otherwise or on failure the free public OSRM demo server. Results are cached.
  */
 export function drivingRoute(from: Point, to: Point, via: Point[] = []): Promise<DrivingRoute> {
 	const stops = [from, ...via, to];
 	const key = `route:${stops.map((p) => `${p.lat.toFixed(3)},${p.lon.toFixed(3)}`).join('>')}`;
 	return cached(key, 10 * 60 * 1000, async () => {
+		if (azureMapsKey()) {
+			try {
+				return await azureRoute(stops);
+			} catch (err) {
+				console.warn(`[routing] azure maps: ${(err as Error).message}; using OSRM`);
+			}
+		}
 		// The demo server allows about one request a second for everyone using it; stay well under that.
 		if (!allow('upstream:osrm', 30)) throw new Error('routing busy');
 		const url = `${OSRM}/${stops.map((p) => `${p.lon},${p.lat}`).join(';')}?overview=full&geometries=geojson&steps=true`;

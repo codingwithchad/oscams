@@ -23,10 +23,13 @@
 	<h2>Where the information comes from</h2>
 	<ul>
 		<li>
-			Routes and place search: map data from <a
-				href="https://www.openstreetmap.org/copyright"
+			Routes and place search: <a
+				href="https://azure.microsoft.com/products/azure-maps"
 				target="_blank"
-				rel="noopener">OpenStreetMap contributors</a
+				rel="noopener">Microsoft Azure Maps</a
+			>, with live traffic, and map data from
+			<a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener"
+				>OpenStreetMap contributors</a
 			>, through the open-source
 			<a href="https://project-osrm.org/" target="_blank" rel="noopener">OSRM</a> routing service and
 			Nominatim and Photon (by Komoot), and town and ZIP locations from the US Census Bureau. The app

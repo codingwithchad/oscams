@@ -27,7 +27,8 @@ export const GET = ({ request }: { request: Request }) => {
 			keys: {
 				windy: Boolean(process.env.WINDY_API_KEY),
 				wsdot: Boolean(process.env.WSDOT_CODE),
-				github: Boolean(process.env.GITHUB_ISSUES_TOKEN)
+				github: Boolean(process.env.GITHUB_ISSUES_TOKEN),
+				azure_maps: Boolean(process.env.AZURE_MAPS_KEY)
 			},
 			...healthReport()
 		}),
