@@ -27,10 +27,16 @@ export interface Projection {
 }
 
 /** Closest point on the route to `p` (flat-earth maths per segment, fine at road scale). */
-export function projectOnRoute(p: Point, route: LatLon[], cum: number[]): Projection {
+export function projectOnRoute(
+	p: Point,
+	route: LatLon[],
+	cum: number[],
+	segments?: Iterable<number>
+): Projection {
 	let best: Projection = { along: 0, off: Infinity };
 	const cosLat = Math.cos((p.lat * Math.PI) / 180);
-	for (let i = 0; i < route.length - 1; i++) {
+	for (const i of segments ?? route.keys()) {
+		if (i >= route.length - 1) continue;
 		const [aLat, aLon] = route[i];
 		const [bLat, bLon] = route[i + 1];
 		const bx = (bLon - aLon) * cosLat * MILES_PER_DEG_LAT;
@@ -43,6 +49,46 @@ export function projectOnRoute(p: Point, route: LatLon[], cum: number[]): Projec
 		if (off < best.off) best = { along: cum[i] + t * (cum[i + 1] - cum[i]), off };
 	}
 	return best;
+}
+
+const CELL = 0.05; // degrees, about 3.5 miles north-south
+
+/**
+ * A grid over the route, so a point is only compared with the stretches of road near it rather than all of
+ * them (a long drive has thousands; the catalog has thousands of cameras). Returns, for a point and a distance
+ * in miles, every segment whose box comes within that distance: a superset of the segments that can be that
+ * close, so the nearest one found among them is the true nearest whenever it is within the distance.
+ */
+export function segmentGrid(route: LatLon[]): (p: Point, miles: number) => Set<number> {
+	const cells = new Map<string, number[]>();
+	for (let i = 0; i < route.length - 1; i++) {
+		const [aLat, aLon] = route[i];
+		const [bLat, bLon] = route[i + 1];
+		for (
+			let y = Math.floor(Math.min(aLat, bLat) / CELL);
+			y <= Math.floor(Math.max(aLat, bLat) / CELL);
+			y++
+		)
+			for (
+				let x = Math.floor(Math.min(aLon, bLon) / CELL);
+				x <= Math.floor(Math.max(aLon, bLon) / CELL);
+				x++
+			) {
+				const key = `${y}:${x}`;
+				const list = cells.get(key);
+				if (list) list.push(i);
+				else cells.set(key, [i]);
+			}
+	}
+	return (p, miles) => {
+		const dLat = miles / MILES_PER_DEG_LAT;
+		const dLon = miles / (MILES_PER_DEG_LAT * Math.max(0.1, Math.cos((p.lat * Math.PI) / 180)));
+		const out = new Set<number>();
+		for (let y = Math.floor((p.lat - dLat) / CELL); y <= Math.floor((p.lat + dLat) / CELL); y++)
+			for (let x = Math.floor((p.lon - dLon) / CELL); x <= Math.floor((p.lon + dLon) / CELL); x++)
+				for (const i of cells.get(`${y}:${x}`) ?? []) out.add(i);
+		return out;
+	};
 }
 
 export interface AlongRoute<T> {
@@ -66,10 +112,15 @@ export function alongRoute<T extends Point>(
 	const cum = cumulativeMiles(route);
 	const total = cum[cum.length - 1];
 	const end = { lat: route[route.length - 1][0], lon: route[route.length - 1][1] };
+	const near = segmentGrid(route);
 	const out: AlongRoute<T>[] = [];
 	for (const item of items) {
-		const { along, off } = projectOnRoute(item, route, cum);
 		const atDestination = distanceMiles(item, end) <= destinationRadius;
+		// Only the stretches of road near the item can be within the corridor. Items at the destination need
+		// the whole road, to know how far along they are.
+		const candidates = near(item, corridor);
+		if (!candidates.size && !atDestination) continue;
+		const { along, off } = projectOnRoute(item, route, cum, atDestination ? undefined : candidates);
 		const onTheWay = off <= corridor && along <= total + endBuffer;
 		if (onTheWay || atDestination)
 			out.push({ item, along: onTheWay ? along : Math.max(along, total - 0.01), off });

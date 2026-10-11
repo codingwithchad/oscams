@@ -7,6 +7,7 @@ import {
 	thinToTarget,
 	type LatLon
 } from './route';
+import { distanceMiles } from './geo';
 
 // A straight road running due north for about 10 miles.
 const road: LatLon[] = [
@@ -76,5 +77,35 @@ describe('thinning', () => {
 	it('leaves short lists alone and thins long ones to the target', () => {
 		expect(thinToTarget(stops, 30)).toBe(stops);
 		expect(thinToTarget(stops, 8).length).toBeLessThanOrEqual(8);
+	});
+});
+
+describe('alongRoute with the segment grid', () => {
+	it('finds exactly what checking every segment finds', () => {
+		// A wiggly 120-mile road and 3000 points scattered around it.
+		let seed = 7;
+		const rand = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
+		const road: LatLon[] = [];
+		for (let i = 0; i <= 2000; i++) road.push([47 + i * 0.0008, -122 + Math.sin(i / 40) * 0.05]);
+		const points = Array.from({ length: 3000 }, (_, i) => ({
+			id: i,
+			lat: 46.95 + rand() * 1.7,
+			lon: -122.2 + rand() * 0.4
+		}));
+		const cum = cumulativeMiles(road);
+		const end = { lat: road[road.length - 1][0], lon: road[road.length - 1][1] };
+		const brute = points
+			.map((item) => ({ item, ...projectOnRoute(item, road, cum) }))
+			.filter(
+				(r) =>
+					(r.off <= 1.5 && r.along <= cum[cum.length - 1] + 2) || distanceMiles(r.item, end) <= 2.5
+			)
+			.map((r) => r.item.id)
+			.sort((a, b) => a - b);
+		const fast = alongRoute(points, road)
+			.map((r) => r.item.id)
+			.sort((a, b) => a - b);
+		expect(brute.length).toBeGreaterThan(100);
+		expect(fast).toEqual(brute);
 	});
 });
