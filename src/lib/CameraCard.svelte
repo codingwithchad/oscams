@@ -16,5 +16,11 @@
 				: ''}
 			· {camera.attribution_text ?? camera.source}
 		</p>
+		{#if camera.view}
+			<!-- Windy's terms: link every picture to Windy, whose page is the full view. -->
+			<a class="windy-full" href={camera.view.link} target="_blank" rel="noopener"
+				>Full size on Windy ↗</a
+			>
+		{/if}
 	</div>
 </article>

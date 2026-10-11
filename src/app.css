@@ -559,6 +559,13 @@ button.wide {
 	margin: 4px 0;
 }
 
+.windy-full {
+	display: inline-block;
+	margin-top: 4px;
+	font-size: var(--fs-sm);
+	font-weight: 600;
+}
+
 /* Windy cameras: shown no larger than the size the API provides, and linked back to Windy */
 .image-link {
 	display: block;
@@ -566,7 +573,8 @@ button.wide {
 	background: #000;
 	text-align: center;
 }
-.image-link img {
+.image-link img,
+.image-button.windy img {
 	display: block;
 	width: 100%;
 	max-width: 400px;
@@ -939,7 +947,8 @@ button.wide {
 	text-align: center;
 	padding: 12px;
 }
-.image-link .cam-down {
+.image-link .cam-down,
+.image-button.windy .cam-down {
 	aspect-ratio: 400 / 224;
 	max-width: 400px;
 	margin: 0 auto;
@@ -1572,6 +1581,9 @@ div.image-button {
 	object-fit: contain;
 	aspect-ratio: auto;
 	-webkit-user-drag: none;
+}
+.viewer-stage .image-link {
+	max-width: 400px;
 }
 .viewer-stage .image-link img {
 	max-width: 400px;

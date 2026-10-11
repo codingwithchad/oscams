@@ -87,8 +87,14 @@
 	{#if age}<span class="age" class:stale>{stale ? 'Stale · ' : ''}{age}</span>{/if}
 {/snippet}
 
-{#if view}
-	<!-- Windy pictures are never enlarged and always link back to Windy. -->
+{#if view && onopen}
+	<!-- On a card, every camera opens the viewer the same way. Windy pictures stay at their own size (Windy's
+	     terms), and the card carries the link to Windy's full view. -->
+	<button class="image-button windy" onclick={onopen} aria-label="View {camera.name}">
+		{@render picture(true)}
+	</button>
+{:else if view}
+	<!-- In the viewer, Windy pictures are never enlarged and link back to Windy for the full view. -->
 	<a
 		class="image-link"
 		href={view.link}

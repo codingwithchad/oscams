@@ -89,7 +89,9 @@
 					? ' (approx.)'
 					: ''}
 				· {item.camera.attribution_text ?? item.camera.source}
-				{#if item.camera.page_url}
+				{#if item.camera.view}
+					· <a href={item.camera.view.link} target="_blank" rel="noopener">Full size on Windy ↗</a>
+				{:else if item.camera.page_url}
 					· <a href={item.camera.page_url} target="_blank" rel="noopener">Source page</a>
 				{/if}
 			</p>
