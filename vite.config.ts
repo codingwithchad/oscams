@@ -1,8 +1,28 @@
 import { defineConfig } from 'vitest/config';
 import adapter from '@sveltejs/adapter-node';
 import { sveltekit } from '@sveltejs/kit/vite';
+import { execSync } from 'node:child_process';
+
+// Which code is running, for /healthz: the commit this was built from (Render says it; elsewhere ask git).
+function commit(): string {
+	if (process.env.RENDER_GIT_COMMIT) return process.env.RENDER_GIT_COMMIT.slice(0, 7);
+	try {
+		const sha = execSync('git rev-parse --short HEAD', { stdio: ['ignore', 'pipe', 'ignore'] })
+			.toString()
+			.trim();
+		const dirty = execSync('git status --porcelain', { stdio: ['ignore', 'pipe', 'ignore'] })
+			.toString()
+			.trim();
+		return dirty ? `${sha}-modified` : sha;
+	} catch {
+		return 'unknown';
+	}
+}
 
 export default defineConfig({
+	define: {
+		__BUILD__: JSON.stringify({ commit: commit(), built: new Date().toISOString() })
+	},
 	plugins: [
 		sveltekit({
 			compilerOptions: {

@@ -1,6 +1,8 @@
 // See https://svelte.dev/docs/kit/types#app.d.ts
 // for information about these interfaces
 declare global {
+	/** Set at build time (vite.config.ts): the commit and when it was built. */
+	const __BUILD__: { commit: string; built: string };
 	namespace App {
 		// interface Error {}
 		interface Locals {

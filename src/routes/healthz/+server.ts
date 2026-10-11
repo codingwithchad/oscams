@@ -15,6 +15,8 @@ export const GET = ({ request }: { request: Request }) => {
 			cameras: cameras.length,
 			weather: weather.length,
 			places: places.length,
+			// Which build is running, to confirm a deploy landed (not just that something answers).
+			version: __BUILD__,
 			// How many addresses the proxies in front of the app put in X-Forwarded-For (never the addresses
 			// themselves). Rate limits trust that many entries from the right; see TRUSTED_PROXIES.
 			forwarded_hops: (request.headers.get('x-forwarded-for') ?? '')
